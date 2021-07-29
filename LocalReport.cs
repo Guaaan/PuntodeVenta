@@ -11,6 +11,9 @@ namespace Microsoft.Reporting.WinForms
 {
     public static class LocalReportExtensions
     {
+
+        
+
         public static void PrintToPrinter(this LocalReport report)
         {
             PageSettings pageSettings = new PageSettings();
@@ -22,11 +25,11 @@ namespace Microsoft.Reporting.WinForms
 
         public static void Print(this LocalReport report, PageSettings pageSettings)
         {
+            
 
+            //      < PageHeight >{ pageSettings.PaperSize.Height * 100}</ PageHeight >
 
-//                  < PageHeight >{ pageSettings.PaperSize.Height * 100}</ PageHeight >
-
-               string deviceInfo =
+            string deviceInfo =
                $@"<DeviceInfo>
                     <OutputFormat>EMF</OutputFormat>
                     <PageWidth>{pageSettings.PaperSize.Width * 100}</PageWidth>
@@ -82,7 +85,7 @@ namespace Microsoft.Reporting.WinForms
                     var xr = XmlWriter.Create(sb);
                     xr.WriteStartElement("DeviceInfo");
                     xr.WriteElementString("OutputFormat", "EMF");
-                    xr.WriteElementString("PageHeight", string.Format("{0}mm", totalHeight));
+                    xr.WriteElementString("PageHeight", string.Format("{0}in", totalHeight));
                     xr.Close();
 
                     printDocument.Print();
