@@ -12,6 +12,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
 using Microsoft.Reporting.WinForms;
+using System.Drawing.Printing;
 
 namespace ptoVenta
 {
@@ -129,7 +130,16 @@ namespace ptoVenta
                     parameters[2] = new ReportParameter("rNro", vNro);
 
                     report.SetParameters(parameters);
-                    report.PrintToPrinter();
+                    //report.PrintToPrinter();
+
+                    //impresion
+                    printDocumento = new PrintDocument();
+                    PrinterSettings ps = new PrinterSettings();
+                    printDocumento.PrinterSettings = ps;
+                    printDocumento.PrintPage += Imprimir;
+                    printDocumento.Print();
+
+
 
                 }
                 if (dgvGrid1.CurrentCell.ColumnIndex == 10)
@@ -137,14 +147,58 @@ namespace ptoVenta
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
                     devoluciones abrirFormClass = new devoluciones();
                     abrirFormClass.ShowDialog();
+
+                    
                 }
             }
         }
+
+        //impresión
+
+        
+        private void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font("Arial", 14);
+            int ancho = 200;
+            int y = 20;
+
+            e.Graphics.DrawString("--- Punto de Venta ---", font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+            e.Graphics.DrawString("Factura # "+ vnum, font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+            e.Graphics.DrawString("Fecha: "+ iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+            e.Graphics.DrawString("Caja: ", font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+            e.Graphics.DrawString("---   productos    ---", font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+        
+            foreach (DataGridViewRow row in dgvGrid1.Rows)
+            {
+                if (row.Cells["numero"].ToString() == vnum)
+                {
+                    MessageBox.Show(vnum.ToString());
+                    TicketDatos dat = new TicketDatos();
+                    dat.Codigo = row.Cells["codigo"].Value.ToString();
+                    dat.Nombre = row.Cells["producto"].Value.ToString();
+                    dat.Cantidad = row.Cells["cantidad"].Value.ToString();
+                    double pre = (double)row.Cells["precio"].Value;
+                    dat.Precio = pre.ToString("N0");
+                    TicketDatos.Add(dat);
+                }
+                /*e.Graphics.DrawString(row["cantidad"].ToString() + " " +
+                    row["producto"].ToString() + " " +
+                    row["precio"].ToString()
+                    , font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));*/
+            }
+            
+            e.Graphics.DrawString("Subtotal", font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+
+
+        }
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
 
         private void ticketsEmitidos_KeyPress(object sender, KeyPressEventArgs e)
         {

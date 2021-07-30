@@ -56,6 +56,7 @@ namespace ptoVenta
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.printDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -316,6 +317,10 @@ namespace ptoVenta
             this.label2.TabIndex = 172;
             this.label2.Text = "Hasta:";
             // 
+            // printDocumento
+            // 
+            this.printDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Imprimir);
+            // 
             // ticketsEmitidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,5 +374,6 @@ namespace ptoVenta
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
+        private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }
