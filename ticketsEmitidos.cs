@@ -145,9 +145,7 @@ namespace ptoVenta
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
                     devoluciones abrirFormClass = new devoluciones();
-                    abrirFormClass.ShowDialog();
-
-                    
+                    abrirFormClass.ShowDialog();                    
                 }
             }
         }
@@ -160,7 +158,7 @@ namespace ptoVenta
         {
             
 
-            Font font = new Font("Arial", 13);
+            Font font = new Font("Arial", 11);
             Font fuente = new Font("Arial", 8);
             int ancho = 300;
             int y = 20;
@@ -179,8 +177,8 @@ namespace ptoVenta
                 if (row.Cells["numero"].Value.ToString() == vnum)
                 {
 
-                    e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString() + " " +
-                    row.Cells["producto"].Value.ToString() + "" +
+                    e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString() + "|" +
+                    row.Cells["producto"].Value.ToString() + " |$" +
                     row.Cells["precio"].Value.ToString()
                     , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
 
