@@ -88,7 +88,7 @@ namespace ptoVenta
             cargaboletas();
         }
 
-        private void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvGrid1.Rows.Count > 0)
             {
@@ -132,11 +132,6 @@ namespace ptoVenta
                     //report.PrintToPrinter();
 
                     //impresion
-                    printDocumento = new PrintDocument();
-                    PrinterSettings ps = new PrinterSettings();
-                    printDocumento.PrinterSettings = ps;
-                    printDocumento.PrintPage += Imprimir;
-                    printDocumento.Print();
 
 
 
@@ -148,48 +143,35 @@ namespace ptoVenta
                     abrirFormClass.ShowDialog();                    
                 }
             }
+                    printDocumento = new PrintDocument();
+                    PrinterSettings ps = new PrinterSettings();
+                    printDocumento.PrinterSettings = ps;
+                    printDocumento.PrintPage += Imprimir;
+                    printDocumento.Print();
         }
 
         //impresión
-
-        
-
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
-            
-
             Font font = new Font("Arial", 11);
             Font fuente = new Font("Arial", 8);
             int ancho = 300;
             int y = 20;
             //header
             e.Graphics.DrawString("————Punto de Venta————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Factura # "+ vnum, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Fecha: "+ DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("—————Productos——————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            
             //----fin del header
-
-
             foreach (DataGridViewRow row in dgvGrid1.Rows)
-            {                                
-                if (row.Cells["numero"].Value.ToString() == vnum)
-                {
-
+            {       
                     e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString() + "|" +
                     row.Cells["producto"].Value.ToString() + " |$" +
                     row.Cells["precio"].Value.ToString()
                     , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
-
-
-
-                    /*e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString() + " " +
-                    row.Cells["producto"].Value.ToString() + " " +
-                    row.Cells["precio"].Value.ToString()
-
-                    , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));*/
-                }
+                                                    
             }
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -197,6 +179,9 @@ namespace ptoVenta
             e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Pago con:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Su cambio:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(10, y += 20, ancho, 20));
+            e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(45, y += 20, ancho, 20));
 
         }
 
