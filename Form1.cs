@@ -979,7 +979,7 @@ namespace ptoVenta
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            
+
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0)
             {
@@ -989,22 +989,22 @@ namespace ptoVenta
                 // Fin Por Pantalla
 
                 //Directo a Impresora
-            //LocalReport report = new LocalReport();
-            //report.DataSources.Clear();
+                //LocalReport report = new LocalReport();
+                //report.DataSources.Clear();
                 //Fin Directo a Impresora
 
-                Form1.MiReporte = "Informes\\Cotizacion.rdlc";
+                //Form1.MiReporte = "Informes\\Cotizacion.rdlc";
 
                 foreach (DataGridViewRow row in dgvGrid1.Rows)
                 {
-                    /*TicketDatos dat = new TicketDatos();
+                    TicketDatos dat = new TicketDatos();
                     dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
                     dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
                     dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
                     double pre = (double)row.Cells["PRECIO1"].Value;
                     dat.Precio = pre.ToString("N0");
-                    TicketDatos.Add(dat);*/
-                    
+                    TicketDatos.Add(dat);
+
                 }
                 // Por Pantalla
                 //report.ShowDialog();
@@ -1022,23 +1022,27 @@ namespace ptoVenta
                 report.PrintToPrinter();*/
                 //Fin Directo a Inpresora
 
-                dgvGrid1.Rows.Clear();
-                Sumarproductos();
+                //dgvGrid1.Rows.Clear();
+                //Sumarproductos();
             }
             txtProducto.Text = "";
             txtProducto.Focus();
 
+            imprimirDocument = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            imprimirDocument.PrinterSettings = ps;
+            imprimirDocument.PrintPage += Imprimir;
+            imprimirDocument.Print();
+
 
         }
         //impresión
-        
-
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
 
 
-            Font font = new Font("Arial", 11);
-            Font fuente = new Font("Arial", 8);
+            Font font = new Font("Arial", 12);
+            Font fuente = new Font("Arial", 6);
             int ancho = 300;
             int y = 20;
             //header
@@ -1047,35 +1051,25 @@ namespace ptoVenta
             e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("—————Productos——————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("CANT.|DESCRIPCION|MONTO", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             //----fin del header
 
 
             foreach (DataGridViewRow row in dgvGrid1.Rows)
-            {
-               
+            {           
 
-                    e.Graphics.DrawString(row.Cells["PRODUCTO1"].Value.ToString() + "|" +
+                e.Graphics.DrawString(row.Cells["CANTIDAD1"].Value.ToString() + "|" +
                     row.Cells["PRODUCTO1"].Value.ToString() + " |$" +
-                    row.Cells["CANTIDAD1"].Value.ToString() + " " +
-                    row.Cells["PRECIO1"].Value
-                    , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
-
-
-
-                    /*e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString() + " " +
-                    row.Cells["producto"].Value.ToString() + " " +
-                    row.Cells["precio"].Value.ToString()
-
-                    , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));*/
-                
+                    row.Cells["PRECIO1"].Value.ToString()
+                    , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));              
             }
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("———————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Pago con:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Su cambio:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(10, y += 20, ancho, 20));
+            e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(45, y += 20, ancho, 20));
 
         }
     }

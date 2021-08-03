@@ -150,6 +150,7 @@ namespace ptoVenta
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.ovalShape1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.galleryContainer1 = new DevComponents.DotNetBar.GalleryContainer();
+            this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -1771,6 +1772,7 @@ namespace ptoVenta
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape1;
         private DevComponents.DotNetBar.GalleryContainer galleryContainer1;
+        private System.Drawing.Printing.PrintDocument imprimirDocument;
     }
 }
 
