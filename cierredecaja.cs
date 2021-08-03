@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
+using System.Drawing.Printing;
 
 namespace ptoVenta
 {
@@ -190,7 +191,47 @@ namespace ptoVenta
                 Application.Exit();
                 this.Close();
             }
+
+            printCierre = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printCierre.PrinterSettings = ps;
+            printCierre.PrintPage += Imprimir;
+            printCierre.Print();
         }
+
+        private void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font("Arial", 11);
+            Font header = new Font("Arial", 14);
+            Font fuente = new Font("Arial", 8);
+            int ancho = 300;
+            int y = 20;
+            //header
+            e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            e.Graphics.DrawString("————Punto de Venta————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("—————Productos——————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+            //----fin del header
+            
+                
+
+            
+            e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("———————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Pago con:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Su cambio:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(10, y += 20, ancho, 20));
+            e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(45, y += 20, ancho, 20));
+
+        }
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
