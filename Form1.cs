@@ -1040,12 +1040,13 @@ namespace ptoVenta
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
 
-
+            Font header = new Font("Arial", 14);
             Font font = new Font("Arial", 12);
             Font fuente = new Font("Arial", 6);
             int ancho = 300;
             int y = 20;
             //header
+            e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("————Punto de Venta————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Factura # ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));

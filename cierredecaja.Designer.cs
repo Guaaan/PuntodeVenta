@@ -44,6 +44,7 @@ namespace ptoVenta
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.printCierre = new System.Drawing.Printing.PrintDocument();
             this.panel15.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -311,5 +312,6 @@ namespace ptoVenta
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Drawing.Printing.PrintDocument printCierre;
     }
 }

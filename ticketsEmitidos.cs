@@ -153,25 +153,35 @@ namespace ptoVenta
         //impresión
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
+            Font header = new Font("Arial", 14);
             Font font = new Font("Arial", 11);
             Font fuente = new Font("Arial", 8);
             int ancho = 300;
             int y = 20;
+
+
+
+
             //header
+            e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20)); 
             e.Graphics.DrawString("————Punto de Venta————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Fecha: "+ DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("—————Productos——————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("CANT.|DESCRIPCION|MONTO", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             
             //----fin del header
             foreach (DataGridViewRow row in dgvGrid1.Rows)
-            {       
+            {
+                if (row.Cells["numero"].Value.ToString() == vnum)
+                {
                     e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString() + "|" +
                     row.Cells["producto"].Value.ToString() + " |$" +
                     row.Cells["precio"].Value.ToString()
                     , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
-                                                    
+                }                                 
             }
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
