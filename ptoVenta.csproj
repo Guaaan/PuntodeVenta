@@ -133,6 +133,7 @@
     <Compile Include="clases.Designer.cs">
       <DependentUpon>clases.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsImpresion.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="descripcionFarmacologica.cs">
       <SubType>Form</SubType>
