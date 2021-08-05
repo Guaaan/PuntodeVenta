@@ -151,7 +151,6 @@ namespace ptoVenta
         }
 
         //impresión
-        public static StringBuilder line = new StringBuilder();
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
             Font header = new Font("Arial", 14);
@@ -172,11 +171,11 @@ namespace ptoVenta
             //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
 
             string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
-            
+
             //header
-            e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20)); 
+            e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("————Punto de Venta————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Fecha: "+ DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("————Productos—————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -188,7 +187,7 @@ namespace ptoVenta
             //----fin del header
             foreach (DataGridViewRow row in dgvGrid1.Rows)
             {
-                   
+
                 TicketDatos dato = new TicketDatos();
                 dato.Codigo = row.Cells["codigo"].Value.ToString();
                 dato.Nombre = row.Cells["producto"].Value.ToString();
@@ -196,14 +195,14 @@ namespace ptoVenta
                 dato.Precio = row.Cells["precio"].Value.ToString();
                 if (row.Cells["numero"].Value.ToString() == vnum)
                 {
-                    
+
                     e.Graphics.DrawString(dato.Cantidad.ToString()
-                    + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));                    
-                    e.Graphics.DrawString("|$" + dato.Precio.ToString() , fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);                        
-                }                                 
+                    + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                    e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                }
             }
-    
-            
+
+
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("—————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -215,6 +214,9 @@ namespace ptoVenta
             e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
         }
+
+        public static StringBuilder line = new StringBuilder();
+       
 
 
         private void btnSalir_Click(object sender, EventArgs e)
