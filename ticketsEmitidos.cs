@@ -158,11 +158,10 @@ namespace ptoVenta
             Font font = new Font("Arial", 11);
             Font fuente = new Font("Arial", 8);
             int y = 20;
-            int ancho = 300;
+            int ancho = 270;
 
             StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
             StringFormat formato2 = new StringFormat(formato1);
-            StringFormat formato0 = new StringFormat();
 
             formato1.LineAlignment = StringAlignment.Near;
             formato1.Alignment = StringAlignment.Center;
@@ -170,63 +169,50 @@ namespace ptoVenta
             formato2.Alignment = StringAlignment.Far;
 
 
-            Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
+            //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
 
-            string LineEncabezado = "Cant       Articulo     Valor";   // agrega lineas de  encabezados
+            string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
             
-
-
             //header
             e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20)); 
-            e.Graphics.DrawString("————Punto de Venta————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("————Punto de Venta————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Fecha: "+ DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("—————Productos——————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("————Productos—————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
             e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-
 
 
 
             //----fin del header
             foreach (DataGridViewRow row in dgvGrid1.Rows)
             {
-                    //e.Graphics.DrawRectangle(Pens.Black, displayRectangle);
+                   
                 TicketDatos dato = new TicketDatos();
                 dato.Codigo = row.Cells["codigo"].Value.ToString();
                 dato.Nombre = row.Cells["producto"].Value.ToString();
                 dato.Cantidad = row.Cells["cantidad"].Value.ToString();
                 dato.Precio = row.Cells["precio"].Value.ToString();
                 if (row.Cells["numero"].Value.ToString() == vnum)
-                {                     
+                {
+                    
                     e.Graphics.DrawString(dato.Cantidad.ToString()
-                    + "  |  " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 24 ? 24 : dato.Nombre.Length), fuente, Brushes.Black, (RectangleF)displayRectangle);
-                    //+ " |$" +
-                    e.Graphics.DrawString(dato.Precio.ToString() , fuente, Brushes.Black, (RectangleF)displayRectangle, formato2);
-                    
-                    
-                    
-                    /*e.Graphics.DrawString(row.Cells["cantidad"].Value.ToString()
-                    + "|" + row.Cells["producto"].Value.ToString().Substring(0, 20), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    //+ " |$" +
-                    e.Graphics.DrawString(row.Cells["precio"].Value.ToString() , fuente, Brushes.Black, (RectangleF)displayRectangle, formato2);*/
+                    + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));                    
+                    e.Graphics.DrawString("|$" + dato.Precio.ToString() , fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);                        
                 }                                 
             }
-            e.Graphics.DrawRectangle(Pens.Black, displayRectangle);
-            e.Graphics.DrawString("", this.Font,
-                Brushes.Green, (RectangleF)displayRectangle, formato1);
-            e.Graphics.DrawString("", this.Font,
-                Brushes.Red, (RectangleF)displayRectangle, formato2);
-
+    
+            
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("———————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("—————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Pago con:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("Su cambio:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(10, y += 20, ancho, 20));
-            e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(45, y += 20, ancho, 20));
+            e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
+            e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
         }
 
