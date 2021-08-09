@@ -157,7 +157,7 @@ namespace ptoVenta
         {
             controlCambio();
         }
-
+        
         private void controlCambio()
         {
             vari = txtProducto.Text.Trim();
@@ -983,17 +983,11 @@ namespace ptoVenta
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0)
             {
+                clsImprimir ticket = new clsImprimir();
+                
+                
 
-                // Por Pantalla
-                //    RepTicket report = new RepTicket();
-                // Fin Por Pantalla
-
-                //Directo a Impresora
-                //LocalReport report = new LocalReport();
-                //report.DataSources.Clear();
-                //Fin Directo a Impresora
-
-                //Form1.MiReporte = "Informes\\Cotizacion.rdlc";
+                
 
                 foreach (DataGridViewRow row in dgvGrid1.Rows)
                 {
@@ -1028,17 +1022,23 @@ namespace ptoVenta
             txtProducto.Text = "";
             txtProducto.Focus();
 
+            clsImprimir.Creaticket TicketCotizacion = new clsImprimir.Creaticket();
+
+
             imprimirDocument = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
             imprimirDocument.PrinterSettings = ps;
-            imprimirDocument.PrintPage += Imprimir;
+            imprimirDocument.PrintPage += TicketCotizacion.Imprimir;
             imprimirDocument.Print();
 
 
         }
+
+        
+
         //impresión
-        private void Imprimir(object sender, PrintPageEventArgs e)
-        {
+        //private void Imprimir(object sender, PrintPageEventArgs e)
+        /*{ 
             Font header = new Font("Arial", 14);
             Font font = new Font("Arial", 11);
             Font fuente = new Font("Arial", 8);
@@ -1088,7 +1088,7 @@ namespace ptoVenta
                     /*e.Graphics.DrawString(row.Cells["CANTIDAD1"].Value.ToString() + "|" +
                         row.Cells["PRODUCTO1"].Value.ToString() + " |$" +
                         row.Cells["PRECIO1"].Value.ToString()
-                        , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));*/
+                        , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
                 
             }
 
@@ -1101,6 +1101,6 @@ namespace ptoVenta
             e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
             e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
-        }
+        }*/
     }
 }
