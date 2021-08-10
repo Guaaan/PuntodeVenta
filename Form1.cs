@@ -975,7 +975,24 @@ namespace ptoVenta
             }
         }
 
-        public List<TicketDatos> TicketDatos = new List<TicketDatos>();
+        public void datosGrid()
+        {
+            foreach (DataGridViewRow row in dgvGrid1.Rows)
+            {
+                TicketDatos dat = new TicketDatos();
+                dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
+                dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
+                dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
+                double pre = (double)row.Cells["PRECIO1"].Value;
+                dat.Precio = pre.ToString("N0");
+
+            }
+
+            
+        }
+
+
+
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
@@ -989,17 +1006,7 @@ namespace ptoVenta
 
                 
 
-                foreach (DataGridViewRow row in dgvGrid1.Rows)
-                {
-                    TicketDatos dat = new TicketDatos();
-                    dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
-                    dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                    dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                    double pre = (double)row.Cells["PRECIO1"].Value;
-                    dat.Precio = pre.ToString("N0");
-                    TicketDatos.Add(dat);
-
-                }
+                
                 // Por Pantalla
                 //report.ShowDialog();
                 // Fin Por Pantalla
@@ -1030,8 +1037,9 @@ namespace ptoVenta
             imprimirDocument.PrinterSettings = ps;
             imprimirDocument.PrintPage += TicketCotizacion.Imprimir;
             imprimirDocument.Print();
+            datosGrid();
 
-
+           
         }
 
         
