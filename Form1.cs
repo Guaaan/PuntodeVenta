@@ -67,12 +67,19 @@ namespace ptoVenta
         public static string MiReporte = "";
         public static string documc = "";
 
-        public SqlDataReader Dr { get => dr; set => dr = value; }
+        
+        
+
+
+
+    public SqlDataReader Dr { get => dr; set => dr = value; }
 
         public Form1()
         {
             InitializeComponent();
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -378,6 +385,7 @@ namespace ptoVenta
             Sumarproductos();
         }
 
+        
         public void Sumarproductos()
         {
             asignavalores();
@@ -975,21 +983,39 @@ namespace ptoVenta
             }
         }
 
-        public void datosGrid()
+
+        public void ImprimirConsolidados(List<TicketDatos> listaTicket, PrintPageEventArgs e)
         {
+            
+        }
+        
+        public void DatosGrid()
+        {
+            List<TicketDatos> listaTicket = new List<TicketDatos>();
             foreach (DataGridViewRow row in dgvGrid1.Rows)
             {
-                TicketDatos dat = new TicketDatos();
-                dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
-                dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
+
+                string Codigo = row.Cells["CODIGO1"].Value.ToString();
+                string Nombre = row.Cells["PRODUCTO1"].Value.ToString();
+                string Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
                 double pre = (double)row.Cells["PRECIO1"].Value;
-                dat.Precio = pre.ToString("N0");
+                string Precio = pre.ToString("N0");
+                
+                
 
             }
 
             
         }
+
+
+        //claseDatos p = new claseDatos(); // p is the instance.
+
+
+
+
+
+
 
 
 
@@ -1037,7 +1063,7 @@ namespace ptoVenta
             imprimirDocument.PrinterSettings = ps;
             imprimirDocument.PrintPage += TicketCotizacion.Imprimir;
             imprimirDocument.Print();
-            datosGrid();
+            DatosGrid();
 
            
         }

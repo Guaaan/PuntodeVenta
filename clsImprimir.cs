@@ -60,7 +60,7 @@ namespace ptoVenta
                 //header
                 e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("————Punto de Venta————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Rut: ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Rut: "+ Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("————Productos—————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -73,9 +73,11 @@ namespace ptoVenta
                 void ImprimirCuerpo()
                 {
                     string foo = "pruebass";
-                                     
+                    TicketDatos dat = new TicketDatos();
+                    
+                    
 
-                    e.Graphics.DrawString(foo.ToString()
+                    e.Graphics.DrawString(fooo.ToString()
                     + "  |   " + foo.ToString().Substring(0, foo.Length > 30 ? 30 : foo.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("|$" + foo.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                 }
