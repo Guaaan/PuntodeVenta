@@ -989,23 +989,40 @@ namespace ptoVenta
             
         }
         
-        public void DatosGrid()
+        public void DatosGrid(object sender, PrintPageEventArgs e)
         {
+            Font header = new Font("Arial", 14);
+            Font font = new Font("Arial", 11);
+            Font fuente = new Font("Arial", 8);
+            int y = 20;
+            int ancho = 270;
+
+            StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
+            StringFormat formato2 = new StringFormat(formato1);
+
+            formato1.LineAlignment = StringAlignment.Near;
+            formato1.Alignment = StringAlignment.Center;
+            formato2.LineAlignment = StringAlignment.Center;
+            formato2.Alignment = StringAlignment.Far;
+            
             List<TicketDatos> listaTicket = new List<TicketDatos>();
+
             foreach (DataGridViewRow row in dgvGrid1.Rows)
             {
 
-                string Codigo = row.Cells["CODIGO1"].Value.ToString();
-                string Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                string Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                double pre = (double)row.Cells["PRECIO1"].Value;
-                string Precio = pre.ToString("N0");
-                
-                
 
+                TicketDatos tickD = new TicketDatos();
+
+                tickD.Codigo = row.Cells["CODIGO1"].Value.ToString();
+                tickD.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
+                tickD.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
+                tickD.Precio = row.Cells["PRECIO1"].Value.ToString(); ;
+                //tickD.Precio = pre.ToString("N0");
+                listaTicket.Add(tickD);
+                //e.Graphics.DrawString(tickD.Cantidad.ToString()
+                //    + "  |   " + tickD.Nombre.ToString().Substring(0, tickD.Nombre.Length > 30 ? 30 : tickD.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString("|$" + tickD.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
             }
-
-            
         }
 
 
@@ -1063,12 +1080,17 @@ namespace ptoVenta
             imprimirDocument.PrinterSettings = ps;
             imprimirDocument.PrintPage += TicketCotizacion.Imprimir;
             imprimirDocument.Print();
-            DatosGrid();
+            
 
            
         }
 
-        
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+
 
         //impresión
         //private void Imprimir(object sender, PrintPageEventArgs e)

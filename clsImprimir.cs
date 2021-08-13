@@ -70,18 +70,21 @@ namespace ptoVenta
                 //----fin del header
 
 
-                void ImprimirCuerpo()
-                {
-                    string foo = "pruebass";
-                    TicketDatos dat = new TicketDatos();
-                    
-                    
+                //void ImprimirCuerpo()
+                //{
+                //    string foo = "pruebass";
+                //    TicketDatos dat = new TicketDatos();
 
-                    e.Graphics.DrawString(fooo.ToString()
-                    + "  |   " + foo.ToString().Substring(0, foo.Length > 30 ? 30 : foo.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("|$" + foo.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                }
-                ImprimirCuerpo();
+
+
+                //    e.Graphics.DrawString(foo.ToString()
+                //    + "  |   " + foo.ToString().Substring(0, foo.Length > 30 ? 30 : foo.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //    e.Graphics.DrawString("|$" + foo.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                //}
+                //ImprimirCuerpo();
+
+
+                
 
 
                 //foreach (DataGridViewRow row in dgvGrid1.Rows)
