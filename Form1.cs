@@ -991,11 +991,11 @@ namespace ptoVenta
         
         public void DatosGrid(object sender, PrintPageEventArgs e)
         {
-            Font header = new Font("Arial", 14);
-            Font font = new Font("Arial", 11);
-            Font fuente = new Font("Arial", 8);
-            int y = 20;
-            int ancho = 270;
+            //Font header = new Font("Arial", 14);
+            //Font font = new Font("Arial", 11);
+            //Font fuente = new Font("Arial", 8);
+            //int y = 20;
+            //int ancho = 270;
 
             StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
             StringFormat formato2 = new StringFormat(formato1);
