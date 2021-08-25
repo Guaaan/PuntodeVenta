@@ -1051,7 +1051,7 @@ namespace ptoVenta
 
                 
                 // Por Pantalla
-                //report.ShowDialog();
+                // report.ShowDialog();
                 // Fin Por Pantalla
 
                 //**Directo a Impresora
