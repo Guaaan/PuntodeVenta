@@ -37,6 +37,8 @@ namespace ptoVenta
             comboBox2.DataSource = ds2.Tables[0].DefaultView;
             comboBox2.ValueMember = "NOMBRE";
             comboBox3.SelectedIndex=0;
+            int index = comboBox2.FindString(iniciarSesion.unombre.Trim());
+            comboBox2.SelectedIndex = index;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

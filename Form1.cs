@@ -1,21 +1,21 @@
 ﻿using System;
 using System.IO;
-using System.ComponentModel;
-using System.Data;
+//using System.ComponentModel;
+//using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
+//using System.Text;
+//using System.Threading;
 using System.Windows.Forms;
-using System.Data.Sql;
+//using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
-using System.Collections;
+//using System.Collections;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
-using DevComponents.DotNetBar;
-using DevComponents.DotNetBar.Controls;
+//using DevComponents.DotNetBar;
+//using DevComponents.DotNetBar.Controls;
 
 
 
@@ -25,7 +25,7 @@ namespace ptoVenta
     {
         CultureInfo myCIintl = new CultureInfo("es-ES", false);
 
-        public static SqlConnection cn;
+        public static SqlConnection cn,locn;
         SqlCommand com;
         SqlDataReader dr;
 
@@ -40,6 +40,8 @@ namespace ptoVenta
         public static string newpre = "";
         public static string cod = "";
         private string upre = "";
+        public static string cadena = "";
+        public static int conecto = 0;
 
         public static string nombre = "";
         public static string rut = "";
@@ -95,7 +97,7 @@ namespace ptoVenta
             {
                 ancp = ancp + dgvGrid1.Columns[a].Width;
             }
-            anc = (anc - ancp) - 0;
+            anc = (anc - ancp) - 20;
             dgvGrid1.Columns[3].Width = dgvGrid1.Columns[3].Width + anc;
             anc = dgvLista.Width;
             ancp = 0;
@@ -154,7 +156,7 @@ namespace ptoVenta
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
-            //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93)
+            //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
             dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
@@ -625,13 +627,13 @@ namespace ptoVenta
 
         private void cambiaprecios()
         {
-            newpre = "";
+            newpre = "0";
             if (dgvGrid1.Rows.Count > 0)
             {
                 cod = Convert.ToString(dgvGrid1.Rows[dgvGrid1.CurrentRow.Index].Cells[2].Value);
                 cambiarPrecio frm = new cambiarPrecio();
                 frm.ShowDialog();
-                if (Convert.ToInt32(newpre) > 0)
+                if (Convert.ToInt32(newpre.ToString()) > 0)
                 {
                     dgvGrid1.Rows[dgvGrid1.CurrentRow.Index].Cells["PRECIO1"].Value = newpre.ToString();
                 }
@@ -657,6 +659,7 @@ namespace ptoVenta
             if (keyData == Keys.F4) { guardaDocumento(); }
             if (keyData == Keys.F5) { cargarDocumento(); }
             if (keyData == Keys.F6) { faltantes(); }
+            if (keyData == Keys.F7) { stocktiendas(); }
             if (keyData == Keys.F8) { cerrarBoleta(); }
             return passed;
         }
@@ -741,7 +744,7 @@ namespace ptoVenta
                     {
                         com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", cn);
                         com.ExecuteNonQuery();
-                        MessageBox.Show("LIBERACION DE CAJA SATISFACTORIA");
+                        MessageBox.Show("CAJA LIBERARADAEN ESTE EQUIPO");
                         iconButton1.Visible = false;
                         Application.Exit();
                         this.Close();
@@ -1021,5 +1024,16 @@ namespace ptoVenta
             txtProducto.Focus();
         }
 
+        private void cButton3_Click(object sender, EventArgs e)
+        {
+            stocktiendas();
+        }
+        private void stocktiendas() 
+        {
+            Stock abrirstock = new Stock();
+            abrirstock.ShowDialog();
+            txtProducto.Text = "";
+            txtProducto.Focus();
+        }
     }
 }
