@@ -14,7 +14,6 @@ namespace ptoVenta
     public partial class RepTicket : Form
     {
         public List<TicketDatos> TicketDatos = new List<TicketDatos>();
-
         public RepTicket()
         {
             InitializeComponent();
@@ -27,6 +26,5 @@ namespace ptoVenta
             reportViewer1.LocalReport.ReportPath = (Form1.MiReporte);
             this.reportViewer1.RefreshReport();
         }
-
     }
 }

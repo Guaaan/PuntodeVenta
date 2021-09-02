@@ -81,11 +81,12 @@ namespace ptoVenta
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel5.BackColor = System.Drawing.Color.Gainsboro;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(267, 710);
+            this.panel5.Location = new System.Drawing.Point(285, 477);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(315, 3);
             this.panel5.TabIndex = 119;
@@ -128,10 +129,11 @@ namespace ptoVenta
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(305, 636);
+            this.label3.Location = new System.Drawing.Point(323, 403);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
@@ -140,10 +142,11 @@ namespace ptoVenta
             // 
             // txtRut1
             // 
+            this.txtRut1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtRut1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRut1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRut1.ForeColor = System.Drawing.Color.Black;
-            this.txtRut1.Location = new System.Drawing.Point(385, 685);
+            this.txtRut1.Location = new System.Drawing.Point(403, 452);
             this.txtRut1.Margin = new System.Windows.Forms.Padding(2);
             this.txtRut1.Name = "txtRut1";
             this.txtRut1.Size = new System.Drawing.Size(192, 25);
@@ -153,10 +156,11 @@ namespace ptoVenta
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(280, 687);
+            this.label5.Location = new System.Drawing.Point(298, 454);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 19);
@@ -165,13 +169,14 @@ namespace ptoVenta
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(385, 632);
+            this.comboBox1.Location = new System.Drawing.Point(403, 399);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 25);
             this.comboBox1.TabIndex = 1;
@@ -205,11 +210,12 @@ namespace ptoVenta
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(267, 659);
+            this.panel1.Location = new System.Drawing.Point(285, 426);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 3);
             this.panel1.TabIndex = 116;
@@ -221,15 +227,16 @@ namespace ptoVenta
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.pictureBox1});
-            this.shapeContainer1.Size = new System.Drawing.Size(680, 750);
+            this.shapeContainer1.Size = new System.Drawing.Size(680, 634);
             this.shapeContainer1.TabIndex = 121;
             this.shapeContainer1.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackgroundImage = global::ptoVenta.Properties.Resources.user;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(363, 359);
+            this.pictureBox1.Location = new System.Drawing.Point(381, 176);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(185, 180);
             // 
@@ -238,7 +245,7 @@ namespace ptoVenta
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(680, 750);
+            this.ClientSize = new System.Drawing.Size(680, 634);
             this.ControlBox = false;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);

@@ -56,7 +56,7 @@ namespace ptoVenta
             for (int i = Width * -1; i < -10; )
 
             {
-                i = (int)(i + 2.5);
+                i = (int)(i + 0.5);
                 Location = new Point(i, 0);
             }
         }
