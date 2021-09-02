@@ -133,7 +133,6 @@
     <Compile Include="clases.Designer.cs">
       <DependentUpon>clases.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsImprimir.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="descripcionFarmacologica.cs">
       <SubType>Form</SubType>
@@ -164,6 +163,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalReport.cs" />
     <Compile Include="RepTicket.cs">
@@ -294,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RepTicket.resx">
       <DependentUpon>RepTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tickets.rdlc" />
     <EmbeddedResource Include="ticketsEmitidos.resx">

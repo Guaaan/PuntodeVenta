@@ -110,6 +110,11 @@ namespace ptoVenta
             }
         }
 
+        private void dgvGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void sumardev()
         {
             totd = 0;

@@ -1,22 +1,23 @@
 ﻿using System;
 using System.IO;
-using System.ComponentModel;
-using System.Data;
+//using System.ComponentModel;
+//using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
+//using System.Text;
+//using System.Threading;
 using System.Windows.Forms;
-using System.Data.Sql;
+//using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
-using System.Collections;
+//using System.Collections;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
-using DevComponents.DotNetBar;
-using DevComponents.DotNetBar.Controls;
-using System.Drawing.Printing;
+//using DevComponents.DotNetBar;
+//using DevComponents.DotNetBar.Controls;
+
+
 
 namespace ptoVenta
 {
@@ -24,9 +25,13 @@ namespace ptoVenta
     {
         CultureInfo myCIintl = new CultureInfo("es-ES", false);
 
-        public static SqlConnection cn;
+        public static SqlConnection cn,locn;
         SqlCommand com;
         SqlDataReader dr;
+
+        public List<TicketDatos> TicketDatos = new List<TicketDatos>();
+
+        //private DataGridView dgvGrid1 = new DataGridView();
 
         public static int totf = 0;
         public static int totp = 0;
@@ -35,6 +40,8 @@ namespace ptoVenta
         public static string newpre = "";
         public static string cod = "";
         private string upre = "";
+        public static string cadena = "";
+        public static int conecto = 0;
 
         public static string nombre = "";
         public static string rut = "";
@@ -67,19 +74,12 @@ namespace ptoVenta
         public static string MiReporte = "";
         public static string documc = "";
 
-        
-        
-
-
-
-    public SqlDataReader Dr { get => dr; set => dr = value; }
+        public SqlDataReader Dr { get => dr; set => dr = value; }
 
         public Form1()
         {
             InitializeComponent();
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -97,7 +97,7 @@ namespace ptoVenta
             {
                 ancp = ancp + dgvGrid1.Columns[a].Width;
             }
-            anc = (anc - ancp) - 0;
+            anc = (anc - ancp) - 20;
             dgvGrid1.Columns[3].Width = dgvGrid1.Columns[3].Width + anc;
             anc = dgvLista.Width;
             ancp = 0;
@@ -156,7 +156,7 @@ namespace ptoVenta
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
-            //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93)
+            //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
             dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
@@ -164,7 +164,7 @@ namespace ptoVenta
         {
             controlCambio();
         }
-        
+
         private void controlCambio()
         {
             vari = txtProducto.Text.Trim();
@@ -385,7 +385,6 @@ namespace ptoVenta
             Sumarproductos();
         }
 
-        
         public void Sumarproductos()
         {
             asignavalores();
@@ -628,13 +627,13 @@ namespace ptoVenta
 
         private void cambiaprecios()
         {
-            newpre = "";
+            newpre = "0";
             if (dgvGrid1.Rows.Count > 0)
             {
                 cod = Convert.ToString(dgvGrid1.Rows[dgvGrid1.CurrentRow.Index].Cells[2].Value);
                 cambiarPrecio frm = new cambiarPrecio();
                 frm.ShowDialog();
-                if (Convert.ToInt32(newpre) > 0)
+                if (Convert.ToInt32(newpre.ToString()) > 0)
                 {
                     dgvGrid1.Rows[dgvGrid1.CurrentRow.Index].Cells["PRECIO1"].Value = newpre.ToString();
                 }
@@ -660,6 +659,7 @@ namespace ptoVenta
             if (keyData == Keys.F4) { guardaDocumento(); }
             if (keyData == Keys.F5) { cargarDocumento(); }
             if (keyData == Keys.F6) { faltantes(); }
+            if (keyData == Keys.F7) { stocktiendas(); }
             if (keyData == Keys.F8) { cerrarBoleta(); }
             return passed;
         }
@@ -744,7 +744,7 @@ namespace ptoVenta
                     {
                         com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", cn);
                         com.ExecuteNonQuery();
-                        MessageBox.Show("LIBERACION DE CAJA SATISFACTORIA");
+                        MessageBox.Show("CAJA LIBERARADAEN ESTE EQUIPO");
                         iconButton1.Visible = false;
                         Application.Exit();
                         this.Close();
@@ -809,7 +809,7 @@ namespace ptoVenta
                     {
                         mfila += 1;
                         mcod = row.Cells["CODIGO1"].Value.ToString();
-                        mnom = row.Cells["PRODUCTO1"].Value.ToString().Trim();
+                        mnom = row.Cells["PRODUCTO1"].Value.ToString();
                         msto = Convert.ToInt32(row.Cells["STOCK1"].Value.ToString());
                         mcan = Convert.ToInt32(row.Cells["CANTIDAD1"].Value.ToString());
                         mpre = Convert.ToDouble(row.Cells["PRECIO1"].Value.ToString());
@@ -823,8 +823,7 @@ namespace ptoVenta
                         mtpr = mcan * mpr1;
                         mmon = mtot;
                         mnum = num;
-                        mpsi = (mpre / 1.19);
-                        //mpsi = (int)Math.Round(mpre / 1.19);
+                        mpsi = mpre / 1.19;
 
                         com = new SqlCommand("SELECT E.CANTIDAD STOCK,I.COSTO,I.PRECIO1,I.PRECIO2,I.GRUPO,E.CODID FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + mcod + "' ", Form1.cn);
                         com.ExecuteNonQuery();
@@ -834,9 +833,9 @@ namespace ptoVenta
                             mcos = Convert.ToDouble(dr["COSTO"]);
                             mp1 = Convert.ToDouble(dr["PRECIO1"]);
                             mp2 = dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(dr["PRECIO2"]);
-                            msto = dr["STOCK"] == DBNull.Value ? 0 : Convert.ToInt32(dr["STOCK"]);
+                            msto = Convert.ToInt32(dr["STOCK"]);
                             mgru = Convert.ToString(dr["GRUPO"]);
-                            mcid = dr["CODID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CODID"]);
+                            mcid = Convert.ToInt32(dr["CODID"]);
 
                         }
                         dr.Close();
@@ -983,180 +982,58 @@ namespace ptoVenta
             }
         }
 
-
-        public void ImprimirConsolidados(List<TicketDatos> listaTicket, PrintPageEventArgs e)
-        {
-            
-        }
-        
-        public void DatosGrid(object sender, PrintPageEventArgs e)
-        {
-            //Font header = new Font("Arial", 14);
-            //Font font = new Font("Arial", 11);
-            //Font fuente = new Font("Arial", 8);
-            //int y = 20;
-            //int ancho = 270;
-
-            StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
-            StringFormat formato2 = new StringFormat(formato1);
-
-            formato1.LineAlignment = StringAlignment.Near;
-            formato1.Alignment = StringAlignment.Center;
-            formato2.LineAlignment = StringAlignment.Center;
-            formato2.Alignment = StringAlignment.Far;
-            
-            List<TicketDatos> listaTicket = new List<TicketDatos>();
-
-            foreach (DataGridViewRow row in dgvGrid1.Rows)
-            {
-
-
-                TicketDatos tickD = new TicketDatos();
-
-                tickD.Codigo = row.Cells["CODIGO1"].Value.ToString();
-                tickD.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                tickD.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                tickD.Precio = row.Cells["PRECIO1"].Value.ToString(); ;
-                //tickD.Precio = pre.ToString("N0");
-                listaTicket.Add(tickD);
-                //e.Graphics.DrawString(tickD.Cantidad.ToString()
-                //    + "  |   " + tickD.Nombre.ToString().Substring(0, tickD.Nombre.Length > 30 ? 30 : tickD.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                //e.Graphics.DrawString("|$" + tickD.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-            }
-        }
-
-
-        //claseDatos p = new claseDatos(); // p is the instance.
-
-
-
-
-
-
-
-
-
-
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0)
             {
-                clsImprimir ticket = new clsImprimir();
-                
-                
 
-                
+                //RepTicket rep = new RepTicket();
+                LocalReport report = new LocalReport();
+                report.DataSources.Clear();
 
-                
-                // Por Pantalla
-                // report.ShowDialog();
-                // Fin Por Pantalla
+                Form1.MiReporte = "Informes\\Cotizacion.rdlc";
 
-                //**Directo a Impresora
-                /*report.DataSources.Add(new ReportDataSource("DataSet1", TicketDatos));
+                foreach (DataGridViewRow row in dgvGrid1.Rows)
+                {
+                    TicketDatos dat = new TicketDatos();
+                    dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
+                    dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
+                    dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
+                    double pre = (double)row.Cells["PRECIO1"].Value;
+                    dat.Precio = pre.ToString("N0");
+                    TicketDatos.Add(dat);
+                }
+                //rep.ShowDialog();
+                report.DataSources.Add(new ReportDataSource("DataSet1", TicketDatos));
                 report.ReportPath = (Form1.MiReporte);
+
                 string vRif = erif.Trim();
                 string vCaja = iniciarSesion.ucodigo.Trim();
+
                 ReportParameter[] parameters = new ReportParameter[2];
                 parameters[0] = new ReportParameter("rRif", vRif);
                 parameters[1] = new ReportParameter("rCaja", vCaja);
-                report.SetParameters(parameters);
-                report.PrintToPrinter();*/
-                //Fin Directo a Inpresora
 
-                //dgvGrid1.Rows.Clear();
-                //Sumarproductos();
+                report.SetParameters(parameters);
+                report.PrintToPrinter();
+                dgvGrid1.Rows.Clear();
+                Sumarproductos();
             }
             txtProducto.Text = "";
             txtProducto.Focus();
-
-            clsImprimir.Creaticket TicketCotizacion = new clsImprimir.Creaticket();
-
-
-            imprimirDocument = new PrintDocument();
-            PrinterSettings ps = new PrinterSettings();
-            imprimirDocument.PrinterSettings = ps;
-            imprimirDocument.PrintPage += TicketCotizacion.Imprimir;
-            imprimirDocument.Print();
-            
-
-           
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void cButton3_Click(object sender, EventArgs e)
         {
-            
+            stocktiendas();
         }
-
-
-
-        //impresión
-        //private void Imprimir(object sender, PrintPageEventArgs e)
-        /*{ 
-            Font header = new Font("Arial", 14);
-            Font font = new Font("Arial", 11);
-            Font fuente = new Font("Arial", 8);
-            int y = 20;
-            int ancho = 270;
-
-            StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
-            StringFormat formato2 = new StringFormat(formato1);
-
-            formato1.LineAlignment = StringAlignment.Near;
-            formato1.Alignment = StringAlignment.Center;
-            formato2.LineAlignment = StringAlignment.Center;
-            formato2.Alignment = StringAlignment.Far;
-
-
-            //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
-
-            string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
-
-            //header
-            e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("————Punto de Venta————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Rut: " + erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("————Productos—————————————————————————", font, Brushes.Black, new RectangleF(0,  y += 20, ancho, 20));
-            e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-            e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-
-
-
-            //----fin del header
-            foreach (DataGridViewRow row in dgvGrid1.Rows)
-            {
-
-                TicketDatos dato = new TicketDatos();
-                //dato.Codigo = row.Cells["codigo"].Value.ToString();
-                dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                dato.Precio = row.Cells["PRECIO1"].Value.ToString();
-                
-
-                    e.Graphics.DrawString(dato.Cantidad.ToString()
-                    + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                    /*e.Graphics.DrawString(row.Cells["CANTIDAD1"].Value.ToString() + "|" +
-                        row.Cells["PRODUCTO1"].Value.ToString() + " |$" +
-                        row.Cells["PRECIO1"].Value.ToString()
-                        , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
-                
-            }
-
-
-            e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("—————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
-            e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
-
-        }*/
+        private void stocktiendas() 
+        {
+            Stock abrirstock = new Stock();
+            abrirstock.ShowDialog();
+            txtProducto.Text = "";
+            txtProducto.Focus();
+        }
     }
 }

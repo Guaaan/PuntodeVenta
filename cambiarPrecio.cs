@@ -84,6 +84,20 @@ namespace ptoVenta
             }
         }
 
+        protected override bool ProcessCmdKey(ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData)
+        {
+            //TECLAS DEL FORM
+            bool passed = false;
+            if (keyData == Keys.F9)
+            {
+                Form1.newpre = mini.ToString();
+                passed = false;
+                this.Close();
+            }
+            return passed;
+        }
+
+
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             decimal xpor = numericUpDown1.Value;

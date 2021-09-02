@@ -111,8 +111,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>1.91482cm</Top>
-              <Left>0.13887cm</Left>
+              <Top>1.87954cm</Top>
+              <Left>0.127cm</Left>
               <Height>0.58127cm</Height>
               <Width>6.76993cm</Width>
               <ZIndex>2</ZIndex>
@@ -477,10 +477,8 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>10cm</PageHeight>
-        <PageWidth>8cm</PageWidth>
-        <InteractiveHeight>10cm</InteractiveHeight>
-        <InteractiveWidth>8cm</InteractiveWidth>
+        <PageHeight>50cm</PageHeight>
+        <PageWidth>7.00001cm</PageWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>
