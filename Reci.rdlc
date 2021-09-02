@@ -477,10 +477,8 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>10cm</PageHeight>
-        <PageWidth>8cm</PageWidth>
-        <InteractiveHeight>10cm</InteractiveHeight>
-        <InteractiveWidth>8cm</InteractiveWidth>
+        <PageHeight>50cm</PageHeight>
+        <PageWidth>7.00001cm</PageWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>

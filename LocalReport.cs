@@ -4,16 +4,11 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
-using System.Text;
-using System.Xml;
 
 namespace Microsoft.Reporting.WinForms
 {
     public static class LocalReportExtensions
     {
-
-        
-
         public static void PrintToPrinter(this LocalReport report)
         {
             PageSettings pageSettings = new PageSettings();
@@ -25,14 +20,11 @@ namespace Microsoft.Reporting.WinForms
 
         public static void Print(this LocalReport report, PageSettings pageSettings)
         {
-            
-
-            //      < PageHeight >{ pageSettings.PaperSize.Height * 100}</ PageHeight >
-
             string deviceInfo =
-               $@"<DeviceInfo>
+                $@"<DeviceInfo>
                     <OutputFormat>EMF</OutputFormat>
-                    <PageWidth>{pageSettings.PaperSize.Width * 100}</PageWidth>
+                    <PageWidth>{pageSettings.PaperSize.Width * 100}in</PageWidth>
+                    <PageHeight>{pageSettings.PaperSize.Height * 100}in</PageHeight>
                     <MarginTop>{pageSettings.Margins.Top * 100}in</MarginTop>
                     <MarginLeft>{pageSettings.Margins.Left * 100}in</MarginLeft>
                     <MarginRight>{pageSettings.Margins.Right * 100}in</MarginRight>
@@ -78,16 +70,6 @@ namespace Microsoft.Reporting.WinForms
                             streams = null;
                         }
                     };
-
-                    double totalHeight = 0; //this will be your calculated height based on report elements
-
-                    var sb = new StringBuilder();
-                    var xr = XmlWriter.Create(sb);
-                    xr.WriteStartElement("DeviceInfo");
-                    xr.WriteElementString("OutputFormat", "EMF");
-                    xr.WriteElementString("PageHeight", string.Format("{0}in", totalHeight));
-                    xr.Close();
-
                     printDocument.Print();
                 }
             }
