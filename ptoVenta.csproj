@@ -133,6 +133,12 @@
     <Compile Include="clases.Designer.cs">
       <DependentUpon>clases.cs</DependentUpon>
     </Compile>
+    <Compile Include="componentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="componentes.Designer.cs">
+      <DependentUpon>componentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexion.cs" />
     <Compile Include="descripcionFarmacologica.cs">
       <SubType>Form</SubType>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clases.resx">
       <DependentUpon>clases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="componentes.resx">
+      <DependentUpon>componentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cotizacion.rdlc" />
     <EmbeddedResource Include="descripcionFarmacologica.resx">

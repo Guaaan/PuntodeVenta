@@ -1028,6 +1028,13 @@ namespace ptoVenta
         {
             stocktiendas();
         }
+
+        private void altoButton1_Click(object sender, EventArgs e)
+        {
+            componentes abrirComponentes = new componentes();
+            abrirComponentes.Show();
+        }
+
         private void stocktiendas() 
         {
             Stock abrirstock = new Stock();
