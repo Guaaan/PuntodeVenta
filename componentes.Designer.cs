@@ -32,6 +32,10 @@ namespace ptoVenta
             this.altoButton1 = new AltoControls.AltoButton();
             this.altoButton2 = new AltoControls.AltoButton();
             this.altoButton3 = new AltoControls.AltoButton();
+            this.altoButton4 = new AltoControls.AltoButton();
+            this.altoButton5 = new AltoControls.AltoButton();
+            this.altoButton6 = new AltoControls.AltoButton();
+            this.altoButton7 = new AltoControls.AltoButton();
             this.SuspendLayout();
             // 
             // altoButton1
@@ -78,8 +82,8 @@ namespace ptoVenta
             // 
             // altoButton3
             // 
-            this.altoButton3.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(151)))), ((int)(((byte)(78)))));
-            this.altoButton3.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(64)))));
+            this.altoButton3.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(117)))), ((int)(((byte)(41)))));
+            this.altoButton3.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(93)))), ((int)(((byte)(33)))));
             this.altoButton3.BackColor = System.Drawing.Color.Transparent;
             this.altoButton3.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.altoButton3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,11 +101,99 @@ namespace ptoVenta
             this.altoButton3.Text = "altoButton3";
             this.altoButton3.Transparency = false;
             // 
+            // altoButton4
+            // 
+            this.altoButton4.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(168)))), ((int)(((byte)(41)))));
+            this.altoButton4.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(157)))), ((int)(((byte)(39)))));
+            this.altoButton4.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton4.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altoButton4.ForeColor = System.Drawing.Color.White;
+            this.altoButton4.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
+            this.altoButton4.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(168)))), ((int)(((byte)(41)))));
+            this.altoButton4.Location = new System.Drawing.Point(163, 8);
+            this.altoButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.altoButton4.Name = "altoButton4";
+            this.altoButton4.Radius = 10;
+            this.altoButton4.Size = new System.Drawing.Size(151, 70);
+            this.altoButton4.Stroke = false;
+            this.altoButton4.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton4.TabIndex = 3;
+            this.altoButton4.Text = "altoButton4";
+            this.altoButton4.Transparency = false;
+            // 
+            // altoButton5
+            // 
+            this.altoButton5.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(82)))), ((int)(((byte)(108)))));
+            this.altoButton5.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
+            this.altoButton5.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton5.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altoButton5.ForeColor = System.Drawing.Color.White;
+            this.altoButton5.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134)))));
+            this.altoButton5.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))));
+            this.altoButton5.Location = new System.Drawing.Point(163, 82);
+            this.altoButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.altoButton5.Name = "altoButton5";
+            this.altoButton5.Radius = 10;
+            this.altoButton5.Size = new System.Drawing.Size(151, 70);
+            this.altoButton5.Stroke = false;
+            this.altoButton5.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton5.TabIndex = 4;
+            this.altoButton5.Text = "altoButton5";
+            this.altoButton5.Transparency = false;
+            // 
+            // altoButton6
+            // 
+            this.altoButton6.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
+            this.altoButton6.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
+            this.altoButton6.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton6.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altoButton6.ForeColor = System.Drawing.Color.White;
+            this.altoButton6.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
+            this.altoButton6.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
+            this.altoButton6.Location = new System.Drawing.Point(163, 156);
+            this.altoButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.altoButton6.Name = "altoButton6";
+            this.altoButton6.Radius = 10;
+            this.altoButton6.Size = new System.Drawing.Size(151, 70);
+            this.altoButton6.Stroke = false;
+            this.altoButton6.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton6.TabIndex = 5;
+            this.altoButton6.Text = "altoButton6";
+            this.altoButton6.Transparency = false;
+            // 
+            // altoButton7
+            // 
+            this.altoButton7.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(76)))), ((int)(((byte)(88)))));
+            this.altoButton7.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(59)))), ((int)(((byte)(71)))));
+            this.altoButton7.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton7.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altoButton7.ForeColor = System.Drawing.Color.White;
+            this.altoButton7.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108)))));
+            this.altoButton7.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(71)))), ((int)(((byte)(85)))));
+            this.altoButton7.Location = new System.Drawing.Point(318, 8);
+            this.altoButton7.Margin = new System.Windows.Forms.Padding(2);
+            this.altoButton7.Name = "altoButton7";
+            this.altoButton7.Radius = 10;
+            this.altoButton7.Size = new System.Drawing.Size(151, 70);
+            this.altoButton7.Stroke = false;
+            this.altoButton7.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton7.TabIndex = 6;
+            this.altoButton7.Text = "altoButton7";
+            this.altoButton7.Transparency = false;
+            // 
             // componentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 526);
+            this.Controls.Add(this.altoButton7);
+            this.Controls.Add(this.altoButton6);
+            this.Controls.Add(this.altoButton5);
+            this.Controls.Add(this.altoButton4);
             this.Controls.Add(this.altoButton3);
             this.Controls.Add(this.altoButton2);
             this.Controls.Add(this.altoButton1);
@@ -117,5 +209,9 @@ namespace ptoVenta
         private AltoControls.AltoButton altoButton1;
         private AltoControls.AltoButton altoButton2;
         private AltoControls.AltoButton altoButton3;
+        private AltoControls.AltoButton altoButton4;
+        private AltoControls.AltoButton altoButton5;
+        private AltoControls.AltoButton altoButton6;
+        private AltoControls.AltoButton altoButton7;
     }
 }
