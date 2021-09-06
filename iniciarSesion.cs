@@ -153,7 +153,32 @@ namespace ptoVenta
             }
         }
 
-     }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string vuser = comboBox1.Text.Trim();
+            string vfoto = "";
+            if (!String.IsNullOrEmpty(vuser))
+                com = new SqlCommand("SELECT TOP 1 * FROM USUARIOS WHERE CODIGO = '" + vuser + "' ", Form1.cn);
+            com.ExecuteNonQuery();
+            ur = com.ExecuteReader();
+            while (ur.Read())
+            {
+                vfoto = "pfp//" + Convert.ToString(ur["EMAIL"]).Trim().ToUpper();
+            }
+            ur.Close();
+            pictureBox1.BackgroundImage = Image.FromFile("pfp\\user.jpg");
+
+            if (vfoto.Trim() != "")
+            {
+                if (File.Exists(vfoto))
+                {
+                    pictureBox1.BackgroundImage = Image.FromFile(vfoto);
+                    ufoto = vfoto;
+                }
+            }
+            txtRut1.Focus();
+        }
+    }
 
 
  }
