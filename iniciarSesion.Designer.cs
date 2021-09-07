@@ -53,19 +53,19 @@ namespace ptoVenta
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Margin = new System.Windows.Forms.Padding(2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(680, 52);
+            this.panel15.Size = new System.Drawing.Size(680, 47);
             this.panel15.TabIndex = 111;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gadugi", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(261, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 44);
+            this.label1.Size = new System.Drawing.Size(133, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ingreso";
             // 
@@ -87,12 +87,12 @@ namespace ptoVenta
             // 
             this.txtRut1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRut1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRut1.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRut1.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRut1.ForeColor = System.Drawing.Color.Black;
             this.txtRut1.Location = new System.Drawing.Point(203, 763);
             this.txtRut1.Margin = new System.Windows.Forms.Padding(2);
             this.txtRut1.Name = "txtRut1";
-            this.txtRut1.Size = new System.Drawing.Size(240, 29);
+            this.txtRut1.Size = new System.Drawing.Size(240, 33);
             this.txtRut1.TabIndex = 30;
             this.txtRut1.UseSystemPasswordChar = true;
             this.txtRut1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRut1_KeyPress);
@@ -144,16 +144,16 @@ namespace ptoVenta
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::ptoVenta.Properties.Resources.user;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(190, 426);
+            this.pictureBox1.Location = new System.Drawing.Point(224, 492);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(193, 193);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(136, 115);
+            this.pictureBox2.Location = new System.Drawing.Point(125, 115);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(396, 250);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,13 +164,14 @@ namespace ptoVenta
             // 
             this.altoButton6.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
             this.altoButton6.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
+            this.altoButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.altoButton6.BackColor = System.Drawing.Color.Transparent;
             this.altoButton6.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.altoButton6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.altoButton6.ForeColor = System.Drawing.Color.White;
             this.altoButton6.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
             this.altoButton6.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
-            this.altoButton6.Location = new System.Drawing.Point(352, 796);
+            this.altoButton6.Location = new System.Drawing.Point(352, 800);
             this.altoButton6.Margin = new System.Windows.Forms.Padding(2);
             this.altoButton6.Name = "altoButton6";
             this.altoButton6.Radius = 2;
@@ -185,13 +186,14 @@ namespace ptoVenta
             // 
             this.altoButton5.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(82)))), ((int)(((byte)(108)))));
             this.altoButton5.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
+            this.altoButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.altoButton5.BackColor = System.Drawing.Color.Transparent;
             this.altoButton5.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.altoButton5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.altoButton5.ForeColor = System.Drawing.Color.White;
             this.altoButton5.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134)))));
             this.altoButton5.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))));
-            this.altoButton5.Location = new System.Drawing.Point(203, 796);
+            this.altoButton5.Location = new System.Drawing.Point(203, 800);
             this.altoButton5.Margin = new System.Windows.Forms.Padding(2);
             this.altoButton5.Name = "altoButton5";
             this.altoButton5.Radius = 2;
