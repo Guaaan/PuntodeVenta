@@ -36,6 +36,7 @@ namespace ptoVenta
             this.altoButton5 = new AltoControls.AltoButton();
             this.altoButton6 = new AltoControls.AltoButton();
             this.altoButton7 = new AltoControls.AltoButton();
+            this.altoButton19 = new AltoControls.AltoButton();
             this.SuspendLayout();
             // 
             // altoButton1
@@ -185,11 +186,33 @@ namespace ptoVenta
             this.altoButton7.Text = "altoButton7";
             this.altoButton7.Transparency = false;
             // 
+            // altoButton19
+            // 
+            this.altoButton19.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(90)))), ((int)(((byte)(83)))));
+            this.altoButton19.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(77)))), ((int)(((byte)(71)))));
+            this.altoButton19.BackColor = System.Drawing.Color.Transparent;
+            this.altoButton19.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.altoButton19.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altoButton19.ForeColor = System.Drawing.Color.White;
+            this.altoButton19.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94)))));
+            this.altoButton19.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(89)))), ((int)(((byte)(86)))));
+            this.altoButton19.Location = new System.Drawing.Point(318, 82);
+            this.altoButton19.Margin = new System.Windows.Forms.Padding(2);
+            this.altoButton19.Name = "altoButton19";
+            this.altoButton19.Radius = 10;
+            this.altoButton19.Size = new System.Drawing.Size(151, 70);
+            this.altoButton19.Stroke = false;
+            this.altoButton19.StrokeColor = System.Drawing.Color.Gray;
+            this.altoButton19.TabIndex = 29;
+            this.altoButton19.Text = "altoButton19";
+            this.altoButton19.Transparency = false;
+            // 
             // componentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 526);
+            this.Controls.Add(this.altoButton19);
             this.Controls.Add(this.altoButton7);
             this.Controls.Add(this.altoButton6);
             this.Controls.Add(this.altoButton5);
@@ -213,5 +236,6 @@ namespace ptoVenta
         private AltoControls.AltoButton altoButton5;
         private AltoControls.AltoButton altoButton6;
         private AltoControls.AltoButton altoButton7;
+        private AltoControls.AltoButton altoButton19;
     }
 }
