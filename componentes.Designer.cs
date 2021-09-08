@@ -37,6 +37,8 @@ namespace ptoVenta
             this.altoButton6 = new AltoControls.AltoButton();
             this.altoButton7 = new AltoControls.AltoButton();
             this.altoButton19 = new AltoControls.AltoButton();
+            this.btnOpcionales2 = new AltoControls.AltoButton();
+            this.btnCerrar2 = new AltoControls.AltoButton();
             this.SuspendLayout();
             // 
             // altoButton1
@@ -207,11 +209,55 @@ namespace ptoVenta
             this.altoButton19.Text = "altoButton19";
             this.altoButton19.Transparency = false;
             // 
+            // btnOpcionales2
+            // 
+            this.btnOpcionales2.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(143)))));
+            this.btnOpcionales2.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(119)))));
+            this.btnOpcionales2.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpcionales2.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOpcionales2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpcionales2.ForeColor = System.Drawing.Color.White;
+            this.btnOpcionales2.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnOpcionales2.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(179)))));
+            this.btnOpcionales2.Location = new System.Drawing.Point(318, 156);
+            this.btnOpcionales2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpcionales2.Name = "btnOpcionales2";
+            this.btnOpcionales2.Radius = 5;
+            this.btnOpcionales2.Size = new System.Drawing.Size(151, 70);
+            this.btnOpcionales2.Stroke = false;
+            this.btnOpcionales2.StrokeColor = System.Drawing.Color.Gray;
+            this.btnOpcionales2.TabIndex = 58;
+            this.btnOpcionales2.Text = "Opcionales";
+            this.btnOpcionales2.Transparency = false;
+            // 
+            // btnCerrar2
+            // 
+            this.btnCerrar2.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnCerrar2.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnCerrar2.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar2.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnCerrar2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar2.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar2.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnCerrar2.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnCerrar2.Location = new System.Drawing.Point(8, 230);
+            this.btnCerrar2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar2.Name = "btnCerrar2";
+            this.btnCerrar2.Radius = 5;
+            this.btnCerrar2.Size = new System.Drawing.Size(151, 71);
+            this.btnCerrar2.Stroke = false;
+            this.btnCerrar2.StrokeColor = System.Drawing.Color.Gray;
+            this.btnCerrar2.TabIndex = 57;
+            this.btnCerrar2.Text = "X";
+            this.btnCerrar2.Transparency = false;
+            // 
             // componentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 526);
+            this.Controls.Add(this.btnOpcionales2);
+            this.Controls.Add(this.btnCerrar2);
             this.Controls.Add(this.altoButton19);
             this.Controls.Add(this.altoButton7);
             this.Controls.Add(this.altoButton6);
@@ -237,5 +283,7 @@ namespace ptoVenta
         private AltoControls.AltoButton altoButton6;
         private AltoControls.AltoButton altoButton7;
         private AltoControls.AltoButton altoButton19;
+        private AltoControls.AltoButton btnOpcionales2;
+        private AltoControls.AltoButton btnCerrar2;
     }
 }
