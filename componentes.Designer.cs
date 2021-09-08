@@ -222,7 +222,7 @@ namespace ptoVenta
             this.btnOpcionales2.Location = new System.Drawing.Point(318, 156);
             this.btnOpcionales2.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpcionales2.Name = "btnOpcionales2";
-            this.btnOpcionales2.Radius = 5;
+            this.btnOpcionales2.Radius = 10;
             this.btnOpcionales2.Size = new System.Drawing.Size(151, 70);
             this.btnOpcionales2.Stroke = false;
             this.btnOpcionales2.StrokeColor = System.Drawing.Color.Gray;
@@ -243,7 +243,7 @@ namespace ptoVenta
             this.btnCerrar2.Location = new System.Drawing.Point(8, 230);
             this.btnCerrar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar2.Name = "btnCerrar2";
-            this.btnCerrar2.Radius = 5;
+            this.btnCerrar2.Radius = 10;
             this.btnCerrar2.Size = new System.Drawing.Size(151, 71);
             this.btnCerrar2.Stroke = false;
             this.btnCerrar2.StrokeColor = System.Drawing.Color.Gray;
