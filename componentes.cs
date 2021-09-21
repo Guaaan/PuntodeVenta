@@ -16,5 +16,10 @@ namespace ptoVenta
         {
             InitializeComponent();
         }
+
+        private void componentes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

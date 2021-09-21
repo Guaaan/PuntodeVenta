@@ -39,15 +39,14 @@ namespace ptoVenta
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.pictureBox1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.altoButton6 = new AltoControls.AltoButton();
-            this.altoButton5 = new AltoControls.AltoButton();
+            this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(75)))), ((int)(((byte)(93)))));
             this.panel15.Controls.Add(this.label1);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
@@ -76,7 +75,7 @@ namespace ptoVenta
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(199, 687);
+            this.label3.Location = new System.Drawing.Point(216, 678);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 19);
@@ -89,7 +88,7 @@ namespace ptoVenta
             this.txtRut1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRut1.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRut1.ForeColor = System.Drawing.Color.Black;
-            this.txtRut1.Location = new System.Drawing.Point(203, 763);
+            this.txtRut1.Location = new System.Drawing.Point(220, 754);
             this.txtRut1.Margin = new System.Windows.Forms.Padding(2);
             this.txtRut1.Name = "txtRut1";
             this.txtRut1.Size = new System.Drawing.Size(240, 33);
@@ -104,7 +103,7 @@ namespace ptoVenta
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(199, 742);
+            this.label5.Location = new System.Drawing.Point(216, 733);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 19);
@@ -121,7 +120,7 @@ namespace ptoVenta
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(203, 709);
+            this.comboBox1.Location = new System.Drawing.Point(220, 700);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(240, 30);
             this.comboBox1.TabIndex = 1;
@@ -144,7 +143,7 @@ namespace ptoVenta
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::ptoVenta.Properties.Resources.user;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(224, 492);
+            this.pictureBox1.Location = new System.Drawing.Point(253, 441);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(193, 193);
             // 
@@ -153,56 +152,42 @@ namespace ptoVenta
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(125, 115);
+            this.pictureBox2.Location = new System.Drawing.Point(142, 115);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(396, 250);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 198;
             this.pictureBox2.TabStop = false;
             // 
-            // altoButton6
+            // gunaGradientButton4
             // 
-            this.altoButton6.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
-            this.altoButton6.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
-            this.altoButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.altoButton6.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton6.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoButton6.ForeColor = System.Drawing.Color.White;
-            this.altoButton6.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
-            this.altoButton6.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
-            this.altoButton6.Location = new System.Drawing.Point(352, 800);
-            this.altoButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.altoButton6.Name = "altoButton6";
-            this.altoButton6.Radius = 2;
-            this.altoButton6.Size = new System.Drawing.Size(91, 33);
-            this.altoButton6.Stroke = false;
-            this.altoButton6.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton6.TabIndex = 200;
-            this.altoButton6.Text = "Ingresar";
-            this.altoButton6.Transparency = false;
-            // 
-            // altoButton5
-            // 
-            this.altoButton5.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(82)))), ((int)(((byte)(108)))));
-            this.altoButton5.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
-            this.altoButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.altoButton5.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton5.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoButton5.ForeColor = System.Drawing.Color.White;
-            this.altoButton5.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134)))));
-            this.altoButton5.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))));
-            this.altoButton5.Location = new System.Drawing.Point(203, 800);
-            this.altoButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.altoButton5.Name = "altoButton5";
-            this.altoButton5.Radius = 2;
-            this.altoButton5.Size = new System.Drawing.Size(145, 33);
-            this.altoButton5.Stroke = false;
-            this.altoButton5.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton5.TabIndex = 201;
-            this.altoButton5.Text = "Cambiar contraseña";
-            this.altoButton5.Transparency = false;
+            this.gunaGradientButton4.Animated = true;
+            this.gunaGradientButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton4.AnimationSpeed = 0.03F;
+            this.gunaGradientButton4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton4.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
+            this.gunaGradientButton4.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
+            this.gunaGradientButton4.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton4.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton4.Font = new System.Drawing.Font("Gadugi", 11.25F);
+            this.gunaGradientButton4.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradientButton4.Image = null;
+            this.gunaGradientButton4.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton4.Location = new System.Drawing.Point(220, 792);
+            this.gunaGradientButton4.Name = "gunaGradientButton4";
+            this.gunaGradientButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
+            this.gunaGradientButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
+            this.gunaGradientButton4.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton4.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton4.OnHoverImage = null;
+            this.gunaGradientButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton4.Radius = 5;
+            this.gunaGradientButton4.Size = new System.Drawing.Size(156, 24);
+            this.gunaGradientButton4.TabIndex = 202;
+            this.gunaGradientButton4.Text = "Cambiar Contraseña";
+            this.gunaGradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // iniciarSesion
             // 
@@ -213,8 +198,7 @@ namespace ptoVenta
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(680, 878);
             this.ControlBox = false;
-            this.Controls.Add(this.altoButton5);
-            this.Controls.Add(this.altoButton6);
+            this.Controls.Add(this.gunaGradientButton4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
@@ -250,7 +234,6 @@ namespace ptoVenta
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.OvalShape pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private AltoControls.AltoButton altoButton6;
-        private AltoControls.AltoButton altoButton5;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton4;
     }
 }

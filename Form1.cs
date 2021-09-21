@@ -464,13 +464,7 @@ namespace ptoVenta
             txtProducto.Focus();
         }
 
-        private void btnTicketsEmitidos_Click(object sender, EventArgs e)
-        {
-            ticketsEmitidos abrirTicketsEmitidos = new ticketsEmitidos();
-            abrirTicketsEmitidos.ShowDialog();
-            txtProducto.Text = "";
-            txtProducto.Focus();
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -512,71 +506,9 @@ namespace ptoVenta
             txtProducto.ReadOnly = false;
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
+        
 
-            vuser = iniciarSesion.ucodigo.Trim();
-            com = new SqlCommand("SELECT TOP 1 * FROM USUARIOS WHERE CODIGO = '" + vuser + "' ", cn);
-            com.ExecuteNonQuery();
-            Dr = com.ExecuteReader();
-            while (Dr.Read())
-            {
-                uforma = Convert.ToString(Dr["FORMATO"]);
-            }
-            Dr.Close();
-            if (uforma.Trim() != "")
-            {
-                if (uforma.Trim() == strHostName)
-                {
-                    MessageBox.Show("SU CAJA YA ESTA APERTURADA EN ESTE COMPUTADOR");
-                }
-                else
-                {
-                    MessageBox.Show("SU CAJA YA ESTA APERTURADA EN EL COMPUTADOR: " + uforma.Trim());
-                }
-            }
-            else
-            {
-                aperturaCaja frm = new aperturaCaja();
-                frm.ShowDialog();
-                if (montoape >= 0)
-                {
-                    string rec = "";
-                    com = new SqlCommand("SELECT MAX(convert(int, RECIBO))+1 REXP FROM RECIBOS WHERE TIPO=1", cn);
-                    com.ExecuteNonQuery();
-                    Dr = com.ExecuteReader();
-                    while (Dr.Read())
-                    {
-                        rec = Convert.ToString(Dr["REXP"]);
-                    }
-                    Dr.Close();
-                    string cod = iniciarSesion.ucodigo.Trim();
-                    string nom = iniciarSesion.unombre.Trim();
-                    string con = "APERTURA DE CAJA: " + nom;
-                    string caj = iniciarSesion.ucaja.Trim();
-                    int mon = montoape;
-                    com = new SqlCommand("INSERT INTO RECIBOS (CODIGO,RECIBO,FECHA,NOMBRE,CONCEPTO,CAJA,MONTO,TIPO) VALUES ('10','" + rec + "', '" + DateTime.Now + "','" + nom + "','" + con + "','" + caj + "'," + mon + "," + 1 + ") ", cn);
-                    com.ExecuteNonQuery();
-
-                    com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '" + strHostName + "' WHERE CODIGO = '" + vuser + "' ", cn);
-                    com.ExecuteNonQuery();
-                    //Report Form reci To Printer Noconsole
-                    MessageBox.Show("APERTURA DE CAJA SATISFACTORIA");
-                    iconButton1.Visible = true;
-                }
-            }
-            txtProducto.Text = "";
-            txtProducto.Focus();
-        }
-
-        private void btnEgresoCaja_Click(object sender, EventArgs e)
-        {
-            egresoCaja abriregresoCajas = new egresoCaja();
-            abriregresoCajas.ShowDialog();
-
-            txtProducto.Text = "";
-            txtProducto.Focus();
-        }
+        
 
         private void dgvGrid1_CurrentCellChanged(object sender, EventArgs e)
         {
@@ -943,23 +875,7 @@ namespace ptoVenta
             cerrarBoleta();
         }
 
-        private void iconButton1_Click_1(object sender, EventArgs e)
-        {
-            int vtot = (int)Convert.ToDouble(txtTotal.Text);
-            if (vtot > 0)
-            {
-                MessageBox.Show("DEBE FINALIZAR VENTA BOLETA ");
-                txtProducto.Text = "";
-                txtProducto.Focus();
-            }
-            else
-            {
-                cierredecaja abrircierre = new cierredecaja();
-                abrircierre.ShowDialog();
-                txtProducto.Text = "";
-                txtProducto.Focus();
-            }
-        }
+        
 
         private void iconButton1_VisibleChanged(object sender, EventArgs e)
         {
@@ -982,47 +898,7 @@ namespace ptoVenta
             }
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            int vtot = (int)Convert.ToDouble(txtTotal.Text);
-            if (vtot > 0)
-            {
-
-                //RepTicket rep = new RepTicket();
-                LocalReport report = new LocalReport();
-                report.DataSources.Clear();
-
-                Form1.MiReporte = "Informes\\Cotizacion.rdlc";
-
-                foreach (DataGridViewRow row in dgvGrid1.Rows)
-                {
-                    TicketDatos dat = new TicketDatos();
-                    dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
-                    dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                    dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                    double pre = (double)row.Cells["PRECIO1"].Value;
-                    dat.Precio = pre.ToString("N0");
-                    TicketDatos.Add(dat);
-                }
-                //rep.ShowDialog();
-                report.DataSources.Add(new ReportDataSource("DataSet1", TicketDatos));
-                report.ReportPath = (Form1.MiReporte);
-
-                string vRif = erif.Trim();
-                string vCaja = iniciarSesion.ucodigo.Trim();
-
-                ReportParameter[] parameters = new ReportParameter[2];
-                parameters[0] = new ReportParameter("rRif", vRif);
-                parameters[1] = new ReportParameter("rCaja", vCaja);
-
-                report.SetParameters(parameters);
-                report.PrintToPrinter();
-                dgvGrid1.Rows.Clear();
-                Sumarproductos();
-            }
-            txtProducto.Text = "";
-            txtProducto.Focus();
-        }
+        
 
         private void cButton3_Click(object sender, EventArgs e)
         {
@@ -1033,6 +909,155 @@ namespace ptoVenta
         {
             componentes abrirComponentes = new componentes();
             abrirComponentes.Show();
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnTicketsEmitidos_Click(object sender, EventArgs e)
+        {
+            
+                ticketsEmitidos abrirTicketsEmitidos = new ticketsEmitidos();
+                abrirTicketsEmitidos.ShowDialog();
+                txtProducto.Text = "";
+                txtProducto.Focus();
+            
+        }
+
+        private void iconButton12_Click(object sender, EventArgs e)
+        {
+            
+                int vtot = (int)Convert.ToDouble(txtTotal.Text);
+                if (vtot > 0)
+                {
+                    MessageBox.Show("DEBE FINALIZAR VENTA BOLETA ");
+                    txtProducto.Text = "";
+                    txtProducto.Focus();
+                }
+                else
+                {
+                    cierredecaja abrircierre = new cierredecaja();
+                    abrircierre.ShowDialog();
+                    txtProducto.Text = "";
+                    txtProducto.Focus();
+                }
+            
+        }
+
+        private void iconbutton3_Click(object sender, EventArgs e)
+        {
+            
+
+                vuser = iniciarSesion.ucodigo.Trim();
+                com = new SqlCommand("SELECT TOP 1 * FROM USUARIOS WHERE CODIGO = '" + vuser + "' ", cn);
+                com.ExecuteNonQuery();
+                Dr = com.ExecuteReader();
+                while (Dr.Read())
+                {
+                    uforma = Convert.ToString(Dr["FORMATO"]);
+                }
+                Dr.Close();
+                if (uforma.Trim() != "")
+                {
+                    if (uforma.Trim() == strHostName)
+                    {
+                        MessageBox.Show("SU CAJA YA ESTA APERTURADA EN ESTE COMPUTADOR");
+                    }
+                    else
+                    {
+                        MessageBox.Show("SU CAJA YA ESTA APERTURADA EN EL COMPUTADOR: " + uforma.Trim());
+                    }
+                }
+                else
+                {
+                    aperturaCaja frm = new aperturaCaja();
+                    frm.ShowDialog();
+                    if (montoape >= 0)
+                    {
+                        string rec = "";
+                        com = new SqlCommand("SELECT MAX(convert(int, RECIBO))+1 REXP FROM RECIBOS WHERE TIPO=1", cn);
+                        com.ExecuteNonQuery();
+                        Dr = com.ExecuteReader();
+                        while (Dr.Read())
+                        {
+                            rec = Convert.ToString(Dr["REXP"]);
+                        }
+                        Dr.Close();
+                        string cod = iniciarSesion.ucodigo.Trim();
+                        string nom = iniciarSesion.unombre.Trim();
+                        string con = "APERTURA DE CAJA: " + nom;
+                        string caj = iniciarSesion.ucaja.Trim();
+                        int mon = montoape;
+                        com = new SqlCommand("INSERT INTO RECIBOS (CODIGO,RECIBO,FECHA,NOMBRE,CONCEPTO,CAJA,MONTO,TIPO) VALUES ('10','" + rec + "', '" + DateTime.Now + "','" + nom + "','" + con + "','" + caj + "'," + mon + "," + 1 + ") ", cn);
+                        com.ExecuteNonQuery();
+
+                        com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '" + strHostName + "' WHERE CODIGO = '" + vuser + "' ", cn);
+                        com.ExecuteNonQuery();
+                        //Report Form reci To Printer Noconsole
+                        MessageBox.Show("APERTURA DE CAJA SATISFACTORIA");
+                        iconButton1.Visible = true;
+                    }
+                }
+                txtProducto.Text = "";
+                txtProducto.Focus();
+            
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            
+                int vtot = (int)Convert.ToDouble(txtTotal.Text);
+                if (vtot > 0)
+                {
+
+                    //RepTicket rep = new RepTicket();
+                    LocalReport report = new LocalReport();
+                    report.DataSources.Clear();
+
+                    Form1.MiReporte = "Informes\\Cotizacion.rdlc";
+
+                    foreach (DataGridViewRow row in dgvGrid1.Rows)
+                    {
+                        TicketDatos dat = new TicketDatos();
+                        dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
+                        dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
+                        dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
+                        double pre = (double)row.Cells["PRECIO1"].Value;
+                        dat.Precio = pre.ToString("N0");
+                        TicketDatos.Add(dat);
+                    }
+                    //rep.ShowDialog();
+                    report.DataSources.Add(new ReportDataSource("DataSet1", TicketDatos));
+                    report.ReportPath = (Form1.MiReporte);
+
+                    string vRif = erif.Trim();
+                    string vCaja = iniciarSesion.ucodigo.Trim();
+
+                    ReportParameter[] parameters = new ReportParameter[2];
+                    parameters[0] = new ReportParameter("rRif", vRif);
+                    parameters[1] = new ReportParameter("rCaja", vCaja);
+
+                    report.SetParameters(parameters);
+                    report.PrintToPrinter();
+                    dgvGrid1.Rows.Clear();
+                    Sumarproductos();
+                }
+                txtProducto.Text = "";
+                txtProducto.Focus();
+            
+        }
+
+        private void btnEgresoCaja_Click(object sender, EventArgs e)
+        {
+            
+                egresoCaja abriregresoCajas = new egresoCaja();
+                abriregresoCajas.ShowDialog();
+
+                txtProducto.Text = "";
+                txtProducto.Focus();
+            
         }
 
         private void stocktiendas() 
