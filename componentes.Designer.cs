@@ -69,19 +69,7 @@ namespace ptoVenta
             this.gunaGradientButton6 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnTicketsEmitidos = new FontAwesome.Sharp.IconButton();
-            this.btnEgresoCaja = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.gunaGradientButton13 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton14 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton15 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton16 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton17 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton18 = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton64 = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
             // 
             // gunaGradientButton63
@@ -1246,342 +1234,37 @@ namespace ptoVenta
             this.gunaGradientButton2.Text = "botón";
             this.gunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel4
+            // gunaGradientButton64
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(618, 466);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(525, 4);
-            this.panel4.TabIndex = 252;
-            // 
-            // btnTicketsEmitidos
-            // 
-            this.btnTicketsEmitidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTicketsEmitidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
-            this.btnTicketsEmitidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTicketsEmitidos.FlatAppearance.BorderSize = 0;
-            this.btnTicketsEmitidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
-            this.btnTicketsEmitidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTicketsEmitidos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTicketsEmitidos.ForeColor = System.Drawing.Color.White;
-            this.btnTicketsEmitidos.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.btnTicketsEmitidos.IconColor = System.Drawing.Color.White;
-            this.btnTicketsEmitidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTicketsEmitidos.IconSize = 32;
-            this.btnTicketsEmitidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTicketsEmitidos.Location = new System.Drawing.Point(723, 422);
-            this.btnTicketsEmitidos.Name = "btnTicketsEmitidos";
-            this.btnTicketsEmitidos.Size = new System.Drawing.Size(105, 45);
-            this.btnTicketsEmitidos.TabIndex = 246;
-            this.btnTicketsEmitidos.TabStop = false;
-            this.btnTicketsEmitidos.Text = "Ventas";
-            this.btnTicketsEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTicketsEmitidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTicketsEmitidos.UseVisualStyleBackColor = false;
-            // 
-            // btnEgresoCaja
-            // 
-            this.btnEgresoCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEgresoCaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(168)))), ((int)(((byte)(222)))));
-            this.btnEgresoCaja.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEgresoCaja.FlatAppearance.BorderSize = 0;
-            this.btnEgresoCaja.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(112)))), ((int)(((byte)(148)))));
-            this.btnEgresoCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEgresoCaja.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEgresoCaja.ForeColor = System.Drawing.Color.White;
-            this.btnEgresoCaja.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
-            this.btnEgresoCaja.IconColor = System.Drawing.Color.White;
-            this.btnEgresoCaja.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEgresoCaja.IconSize = 32;
-            this.btnEgresoCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEgresoCaja.Location = new System.Drawing.Point(933, 422);
-            this.btnEgresoCaja.Name = "btnEgresoCaja";
-            this.btnEgresoCaja.Size = new System.Drawing.Size(105, 45);
-            this.btnEgresoCaja.TabIndex = 247;
-            this.btnEgresoCaja.TabStop = false;
-            this.btnEgresoCaja.Text = "Vales \r\nde Caja";
-            this.btnEgresoCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEgresoCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEgresoCaja.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(102)))), ((int)(((byte)(128)))));
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.iconButton2.Location = new System.Drawing.Point(828, 422);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(105, 45);
-            this.iconButton2.TabIndex = 251;
-            this.iconButton2.TabStop = false;
-            this.iconButton2.Text = "Cotizacion";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50)))));
-            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(113)))), ((int)(((byte)(40)))));
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Biking;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 32;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(1038, 422);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(105, 45);
-            this.iconButton4.TabIndex = 249;
-            this.iconButton4.TabStop = false;
-            this.iconButton4.Text = "Delivery";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(513, 422);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(105, 45);
-            this.iconButton1.TabIndex = 250;
-            this.iconButton1.TabStop = false;
-            this.iconButton1.Text = "Cierre de Caja";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Visible = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(188)))), ((int)(((byte)(96)))));
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(64)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(64)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(618, 422);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(105, 45);
-            this.iconButton3.TabIndex = 248;
-            this.iconButton3.TabStop = false;
-            this.iconButton3.Text = "Apertura de Caja";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // gunaGradientButton13
-            // 
-            this.gunaGradientButton13.Animated = true;
-            this.gunaGradientButton13.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton13.AnimationSpeed = 0.03F;
-            this.gunaGradientButton13.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton13.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210)))));
-            this.gunaGradientButton13.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(167)))), ((int)(((byte)(188)))));
-            this.gunaGradientButton13.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton13.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton13.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton13.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton13.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton13.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton13.Image")));
-            this.gunaGradientButton13.ImageOffsetX = -2;
-            this.gunaGradientButton13.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaGradientButton13.Location = new System.Drawing.Point(1133, 358);
-            this.gunaGradientButton13.Name = "gunaGradientButton13";
-            this.gunaGradientButton13.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(111)))), ((int)(((byte)(125)))));
-            this.gunaGradientButton13.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(111)))), ((int)(((byte)(125)))));
-            this.gunaGradientButton13.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton13.OnHoverImage = null;
-            this.gunaGradientButton13.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.Size = new System.Drawing.Size(155, 40);
-            this.gunaGradientButton13.TabIndex = 258;
-            this.gunaGradientButton13.Text = "Vales de caja";
-            this.gunaGradientButton13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // gunaGradientButton14
-            // 
-            this.gunaGradientButton14.Animated = true;
-            this.gunaGradientButton14.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton14.AnimationSpeed = 0.03F;
-            this.gunaGradientButton14.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton14.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(188)))), ((int)(((byte)(95)))));
-            this.gunaGradientButton14.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(125)))), ((int)(((byte)(63)))));
-            this.gunaGradientButton14.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton14.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton14.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton14.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton14.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton14.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton14.Image")));
-            this.gunaGradientButton14.ImageOffsetX = -15;
-            this.gunaGradientButton14.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaGradientButton14.Location = new System.Drawing.Point(668, 358);
-            this.gunaGradientButton14.Name = "gunaGradientButton14";
-            this.gunaGradientButton14.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
-            this.gunaGradientButton14.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(100)))), ((int)(((byte)(51)))));
-            this.gunaGradientButton14.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton14.OnHoverImage = null;
-            this.gunaGradientButton14.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.Size = new System.Drawing.Size(155, 40);
-            this.gunaGradientButton14.TabIndex = 257;
-            this.gunaGradientButton14.Text = "Apertura de caja";
-            this.gunaGradientButton14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.gunaGradientButton14.TextOffsetX = -5;
-            // 
-            // gunaGradientButton15
-            // 
-            this.gunaGradientButton15.Animated = true;
-            this.gunaGradientButton15.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton15.AnimationSpeed = 0.03F;
-            this.gunaGradientButton15.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton15.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton15.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton15.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton15.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton15.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton15.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton15.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton15.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton15.Image")));
-            this.gunaGradientButton15.ImageOffsetX = -8;
-            this.gunaGradientButton15.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaGradientButton15.Location = new System.Drawing.Point(513, 358);
-            this.gunaGradientButton15.Name = "gunaGradientButton15";
-            this.gunaGradientButton15.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.gunaGradientButton15.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.gunaGradientButton15.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton15.OnHoverImage = null;
-            this.gunaGradientButton15.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.Size = new System.Drawing.Size(155, 40);
-            this.gunaGradientButton15.TabIndex = 255;
-            this.gunaGradientButton15.Text = "Cierre de Caja";
-            this.gunaGradientButton15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // gunaGradientButton16
-            // 
-            this.gunaGradientButton16.Animated = true;
-            this.gunaGradientButton16.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton16.AnimationSpeed = 0.03F;
-            this.gunaGradientButton16.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton16.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton16.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton16.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton16.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton16.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton16.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton16.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton16.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton16.Image")));
-            this.gunaGradientButton16.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaGradientButton16.Location = new System.Drawing.Point(1288, 358);
-            this.gunaGradientButton16.Name = "gunaGradientButton16";
-            this.gunaGradientButton16.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(117)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton16.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(117)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton16.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton16.OnHoverImage = null;
-            this.gunaGradientButton16.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.Size = new System.Drawing.Size(155, 40);
-            this.gunaGradientButton16.TabIndex = 256;
-            this.gunaGradientButton16.Text = "Delivery";
-            // 
-            // gunaGradientButton17
-            // 
-            this.gunaGradientButton17.Animated = true;
-            this.gunaGradientButton17.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton17.AnimationSpeed = 0.03F;
-            this.gunaGradientButton17.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton17.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.gunaGradientButton17.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(179)))));
-            this.gunaGradientButton17.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton17.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton17.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton17.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton17.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton17.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton17.Image")));
-            this.gunaGradientButton17.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaGradientButton17.Location = new System.Drawing.Point(978, 358);
-            this.gunaGradientButton17.Name = "gunaGradientButton17";
-            this.gunaGradientButton17.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(143)))));
-            this.gunaGradientButton17.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(119)))));
-            this.gunaGradientButton17.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton17.OnHoverImage = null;
-            this.gunaGradientButton17.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.Size = new System.Drawing.Size(155, 40);
-            this.gunaGradientButton17.TabIndex = 254;
-            this.gunaGradientButton17.Text = "Cotización";
-            this.gunaGradientButton17.TextOffsetX = -2;
-            // 
-            // gunaGradientButton18
-            // 
-            this.gunaGradientButton18.Animated = true;
-            this.gunaGradientButton18.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton18.AnimationSpeed = 0.03F;
-            this.gunaGradientButton18.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton18.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
-            this.gunaGradientButton18.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
-            this.gunaGradientButton18.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton18.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton18.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton18.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton18.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton18.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton18.Image")));
-            this.gunaGradientButton18.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaGradientButton18.Location = new System.Drawing.Point(823, 358);
-            this.gunaGradientButton18.Name = "gunaGradientButton18";
-            this.gunaGradientButton18.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
-            this.gunaGradientButton18.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
-            this.gunaGradientButton18.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton18.OnHoverImage = null;
-            this.gunaGradientButton18.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.Size = new System.Drawing.Size(155, 40);
-            this.gunaGradientButton18.TabIndex = 253;
-            this.gunaGradientButton18.Text = "Ventas";
-            this.gunaGradientButton18.TextOffsetX = 5;
+            this.gunaGradientButton64.Animated = true;
+            this.gunaGradientButton64.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton64.AnimationSpeed = 0.03F;
+            this.gunaGradientButton64.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton64.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton64.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.gunaGradientButton64.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton64.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton64.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton64.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gunaGradientButton64.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton64.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradientButton64.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton64.Image")));
+            this.gunaGradientButton64.ImageOffsetX = -1;
+            this.gunaGradientButton64.ImageSize = new System.Drawing.Size(35, 35);
+            this.gunaGradientButton64.Location = new System.Drawing.Point(600, 10);
+            this.gunaGradientButton64.Name = "gunaGradientButton64";
+            this.gunaGradientButton64.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.gunaGradientButton64.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaGradientButton64.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton64.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton64.OnHoverImage = null;
+            this.gunaGradientButton64.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton64.Radius = 8;
+            this.gunaGradientButton64.Size = new System.Drawing.Size(200, 40);
+            this.gunaGradientButton64.TabIndex = 259;
+            this.gunaGradientButton64.Text = "Proveedores";
+            this.gunaGradientButton64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaGradientButton64.TextOffsetX = 8;
             // 
             // componentes
             // 
@@ -1589,19 +1272,7 @@ namespace ptoVenta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1567, 722);
-            this.Controls.Add(this.gunaGradientButton13);
-            this.Controls.Add(this.gunaGradientButton14);
-            this.Controls.Add(this.gunaGradientButton15);
-            this.Controls.Add(this.gunaGradientButton16);
-            this.Controls.Add(this.gunaGradientButton17);
-            this.Controls.Add(this.gunaGradientButton18);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.btnTicketsEmitidos);
-            this.Controls.Add(this.btnEgresoCaja);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton4);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.iconButton3);
+            this.Controls.Add(this.gunaGradientButton64);
             this.Controls.Add(this.gunaGradientButton63);
             this.Controls.Add(this.gunaGradientButton5);
             this.Controls.Add(this.gunaGradientButton1);
@@ -1690,18 +1361,6 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton6;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton4;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
-        private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnTicketsEmitidos;
-        private FontAwesome.Sharp.IconButton btnEgresoCaja;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton13;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton14;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton15;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton16;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton17;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton18;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton64;
     }
 }

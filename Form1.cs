@@ -1060,6 +1060,8 @@ namespace ptoVenta
             
         }
 
+        
+
         private void stocktiendas() 
         {
             Stock abrirstock = new Stock();
