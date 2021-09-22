@@ -156,7 +156,8 @@ namespace ptoVenta
         }
         public void alternarColorData(DataGridView dgv)
         {
-            dgvLista.RowsDefaultCellStyle.BackColor = Color.MistyRose;
+            //44, 188, 210
+            dgvLista.RowsDefaultCellStyle.BackColor = Color.FromArgb(213, 241, 245);
             dgvLista.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvLista.EnableHeadersVisualStyles = false;
             dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.MediumSlateBlue;
@@ -165,7 +166,7 @@ namespace ptoVenta
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
             //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(36, 117, 83);
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void txtProducto_TextChanged(object sender, EventArgs e)
