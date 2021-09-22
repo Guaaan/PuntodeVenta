@@ -377,7 +377,7 @@ namespace ptoVenta
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.Color.Black;
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(153)))), ((int)(((byte)(87)))));
             this.panel18.Controls.Add(this.btnSalir);
             this.panel18.Controls.Add(this.label16);
             this.panel18.Controls.Add(this.label14);
@@ -404,7 +404,7 @@ namespace ptoVenta
             this.btnSalir.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSalir.Location = new System.Drawing.Point(1091, 5);
+            this.btnSalir.Location = new System.Drawing.Point(1091, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnSalir.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
@@ -996,9 +996,9 @@ namespace ptoVenta
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(396, 12);
+            this.label13.Location = new System.Drawing.Point(531, 11);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(583, 31);
@@ -1120,13 +1120,13 @@ namespace ptoVenta
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Gadugi", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(2, 14);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(165, 30);
+            this.label12.Size = new System.Drawing.Size(189, 28);
             this.label12.TabIndex = 6;
             this.label12.Text = "Punto de Venta";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1138,7 +1138,7 @@ namespace ptoVenta
             this.ovalShape1.BackgroundImage = global::ptoVenta.Properties.Resources.user;
             this.ovalShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ovalShape1.BorderColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ovalShape1.Location = new System.Drawing.Point(1127, 3);
+            this.ovalShape1.Location = new System.Drawing.Point(1126, 3);
             this.ovalShape1.Name = "ovalShape1";
             this.ovalShape1.Size = new System.Drawing.Size(45, 45);
             // 
@@ -1437,7 +1437,7 @@ namespace ptoVenta
             this.btnProcesarBoleta.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesarBoleta.Image")));
             this.btnProcesarBoleta.ImageOffsetX = -8;
             this.btnProcesarBoleta.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnProcesarBoleta.Location = new System.Drawing.Point(944, 179);
+            this.btnProcesarBoleta.Location = new System.Drawing.Point(945, 179);
             this.btnProcesarBoleta.Name = "btnProcesarBoleta";
             this.btnProcesarBoleta.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnProcesarBoleta.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1469,7 +1469,7 @@ namespace ptoVenta
             this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
             this.btnStock.ImageOffsetX = -8;
             this.btnStock.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnStock.Location = new System.Drawing.Point(832, 179);
+            this.btnStock.Location = new System.Drawing.Point(833, 179);
             this.btnStock.Name = "btnStock";
             this.btnStock.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnStock.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1501,7 +1501,7 @@ namespace ptoVenta
             this.btnProductosFaltantes.Image = ((System.Drawing.Image)(resources.GetObject("btnProductosFaltantes.Image")));
             this.btnProductosFaltantes.ImageOffsetX = -8;
             this.btnProductosFaltantes.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnProductosFaltantes.Location = new System.Drawing.Point(720, 179);
+            this.btnProductosFaltantes.Location = new System.Drawing.Point(721, 179);
             this.btnProductosFaltantes.Name = "btnProductosFaltantes";
             this.btnProductosFaltantes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnProductosFaltantes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1533,7 +1533,7 @@ namespace ptoVenta
             this.btnCargarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarDocumento.Image")));
             this.btnCargarDocumento.ImageOffsetX = -8;
             this.btnCargarDocumento.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnCargarDocumento.Location = new System.Drawing.Point(608, 179);
+            this.btnCargarDocumento.Location = new System.Drawing.Point(609, 179);
             this.btnCargarDocumento.Name = "btnCargarDocumento";
             this.btnCargarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnCargarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1565,7 +1565,7 @@ namespace ptoVenta
             this.btnGuardarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarDocumento.Image")));
             this.btnGuardarDocumento.ImageOffsetX = -8;
             this.btnGuardarDocumento.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnGuardarDocumento.Location = new System.Drawing.Point(496, 179);
+            this.btnGuardarDocumento.Location = new System.Drawing.Point(497, 179);
             this.btnGuardarDocumento.Name = "btnGuardarDocumento";
             this.btnGuardarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnGuardarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1597,7 +1597,7 @@ namespace ptoVenta
             this.btnLiberarCaja.Image = ((System.Drawing.Image)(resources.GetObject("btnLiberarCaja.Image")));
             this.btnLiberarCaja.ImageOffsetX = -8;
             this.btnLiberarCaja.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnLiberarCaja.Location = new System.Drawing.Point(384, 179);
+            this.btnLiberarCaja.Location = new System.Drawing.Point(385, 179);
             this.btnLiberarCaja.Name = "btnLiberarCaja";
             this.btnLiberarCaja.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnLiberarCaja.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1629,7 +1629,7 @@ namespace ptoVenta
             this.btnCambioPrecio.Image = ((System.Drawing.Image)(resources.GetObject("btnCambioPrecio.Image")));
             this.btnCambioPrecio.ImageOffsetX = -8;
             this.btnCambioPrecio.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnCambioPrecio.Location = new System.Drawing.Point(1056, 179);
+            this.btnCambioPrecio.Location = new System.Drawing.Point(1057, 179);
             this.btnCambioPrecio.Name = "btnCambioPrecio";
             this.btnCambioPrecio.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnCambioPrecio.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
