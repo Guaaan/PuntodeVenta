@@ -86,6 +86,14 @@ namespace ptoVenta
             SqlConnection cn = Conexion.conexion();
             cn.Open();
 
+            btnLiberarCaja.Text = "Liberar" + Environment.NewLine + "Caja";
+            btnGuardarDocumento.Text = "Guardar" + Environment.NewLine + "Documento";
+            btnCargarDocumento.Text = "Cargar" + Environment.NewLine + "Documento";
+            btnProductosFaltantes.Text = "Productos" + Environment.NewLine + "Faltantes";
+            btnStock.Text = "Stock en" + Environment.NewLine + "Tiendas";
+            btnProcesarBoleta.Text = "Procesar" + Environment.NewLine + "Boleta";
+            btnCambioPrecio.Text = "Cambio" + Environment.NewLine + "de Precio";
+
             textBox1.BorderStyle = BorderStyle.None;
             iconButton1.Left = iconButton3.Left;
             dgvLista.Width = dgvGrid1.Width;

@@ -55,13 +55,6 @@ namespace ptoVenta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems2 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems3 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems4 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems5 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems6 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems7 = new CButtonLib.cBlendItems();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.LINEA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOTO = new System.Windows.Forms.DataGridViewImageColumn();
@@ -116,7 +109,6 @@ namespace ptoVenta
             this.txtRut = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -130,21 +122,12 @@ namespace ptoVenta
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.ovalShape1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.galleryContainer1 = new DevComponents.DotNetBar.GalleryContainer();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.altoButton1 = new AltoControls.AltoButton();
-            this.cButton7 = new CButtonLib.CButton();
-            this.cButton2 = new CButtonLib.CButton();
-            this.cButton1 = new CButtonLib.CButton();
-            this.cButton5 = new CButtonLib.CButton();
-            this.cButton4 = new CButtonLib.CButton();
-            this.cButton6 = new CButtonLib.CButton();
-            this.cButton3 = new CButtonLib.CButton();
             this.btnEgresoCaja = new Guna.UI.WinForms.GunaGradientButton();
             this.iconButton3 = new Guna.UI.WinForms.GunaGradientButton();
             this.iconButton1 = new Guna.UI.WinForms.GunaGradientButton();
@@ -152,6 +135,17 @@ namespace ptoVenta
             this.iconButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.btnTicketsEmitidos = new Guna.UI.WinForms.GunaGradientButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnProcesarBoleta = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnStock = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnProductosFaltantes = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnCargarDocumento = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnGuardarDocumento = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnLiberarCaja = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnBuscar1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -159,8 +153,8 @@ namespace ptoVenta
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gunaGradient2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvLista
@@ -429,13 +423,13 @@ namespace ptoVenta
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(6, 18);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label16.Size = new System.Drawing.Size(47, 17);
+            this.label16.Size = new System.Drawing.Size(46, 17);
             this.label16.TabIndex = 86;
             this.label16.Text = "Server";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -444,13 +438,13 @@ namespace ptoVenta
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(6, 3);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label14.Size = new System.Drawing.Size(33, 17);
+            this.label14.Size = new System.Drawing.Size(34, 17);
             this.label14.TabIndex = 85;
             this.label14.Text = "Caja";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -953,6 +947,7 @@ namespace ptoVenta
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.btnBuscar1);
             this.panel7.Controls.Add(this.btnBuscar);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.textBox4);
@@ -970,31 +965,6 @@ namespace ptoVenta
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(720, 95);
             this.panel7.TabIndex = 86;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(41)))));
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(50)))), ((int)(((byte)(27)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(3, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnBuscar.Size = new System.Drawing.Size(93, 40);
-            this.btnBuscar.TabIndex = 182;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // label22
             // 
@@ -1027,11 +997,11 @@ namespace ptoVenta
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(564, 10);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(396, 12);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(448, 31);
+            this.label13.Size = new System.Drawing.Size(583, 31);
             this.label13.TabIndex = 5;
             this.label13.Text = "...";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1138,7 +1108,7 @@ namespace ptoVenta
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(177)))), ((int)(((byte)(230)))));
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(195)))), ((int)(((byte)(93)))));
-            this.textBox1.Location = new System.Drawing.Point(300, 7);
+            this.textBox1.Location = new System.Drawing.Point(295, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 33);
             this.textBox1.TabIndex = 1;
@@ -1152,7 +1122,7 @@ namespace ptoVenta
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(7, 10);
+            this.label12.Location = new System.Drawing.Point(2, 14);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1161,31 +1131,6 @@ namespace ptoVenta
             this.label12.Text = "Punto de Venta";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(48)))), ((int)(((byte)(99)))));
-            this.panel15.Controls.Add(this.label13);
-            this.panel15.Controls.Add(this.label12);
-            this.panel15.Controls.Add(this.textBox1);
-            this.panel15.Controls.Add(this.shapeContainer2);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1184, 52);
-            this.panel15.TabIndex = 81;
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.ovalShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(1184, 52);
-            this.shapeContainer2.TabIndex = 174;
-            this.shapeContainer2.TabStop = false;
-            // 
             // ovalShape1
             // 
             this.ovalShape1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1193,7 +1138,7 @@ namespace ptoVenta
             this.ovalShape1.BackgroundImage = global::ptoVenta.Properties.Resources.user;
             this.ovalShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ovalShape1.BorderColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ovalShape1.Location = new System.Drawing.Point(1130, 3);
+            this.ovalShape1.Location = new System.Drawing.Point(1127, 3);
             this.ovalShape1.Name = "ovalShape1";
             this.ovalShape1.Size = new System.Drawing.Size(45, 45);
             // 
@@ -1276,249 +1221,6 @@ namespace ptoVenta
             this.altoButton1.Text = "probar componentes";
             this.altoButton1.Transparency = false;
             this.altoButton1.Click += new System.EventHandler(this.altoButton1_Click);
-            // 
-            // cButton7
-            // 
-            this.cButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton7.BackColor = System.Drawing.Color.Transparent;
-            this.cButton7.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems1.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(79)))), ((int)(((byte)(89)))))};
-            cBlendItems1.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton7.ColorFillBlend = cBlendItems1;
-            this.cButton7.ColorFillSolid = System.Drawing.Color.Transparent;
-            this.cButton7.Corners.LowerLeft = 5;
-            this.cButton7.Corners.LowerRight = 7;
-            this.cButton7.Corners.UpperLeft = 5;
-            this.cButton7.Corners.UpperRight = 5;
-            this.cButton7.DesignerSelected = false;
-            this.cButton7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton7.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton7.Image = global::ptoVenta.Properties.Resources.kf3;
-            this.cButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton7.ImageIndex = 0;
-            this.cButton7.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton7.Location = new System.Drawing.Point(469, 181);
-            this.cButton7.Name = "cButton7";
-            this.cButton7.Size = new System.Drawing.Size(100, 38);
-            this.cButton7.TabIndex = 258;
-            this.cButton7.TabStop = false;
-            this.cButton7.Text = "Liberar Caja";
-            this.cButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton7.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton2
-            // 
-            this.cButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton2.BackColor = System.Drawing.Color.Transparent;
-            this.cButton2.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems2.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(183)))), ((int)(((byte)(30))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(122)))), ((int)(((byte)(20)))))};
-            cBlendItems2.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton2.ColorFillBlend = cBlendItems2;
-            this.cButton2.Corners.All = 5;
-            this.cButton2.Corners.LowerLeft = 5;
-            this.cButton2.Corners.LowerRight = 5;
-            this.cButton2.Corners.UpperLeft = 5;
-            this.cButton2.Corners.UpperRight = 5;
-            this.cButton2.DesignerSelected = false;
-            this.cButton2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton2.Image = global::ptoVenta.Properties.Resources.kf5;
-            this.cButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton2.ImageIndex = 0;
-            this.cButton2.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton2.Location = new System.Drawing.Point(669, 181);
-            this.cButton2.Name = "cButton2";
-            this.cButton2.Size = new System.Drawing.Size(100, 38);
-            this.cButton2.TabIndex = 254;
-            this.cButton2.TabStop = false;
-            this.cButton2.Text = "Cargar Documento";
-            this.cButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton2.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton1
-            // 
-            this.cButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton1.BackColor = System.Drawing.Color.Transparent;
-            this.cButton1.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems3.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
-            cBlendItems3.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton1.ColorFillBlend = cBlendItems3;
-            this.cButton1.Corners.All = 5;
-            this.cButton1.Corners.LowerLeft = 5;
-            this.cButton1.Corners.LowerRight = 5;
-            this.cButton1.Corners.UpperLeft = 5;
-            this.cButton1.Corners.UpperRight = 5;
-            this.cButton1.DesignerSelected = false;
-            this.cButton1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton1.Image = global::ptoVenta.Properties.Resources.kf4;
-            this.cButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton1.ImageIndex = 0;
-            this.cButton1.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton1.Location = new System.Drawing.Point(569, 181);
-            this.cButton1.Name = "cButton1";
-            this.cButton1.Size = new System.Drawing.Size(100, 38);
-            this.cButton1.TabIndex = 253;
-            this.cButton1.TabStop = false;
-            this.cButton1.Text = "Guardar Documento";
-            this.cButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton1.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton5
-            // 
-            this.cButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton5.BackColor = System.Drawing.Color.Transparent;
-            this.cButton5.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems4.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))))};
-            cBlendItems4.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton5.ColorFillBlend = cBlendItems4;
-            this.cButton5.Corners.All = 5;
-            this.cButton5.Corners.LowerLeft = 5;
-            this.cButton5.Corners.LowerRight = 5;
-            this.cButton5.Corners.UpperLeft = 5;
-            this.cButton5.Corners.UpperRight = 5;
-            this.cButton5.DesignerSelected = false;
-            this.cButton5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton5.Image = global::ptoVenta.Properties.Resources.kf8;
-            this.cButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton5.ImageIndex = 0;
-            this.cButton5.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton5.Location = new System.Drawing.Point(969, 181);
-            this.cButton5.Name = "cButton5";
-            this.cButton5.Size = new System.Drawing.Size(100, 38);
-            this.cButton5.TabIndex = 256;
-            this.cButton5.TabStop = false;
-            this.cButton5.Text = "Procesar Boleta";
-            this.cButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton5.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton4
-            // 
-            this.cButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton4.BackColor = System.Drawing.Color.Transparent;
-            this.cButton4.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems5.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(125)))), ((int)(((byte)(140)))))};
-            cBlendItems5.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton4.ColorFillBlend = cBlendItems5;
-            this.cButton4.Corners.All = 5;
-            this.cButton4.Corners.LowerLeft = 5;
-            this.cButton4.Corners.LowerRight = 5;
-            this.cButton4.Corners.UpperLeft = 5;
-            this.cButton4.Corners.UpperRight = 5;
-            this.cButton4.DesignerSelected = false;
-            this.cButton4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton4.Image = global::ptoVenta.Properties.Resources.kf9;
-            this.cButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton4.ImageIndex = 0;
-            this.cButton4.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton4.Location = new System.Drawing.Point(1069, 181);
-            this.cButton4.Name = "cButton4";
-            this.cButton4.Size = new System.Drawing.Size(100, 38);
-            this.cButton4.TabIndex = 257;
-            this.cButton4.TabStop = false;
-            this.cButton4.Text = "Cambio de Precio";
-            this.cButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton4.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton6
-            // 
-            this.cButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton6.BackColor = System.Drawing.Color.Transparent;
-            this.cButton6.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems6.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))))};
-            cBlendItems6.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton6.ColorFillBlend = cBlendItems6;
-            this.cButton6.Corners.All = 5;
-            this.cButton6.Corners.LowerLeft = 5;
-            this.cButton6.Corners.LowerRight = 5;
-            this.cButton6.Corners.UpperLeft = 5;
-            this.cButton6.Corners.UpperRight = 5;
-            this.cButton6.DesignerSelected = false;
-            this.cButton6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton6.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton6.Image = global::ptoVenta.Properties.Resources.kf6;
-            this.cButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton6.ImageIndex = 0;
-            this.cButton6.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton6.Location = new System.Drawing.Point(769, 181);
-            this.cButton6.Name = "cButton6";
-            this.cButton6.Size = new System.Drawing.Size(100, 38);
-            this.cButton6.TabIndex = 259;
-            this.cButton6.TabStop = false;
-            this.cButton6.Text = "Productos Faltantes";
-            this.cButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton6.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton3
-            // 
-            this.cButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton3.BackColor = System.Drawing.Color.Transparent;
-            this.cButton3.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems7.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(167)))), ((int)(((byte)(85))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(111)))), ((int)(((byte)(56)))))};
-            cBlendItems7.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton3.ColorFillBlend = cBlendItems7;
-            this.cButton3.Corners.All = 5;
-            this.cButton3.Corners.LowerLeft = 5;
-            this.cButton3.Corners.LowerRight = 5;
-            this.cButton3.Corners.UpperLeft = 5;
-            this.cButton3.Corners.UpperRight = 5;
-            this.cButton3.DesignerSelected = false;
-            this.cButton3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton3.Image = global::ptoVenta.Properties.Resources.kf7;
-            this.cButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton3.ImageIndex = 0;
-            this.cButton3.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton3.Location = new System.Drawing.Point(869, 181);
-            this.cButton3.Name = "cButton3";
-            this.cButton3.Size = new System.Drawing.Size(100, 38);
-            this.cButton3.TabIndex = 255;
-            this.cButton3.TabStop = false;
-            this.cButton3.Text = "Stock en Tiendas";
-            this.cButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton3.TextShadow = System.Drawing.Color.Transparent;
             // 
             // btnEgresoCaja
             // 
@@ -1717,6 +1419,313 @@ namespace ptoVenta
             this.panel4.Size = new System.Drawing.Size(700, 4);
             this.panel4.TabIndex = 187;
             // 
+            // btnProcesarBoleta
+            // 
+            this.btnProcesarBoleta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProcesarBoleta.Animated = true;
+            this.btnProcesarBoleta.AnimationHoverSpeed = 0.07F;
+            this.btnProcesarBoleta.AnimationSpeed = 0.03F;
+            this.btnProcesarBoleta.BackColor = System.Drawing.Color.Transparent;
+            this.btnProcesarBoleta.BaseColor1 = System.Drawing.Color.White;
+            this.btnProcesarBoleta.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnProcesarBoleta.BorderColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnProcesarBoleta.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProcesarBoleta.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcesarBoleta.ForeColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnProcesarBoleta.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesarBoleta.Image")));
+            this.btnProcesarBoleta.ImageOffsetX = -8;
+            this.btnProcesarBoleta.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnProcesarBoleta.Location = new System.Drawing.Point(944, 179);
+            this.btnProcesarBoleta.Name = "btnProcesarBoleta";
+            this.btnProcesarBoleta.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnProcesarBoleta.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProcesarBoleta.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProcesarBoleta.OnHoverImage = null;
+            this.btnProcesarBoleta.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.Radius = 8;
+            this.btnProcesarBoleta.Size = new System.Drawing.Size(110, 40);
+            this.btnProcesarBoleta.TabIndex = 279;
+            this.btnProcesarBoleta.Text = "Procesar Boleta";
+            this.btnProcesarBoleta.TextOffsetX = -5;
+            // 
+            // btnStock
+            // 
+            this.btnStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStock.Animated = true;
+            this.btnStock.AnimationHoverSpeed = 0.07F;
+            this.btnStock.AnimationSpeed = 0.03F;
+            this.btnStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnStock.BaseColor1 = System.Drawing.Color.White;
+            this.btnStock.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnStock.BorderColor = System.Drawing.Color.Black;
+            this.btnStock.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnStock.FocusedColor = System.Drawing.Color.Empty;
+            this.btnStock.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.Black;
+            this.btnStock.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
+            this.btnStock.ImageOffsetX = -8;
+            this.btnStock.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnStock.Location = new System.Drawing.Point(832, 179);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnStock.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStock.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnStock.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnStock.OnHoverImage = null;
+            this.btnStock.OnPressedColor = System.Drawing.Color.Black;
+            this.btnStock.Radius = 8;
+            this.btnStock.Size = new System.Drawing.Size(110, 40);
+            this.btnStock.TabIndex = 278;
+            this.btnStock.Text = "Stock en Tiendas";
+            this.btnStock.TextOffsetX = -5;
+            // 
+            // btnProductosFaltantes
+            // 
+            this.btnProductosFaltantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProductosFaltantes.Animated = true;
+            this.btnProductosFaltantes.AnimationHoverSpeed = 0.07F;
+            this.btnProductosFaltantes.AnimationSpeed = 0.03F;
+            this.btnProductosFaltantes.BackColor = System.Drawing.Color.Transparent;
+            this.btnProductosFaltantes.BaseColor1 = System.Drawing.Color.White;
+            this.btnProductosFaltantes.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnProductosFaltantes.BorderColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnProductosFaltantes.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProductosFaltantes.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductosFaltantes.ForeColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnProductosFaltantes.Image = ((System.Drawing.Image)(resources.GetObject("btnProductosFaltantes.Image")));
+            this.btnProductosFaltantes.ImageOffsetX = -8;
+            this.btnProductosFaltantes.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnProductosFaltantes.Location = new System.Drawing.Point(720, 179);
+            this.btnProductosFaltantes.Name = "btnProductosFaltantes";
+            this.btnProductosFaltantes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnProductosFaltantes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProductosFaltantes.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProductosFaltantes.OnHoverImage = null;
+            this.btnProductosFaltantes.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.Radius = 8;
+            this.btnProductosFaltantes.Size = new System.Drawing.Size(110, 40);
+            this.btnProductosFaltantes.TabIndex = 277;
+            this.btnProductosFaltantes.Text = "Productos Faltantes";
+            this.btnProductosFaltantes.TextOffsetX = -5;
+            // 
+            // btnCargarDocumento
+            // 
+            this.btnCargarDocumento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCargarDocumento.Animated = true;
+            this.btnCargarDocumento.AnimationHoverSpeed = 0.07F;
+            this.btnCargarDocumento.AnimationSpeed = 0.03F;
+            this.btnCargarDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargarDocumento.BaseColor1 = System.Drawing.Color.White;
+            this.btnCargarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnCargarDocumento.BorderColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCargarDocumento.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCargarDocumento.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarDocumento.ForeColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCargarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarDocumento.Image")));
+            this.btnCargarDocumento.ImageOffsetX = -8;
+            this.btnCargarDocumento.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnCargarDocumento.Location = new System.Drawing.Point(608, 179);
+            this.btnCargarDocumento.Name = "btnCargarDocumento";
+            this.btnCargarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnCargarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCargarDocumento.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCargarDocumento.OnHoverImage = null;
+            this.btnCargarDocumento.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.Radius = 8;
+            this.btnCargarDocumento.Size = new System.Drawing.Size(110, 40);
+            this.btnCargarDocumento.TabIndex = 276;
+            this.btnCargarDocumento.Text = "Cargar Documento";
+            this.btnCargarDocumento.TextOffsetX = -5;
+            // 
+            // btnGuardarDocumento
+            // 
+            this.btnGuardarDocumento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarDocumento.Animated = true;
+            this.btnGuardarDocumento.AnimationHoverSpeed = 0.07F;
+            this.btnGuardarDocumento.AnimationSpeed = 0.03F;
+            this.btnGuardarDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarDocumento.BaseColor1 = System.Drawing.Color.White;
+            this.btnGuardarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGuardarDocumento.BorderColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnGuardarDocumento.FocusedColor = System.Drawing.Color.Empty;
+            this.btnGuardarDocumento.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarDocumento.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnGuardarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarDocumento.Image")));
+            this.btnGuardarDocumento.ImageOffsetX = -8;
+            this.btnGuardarDocumento.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnGuardarDocumento.Location = new System.Drawing.Point(496, 179);
+            this.btnGuardarDocumento.Name = "btnGuardarDocumento";
+            this.btnGuardarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGuardarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardarDocumento.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnGuardarDocumento.OnHoverImage = null;
+            this.btnGuardarDocumento.OnPressedColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.Radius = 8;
+            this.btnGuardarDocumento.Size = new System.Drawing.Size(110, 40);
+            this.btnGuardarDocumento.TabIndex = 275;
+            this.btnGuardarDocumento.Text = "Cargar Documento";
+            this.btnGuardarDocumento.TextOffsetX = -5;
+            // 
+            // btnLiberarCaja
+            // 
+            this.btnLiberarCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLiberarCaja.Animated = true;
+            this.btnLiberarCaja.AnimationHoverSpeed = 0.07F;
+            this.btnLiberarCaja.AnimationSpeed = 0.03F;
+            this.btnLiberarCaja.BackColor = System.Drawing.Color.Transparent;
+            this.btnLiberarCaja.BaseColor1 = System.Drawing.Color.White;
+            this.btnLiberarCaja.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnLiberarCaja.BorderColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLiberarCaja.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLiberarCaja.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiberarCaja.ForeColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnLiberarCaja.Image = ((System.Drawing.Image)(resources.GetObject("btnLiberarCaja.Image")));
+            this.btnLiberarCaja.ImageOffsetX = -8;
+            this.btnLiberarCaja.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnLiberarCaja.Location = new System.Drawing.Point(384, 179);
+            this.btnLiberarCaja.Name = "btnLiberarCaja";
+            this.btnLiberarCaja.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnLiberarCaja.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLiberarCaja.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLiberarCaja.OnHoverImage = null;
+            this.btnLiberarCaja.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.Radius = 8;
+            this.btnLiberarCaja.Size = new System.Drawing.Size(110, 40);
+            this.btnLiberarCaja.TabIndex = 274;
+            this.btnLiberarCaja.Text = "Liberar Caja";
+            this.btnLiberarCaja.TextOffsetX = -5;
+            // 
+            // btnCambioPrecio
+            // 
+            this.btnCambioPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCambioPrecio.Animated = true;
+            this.btnCambioPrecio.AnimationHoverSpeed = 0.07F;
+            this.btnCambioPrecio.AnimationSpeed = 0.03F;
+            this.btnCambioPrecio.BackColor = System.Drawing.Color.Transparent;
+            this.btnCambioPrecio.BaseColor1 = System.Drawing.Color.White;
+            this.btnCambioPrecio.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnCambioPrecio.BorderColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCambioPrecio.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCambioPrecio.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambioPrecio.ForeColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCambioPrecio.Image = ((System.Drawing.Image)(resources.GetObject("btnCambioPrecio.Image")));
+            this.btnCambioPrecio.ImageOffsetX = -8;
+            this.btnCambioPrecio.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnCambioPrecio.Location = new System.Drawing.Point(1056, 179);
+            this.btnCambioPrecio.Name = "btnCambioPrecio";
+            this.btnCambioPrecio.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnCambioPrecio.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCambioPrecio.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCambioPrecio.OnHoverImage = null;
+            this.btnCambioPrecio.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.Radius = 8;
+            this.btnCambioPrecio.Size = new System.Drawing.Size(110, 40);
+            this.btnCambioPrecio.TabIndex = 273;
+            this.btnCambioPrecio.Text = "Cambio de Precio";
+            this.btnCambioPrecio.TextOffsetX = -5;
+            // 
+            // btnBuscar1
+            // 
+            this.btnBuscar1.Animated = true;
+            this.btnBuscar1.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar1.AnimationSpeed = 0.03F;
+            this.btnBuscar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50)))));
+            this.btnBuscar1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(105)))), ((int)(((byte)(37)))));
+            this.btnBuscar1.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscar1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar1.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar1.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnBuscar1.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar1.Image")));
+            this.btnBuscar1.ImageOffsetX = -2;
+            this.btnBuscar1.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBuscar1.Location = new System.Drawing.Point(3, 3);
+            this.btnBuscar1.Name = "btnBuscar1";
+            this.btnBuscar1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(117)))), ((int)(((byte)(41)))));
+            this.btnBuscar1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(93)))), ((int)(((byte)(33)))));
+            this.btnBuscar1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBuscar1.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar1.OnHoverImage = null;
+            this.btnBuscar1.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar1.Radius = 8;
+            this.btnBuscar1.Size = new System.Drawing.Size(105, 40);
+            this.btnBuscar1.TabIndex = 280;
+            this.btnBuscar1.Text = "Buscar";
+            this.btnBuscar1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(41)))));
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(50)))), ((int)(((byte)(27)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 30;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(3, 3);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnBuscar.Size = new System.Drawing.Size(93, 40);
+            this.btnBuscar.TabIndex = 182;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // gunaGradient2Panel1
+            // 
+            this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.label13);
+            this.gunaGradient2Panel1.Controls.Add(this.label12);
+            this.gunaGradient2Panel1.Controls.Add(this.textBox1);
+            this.gunaGradient2Panel1.Controls.Add(this.shapeContainer1);
+            this.gunaGradient2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(149)))));
+            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(79)))), ((int)(((byte)(162)))));
+            this.gunaGradient2Panel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradient2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(1184, 53);
+            this.gunaGradient2Panel1.TabIndex = 281;
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.ovalShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(1184, 53);
+            this.shapeContainer1.TabIndex = 7;
+            this.shapeContainer1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1728,19 +1737,20 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.gunaGradient2Panel1);
+            this.Controls.Add(this.btnProcesarBoleta);
+            this.Controls.Add(this.btnStock);
+            this.Controls.Add(this.btnProductosFaltantes);
+            this.Controls.Add(this.btnCargarDocumento);
+            this.Controls.Add(this.btnGuardarDocumento);
+            this.Controls.Add(this.btnLiberarCaja);
+            this.Controls.Add(this.btnCambioPrecio);
             this.Controls.Add(this.btnEgresoCaja);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.btnTicketsEmitidos);
-            this.Controls.Add(this.cButton7);
-            this.Controls.Add(this.cButton2);
-            this.Controls.Add(this.cButton1);
-            this.Controls.Add(this.cButton5);
-            this.Controls.Add(this.cButton4);
-            this.Controls.Add(this.cButton6);
-            this.Controls.Add(this.cButton3);
             this.Controls.Add(this.altoButton1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel4);
@@ -1752,7 +1762,6 @@ namespace ptoVenta
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.dgvGrid1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1777,9 +1786,9 @@ namespace ptoVenta
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gunaGradient2Panel1.ResumeLayout(false);
+            this.gunaGradient2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1842,11 +1851,8 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private System.Windows.Forms.Panel panel6;
-        private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel15;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape1;
         private DevComponents.DotNetBar.GalleryContainer galleryContainer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LINEA1;
@@ -1861,13 +1867,6 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewImageColumn DELE;
         private System.Windows.Forms.PictureBox pictureBox2;
         private AltoControls.AltoButton altoButton1;
-        private CButtonLib.CButton cButton7;
-        private CButtonLib.CButton cButton2;
-        private CButtonLib.CButton cButton1;
-        private CButtonLib.CButton cButton5;
-        private CButtonLib.CButton cButton4;
-        private CButtonLib.CButton cButton6;
-        private CButtonLib.CButton cButton3;
         private Guna.UI.WinForms.GunaGradientButton btnSalir;
         private Guna.UI.WinForms.GunaGradientButton btnEgresoCaja;
         private Guna.UI.WinForms.GunaGradientButton iconButton3;
@@ -1876,6 +1875,17 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton iconButton2;
         private Guna.UI.WinForms.GunaGradientButton btnTicketsEmitidos;
         private System.Windows.Forms.Panel panel4;
+        private Guna.UI.WinForms.GunaGradientButton btnProcesarBoleta;
+        private Guna.UI.WinForms.GunaGradientButton btnStock;
+        private Guna.UI.WinForms.GunaGradientButton btnProductosFaltantes;
+        private Guna.UI.WinForms.GunaGradientButton btnCargarDocumento;
+        private Guna.UI.WinForms.GunaGradientButton btnGuardarDocumento;
+        private Guna.UI.WinForms.GunaGradientButton btnLiberarCaja;
+        private Guna.UI.WinForms.GunaGradientButton btnCambioPrecio;
+        private FontAwesome.Sharp.IconButton btnBuscar;
+        private Guna.UI.WinForms.GunaGradientButton btnBuscar1;
+        private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
     }
 }
 
