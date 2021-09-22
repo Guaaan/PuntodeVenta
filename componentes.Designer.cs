@@ -31,13 +31,13 @@ namespace ptoVenta
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(componentes));
-            CButtonLib.cBlendItems cBlendItems6 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems7 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems8 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems2 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems3 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems4 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems5 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems6 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems7 = new CButtonLib.cBlendItems();
             this.gunaGradientButton63 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton5 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
@@ -77,7 +77,7 @@ namespace ptoVenta
             this.gunaGradientButton6 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton64 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
             this.cButton7 = new CButtonLib.CButton();
             this.cButton2 = new CButtonLib.CButton();
             this.cButton1 = new CButtonLib.CButton();
@@ -85,12 +85,12 @@ namespace ptoVenta
             this.cButton4 = new CButtonLib.CButton();
             this.cButton6 = new CButtonLib.CButton();
             this.cButton3 = new CButtonLib.CButton();
-            this.gunaGradientButton13 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton14 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton15 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton16 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton17 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton18 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnLiberarCaja = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnGuardarDocumento = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnCargarDocumento = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnProductosFaltantes = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnStock = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnProcesarBoleta = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
             // 
             // gunaGradientButton63
@@ -1255,50 +1255,49 @@ namespace ptoVenta
             this.gunaGradientButton2.Text = "botón";
             this.gunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaGradientButton64
+            // btnCambioPrecio
             // 
-            this.gunaGradientButton64.Animated = true;
-            this.gunaGradientButton64.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton64.AnimationSpeed = 0.03F;
-            this.gunaGradientButton64.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton64.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton64.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton64.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton64.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton64.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton64.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton64.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton64.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton64.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton64.Image")));
-            this.gunaGradientButton64.ImageOffsetX = -1;
-            this.gunaGradientButton64.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton64.Location = new System.Drawing.Point(1298, 422);
-            this.gunaGradientButton64.Name = "gunaGradientButton64";
-            this.gunaGradientButton64.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton64.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton64.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton64.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton64.OnHoverImage = null;
-            this.gunaGradientButton64.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton64.Radius = 8;
-            this.gunaGradientButton64.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton64.TabIndex = 259;
-            this.gunaGradientButton64.Text = "Proveedores";
-            this.gunaGradientButton64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton64.TextOffsetX = 8;
+            this.btnCambioPrecio.Animated = true;
+            this.btnCambioPrecio.AnimationHoverSpeed = 0.07F;
+            this.btnCambioPrecio.AnimationSpeed = 0.03F;
+            this.btnCambioPrecio.BackColor = System.Drawing.Color.Transparent;
+            this.btnCambioPrecio.BaseColor1 = System.Drawing.Color.White;
+            this.btnCambioPrecio.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnCambioPrecio.BorderColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCambioPrecio.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCambioPrecio.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambioPrecio.ForeColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCambioPrecio.Image = ((System.Drawing.Image)(resources.GetObject("btnCambioPrecio.Image")));
+            this.btnCambioPrecio.ImageOffsetX = -8;
+            this.btnCambioPrecio.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnCambioPrecio.Location = new System.Drawing.Point(1209, 427);
+            this.btnCambioPrecio.Name = "btnCambioPrecio";
+            this.btnCambioPrecio.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnCambioPrecio.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCambioPrecio.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCambioPrecio.OnHoverImage = null;
+            this.btnCambioPrecio.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.Radius = 8;
+            this.btnCambioPrecio.Size = new System.Drawing.Size(110, 40);
+            this.btnCambioPrecio.TabIndex = 259;
+            this.btnCambioPrecio.Text = "Cambio de Precio";
+            this.btnCambioPrecio.TextOffsetX = -5;
             // 
             // cButton7
             // 
             this.cButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton7.BackColor = System.Drawing.Color.Transparent;
             this.cButton7.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems6.iColor = new System.Drawing.Color[] {
+            cBlendItems1.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(79)))), ((int)(((byte)(89)))))};
-            cBlendItems6.iPoint = new float[] {
+            cBlendItems1.iPoint = new float[] {
         0F,
         1F};
-            this.cButton7.ColorFillBlend = cBlendItems6;
+            this.cButton7.ColorFillBlend = cBlendItems1;
             this.cButton7.ColorFillSolid = System.Drawing.Color.Transparent;
             this.cButton7.Corners.LowerLeft = 5;
             this.cButton7.Corners.LowerRight = 7;
@@ -1326,13 +1325,13 @@ namespace ptoVenta
             this.cButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton2.BackColor = System.Drawing.Color.Transparent;
             this.cButton2.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems7.iColor = new System.Drawing.Color[] {
+            cBlendItems2.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(183)))), ((int)(((byte)(30))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(122)))), ((int)(((byte)(20)))))};
-            cBlendItems7.iPoint = new float[] {
+            cBlendItems2.iPoint = new float[] {
         0F,
         1F};
-            this.cButton2.ColorFillBlend = cBlendItems7;
+            this.cButton2.ColorFillBlend = cBlendItems2;
             this.cButton2.Corners.All = 5;
             this.cButton2.Corners.LowerLeft = 5;
             this.cButton2.Corners.LowerRight = 5;
@@ -1361,13 +1360,13 @@ namespace ptoVenta
             this.cButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton1.BackColor = System.Drawing.Color.Transparent;
             this.cButton1.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems8.iColor = new System.Drawing.Color[] {
+            cBlendItems3.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
-            cBlendItems8.iPoint = new float[] {
+            cBlendItems3.iPoint = new float[] {
         0F,
         1F};
-            this.cButton1.ColorFillBlend = cBlendItems8;
+            this.cButton1.ColorFillBlend = cBlendItems3;
             this.cButton1.Corners.All = 5;
             this.cButton1.Corners.LowerLeft = 5;
             this.cButton1.Corners.LowerRight = 5;
@@ -1396,13 +1395,13 @@ namespace ptoVenta
             this.cButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton5.BackColor = System.Drawing.Color.Transparent;
             this.cButton5.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems1.iColor = new System.Drawing.Color[] {
+            cBlendItems4.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))))};
-            cBlendItems1.iPoint = new float[] {
+            cBlendItems4.iPoint = new float[] {
         0F,
         1F};
-            this.cButton5.ColorFillBlend = cBlendItems1;
+            this.cButton5.ColorFillBlend = cBlendItems4;
             this.cButton5.Corners.All = 5;
             this.cButton5.Corners.LowerLeft = 5;
             this.cButton5.Corners.LowerRight = 5;
@@ -1431,13 +1430,13 @@ namespace ptoVenta
             this.cButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton4.BackColor = System.Drawing.Color.Transparent;
             this.cButton4.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems2.iColor = new System.Drawing.Color[] {
+            cBlendItems5.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(125)))), ((int)(((byte)(140)))))};
-            cBlendItems2.iPoint = new float[] {
+            cBlendItems5.iPoint = new float[] {
         0F,
         1F};
-            this.cButton4.ColorFillBlend = cBlendItems2;
+            this.cButton4.ColorFillBlend = cBlendItems5;
             this.cButton4.Corners.All = 5;
             this.cButton4.Corners.LowerLeft = 5;
             this.cButton4.Corners.LowerRight = 5;
@@ -1466,13 +1465,13 @@ namespace ptoVenta
             this.cButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton6.BackColor = System.Drawing.Color.Transparent;
             this.cButton6.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems3.iColor = new System.Drawing.Color[] {
+            cBlendItems6.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))))};
-            cBlendItems3.iPoint = new float[] {
+            cBlendItems6.iPoint = new float[] {
         0F,
         1F};
-            this.cButton6.ColorFillBlend = cBlendItems3;
+            this.cButton6.ColorFillBlend = cBlendItems6;
             this.cButton6.Corners.All = 5;
             this.cButton6.Corners.LowerLeft = 5;
             this.cButton6.Corners.LowerRight = 5;
@@ -1501,13 +1500,13 @@ namespace ptoVenta
             this.cButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton3.BackColor = System.Drawing.Color.Transparent;
             this.cButton3.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems4.iColor = new System.Drawing.Color[] {
+            cBlendItems7.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(167)))), ((int)(((byte)(85))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(111)))), ((int)(((byte)(56)))))};
-            cBlendItems4.iPoint = new float[] {
+            cBlendItems7.iPoint = new float[] {
         0F,
         1F};
-            this.cButton3.ColorFillBlend = cBlendItems4;
+            this.cButton3.ColorFillBlend = cBlendItems7;
             this.cButton3.Corners.All = 5;
             this.cButton3.Corners.LowerLeft = 5;
             this.cButton3.Corners.LowerRight = 5;
@@ -1530,196 +1529,191 @@ namespace ptoVenta
             this.cButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton3.TextShadow = System.Drawing.Color.Transparent;
             // 
-            // gunaGradientButton13
+            // btnLiberarCaja
             // 
-            this.gunaGradientButton13.Animated = true;
-            this.gunaGradientButton13.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton13.AnimationSpeed = 0.03F;
-            this.gunaGradientButton13.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton13.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton13.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton13.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton13.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton13.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton13.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton13.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton13.Image")));
-            this.gunaGradientButton13.ImageOffsetX = -1;
-            this.gunaGradientButton13.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton13.Location = new System.Drawing.Point(524, 422);
-            this.gunaGradientButton13.Name = "gunaGradientButton13";
-            this.gunaGradientButton13.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton13.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton13.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton13.OnHoverImage = null;
-            this.gunaGradientButton13.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton13.Radius = 8;
-            this.gunaGradientButton13.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton13.TabIndex = 267;
-            this.gunaGradientButton13.Text = "Proveedores";
-            this.gunaGradientButton13.TextOffsetX = 8;
+            this.btnLiberarCaja.Animated = true;
+            this.btnLiberarCaja.AnimationHoverSpeed = 0.07F;
+            this.btnLiberarCaja.AnimationSpeed = 0.03F;
+            this.btnLiberarCaja.BackColor = System.Drawing.Color.Transparent;
+            this.btnLiberarCaja.BaseColor1 = System.Drawing.Color.White;
+            this.btnLiberarCaja.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnLiberarCaja.BorderColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLiberarCaja.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLiberarCaja.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiberarCaja.ForeColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnLiberarCaja.Image = ((System.Drawing.Image)(resources.GetObject("btnLiberarCaja.Image")));
+            this.btnLiberarCaja.ImageOffsetX = -8;
+            this.btnLiberarCaja.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnLiberarCaja.Location = new System.Drawing.Point(549, 427);
+            this.btnLiberarCaja.Name = "btnLiberarCaja";
+            this.btnLiberarCaja.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnLiberarCaja.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLiberarCaja.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLiberarCaja.OnHoverImage = null;
+            this.btnLiberarCaja.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.Radius = 8;
+            this.btnLiberarCaja.Size = new System.Drawing.Size(110, 40);
+            this.btnLiberarCaja.TabIndex = 267;
+            this.btnLiberarCaja.Text = "Liberar Caja";
+            this.btnLiberarCaja.TextOffsetX = -5;
             // 
-            // gunaGradientButton14
+            // btnGuardarDocumento
             // 
-            this.gunaGradientButton14.Animated = true;
-            this.gunaGradientButton14.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton14.AnimationSpeed = 0.03F;
-            this.gunaGradientButton14.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton14.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton14.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton14.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton14.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton14.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton14.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton14.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton14.Image")));
-            this.gunaGradientButton14.ImageOffsetX = -1;
-            this.gunaGradientButton14.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton14.Location = new System.Drawing.Point(653, 422);
-            this.gunaGradientButton14.Name = "gunaGradientButton14";
-            this.gunaGradientButton14.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton14.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton14.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton14.OnHoverImage = null;
-            this.gunaGradientButton14.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton14.Radius = 8;
-            this.gunaGradientButton14.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton14.TabIndex = 268;
-            this.gunaGradientButton14.Text = "Proveedores";
-            this.gunaGradientButton14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton14.TextOffsetX = 8;
+            this.btnGuardarDocumento.Animated = true;
+            this.btnGuardarDocumento.AnimationHoverSpeed = 0.07F;
+            this.btnGuardarDocumento.AnimationSpeed = 0.03F;
+            this.btnGuardarDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarDocumento.BaseColor1 = System.Drawing.Color.White;
+            this.btnGuardarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGuardarDocumento.BorderColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnGuardarDocumento.FocusedColor = System.Drawing.Color.Empty;
+            this.btnGuardarDocumento.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarDocumento.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnGuardarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarDocumento.Image")));
+            this.btnGuardarDocumento.ImageOffsetX = -8;
+            this.btnGuardarDocumento.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnGuardarDocumento.Location = new System.Drawing.Point(659, 427);
+            this.btnGuardarDocumento.Name = "btnGuardarDocumento";
+            this.btnGuardarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGuardarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardarDocumento.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnGuardarDocumento.OnHoverImage = null;
+            this.btnGuardarDocumento.OnPressedColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.Radius = 8;
+            this.btnGuardarDocumento.Size = new System.Drawing.Size(110, 40);
+            this.btnGuardarDocumento.TabIndex = 268;
+            this.btnGuardarDocumento.Text = "Cargar Documento";
+            this.btnGuardarDocumento.TextOffsetX = -5;
             // 
-            // gunaGradientButton15
+            // btnCargarDocumento
             // 
-            this.gunaGradientButton15.Animated = true;
-            this.gunaGradientButton15.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton15.AnimationSpeed = 0.03F;
-            this.gunaGradientButton15.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton15.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton15.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton15.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton15.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton15.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton15.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton15.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton15.Image")));
-            this.gunaGradientButton15.ImageOffsetX = -1;
-            this.gunaGradientButton15.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton15.Location = new System.Drawing.Point(782, 422);
-            this.gunaGradientButton15.Name = "gunaGradientButton15";
-            this.gunaGradientButton15.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton15.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton15.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton15.OnHoverImage = null;
-            this.gunaGradientButton15.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton15.Radius = 8;
-            this.gunaGradientButton15.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton15.TabIndex = 269;
-            this.gunaGradientButton15.Text = "Proveedores";
-            this.gunaGradientButton15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton15.TextOffsetX = 8;
+            this.btnCargarDocumento.Animated = true;
+            this.btnCargarDocumento.AnimationHoverSpeed = 0.07F;
+            this.btnCargarDocumento.AnimationSpeed = 0.03F;
+            this.btnCargarDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargarDocumento.BaseColor1 = System.Drawing.Color.White;
+            this.btnCargarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnCargarDocumento.BorderColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCargarDocumento.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCargarDocumento.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarDocumento.ForeColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCargarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarDocumento.Image")));
+            this.btnCargarDocumento.ImageOffsetX = -8;
+            this.btnCargarDocumento.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnCargarDocumento.Location = new System.Drawing.Point(769, 427);
+            this.btnCargarDocumento.Name = "btnCargarDocumento";
+            this.btnCargarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnCargarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCargarDocumento.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCargarDocumento.OnHoverImage = null;
+            this.btnCargarDocumento.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.Radius = 8;
+            this.btnCargarDocumento.Size = new System.Drawing.Size(110, 40);
+            this.btnCargarDocumento.TabIndex = 269;
+            this.btnCargarDocumento.Text = "Cargar Documento";
+            this.btnCargarDocumento.TextOffsetX = -5;
             // 
-            // gunaGradientButton16
+            // btnProductosFaltantes
             // 
-            this.gunaGradientButton16.Animated = true;
-            this.gunaGradientButton16.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton16.AnimationSpeed = 0.03F;
-            this.gunaGradientButton16.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton16.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton16.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton16.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton16.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton16.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton16.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton16.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton16.Image")));
-            this.gunaGradientButton16.ImageOffsetX = -1;
-            this.gunaGradientButton16.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton16.Location = new System.Drawing.Point(911, 422);
-            this.gunaGradientButton16.Name = "gunaGradientButton16";
-            this.gunaGradientButton16.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton16.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton16.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton16.OnHoverImage = null;
-            this.gunaGradientButton16.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton16.Radius = 8;
-            this.gunaGradientButton16.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton16.TabIndex = 270;
-            this.gunaGradientButton16.Text = "Proveedores";
-            this.gunaGradientButton16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton16.TextOffsetX = 8;
+            this.btnProductosFaltantes.Animated = true;
+            this.btnProductosFaltantes.AnimationHoverSpeed = 0.07F;
+            this.btnProductosFaltantes.AnimationSpeed = 0.03F;
+            this.btnProductosFaltantes.BackColor = System.Drawing.Color.Transparent;
+            this.btnProductosFaltantes.BaseColor1 = System.Drawing.Color.White;
+            this.btnProductosFaltantes.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnProductosFaltantes.BorderColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnProductosFaltantes.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProductosFaltantes.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductosFaltantes.ForeColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnProductosFaltantes.Image = ((System.Drawing.Image)(resources.GetObject("btnProductosFaltantes.Image")));
+            this.btnProductosFaltantes.ImageOffsetX = -8;
+            this.btnProductosFaltantes.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnProductosFaltantes.Location = new System.Drawing.Point(879, 427);
+            this.btnProductosFaltantes.Name = "btnProductosFaltantes";
+            this.btnProductosFaltantes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnProductosFaltantes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProductosFaltantes.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProductosFaltantes.OnHoverImage = null;
+            this.btnProductosFaltantes.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.Radius = 8;
+            this.btnProductosFaltantes.Size = new System.Drawing.Size(110, 40);
+            this.btnProductosFaltantes.TabIndex = 270;
+            this.btnProductosFaltantes.Text = "Productos Faltantes";
+            this.btnProductosFaltantes.TextOffsetX = -5;
             // 
-            // gunaGradientButton17
+            // btnStock
             // 
-            this.gunaGradientButton17.Animated = true;
-            this.gunaGradientButton17.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton17.AnimationSpeed = 0.03F;
-            this.gunaGradientButton17.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton17.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton17.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton17.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton17.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton17.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton17.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton17.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton17.Image")));
-            this.gunaGradientButton17.ImageOffsetX = -1;
-            this.gunaGradientButton17.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton17.Location = new System.Drawing.Point(1040, 422);
-            this.gunaGradientButton17.Name = "gunaGradientButton17";
-            this.gunaGradientButton17.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton17.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton17.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton17.OnHoverImage = null;
-            this.gunaGradientButton17.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton17.Radius = 8;
-            this.gunaGradientButton17.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton17.TabIndex = 271;
-            this.gunaGradientButton17.Text = "Proveedores";
-            this.gunaGradientButton17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton17.TextOffsetX = 8;
+            this.btnStock.Animated = true;
+            this.btnStock.AnimationHoverSpeed = 0.07F;
+            this.btnStock.AnimationSpeed = 0.03F;
+            this.btnStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnStock.BaseColor1 = System.Drawing.Color.White;
+            this.btnStock.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnStock.BorderColor = System.Drawing.Color.Black;
+            this.btnStock.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnStock.FocusedColor = System.Drawing.Color.Empty;
+            this.btnStock.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.Black;
+            this.btnStock.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
+            this.btnStock.ImageOffsetX = -8;
+            this.btnStock.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnStock.Location = new System.Drawing.Point(989, 427);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnStock.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStock.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnStock.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnStock.OnHoverImage = null;
+            this.btnStock.OnPressedColor = System.Drawing.Color.Black;
+            this.btnStock.Radius = 8;
+            this.btnStock.Size = new System.Drawing.Size(110, 40);
+            this.btnStock.TabIndex = 271;
+            this.btnStock.Text = "Stock en Tiendas";
+            this.btnStock.TextOffsetX = -5;
             // 
-            // gunaGradientButton18
+            // btnProcesarBoleta
             // 
-            this.gunaGradientButton18.Animated = true;
-            this.gunaGradientButton18.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton18.AnimationSpeed = 0.03F;
-            this.gunaGradientButton18.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton18.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton18.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gunaGradientButton18.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton18.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton18.Font = new System.Drawing.Font("Gadugi", 12.25F, System.Drawing.FontStyle.Bold);
-            this.gunaGradientButton18.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton18.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton18.Image")));
-            this.gunaGradientButton18.ImageOffsetX = -1;
-            this.gunaGradientButton18.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton18.Location = new System.Drawing.Point(1169, 422);
-            this.gunaGradientButton18.Name = "gunaGradientButton18";
-            this.gunaGradientButton18.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton18.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton18.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton18.OnHoverImage = null;
-            this.gunaGradientButton18.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton18.Radius = 8;
-            this.gunaGradientButton18.Size = new System.Drawing.Size(129, 40);
-            this.gunaGradientButton18.TabIndex = 272;
-            this.gunaGradientButton18.Text = "Proveedores";
-            this.gunaGradientButton18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton18.TextOffsetX = 8;
+            this.btnProcesarBoleta.Animated = true;
+            this.btnProcesarBoleta.AnimationHoverSpeed = 0.07F;
+            this.btnProcesarBoleta.AnimationSpeed = 0.03F;
+            this.btnProcesarBoleta.BackColor = System.Drawing.Color.Transparent;
+            this.btnProcesarBoleta.BaseColor1 = System.Drawing.Color.White;
+            this.btnProcesarBoleta.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnProcesarBoleta.BorderColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnProcesarBoleta.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProcesarBoleta.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcesarBoleta.ForeColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnProcesarBoleta.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesarBoleta.Image")));
+            this.btnProcesarBoleta.ImageOffsetX = -8;
+            this.btnProcesarBoleta.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnProcesarBoleta.Location = new System.Drawing.Point(1099, 427);
+            this.btnProcesarBoleta.Name = "btnProcesarBoleta";
+            this.btnProcesarBoleta.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnProcesarBoleta.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProcesarBoleta.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProcesarBoleta.OnHoverImage = null;
+            this.btnProcesarBoleta.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.Radius = 8;
+            this.btnProcesarBoleta.Size = new System.Drawing.Size(110, 40);
+            this.btnProcesarBoleta.TabIndex = 272;
+            this.btnProcesarBoleta.Text = "Procesar Boleta";
+            this.btnProcesarBoleta.TextOffsetX = -5;
             // 
             // componentes
             // 
@@ -1727,12 +1721,12 @@ namespace ptoVenta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1567, 722);
-            this.Controls.Add(this.gunaGradientButton18);
-            this.Controls.Add(this.gunaGradientButton17);
-            this.Controls.Add(this.gunaGradientButton16);
-            this.Controls.Add(this.gunaGradientButton15);
-            this.Controls.Add(this.gunaGradientButton14);
-            this.Controls.Add(this.gunaGradientButton13);
+            this.Controls.Add(this.btnProcesarBoleta);
+            this.Controls.Add(this.btnStock);
+            this.Controls.Add(this.btnProductosFaltantes);
+            this.Controls.Add(this.btnCargarDocumento);
+            this.Controls.Add(this.btnGuardarDocumento);
+            this.Controls.Add(this.btnLiberarCaja);
             this.Controls.Add(this.cButton7);
             this.Controls.Add(this.cButton2);
             this.Controls.Add(this.cButton1);
@@ -1740,7 +1734,7 @@ namespace ptoVenta
             this.Controls.Add(this.cButton4);
             this.Controls.Add(this.cButton6);
             this.Controls.Add(this.cButton3);
-            this.Controls.Add(this.gunaGradientButton64);
+            this.Controls.Add(this.btnCambioPrecio);
             this.Controls.Add(this.gunaGradientButton63);
             this.Controls.Add(this.gunaGradientButton5);
             this.Controls.Add(this.gunaGradientButton1);
@@ -1829,7 +1823,7 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton6;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton4;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton64;
+        private Guna.UI.WinForms.GunaGradientButton btnCambioPrecio;
         private CButtonLib.CButton cButton7;
         private CButtonLib.CButton cButton2;
         private CButtonLib.CButton cButton1;
@@ -1837,11 +1831,11 @@ namespace ptoVenta
         private CButtonLib.CButton cButton4;
         private CButtonLib.CButton cButton6;
         private CButtonLib.CButton cButton3;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton13;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton14;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton15;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton16;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton17;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton18;
+        private Guna.UI.WinForms.GunaGradientButton btnLiberarCaja;
+        private Guna.UI.WinForms.GunaGradientButton btnGuardarDocumento;
+        private Guna.UI.WinForms.GunaGradientButton btnCargarDocumento;
+        private Guna.UI.WinForms.GunaGradientButton btnProductosFaltantes;
+        private Guna.UI.WinForms.GunaGradientButton btnStock;
+        private Guna.UI.WinForms.GunaGradientButton btnProcesarBoleta;
     }
 }
