@@ -146,6 +146,7 @@ namespace ptoVenta
             this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -155,6 +156,7 @@ namespace ptoVenta
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gunaGradient2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvLista
@@ -214,8 +216,10 @@ namespace ptoVenta
             this.dgvLista.Size = new System.Drawing.Size(734, 232);
             this.dgvLista.TabIndex = 18;
             this.dgvLista.TabStop = false;
-            this.dgvLista.VirtualMode = true;
+            this.dgvLista.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellMouseEnter);
+            this.dgvLista.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellMouseLeave);
             this.dgvLista.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvLista_CellToolTipTextNeeded);
+            this.dgvLista.Click += new System.EventHandler(this.dgvLista_Click);
             this.dgvLista.DoubleClick += new System.EventHandler(this.dgvLista_DoubleClick);
             this.dgvLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLista_KeyPress);
             this.dgvLista.MouseHover += new System.EventHandler(this.dgvLista_MouseHover);
@@ -1730,6 +1734,16 @@ namespace ptoVenta
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(66, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 174);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 282;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1741,6 +1755,7 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gunaGradient2Panel1);
             this.Controls.Add(this.btnProcesarBoleta);
             this.Controls.Add(this.btnStock);
@@ -1793,6 +1808,7 @@ namespace ptoVenta
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1890,6 +1906,7 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton btnBuscar1;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
