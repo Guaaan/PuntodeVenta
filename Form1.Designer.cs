@@ -214,7 +214,7 @@ namespace ptoVenta
             this.dgvLista.Size = new System.Drawing.Size(734, 232);
             this.dgvLista.TabIndex = 18;
             this.dgvLista.TabStop = false;
-            this.dgvLista.VirtualMode = true;
+            this.dgvLista.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLista_CellFormatting);
             this.dgvLista.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvLista_CellToolTipTextNeeded);
             this.dgvLista.DoubleClick += new System.EventHandler(this.dgvLista_DoubleClick);
             this.dgvLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLista_KeyPress);

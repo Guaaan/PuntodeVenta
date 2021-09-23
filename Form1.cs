@@ -1083,46 +1083,25 @@ namespace ptoVenta
 
         private void dgvLista_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
         {
-            string newLine = Environment.NewLine;
-            if (e.RowIndex > -1)
-            {
-                DataGridViewRow dataGridViewRow1 = dgvLista.Rows[e.RowIndex];
+            //string newLine = Environment.NewLine;
+            //if (e.RowIndex > -1)
+            //{
+            //    DataGridViewRow dataGridViewRow1 = dgvLista.Rows[e.RowIndex];
 
-                // Add the employee's ID to the ToolTipText.
-                e.ToolTipText = String.Format("Código {0}:{1}",
-                    dataGridViewRow1.Cells["CODIGO"].Value, newLine) ;
-            }
-                 
-                
-
-                
-
-                
-
-
-                //var array = dgvLista.Rows
-                //.Cast<DataGridViewRow>()
-                //.Select(x => x.Cells[3].Value.ToString().Trim())
-                //.ToArray();
-                //for (int i = 0; i < dgvLista.Rows.Count; i++)
-                //{
-                //    array[i] = dgvLista.Rows[i].Cells[3].Value.ToString().Trim();
-                //}
-
-
-                //if (e.RowIndex < 0) return;
-                //if (dgvLista.Rows[e.RowIndex].IsNewRow) return;
-
-
-
-                //int valor1 = (int)dgvLista.CurrentRow.Cells["NombreColumna"].Value;
-                //string texto = string.Format("Id: {0}\nNombres: {1}\nApellidos: {2}\nEspecialidad: {3}\nTeléfono: {4}\nGrupo: {5}", dgvLista.Rows[0].ToString(), dgvLista.Rows[1].ToString(), dgvLista.Rows[2].ToString(), dgvLista.Rows[3].ToString(), dgvLista.Rows[4].ToString(), dgvLista.Rows[5].ToString());
-
-                //e.ToolTipText = texto;
+            //    // Add the employee's ID to the ToolTipText.
+            //    e.ToolTipText = String.Format("Código {0}:{1}",
+            //        dataGridViewRow1.Cells["CODIGO"].Value, newLine) ;
+            //}
+            
         }
 
         private void dgvGrid1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
         {
+        }
+
+        private void dgvLista_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
         }
 
         private void stocktiendas()
