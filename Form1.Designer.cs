@@ -109,6 +109,8 @@ namespace ptoVenta
             this.txtRut = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnBuscar1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -142,8 +144,6 @@ namespace ptoVenta
             this.btnGuardarDocumento = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLiberarCaja = new Guna.UI.WinForms.GunaGradientButton();
             this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnBuscar1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -214,8 +214,11 @@ namespace ptoVenta
             this.dgvLista.Size = new System.Drawing.Size(734, 232);
             this.dgvLista.TabIndex = 18;
             this.dgvLista.TabStop = false;
+            this.dgvLista.VirtualMode = true;
+            this.dgvLista.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvLista_CellToolTipTextNeeded);
             this.dgvLista.DoubleClick += new System.EventHandler(this.dgvLista_DoubleClick);
             this.dgvLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLista_KeyPress);
+            this.dgvLista.MouseHover += new System.EventHandler(this.dgvLista_MouseHover);
             // 
             // LINEA
             // 
@@ -663,6 +666,7 @@ namespace ptoVenta
             this.dgvGrid1.TabIndex = 93;
             this.dgvGrid1.TabStop = false;
             this.dgvGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid1_CellClick);
+            this.dgvGrid1.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvGrid1_CellToolTipTextNeeded);
             this.dgvGrid1.CurrentCellChanged += new System.EventHandler(this.dgvGrid1_CurrentCellChanged);
             this.dgvGrid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvGrid1_EditingControlShowing);
             // 
@@ -965,6 +969,62 @@ namespace ptoVenta
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(720, 95);
             this.panel7.TabIndex = 86;
+            // 
+            // btnBuscar1
+            // 
+            this.btnBuscar1.Animated = true;
+            this.btnBuscar1.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar1.AnimationSpeed = 0.03F;
+            this.btnBuscar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50)))));
+            this.btnBuscar1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(105)))), ((int)(((byte)(37)))));
+            this.btnBuscar1.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscar1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar1.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar1.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnBuscar1.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar1.Image")));
+            this.btnBuscar1.ImageOffsetX = -2;
+            this.btnBuscar1.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBuscar1.Location = new System.Drawing.Point(3, 3);
+            this.btnBuscar1.Name = "btnBuscar1";
+            this.btnBuscar1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(117)))), ((int)(((byte)(41)))));
+            this.btnBuscar1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(93)))), ((int)(((byte)(33)))));
+            this.btnBuscar1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBuscar1.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar1.OnHoverImage = null;
+            this.btnBuscar1.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar1.Radius = 8;
+            this.btnBuscar1.Size = new System.Drawing.Size(105, 40);
+            this.btnBuscar1.TabIndex = 280;
+            this.btnBuscar1.Text = "Buscar";
+            this.btnBuscar1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(41)))));
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(50)))), ((int)(((byte)(27)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 30;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(3, 3);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnBuscar.Size = new System.Drawing.Size(93, 40);
+            this.btnBuscar.TabIndex = 182;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // label22
             // 
@@ -1642,62 +1702,6 @@ namespace ptoVenta
             this.btnCambioPrecio.TabIndex = 273;
             this.btnCambioPrecio.Text = "Cambio de Precio";
             this.btnCambioPrecio.TextOffsetX = -5;
-            // 
-            // btnBuscar1
-            // 
-            this.btnBuscar1.Animated = true;
-            this.btnBuscar1.AnimationHoverSpeed = 0.07F;
-            this.btnBuscar1.AnimationSpeed = 0.03F;
-            this.btnBuscar1.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50)))));
-            this.btnBuscar1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(105)))), ((int)(((byte)(37)))));
-            this.btnBuscar1.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscar1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnBuscar1.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuscar1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar1.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnBuscar1.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar1.Image")));
-            this.btnBuscar1.ImageOffsetX = -2;
-            this.btnBuscar1.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBuscar1.Location = new System.Drawing.Point(3, 3);
-            this.btnBuscar1.Name = "btnBuscar1";
-            this.btnBuscar1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(117)))), ((int)(((byte)(41)))));
-            this.btnBuscar1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(93)))), ((int)(((byte)(33)))));
-            this.btnBuscar1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnBuscar1.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBuscar1.OnHoverImage = null;
-            this.btnBuscar1.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscar1.Radius = 8;
-            this.btnBuscar1.Size = new System.Drawing.Size(105, 40);
-            this.btnBuscar1.TabIndex = 280;
-            this.btnBuscar1.Text = "Buscar";
-            this.btnBuscar1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(41)))));
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(50)))), ((int)(((byte)(27)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(3, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnBuscar.Size = new System.Drawing.Size(93, 40);
-            this.btnBuscar.TabIndex = 182;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // gunaGradient2Panel1
             // 
