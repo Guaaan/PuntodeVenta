@@ -1099,9 +1099,20 @@ namespace ptoVenta
         {
         }
 
-        private void dgvLista_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvLista_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void dgvLista_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            ;
+        }
+
+        private void dgvLista_Click(object sender, EventArgs e)
+        {
+            imagenProducto abrirImagen = new imagenProducto();
+            abrirImagen.Show();
         }
 
         private void stocktiendas()
