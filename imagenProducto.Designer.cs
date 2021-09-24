@@ -32,6 +32,8 @@ namespace ptoVenta
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtLinea = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -67,16 +69,26 @@ namespace ptoVenta
             this.txtLinea.TabIndex = 285;
             this.txtLinea.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(279, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 122);
+            this.pictureBox1.TabIndex = 287;
+            this.pictureBox1.TabStop = false;
+            // 
             // imagenProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 198);
+            this.ClientSize = new System.Drawing.Size(497, 175);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtLinea);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtNombre);
             this.Name = "imagenProducto";
             this.Text = "imagenProducto";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,5 +99,6 @@ namespace ptoVenta
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtCodigo;
         public System.Windows.Forms.TextBox txtLinea;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
