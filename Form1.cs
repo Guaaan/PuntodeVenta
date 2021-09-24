@@ -14,6 +14,7 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
+using System.Configuration;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -1074,12 +1075,7 @@ namespace ptoVenta
             
         }
 
-        //dgvLista.Rows[renglon].Cells["CODIGO"].Value = Dr["CODIGO"] == DBNull.Value? " " : Convert.ToString(Dr["CODIGO"]).Trim();
-        //dgvLista.Rows[renglon].Cells["PRODUCTO"].Value = Dr["NOMBRE"] == DBNull.Value? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
-        //dgvLista.Rows[renglon].Cells["PRINCIPIO"].Value = Dr["PRINCIPIO"] == DBNull.Value? " " : Convert.ToString(Dr["PRINCIPIO"]).Trim();
-        //dgvLista.Rows[renglon].Cells["STOCK"].Value = Dr["STOCK"] == DBNull.Value? 0 : Convert.ToDouble(Dr["STOCK"]);
-        //dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value? 0 : Convert.ToDouble(Dr["PRECIO1"]);
-        //dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+        
 
         private void dgvLista_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
         {
@@ -1111,12 +1107,75 @@ namespace ptoVenta
 
         private void dgvLista_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow fila in dgvLista.Rows)
+            {
+                //if (row.Cells["CODIGO"].Value != null)
+                
+
+
+            }
             
-            imagenProducto abrirImagen = new imagenProducto();
-            abrirImagen.Show();
+
+            
                 
 
             
+        }
+
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Dr = com.ExecuteReader();
+            //while (Dr.Read())
+            //{
+            //    vfoto = (string)Convert.ToString(Dr["FOTO"]);
+            //    if (vfoto.Trim() != "")
+            //    {
+            //        if (File.Exists(vfoto))
+            //        {
+            //            try
+            //            {
+            //                //dgvLista.CurrentRow.Cells["FOTO"].Value = Image.FromFile(vfoto);
+            //                pictureBox1.Image = Image.FromFile(vfoto);
+            //                txtPrincipioA.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+
+            //            }
+            //            catch { }
+            //        }
+
+                    
+                    
+            //        else { return; }
+            //    }
+            //}
+            //Dr.Close();
+        }
+
+        private void dgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+                frm.txtNombre.Text = dgvLista.CurrentRow.Cells[0].Value.ToString();
+                frm.txtCodigo.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
+                frm.txtLinea.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+
+                frm.Show();
+            }
+        }
+
+        private void MoveCursor()
+        {
+            // Set the Current cursor, move the cursor's Position,
+            // and set its clipping rectangle to the form. 
+
+            this.Cursor = new Cursor(Cursor.Current.Handle);
+            Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 50);
+            Cursor.Clip = new Rectangle(this.Location, this.Size);
         }
 
         private void stocktiendas()
