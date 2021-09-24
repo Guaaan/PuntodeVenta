@@ -1157,15 +1157,18 @@ namespace ptoVenta
 
         private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            
+            imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+            frm.txtNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+            frm.txtCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+            frm.txtLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
+                Image image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString();
+            if (File.Exists(image))
             {
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-                frm.txtNombre.Text = dgvLista.CurrentRow.Cells[0].Value.ToString();
-                frm.txtCodigo.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
-                frm.txtLinea.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
-
-                frm.Show();
+                frm.pictureBox1.Image = image;
             }
+            frm.Show();
+            
         }
 
         private void MoveCursor()
