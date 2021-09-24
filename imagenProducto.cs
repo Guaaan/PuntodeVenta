@@ -16,5 +16,19 @@ namespace ptoVenta
         {
             InitializeComponent();
         }
+
+        private void imagenProducto_Load(object sender, EventArgs e)
+        {
+
+        }
+       
+
+        private void imagenProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

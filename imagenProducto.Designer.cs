@@ -88,6 +88,8 @@ namespace ptoVenta
             this.Controls.Add(this.txtNombre);
             this.Name = "imagenProducto";
             this.Text = "imagenProducto";
+            this.Load += new System.EventHandler(this.imagenProducto_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.imagenProducto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
