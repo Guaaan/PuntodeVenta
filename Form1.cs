@@ -1162,11 +1162,9 @@ namespace ptoVenta
             frm.txtNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
             frm.txtCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
             frm.txtLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
-                Image image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString();
-            if (File.Exists(image))
-            {
-                frm.pictureBox1.Image = image;
-            }
+            
+                //frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
+            
             frm.Show();
             
         }
