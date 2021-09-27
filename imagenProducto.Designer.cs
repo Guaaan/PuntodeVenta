@@ -29,45 +29,12 @@ namespace ptoVenta
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtLinea = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblLinea = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(12, 12);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(261, 22);
-            this.txtNombre.TabIndex = 283;
-            this.txtNombre.TabStop = false;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BackColor = System.Drawing.Color.White;
-            this.txtCodigo.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCodigo.Location = new System.Drawing.Point(12, 40);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(261, 22);
-            this.txtCodigo.TabIndex = 284;
-            this.txtCodigo.TabStop = false;
-            // 
-            // txtLinea
-            // 
-            this.txtLinea.BackColor = System.Drawing.Color.White;
-            this.txtLinea.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinea.ForeColor = System.Drawing.Color.DimGray;
-            this.txtLinea.Location = new System.Drawing.Point(12, 68);
-            this.txtLinea.Name = "txtLinea";
-            this.txtLinea.Size = new System.Drawing.Size(261, 22);
-            this.txtLinea.TabIndex = 285;
-            this.txtLinea.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -77,19 +44,51 @@ namespace ptoVenta
             this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(12, 12);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(51, 20);
+            this.lblNombre.TabIndex = 288;
+            this.lblNombre.Text = "label1";
+            // 
+            // lblLinea
+            // 
+            this.lblLinea.AutoSize = true;
+            this.lblLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLinea.Location = new System.Drawing.Point(12, 64);
+            this.lblLinea.Name = "lblLinea";
+            this.lblLinea.Size = new System.Drawing.Size(51, 20);
+            this.lblLinea.TabIndex = 289;
+            this.lblLinea.Text = "label1";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(12, 38);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(51, 20);
+            this.lblCodigo.TabIndex = 290;
+            this.lblCodigo.Text = "label1";
+            // 
             // imagenProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 175);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.lblLinea);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtLinea);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.txtNombre);
             this.Name = "imagenProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "imagenProducto";
             this.Load += new System.EventHandler(this.imagenProducto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.imagenProducto_KeyDown);
+            this.MouseLeave += new System.EventHandler(this.imagenProducto_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,10 +96,9 @@ namespace ptoVenta
         }
 
         #endregion
-
-        public System.Windows.Forms.TextBox txtNombre;
-        public System.Windows.Forms.TextBox txtCodigo;
-        public System.Windows.Forms.TextBox txtLinea;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label lblNombre;
+        public System.Windows.Forms.Label lblLinea;
+        public System.Windows.Forms.Label lblCodigo;
     }
 }
