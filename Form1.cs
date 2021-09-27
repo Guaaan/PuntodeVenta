@@ -1157,31 +1157,25 @@ namespace ptoVenta
 
         private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 1) // third-column 
-            {
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-                frm.txtNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
-                frm.txtCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
-                frm.txtLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
 
+            if (e.ColumnIndex == 1) // second-column 
+            {
+               
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+                frm.lblLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
                 //frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
 
                 frm.Show();
             }
         }
-        
 
-      
 
-        private void MoveCursor()
-        {
-            // Set the Current cursor, move the cursor's Position,
-            // and set its clipping rectangle to the form. 
 
-            this.Cursor = new Cursor(Cursor.Current.Handle);
-            Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 50);
-            Cursor.Clip = new Rectangle(this.Location, this.Size);
-        }
+
+
+
 
         private void stocktiendas()
             {

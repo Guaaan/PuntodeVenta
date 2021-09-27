@@ -146,8 +146,6 @@ namespace ptoVenta
             this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.txtPrincipioA = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -157,7 +155,6 @@ namespace ptoVenta
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gunaGradient2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvLista
@@ -1738,25 +1735,6 @@ namespace ptoVenta
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
-            // txtPrincipioA
-            // 
-            this.txtPrincipioA.BackColor = System.Drawing.Color.White;
-            this.txtPrincipioA.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrincipioA.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrincipioA.Location = new System.Drawing.Point(385, 127);
-            this.txtPrincipioA.Name = "txtPrincipioA";
-            this.txtPrincipioA.Size = new System.Drawing.Size(127, 22);
-            this.txtPrincipioA.TabIndex = 282;
-            this.txtPrincipioA.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(518, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 93);
-            this.pictureBox1.TabIndex = 283;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1768,8 +1746,6 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtPrincipioA);
             this.Controls.Add(this.gunaGradient2Panel1);
             this.Controls.Add(this.btnProcesarBoleta);
             this.Controls.Add(this.btnStock);
@@ -1822,7 +1798,6 @@ namespace ptoVenta
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1920,8 +1895,6 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton btnBuscar1;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private System.Windows.Forms.TextBox txtPrincipioA;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

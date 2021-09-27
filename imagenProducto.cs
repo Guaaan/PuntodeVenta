@@ -19,7 +19,9 @@ namespace ptoVenta
 
         private void imagenProducto_Load(object sender, EventArgs e)
         {
-            
+            var _point = new System.Drawing.Point(Cursor.Position.X, Cursor.Position.Y);
+            Top = _point.Y -135;
+            Left = _point.X;
         }
        
 
@@ -29,6 +31,16 @@ namespace ptoVenta
             {
                 this.Close();
             }
+        }
+
+        private void imagenProducto_Leave(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void imagenProducto_MouseLeave(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
