@@ -19,7 +19,7 @@ namespace ptoVenta
 
         private void imagenProducto_Load(object sender, EventArgs e)
         {
-
+            
         }
        
 
