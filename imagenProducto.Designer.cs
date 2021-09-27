@@ -38,9 +38,9 @@ namespace ptoVenta
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(279, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(243, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(163, 105);
             this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
             // 
@@ -78,14 +78,18 @@ namespace ptoVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 175);
+            this.ClientSize = new System.Drawing.Size(418, 130);
+            this.ControlBox = false;
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblLinea);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "imagenProducto";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "imagenProducto";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.imagenProducto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.imagenProducto_KeyDown);
             this.MouseLeave += new System.EventHandler(this.imagenProducto_MouseLeave);

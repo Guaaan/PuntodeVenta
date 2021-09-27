@@ -20,7 +20,7 @@ namespace ptoVenta
         private void imagenProducto_Load(object sender, EventArgs e)
         {
             var _point = new System.Drawing.Point(Cursor.Position.X, Cursor.Position.Y);
-            Top = _point.Y;
+            Top = _point.Y -135;
             Left = _point.X;
         }
        
