@@ -1165,10 +1165,16 @@ namespace ptoVenta
                 frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
                 frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
                 frm.lblLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
-                //frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
+
+                frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
+
+               
+
 
                 frm.Show();
             }
+
+
         }
 
 
