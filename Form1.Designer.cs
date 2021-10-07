@@ -30,31 +30,31 @@ namespace ptoVenta
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.LINEA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOTO = new System.Windows.Forms.DataGridViewImageColumn();
@@ -146,13 +146,6 @@ namespace ptoVenta
             this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton3 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton5 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton6 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton7 = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -172,14 +165,14 @@ namespace ptoVenta
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLista.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LINEA,
@@ -190,29 +183,29 @@ namespace ptoVenta
             this.STOCK,
             this.PRECIO,
             this.OFERTA});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLista.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLista.DefaultCellStyle = dataGridViewCellStyle31;
             this.dgvLista.Location = new System.Drawing.Point(12, 349);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dgvLista.RowHeadersVisible = false;
             this.dgvLista.RowHeadersWidth = 20;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvLista.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvLista.RowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvLista.RowTemplate.Height = 30;
             this.dgvLista.RowTemplate.ReadOnly = true;
             this.dgvLista.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -235,8 +228,8 @@ namespace ptoVenta
             // LINEA
             // 
             this.LINEA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.LINEA.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.LINEA.DefaultCellStyle = dataGridViewCellStyle26;
             this.LINEA.HeaderText = "Linea";
             this.LINEA.MinimumWidth = 6;
             this.LINEA.Name = "LINEA";
@@ -246,9 +239,9 @@ namespace ptoVenta
             // FOTO
             // 
             this.FOTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FOTO.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FOTO.DefaultCellStyle = dataGridViewCellStyle27;
             this.FOTO.HeaderText = "IMAGEN";
             this.FOTO.Image = ((System.Drawing.Image)(resources.GetObject("FOTO.Image")));
             this.FOTO.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -288,8 +281,8 @@ namespace ptoVenta
             // STOCK
             // 
             this.STOCK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STOCK.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.STOCK.DefaultCellStyle = dataGridViewCellStyle28;
             this.STOCK.HeaderText = "STOCK";
             this.STOCK.MinimumWidth = 6;
             this.STOCK.Name = "STOCK";
@@ -299,10 +292,10 @@ namespace ptoVenta
             // PRECIO
             // 
             this.PRECIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N0";
-            dataGridViewCellStyle5.NullValue = null;
-            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle29.Format = "N0";
+            dataGridViewCellStyle29.NullValue = null;
+            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle29;
             this.PRECIO.HeaderText = "PRECIO FINAL";
             this.PRECIO.MinimumWidth = 6;
             this.PRECIO.Name = "PRECIO";
@@ -312,10 +305,10 @@ namespace ptoVenta
             // OFERTA
             // 
             this.OFERTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N0";
-            dataGridViewCellStyle6.NullValue = null;
-            this.OFERTA.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle30.Format = "N0";
+            dataGridViewCellStyle30.NullValue = null;
+            this.OFERTA.DefaultCellStyle = dataGridViewCellStyle30;
             this.OFERTA.HeaderText = "OFERTA";
             this.OFERTA.MinimumWidth = 6;
             this.OFERTA.Name = "OFERTA";
@@ -628,14 +621,14 @@ namespace ptoVenta
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGrid1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LINEA1,
@@ -648,25 +641,25 @@ namespace ptoVenta
             this.OFERTA1,
             this.TOTAL1,
             this.DELE});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGrid1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGrid1.DefaultCellStyle = dataGridViewCellStyle43;
             this.dgvGrid1.Location = new System.Drawing.Point(12, 349);
             this.dgvGrid1.Name = "dgvGrid1";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle44.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.dgvGrid1.RowHeadersVisible = false;
             this.dgvGrid1.RowHeadersWidth = 20;
             this.dgvGrid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -685,8 +678,8 @@ namespace ptoVenta
             // LINEA1
             // 
             this.LINEA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.LINEA1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.LINEA1.DefaultCellStyle = dataGridViewCellStyle35;
             this.LINEA1.HeaderText = "Linea";
             this.LINEA1.MinimumWidth = 6;
             this.LINEA1.Name = "LINEA1";
@@ -696,8 +689,8 @@ namespace ptoVenta
             // FOTO1
             // 
             this.FOTO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FOTO1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FOTO1.DefaultCellStyle = dataGridViewCellStyle36;
             this.FOTO1.HeaderText = "IMAGEN";
             this.FOTO1.Image = ((System.Drawing.Image)(resources.GetObject("FOTO1.Image")));
             this.FOTO1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -728,8 +721,8 @@ namespace ptoVenta
             // STOCK1
             // 
             this.STOCK1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STOCK1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.STOCK1.DefaultCellStyle = dataGridViewCellStyle37;
             this.STOCK1.HeaderText = "STOCK";
             this.STOCK1.MinimumWidth = 6;
             this.STOCK1.Name = "STOCK1";
@@ -739,8 +732,8 @@ namespace ptoVenta
             // CANTIDAD1
             // 
             this.CANTIDAD1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CANTIDAD1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CANTIDAD1.DefaultCellStyle = dataGridViewCellStyle38;
             this.CANTIDAD1.DisplayStyleForCurrentCellOnly = true;
             this.CANTIDAD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CANTIDAD1.HeaderText = "CANTIDAD";
@@ -763,10 +756,10 @@ namespace ptoVenta
             // PRECIO1
             // 
             this.PRECIO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N0";
-            dataGridViewCellStyle15.NullValue = null;
-            this.PRECIO1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle39.Format = "N0";
+            dataGridViewCellStyle39.NullValue = null;
+            this.PRECIO1.DefaultCellStyle = dataGridViewCellStyle39;
             this.PRECIO1.HeaderText = "PRECIO FINAL";
             this.PRECIO1.MinimumWidth = 6;
             this.PRECIO1.Name = "PRECIO1";
@@ -776,10 +769,10 @@ namespace ptoVenta
             // OFERTA1
             // 
             this.OFERTA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N0";
-            dataGridViewCellStyle16.NullValue = null;
-            this.OFERTA1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle40.Format = "N0";
+            dataGridViewCellStyle40.NullValue = null;
+            this.OFERTA1.DefaultCellStyle = dataGridViewCellStyle40;
             this.OFERTA1.HeaderText = "OFERTA";
             this.OFERTA1.MinimumWidth = 6;
             this.OFERTA1.Name = "OFERTA1";
@@ -789,11 +782,11 @@ namespace ptoVenta
             // TOTAL1
             // 
             this.TOTAL1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.Format = "N0";
-            dataGridViewCellStyle17.NullValue = null;
-            this.TOTAL1.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.Format = "N0";
+            dataGridViewCellStyle41.NullValue = null;
+            this.TOTAL1.DefaultCellStyle = dataGridViewCellStyle41;
             this.TOTAL1.HeaderText = "TOTAL";
             this.TOTAL1.MinimumWidth = 6;
             this.TOTAL1.Name = "TOTAL1";
@@ -802,10 +795,10 @@ namespace ptoVenta
             // 
             // DELE
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.NullValue = null;
-            this.DELE.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.NullValue = null;
+            this.DELE.DefaultCellStyle = dataGridViewCellStyle42;
             this.DELE.HeaderText = "";
             this.DELE.Image = ((System.Drawing.Image)(resources.GetObject("DELE.Image")));
             this.DELE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -1081,10 +1074,10 @@ namespace ptoVenta
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.NullValue = null;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle45.NullValue = null;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle45;
             this.dataGridViewImageColumn1.HeaderText = "IMAGEN";
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn1.MinimumWidth = 6;
@@ -1097,9 +1090,9 @@ namespace ptoVenta
             // dataGridViewImageColumn2
             // 
             this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle46;
             this.dataGridViewImageColumn2.HeaderText = "IMAGEN";
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn2.MinimumWidth = 6;
@@ -1234,8 +1227,8 @@ namespace ptoVenta
             // dataGridViewImageColumn3
             // 
             this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewImageColumn3.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewImageColumn3.DefaultCellStyle = dataGridViewCellStyle47;
             this.dataGridViewImageColumn3.HeaderText = "IMAGEN";
             this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
             this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -1249,9 +1242,9 @@ namespace ptoVenta
             // dataGridViewImageColumn4
             // 
             this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn4.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn4.DefaultCellStyle = dataGridViewCellStyle48;
             this.dataGridViewImageColumn4.HeaderText = "IMAGEN";
             this.dataGridViewImageColumn4.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn4.Image")));
             this.dataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -1498,21 +1491,21 @@ namespace ptoVenta
             this.btnProcesarBoleta.AnimationHoverSpeed = 0.07F;
             this.btnProcesarBoleta.AnimationSpeed = 0.03F;
             this.btnProcesarBoleta.BackColor = System.Drawing.Color.Transparent;
-            this.btnProcesarBoleta.BaseColor1 = System.Drawing.Color.White;
-            this.btnProcesarBoleta.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnProcesarBoleta.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnProcesarBoleta.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnProcesarBoleta.BorderColor = System.Drawing.Color.Black;
             this.btnProcesarBoleta.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnProcesarBoleta.FocusedColor = System.Drawing.Color.Empty;
             this.btnProcesarBoleta.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcesarBoleta.ForeColor = System.Drawing.Color.Black;
+            this.btnProcesarBoleta.ForeColor = System.Drawing.Color.White;
             this.btnProcesarBoleta.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnProcesarBoleta.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesarBoleta.Image")));
             this.btnProcesarBoleta.ImageOffsetX = -8;
             this.btnProcesarBoleta.ImageSize = new System.Drawing.Size(35, 35);
             this.btnProcesarBoleta.Location = new System.Drawing.Point(945, 179);
             this.btnProcesarBoleta.Name = "btnProcesarBoleta";
-            this.btnProcesarBoleta.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnProcesarBoleta.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProcesarBoleta.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnProcesarBoleta.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnProcesarBoleta.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnProcesarBoleta.OnHoverForeColor = System.Drawing.Color.White;
             this.btnProcesarBoleta.OnHoverImage = null;
@@ -1530,21 +1523,21 @@ namespace ptoVenta
             this.btnStock.AnimationHoverSpeed = 0.07F;
             this.btnStock.AnimationSpeed = 0.03F;
             this.btnStock.BackColor = System.Drawing.Color.Transparent;
-            this.btnStock.BaseColor1 = System.Drawing.Color.White;
-            this.btnStock.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnStock.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnStock.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnStock.BorderColor = System.Drawing.Color.Black;
             this.btnStock.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnStock.FocusedColor = System.Drawing.Color.Empty;
             this.btnStock.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.ForeColor = System.Drawing.Color.Black;
+            this.btnStock.ForeColor = System.Drawing.Color.White;
             this.btnStock.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
             this.btnStock.ImageOffsetX = -8;
             this.btnStock.ImageSize = new System.Drawing.Size(35, 35);
             this.btnStock.Location = new System.Drawing.Point(833, 179);
             this.btnStock.Name = "btnStock";
-            this.btnStock.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnStock.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStock.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnStock.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnStock.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnStock.OnHoverForeColor = System.Drawing.Color.White;
             this.btnStock.OnHoverImage = null;
@@ -1562,21 +1555,21 @@ namespace ptoVenta
             this.btnProductosFaltantes.AnimationHoverSpeed = 0.07F;
             this.btnProductosFaltantes.AnimationSpeed = 0.03F;
             this.btnProductosFaltantes.BackColor = System.Drawing.Color.Transparent;
-            this.btnProductosFaltantes.BaseColor1 = System.Drawing.Color.White;
-            this.btnProductosFaltantes.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnProductosFaltantes.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnProductosFaltantes.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnProductosFaltantes.BorderColor = System.Drawing.Color.Black;
             this.btnProductosFaltantes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnProductosFaltantes.FocusedColor = System.Drawing.Color.Empty;
             this.btnProductosFaltantes.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductosFaltantes.ForeColor = System.Drawing.Color.Black;
+            this.btnProductosFaltantes.ForeColor = System.Drawing.Color.White;
             this.btnProductosFaltantes.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnProductosFaltantes.Image = ((System.Drawing.Image)(resources.GetObject("btnProductosFaltantes.Image")));
             this.btnProductosFaltantes.ImageOffsetX = -8;
             this.btnProductosFaltantes.ImageSize = new System.Drawing.Size(35, 35);
             this.btnProductosFaltantes.Location = new System.Drawing.Point(721, 179);
             this.btnProductosFaltantes.Name = "btnProductosFaltantes";
-            this.btnProductosFaltantes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnProductosFaltantes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProductosFaltantes.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnProductosFaltantes.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnProductosFaltantes.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnProductosFaltantes.OnHoverForeColor = System.Drawing.Color.White;
             this.btnProductosFaltantes.OnHoverImage = null;
@@ -1594,21 +1587,21 @@ namespace ptoVenta
             this.btnCargarDocumento.AnimationHoverSpeed = 0.07F;
             this.btnCargarDocumento.AnimationSpeed = 0.03F;
             this.btnCargarDocumento.BackColor = System.Drawing.Color.Transparent;
-            this.btnCargarDocumento.BaseColor1 = System.Drawing.Color.White;
-            this.btnCargarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnCargarDocumento.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnCargarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCargarDocumento.BorderColor = System.Drawing.Color.Black;
             this.btnCargarDocumento.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCargarDocumento.FocusedColor = System.Drawing.Color.Empty;
             this.btnCargarDocumento.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarDocumento.ForeColor = System.Drawing.Color.Black;
+            this.btnCargarDocumento.ForeColor = System.Drawing.Color.White;
             this.btnCargarDocumento.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnCargarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarDocumento.Image")));
             this.btnCargarDocumento.ImageOffsetX = -8;
             this.btnCargarDocumento.ImageSize = new System.Drawing.Size(35, 35);
             this.btnCargarDocumento.Location = new System.Drawing.Point(609, 179);
             this.btnCargarDocumento.Name = "btnCargarDocumento";
-            this.btnCargarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnCargarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCargarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnCargarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnCargarDocumento.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnCargarDocumento.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCargarDocumento.OnHoverImage = null;
@@ -1626,21 +1619,21 @@ namespace ptoVenta
             this.btnGuardarDocumento.AnimationHoverSpeed = 0.07F;
             this.btnGuardarDocumento.AnimationSpeed = 0.03F;
             this.btnGuardarDocumento.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarDocumento.BaseColor1 = System.Drawing.Color.White;
-            this.btnGuardarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGuardarDocumento.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGuardarDocumento.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGuardarDocumento.BorderColor = System.Drawing.Color.Black;
             this.btnGuardarDocumento.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnGuardarDocumento.FocusedColor = System.Drawing.Color.Empty;
             this.btnGuardarDocumento.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarDocumento.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarDocumento.ForeColor = System.Drawing.Color.White;
             this.btnGuardarDocumento.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnGuardarDocumento.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarDocumento.Image")));
             this.btnGuardarDocumento.ImageOffsetX = -8;
             this.btnGuardarDocumento.ImageSize = new System.Drawing.Size(35, 35);
             this.btnGuardarDocumento.Location = new System.Drawing.Point(497, 179);
             this.btnGuardarDocumento.Name = "btnGuardarDocumento";
-            this.btnGuardarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnGuardarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardarDocumento.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnGuardarDocumento.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnGuardarDocumento.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnGuardarDocumento.OnHoverForeColor = System.Drawing.Color.White;
             this.btnGuardarDocumento.OnHoverImage = null;
@@ -1658,21 +1651,21 @@ namespace ptoVenta
             this.btnLiberarCaja.AnimationHoverSpeed = 0.07F;
             this.btnLiberarCaja.AnimationSpeed = 0.03F;
             this.btnLiberarCaja.BackColor = System.Drawing.Color.Transparent;
-            this.btnLiberarCaja.BaseColor1 = System.Drawing.Color.White;
-            this.btnLiberarCaja.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnLiberarCaja.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnLiberarCaja.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLiberarCaja.BorderColor = System.Drawing.Color.Black;
             this.btnLiberarCaja.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLiberarCaja.FocusedColor = System.Drawing.Color.Empty;
             this.btnLiberarCaja.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLiberarCaja.ForeColor = System.Drawing.Color.Black;
+            this.btnLiberarCaja.ForeColor = System.Drawing.Color.White;
             this.btnLiberarCaja.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnLiberarCaja.Image = ((System.Drawing.Image)(resources.GetObject("btnLiberarCaja.Image")));
             this.btnLiberarCaja.ImageOffsetX = -8;
             this.btnLiberarCaja.ImageSize = new System.Drawing.Size(35, 35);
             this.btnLiberarCaja.Location = new System.Drawing.Point(385, 179);
             this.btnLiberarCaja.Name = "btnLiberarCaja";
-            this.btnLiberarCaja.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnLiberarCaja.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLiberarCaja.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnLiberarCaja.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnLiberarCaja.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnLiberarCaja.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLiberarCaja.OnHoverImage = null;
@@ -1689,21 +1682,21 @@ namespace ptoVenta
             this.btnCambioPrecio.AnimationHoverSpeed = 0.07F;
             this.btnCambioPrecio.AnimationSpeed = 0.03F;
             this.btnCambioPrecio.BackColor = System.Drawing.Color.Transparent;
-            this.btnCambioPrecio.BaseColor1 = System.Drawing.Color.White;
-            this.btnCambioPrecio.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnCambioPrecio.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnCambioPrecio.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCambioPrecio.BorderColor = System.Drawing.Color.Black;
             this.btnCambioPrecio.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCambioPrecio.FocusedColor = System.Drawing.Color.Empty;
             this.btnCambioPrecio.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambioPrecio.ForeColor = System.Drawing.Color.Black;
+            this.btnCambioPrecio.ForeColor = System.Drawing.Color.White;
             this.btnCambioPrecio.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnCambioPrecio.Image = ((System.Drawing.Image)(resources.GetObject("btnCambioPrecio.Image")));
             this.btnCambioPrecio.ImageOffsetX = -8;
             this.btnCambioPrecio.ImageSize = new System.Drawing.Size(35, 35);
             this.btnCambioPrecio.Location = new System.Drawing.Point(1057, 179);
             this.btnCambioPrecio.Name = "btnCambioPrecio";
-            this.btnCambioPrecio.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnCambioPrecio.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCambioPrecio.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnCambioPrecio.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnCambioPrecio.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnCambioPrecio.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCambioPrecio.OnHoverImage = null;
@@ -1741,230 +1734,6 @@ namespace ptoVenta
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
-            // gunaGradientButton1
-            // 
-            this.gunaGradientButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton1.Animated = true;
-            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(89)))), ((int)(((byte)(128)))));
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
-            this.gunaGradientButton1.ImageOffsetX = -8;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(385, 133);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Radius = 8;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton1.TabIndex = 285;
-            this.gunaGradientButton1.Text = "Liberar Caja";
-            this.gunaGradientButton1.TextOffsetX = -5;
-            // 
-            // gunaGradientButton2
-            // 
-            this.gunaGradientButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton2.Animated = true;
-            this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton2.AnimationSpeed = 0.03F;
-            this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
-            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(89)))), ((int)(((byte)(128)))));
-            this.gunaGradientButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton2.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton2.Image")));
-            this.gunaGradientButton2.ImageOffsetX = -8;
-            this.gunaGradientButton2.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton2.Location = new System.Drawing.Point(495, 133);
-            this.gunaGradientButton2.Name = "gunaGradientButton2";
-            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.OnHoverImage = null;
-            this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.Radius = 8;
-            this.gunaGradientButton2.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton2.TabIndex = 286;
-            this.gunaGradientButton2.Text = "Liberar Caja";
-            this.gunaGradientButton2.TextOffsetX = -5;
-            // 
-            // gunaGradientButton3
-            // 
-            this.gunaGradientButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton3.Animated = true;
-            this.gunaGradientButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton3.AnimationSpeed = 0.03F;
-            this.gunaGradientButton3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton3.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
-            this.gunaGradientButton3.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(89)))), ((int)(((byte)(128)))));
-            this.gunaGradientButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton3.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton3.Image")));
-            this.gunaGradientButton3.ImageOffsetX = -8;
-            this.gunaGradientButton3.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton3.Location = new System.Drawing.Point(605, 133);
-            this.gunaGradientButton3.Name = "gunaGradientButton3";
-            this.gunaGradientButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton3.OnHoverImage = null;
-            this.gunaGradientButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton3.Radius = 8;
-            this.gunaGradientButton3.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton3.TabIndex = 287;
-            this.gunaGradientButton3.Text = "Liberar Caja";
-            this.gunaGradientButton3.TextOffsetX = -5;
-            // 
-            // gunaGradientButton4
-            // 
-            this.gunaGradientButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton4.Animated = true;
-            this.gunaGradientButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton4.AnimationSpeed = 0.03F;
-            this.gunaGradientButton4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton4.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134)))));
-            this.gunaGradientButton4.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))));
-            this.gunaGradientButton4.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton4.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton4.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton4.Image")));
-            this.gunaGradientButton4.ImageOffsetX = -8;
-            this.gunaGradientButton4.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton4.Location = new System.Drawing.Point(1045, 133);
-            this.gunaGradientButton4.Name = "gunaGradientButton4";
-            this.gunaGradientButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton4.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton4.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton4.OnHoverImage = null;
-            this.gunaGradientButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton4.Radius = 8;
-            this.gunaGradientButton4.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton4.TabIndex = 288;
-            this.gunaGradientButton4.Text = "Liberar Caja";
-            this.gunaGradientButton4.TextOffsetX = -5;
-            // 
-            // gunaGradientButton5
-            // 
-            this.gunaGradientButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton5.Animated = true;
-            this.gunaGradientButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton5.AnimationSpeed = 0.03F;
-            this.gunaGradientButton5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton5.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
-            this.gunaGradientButton5.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(89)))), ((int)(((byte)(128)))));
-            this.gunaGradientButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton5.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton5.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton5.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton5.Image")));
-            this.gunaGradientButton5.ImageOffsetX = -8;
-            this.gunaGradientButton5.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton5.Location = new System.Drawing.Point(715, 133);
-            this.gunaGradientButton5.Name = "gunaGradientButton5";
-            this.gunaGradientButton5.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton5.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton5.OnHoverImage = null;
-            this.gunaGradientButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton5.Radius = 8;
-            this.gunaGradientButton5.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton5.TabIndex = 289;
-            this.gunaGradientButton5.Text = "Liberar Caja";
-            this.gunaGradientButton5.TextOffsetX = -5;
-            // 
-            // gunaGradientButton6
-            // 
-            this.gunaGradientButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton6.Animated = true;
-            this.gunaGradientButton6.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton6.AnimationSpeed = 0.03F;
-            this.gunaGradientButton6.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton6.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134)))));
-            this.gunaGradientButton6.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))));
-            this.gunaGradientButton6.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton6.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton6.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton6.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton6.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton6.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton6.Image")));
-            this.gunaGradientButton6.ImageOffsetX = -8;
-            this.gunaGradientButton6.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton6.Location = new System.Drawing.Point(825, 133);
-            this.gunaGradientButton6.Name = "gunaGradientButton6";
-            this.gunaGradientButton6.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton6.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton6.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton6.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton6.OnHoverImage = null;
-            this.gunaGradientButton6.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton6.Radius = 8;
-            this.gunaGradientButton6.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton6.TabIndex = 290;
-            this.gunaGradientButton6.Text = "Liberar Caja";
-            this.gunaGradientButton6.TextOffsetX = -5;
-            // 
-            // gunaGradientButton7
-            // 
-            this.gunaGradientButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton7.Animated = true;
-            this.gunaGradientButton7.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton7.AnimationSpeed = 0.03F;
-            this.gunaGradientButton7.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton7.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134)))));
-            this.gunaGradientButton7.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))));
-            this.gunaGradientButton7.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton7.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton7.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton7.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton7.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton7.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton7.Image")));
-            this.gunaGradientButton7.ImageOffsetX = -8;
-            this.gunaGradientButton7.ImageSize = new System.Drawing.Size(35, 35);
-            this.gunaGradientButton7.Location = new System.Drawing.Point(935, 133);
-            this.gunaGradientButton7.Name = "gunaGradientButton7";
-            this.gunaGradientButton7.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.gunaGradientButton7.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton7.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton7.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton7.OnHoverImage = null;
-            this.gunaGradientButton7.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton7.Radius = 8;
-            this.gunaGradientButton7.Size = new System.Drawing.Size(110, 40);
-            this.gunaGradientButton7.TabIndex = 291;
-            this.gunaGradientButton7.Text = "Liberar Caja";
-            this.gunaGradientButton7.TextOffsetX = -5;
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1976,13 +1745,6 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.ControlBox = false;
-            this.Controls.Add(this.gunaGradientButton7);
-            this.Controls.Add(this.gunaGradientButton6);
-            this.Controls.Add(this.gunaGradientButton5);
-            this.Controls.Add(this.gunaGradientButton4);
-            this.Controls.Add(this.gunaGradientButton3);
-            this.Controls.Add(this.gunaGradientButton2);
-            this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.gunaGradient2Panel1);
             this.Controls.Add(this.btnProcesarBoleta);
             this.Controls.Add(this.btnStock);
@@ -2132,13 +1894,6 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton btnBuscar1;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton3;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton4;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton5;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton6;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton7;
     }
 }
 
