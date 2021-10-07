@@ -161,13 +161,13 @@ namespace ptoVenta
             dgvLista.RowsDefaultCellStyle.BackColor = Color.FromArgb(213, 241, 245);
             dgvLista.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvLista.EnableHeadersVisualStyles = false;
-            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.MediumSlateBlue;
+            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 134, 193);
             dgvLista.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
             //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(36, 117, 83);
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(75, 153, 87);
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void txtProducto_TextChanged(object sender, EventArgs e)
@@ -1166,6 +1166,7 @@ namespace ptoVenta
                 frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
                 frm.lblLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
 
+
                 frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
 
                
@@ -1177,11 +1178,11 @@ namespace ptoVenta
 
         }
 
-
-
-
-
-
+        private void gunaTransfarantPictureBox2_Click(object sender, EventArgs e)
+        {
+            componentes abc = new componentes();
+            abc.Show();
+        }
 
         private void stocktiendas()
             {
