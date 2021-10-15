@@ -1167,7 +1167,7 @@ namespace ptoVenta
                 frm.lblLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
 
 
-                frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
+                //frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
 
                
 
