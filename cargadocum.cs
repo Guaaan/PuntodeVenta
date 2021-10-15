@@ -42,7 +42,7 @@ namespace ptoVenta
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.Green;
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(75, 153, 87);
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             cargaboletas();
 
@@ -125,6 +125,11 @@ namespace ptoVenta
             {
                 this.Close();
             }
+        }
+
+        private void gunaGradientButton63_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void cargadocum_KeyPress(object sender, KeyPressEventArgs e)

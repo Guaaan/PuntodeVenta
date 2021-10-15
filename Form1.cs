@@ -15,6 +15,7 @@ using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Drawing.Imaging;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -43,6 +44,7 @@ namespace ptoVenta
         private string upre = "";
         public static string cadena = "";
         public static int conecto = 0;
+        public static int ftop = 0;
 
         public static string nombre = "";
         public static string rut = "";
@@ -217,6 +219,7 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["STOCK"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                        dgvLista.Rows[renglon].Cells["img"].Value = Dr["FOTO"] == DBNull.Value ? " " : Convert.ToString(Dr["FOTO"]).Trim();
                     }
                     Dr.Close();
                 }
@@ -1070,9 +1073,9 @@ namespace ptoVenta
 
         }
 
-        private void dgvLista_MouseHover(object sender, EventArgs e)
+        private void dgvLista_MouseHover(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+            this.dgvLista.Click += new System.EventHandler(this.dgvLista_Click);
         }
 
         
@@ -1162,17 +1165,18 @@ namespace ptoVenta
             {
                
                 imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+
+
                 frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
                 frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
-                frm.lblLinea.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
 
+                MemoryStream ms = new MemoryStream(); 
+                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
+                imagen.Save(ms, ImageFormat.Jpeg);
+                frm.pictureBox1.Image = Image.FromStream(ms);
 
-                //frm.pictureBox1.Image = Image.FromFile(dgvLista.CurrentRow.Cells[1].Value.ToString());
-
-               
-
-
-                frm.Show();
+                ftop = dgvLista.Top;
+                frm.ShowDialog();
             }
 
 
@@ -1184,6 +1188,7 @@ namespace ptoVenta
             abc.Show();
         }
 
+ 
         private void stocktiendas()
             {
                 Stock abrirstock = new Stock();
