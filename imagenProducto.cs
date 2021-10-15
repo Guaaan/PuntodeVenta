@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +16,13 @@ namespace ptoVenta
         public imagenProducto()
         {
             InitializeComponent();
+            //pictureBox1.Image = Image.FromFile(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal)+ lblLinea.Text.ToString());
         }
 
         private void imagenProducto_Load(object sender, EventArgs e)
         {
-            var _point = new System.Drawing.Point(Cursor.Position.X, Cursor.Position.Y);
-            Top = _point.Y -135;
-            Left = _point.X;
+            Top = Form1.ftop;
+            Left = 150;
         }
        
 
@@ -33,12 +34,7 @@ namespace ptoVenta
             }
         }
 
-        private void imagenProducto_Leave(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void imagenProducto_MouseLeave(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
