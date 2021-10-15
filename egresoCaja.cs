@@ -106,7 +106,17 @@ namespace ptoVenta
             }
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        
+
+        private void egresoCaja_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           if (e.KeyChar == 27)
+           {
+               this.Close();
+            }
+        }
+
+        private void gunaGradientButton100_Click(object sender, EventArgs e)
         {
             int mon = Convert.ToInt32(txtEfectivo.Text);
             string cod = textBox1.Text.ToString();
@@ -184,12 +194,34 @@ namespace ptoVenta
             }
         }
 
-        private void egresoCaja_KeyPress(object sender, KeyPressEventArgs e)
+        private void gunaGradientButton13_Click(object sender, EventArgs e)
         {
-           if (e.KeyChar == 27)
-           {
-               this.Close();
-            }
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,15 +29,7 @@ namespace ptoVenta
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(componentes));
-            CButtonLib.cBlendItems cBlendItems7 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems8 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems2 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems3 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems4 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems5 = new CButtonLib.cBlendItems();
             this.gunaGradientButton63 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton5 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
@@ -78,27 +70,14 @@ namespace ptoVenta
             this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.btnCambioPrecio = new Guna.UI.WinForms.GunaGradientButton();
-            this.cButton7 = new CButtonLib.CButton();
-            this.cButton2 = new CButtonLib.CButton();
-            this.cButton1 = new CButtonLib.CButton();
-            this.cButton5 = new CButtonLib.CButton();
-            this.cButton4 = new CButtonLib.CButton();
-            this.cButton6 = new CButtonLib.CButton();
-            this.cButton3 = new CButtonLib.CButton();
             this.btnLiberarCaja = new Guna.UI.WinForms.GunaGradientButton();
             this.btnGuardarDocumento = new Guna.UI.WinForms.GunaGradientButton();
             this.btnCargarDocumento = new Guna.UI.WinForms.GunaGradientButton();
             this.btnProductosFaltantes = new Guna.UI.WinForms.GunaGradientButton();
             this.btnStock = new Guna.UI.WinForms.GunaGradientButton();
             this.btnProcesarBoleta = new Guna.UI.WinForms.GunaGradientButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.gunaGradientButton100 = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton13 = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
             // 
             // gunaGradientButton63
@@ -1294,249 +1273,6 @@ namespace ptoVenta
             this.btnCambioPrecio.Text = "Cambio de Precio";
             this.btnCambioPrecio.TextOffsetX = -5;
             // 
-            // cButton7
-            // 
-            this.cButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton7.BackColor = System.Drawing.Color.Transparent;
-            this.cButton7.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems7.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(79)))), ((int)(((byte)(89)))))};
-            cBlendItems7.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton7.ColorFillBlend = cBlendItems7;
-            this.cButton7.ColorFillSolid = System.Drawing.Color.Transparent;
-            this.cButton7.Corners.LowerLeft = 5;
-            this.cButton7.Corners.LowerRight = 7;
-            this.cButton7.Corners.UpperLeft = 5;
-            this.cButton7.Corners.UpperRight = 5;
-            this.cButton7.DesignerSelected = false;
-            this.cButton7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton7.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton7.Image = global::ptoVenta.Properties.Resources.kf3;
-            this.cButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton7.ImageIndex = 0;
-            this.cButton7.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton7.Location = new System.Drawing.Point(588, 327);
-            this.cButton7.Name = "cButton7";
-            this.cButton7.Size = new System.Drawing.Size(100, 38);
-            this.cButton7.TabIndex = 265;
-            this.cButton7.TabStop = false;
-            this.cButton7.Text = "Liberar Caja";
-            this.cButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton7.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton2
-            // 
-            this.cButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton2.BackColor = System.Drawing.Color.Transparent;
-            this.cButton2.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems8.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(183)))), ((int)(((byte)(30))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(122)))), ((int)(((byte)(20)))))};
-            cBlendItems8.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton2.ColorFillBlend = cBlendItems8;
-            this.cButton2.Corners.All = 5;
-            this.cButton2.Corners.LowerLeft = 5;
-            this.cButton2.Corners.LowerRight = 5;
-            this.cButton2.Corners.UpperLeft = 5;
-            this.cButton2.Corners.UpperRight = 5;
-            this.cButton2.DesignerSelected = false;
-            this.cButton2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton2.Image = global::ptoVenta.Properties.Resources.kf5;
-            this.cButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton2.ImageIndex = 0;
-            this.cButton2.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton2.Location = new System.Drawing.Point(788, 327);
-            this.cButton2.Name = "cButton2";
-            this.cButton2.Size = new System.Drawing.Size(100, 38);
-            this.cButton2.TabIndex = 261;
-            this.cButton2.TabStop = false;
-            this.cButton2.Text = "Cargar Documento";
-            this.cButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton2.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton1
-            // 
-            this.cButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton1.BackColor = System.Drawing.Color.Transparent;
-            this.cButton1.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems1.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
-            cBlendItems1.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton1.ColorFillBlend = cBlendItems1;
-            this.cButton1.Corners.All = 5;
-            this.cButton1.Corners.LowerLeft = 5;
-            this.cButton1.Corners.LowerRight = 5;
-            this.cButton1.Corners.UpperLeft = 5;
-            this.cButton1.Corners.UpperRight = 5;
-            this.cButton1.DesignerSelected = false;
-            this.cButton1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton1.Image = global::ptoVenta.Properties.Resources.kf4;
-            this.cButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton1.ImageIndex = 0;
-            this.cButton1.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton1.Location = new System.Drawing.Point(688, 327);
-            this.cButton1.Name = "cButton1";
-            this.cButton1.Size = new System.Drawing.Size(100, 38);
-            this.cButton1.TabIndex = 260;
-            this.cButton1.TabStop = false;
-            this.cButton1.Text = "Guardar Documento";
-            this.cButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton1.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton5
-            // 
-            this.cButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton5.BackColor = System.Drawing.Color.Transparent;
-            this.cButton5.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems2.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(134))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(68)))), ((int)(((byte)(89)))))};
-            cBlendItems2.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton5.ColorFillBlend = cBlendItems2;
-            this.cButton5.Corners.All = 5;
-            this.cButton5.Corners.LowerLeft = 5;
-            this.cButton5.Corners.LowerRight = 5;
-            this.cButton5.Corners.UpperLeft = 5;
-            this.cButton5.Corners.UpperRight = 5;
-            this.cButton5.DesignerSelected = false;
-            this.cButton5.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton5.Image = global::ptoVenta.Properties.Resources.kf8;
-            this.cButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton5.ImageIndex = 0;
-            this.cButton5.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton5.Location = new System.Drawing.Point(1088, 327);
-            this.cButton5.Name = "cButton5";
-            this.cButton5.Size = new System.Drawing.Size(100, 38);
-            this.cButton5.TabIndex = 263;
-            this.cButton5.TabStop = false;
-            this.cButton5.Text = "Procesar Boleta";
-            this.cButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton5.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton4
-            // 
-            this.cButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton4.BackColor = System.Drawing.Color.Transparent;
-            this.cButton4.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems3.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(125)))), ((int)(((byte)(140)))))};
-            cBlendItems3.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton4.ColorFillBlend = cBlendItems3;
-            this.cButton4.Corners.All = 5;
-            this.cButton4.Corners.LowerLeft = 5;
-            this.cButton4.Corners.LowerRight = 5;
-            this.cButton4.Corners.UpperLeft = 5;
-            this.cButton4.Corners.UpperRight = 5;
-            this.cButton4.DesignerSelected = false;
-            this.cButton4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton4.Image = global::ptoVenta.Properties.Resources.kf9;
-            this.cButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton4.ImageIndex = 0;
-            this.cButton4.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton4.Location = new System.Drawing.Point(1188, 327);
-            this.cButton4.Name = "cButton4";
-            this.cButton4.Size = new System.Drawing.Size(100, 38);
-            this.cButton4.TabIndex = 264;
-            this.cButton4.TabStop = false;
-            this.cButton4.Text = "Cambio de Precio";
-            this.cButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton4.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton6
-            // 
-            this.cButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton6.BackColor = System.Drawing.Color.Transparent;
-            this.cButton6.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems4.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))))};
-            cBlendItems4.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton6.ColorFillBlend = cBlendItems4;
-            this.cButton6.Corners.All = 5;
-            this.cButton6.Corners.LowerLeft = 5;
-            this.cButton6.Corners.LowerRight = 5;
-            this.cButton6.Corners.UpperLeft = 5;
-            this.cButton6.Corners.UpperRight = 5;
-            this.cButton6.DesignerSelected = false;
-            this.cButton6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton6.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton6.Image = global::ptoVenta.Properties.Resources.kf6;
-            this.cButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton6.ImageIndex = 0;
-            this.cButton6.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton6.Location = new System.Drawing.Point(888, 327);
-            this.cButton6.Name = "cButton6";
-            this.cButton6.Size = new System.Drawing.Size(100, 38);
-            this.cButton6.TabIndex = 266;
-            this.cButton6.TabStop = false;
-            this.cButton6.Text = "Productos Faltantes";
-            this.cButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton6.TextShadow = System.Drawing.Color.Transparent;
-            // 
-            // cButton3
-            // 
-            this.cButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cButton3.BackColor = System.Drawing.Color.Transparent;
-            this.cButton3.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems5.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(167)))), ((int)(((byte)(85))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(111)))), ((int)(((byte)(56)))))};
-            cBlendItems5.iPoint = new float[] {
-        0F,
-        1F};
-            this.cButton3.ColorFillBlend = cBlendItems5;
-            this.cButton3.Corners.All = 5;
-            this.cButton3.Corners.LowerLeft = 5;
-            this.cButton3.Corners.LowerRight = 5;
-            this.cButton3.Corners.UpperLeft = 5;
-            this.cButton3.Corners.UpperRight = 5;
-            this.cButton3.DesignerSelected = false;
-            this.cButton3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cButton3.Image = global::ptoVenta.Properties.Resources.kf7;
-            this.cButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton3.ImageIndex = 0;
-            this.cButton3.ImageSize = new System.Drawing.Size(28, 30);
-            this.cButton3.Location = new System.Drawing.Point(988, 327);
-            this.cButton3.Name = "cButton3";
-            this.cButton3.Size = new System.Drawing.Size(100, 38);
-            this.cButton3.TabIndex = 262;
-            this.cButton3.TabStop = false;
-            this.cButton3.Text = "Stock en Tiendas";
-            this.cButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton3.TextShadow = System.Drawing.Color.Transparent;
-            // 
             // btnLiberarCaja
             // 
             this.btnLiberarCaja.Animated = true;
@@ -1723,86 +1459,66 @@ namespace ptoVenta
             this.btnProcesarBoleta.Text = "Procesar Boleta";
             this.btnProcesarBoleta.TextOffsetX = -5;
             // 
-            // groupBox1
+            // gunaGradientButton100
             // 
-            this.groupBox1.Controls.Add(this.radioButton6);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(659, 92);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(298, 181);
-            this.groupBox1.TabIndex = 273;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gunaGradientButton100.Animated = true;
+            this.gunaGradientButton100.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton100.AnimationSpeed = 0.03F;
+            this.gunaGradientButton100.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton100.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.gunaGradientButton100.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(139)))), ((int)(((byte)(68)))));
+            this.gunaGradientButton100.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton100.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton100.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton100.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold);
+            this.gunaGradientButton100.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton100.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradientButton100.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton100.Image")));
+            this.gunaGradientButton100.ImageOffsetX = -5;
+            this.gunaGradientButton100.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaGradientButton100.Location = new System.Drawing.Point(510, 320);
+            this.gunaGradientButton100.Name = "gunaGradientButton100";
+            this.gunaGradientButton100.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))));
+            this.gunaGradientButton100.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(48)))));
+            this.gunaGradientButton100.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton100.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton100.OnHoverImage = null;
+            this.gunaGradientButton100.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton100.Radius = 8;
+            this.gunaGradientButton100.Size = new System.Drawing.Size(106, 30);
+            this.gunaGradientButton100.TabIndex = 274;
+            this.gunaGradientButton100.Text = "Aceptar";
+            this.gunaGradientButton100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // radioButton1
+            // gunaGradientButton13
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(25, 37);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(25, 82);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(25, 99);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(25, 116);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(25, 133);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(85, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "radioButton5";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(25, 150);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(85, 17);
-            this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "radioButton6";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.gunaGradientButton13.Animated = true;
+            this.gunaGradientButton13.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton13.AnimationSpeed = 0.03F;
+            this.gunaGradientButton13.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton13.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gunaGradientButton13.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gunaGradientButton13.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton13.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton13.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton13.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientButton13.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton13.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradientButton13.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton13.Image")));
+            this.gunaGradientButton13.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaGradientButton13.Location = new System.Drawing.Point(414, 320);
+            this.gunaGradientButton13.Name = "gunaGradientButton13";
+            this.gunaGradientButton13.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.gunaGradientButton13.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.gunaGradientButton13.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton13.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton13.OnHoverImage = null;
+            this.gunaGradientButton13.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton13.Radius = 8;
+            this.gunaGradientButton13.Size = new System.Drawing.Size(90, 30);
+            this.gunaGradientButton13.TabIndex = 273;
+            this.gunaGradientButton13.Text = "Salir";
+            this.gunaGradientButton13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // componentes
             // 
@@ -1810,20 +1526,14 @@ namespace ptoVenta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1567, 722);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gunaGradientButton100);
+            this.Controls.Add(this.gunaGradientButton13);
             this.Controls.Add(this.btnProcesarBoleta);
             this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnProductosFaltantes);
             this.Controls.Add(this.btnCargarDocumento);
             this.Controls.Add(this.btnGuardarDocumento);
             this.Controls.Add(this.btnLiberarCaja);
-            this.Controls.Add(this.cButton7);
-            this.Controls.Add(this.cButton2);
-            this.Controls.Add(this.cButton1);
-            this.Controls.Add(this.cButton5);
-            this.Controls.Add(this.cButton4);
-            this.Controls.Add(this.cButton6);
-            this.Controls.Add(this.cButton3);
             this.Controls.Add(this.btnCambioPrecio);
             this.Controls.Add(this.gunaGradientButton63);
             this.Controls.Add(this.gunaGradientButton5);
@@ -1868,8 +1578,6 @@ namespace ptoVenta
             this.Name = "componentes";
             this.Text = "componentes";
             this.Load += new System.EventHandler(this.componentes_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1915,13 +1623,6 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton4;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
         private Guna.UI.WinForms.GunaGradientButton btnCambioPrecio;
-        private CButtonLib.CButton cButton7;
-        private CButtonLib.CButton cButton2;
-        private CButtonLib.CButton cButton1;
-        private CButtonLib.CButton cButton5;
-        private CButtonLib.CButton cButton4;
-        private CButtonLib.CButton cButton6;
-        private CButtonLib.CButton cButton3;
         private Guna.UI.WinForms.GunaGradientButton btnLiberarCaja;
         private Guna.UI.WinForms.GunaGradientButton btnGuardarDocumento;
         private Guna.UI.WinForms.GunaGradientButton btnCargarDocumento;
@@ -1929,12 +1630,7 @@ namespace ptoVenta
         private Guna.UI.WinForms.GunaGradientButton btnStock;
         private Guna.UI.WinForms.GunaGradientButton btnProcesarBoleta;
         private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton100;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton13;
     }
 }
