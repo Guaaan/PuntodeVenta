@@ -31,6 +31,7 @@ namespace ptoVenta
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iniciarSesion));
             this.panel15 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRut1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,14 +40,13 @@ namespace ptoVenta
             this.pictureBox1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(167)))), ((int)(((byte)(208)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(149)))));
             this.panel15.Controls.Add(this.label2);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
@@ -54,6 +54,19 @@ namespace ptoVenta
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(680, 47);
             this.panel15.TabIndex = 111;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(274, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 45);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Ingreso";
             // 
             // label3
             // 
@@ -175,19 +188,6 @@ namespace ptoVenta
             this.gunaGradientButton4.TabIndex = 202;
             this.gunaGradientButton4.Text = "Cambiar Contraseña";
             this.gunaGradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(274, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 45);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Ingreso";
             // 
             // iniciarSesion
             // 
