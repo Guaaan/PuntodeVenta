@@ -1168,12 +1168,16 @@ namespace ptoVenta
 
 
                 frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
+                frm.lblPrecio.Text = dgvLista.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
                 frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+
 
                 MemoryStream ms = new MemoryStream(); 
                 Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
                 imagen.Save(ms, ImageFormat.Jpeg);
-                frm.pictureBox1.Image = Image.FromStream(ms);
+                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
 
                 ftop = dgvLista.Top;
                 frm.ShowDialog();

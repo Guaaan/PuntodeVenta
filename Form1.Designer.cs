@@ -130,7 +130,6 @@ namespace ptoVenta
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.altoButton1 = new AltoControls.AltoButton();
             this.btnEgresoCaja = new Guna.UI.WinForms.GunaGradientButton();
             this.iconButton3 = new Guna.UI.WinForms.GunaGradientButton();
             this.iconButton1 = new Guna.UI.WinForms.GunaGradientButton();
@@ -1273,28 +1272,6 @@ namespace ptoVenta
             this.pictureBox2.TabIndex = 197;
             this.pictureBox2.TabStop = false;
             // 
-            // altoButton1
-            // 
-            this.altoButton1.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.altoButton1.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
-            this.altoButton1.BackColor = System.Drawing.Color.Transparent;
-            this.altoButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.altoButton1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altoButton1.ForeColor = System.Drawing.Color.White;
-            this.altoButton1.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210)))));
-            this.altoButton1.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(167)))), ((int)(((byte)(188)))));
-            this.altoButton1.Location = new System.Drawing.Point(401, 73);
-            this.altoButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.altoButton1.Name = "altoButton1";
-            this.altoButton1.Radius = 10;
-            this.altoButton1.Size = new System.Drawing.Size(70, 36);
-            this.altoButton1.Stroke = false;
-            this.altoButton1.StrokeColor = System.Drawing.Color.Gray;
-            this.altoButton1.TabIndex = 198;
-            this.altoButton1.Text = "probar componentes";
-            this.altoButton1.Transparency = false;
-            this.altoButton1.Click += new System.EventHandler(this.altoButton1_Click);
-            // 
             // btnEgresoCaja
             // 
             this.btnEgresoCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1417,7 +1394,6 @@ namespace ptoVenta
             this.iconButton4.OnHoverForeColor = System.Drawing.Color.White;
             this.iconButton4.OnHoverImage = null;
             this.iconButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.iconButton4.Radius = 10;
             this.iconButton4.Size = new System.Drawing.Size(140, 45);
             this.iconButton4.TabIndex = 263;
             this.iconButton4.Text = "Delivery";
@@ -1430,7 +1406,7 @@ namespace ptoVenta
             this.iconButton2.AnimationSpeed = 0.03F;
             this.iconButton2.BackColor = System.Drawing.Color.Transparent;
             this.iconButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.iconButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(179)))));
+            this.iconButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(143)))));
             this.iconButton2.BorderColor = System.Drawing.Color.Black;
             this.iconButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.iconButton2.FocusedColor = System.Drawing.Color.Empty;
@@ -1461,7 +1437,7 @@ namespace ptoVenta
             this.btnTicketsEmitidos.AnimationSpeed = 0.03F;
             this.btnTicketsEmitidos.BackColor = System.Drawing.Color.Transparent;
             this.btnTicketsEmitidos.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
-            this.btnTicketsEmitidos.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
+            this.btnTicketsEmitidos.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
             this.btnTicketsEmitidos.BorderColor = System.Drawing.Color.Black;
             this.btnTicketsEmitidos.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnTicketsEmitidos.FocusedColor = System.Drawing.Color.Empty;
@@ -1766,7 +1742,6 @@ namespace ptoVenta
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.btnTicketsEmitidos);
-            this.Controls.Add(this.altoButton1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
@@ -1786,7 +1761,7 @@ namespace ptoVenta
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Geminis.- Softway";
+            this.Text = "44; 188; 210";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
@@ -1873,7 +1848,6 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL1;
         private System.Windows.Forms.DataGridViewImageColumn DELE;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private AltoControls.AltoButton altoButton1;
         private Guna.UI.WinForms.GunaGradientButton btnSalir;
         private Guna.UI.WinForms.GunaGradientButton btnEgresoCaja;
         private Guna.UI.WinForms.GunaGradientButton iconButton3;

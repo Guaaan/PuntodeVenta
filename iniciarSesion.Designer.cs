@@ -75,7 +75,7 @@ namespace ptoVenta
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(216, 678);
+            this.label3.Location = new System.Drawing.Point(224, 496);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 19);
@@ -88,7 +88,7 @@ namespace ptoVenta
             this.txtRut1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRut1.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRut1.ForeColor = System.Drawing.Color.Black;
-            this.txtRut1.Location = new System.Drawing.Point(220, 754);
+            this.txtRut1.Location = new System.Drawing.Point(228, 572);
             this.txtRut1.Margin = new System.Windows.Forms.Padding(2);
             this.txtRut1.Name = "txtRut1";
             this.txtRut1.Size = new System.Drawing.Size(240, 33);
@@ -103,7 +103,7 @@ namespace ptoVenta
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(216, 733);
+            this.label5.Location = new System.Drawing.Point(224, 551);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 19);
@@ -120,7 +120,7 @@ namespace ptoVenta
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(220, 700);
+            this.comboBox1.Location = new System.Drawing.Point(228, 518);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(240, 30);
             this.comboBox1.TabIndex = 1;
@@ -134,7 +134,7 @@ namespace ptoVenta
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.pictureBox1});
-            this.shapeContainer1.Size = new System.Drawing.Size(680, 878);
+            this.shapeContainer1.Size = new System.Drawing.Size(680, 818);
             this.shapeContainer1.TabIndex = 121;
             this.shapeContainer1.TabStop = false;
             // 
@@ -143,7 +143,7 @@ namespace ptoVenta
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::ptoVenta.Properties.Resources.user;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 441);
+            this.pictureBox1.Location = new System.Drawing.Point(257, 268);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(193, 193);
             // 
@@ -152,9 +152,9 @@ namespace ptoVenta
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(142, 115);
+            this.pictureBox2.Location = new System.Drawing.Point(173, 51);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(396, 250);
+            this.pictureBox2.Size = new System.Drawing.Size(335, 201);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 198;
             this.pictureBox2.TabStop = false;
@@ -175,7 +175,7 @@ namespace ptoVenta
             this.gunaGradientButton4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gunaGradientButton4.Image = null;
             this.gunaGradientButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton4.Location = new System.Drawing.Point(220, 792);
+            this.gunaGradientButton4.Location = new System.Drawing.Point(228, 610);
             this.gunaGradientButton4.Name = "gunaGradientButton4";
             this.gunaGradientButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
             this.gunaGradientButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
@@ -196,7 +196,7 @@ namespace ptoVenta
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(102)))), ((int)(((byte)(128)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(680, 878);
+            this.ClientSize = new System.Drawing.Size(680, 818);
             this.ControlBox = false;
             this.Controls.Add(this.gunaGradientButton4);
             this.Controls.Add(this.pictureBox2);
