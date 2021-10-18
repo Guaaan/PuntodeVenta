@@ -26,6 +26,13 @@ namespace ptoVenta
         }
        
 
+        
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void imagenProducto_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -34,9 +41,6 @@ namespace ptoVenta
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

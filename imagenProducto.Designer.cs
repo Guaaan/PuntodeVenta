@@ -31,17 +31,27 @@ namespace ptoVenta
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblLinea = new System.Windows.Forms.Label();
+            this.lblPrincipioActivo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnSalir = new Guna.UI.WinForms.GunaGradientButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(395, 395);
+            this.pictureBox1.Size = new System.Drawing.Size(395, 407);
             this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
             // 
@@ -49,31 +59,31 @@ namespace ptoVenta
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(413, 12);
+            this.lblNombre.Location = new System.Drawing.Point(401, 31);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 20);
+            this.lblNombre.Size = new System.Drawing.Size(42, 20);
             this.lblNombre.TabIndex = 288;
-            this.lblNombre.Text = "label1";
+            this.lblNombre.Text = "label";
             // 
-            // lblLinea
+            // lblPrincipioActivo
             // 
-            this.lblLinea.AutoSize = true;
-            this.lblLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinea.Location = new System.Drawing.Point(413, 80);
-            this.lblLinea.Name = "lblLinea";
-            this.lblLinea.Size = new System.Drawing.Size(51, 20);
-            this.lblLinea.TabIndex = 289;
-            this.lblLinea.Text = "label1";
+            this.lblPrincipioActivo.AutoSize = true;
+            this.lblPrincipioActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrincipioActivo.Location = new System.Drawing.Point(401, 88);
+            this.lblPrincipioActivo.Name = "lblPrincipioActivo";
+            this.lblPrincipioActivo.Size = new System.Drawing.Size(42, 20);
+            this.lblPrincipioActivo.TabIndex = 289;
+            this.lblPrincipioActivo.Text = "label";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(413, 46);
+            this.lblCodigo.Location = new System.Drawing.Point(401, 263);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(51, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(42, 20);
             this.lblCodigo.TabIndex = 290;
-            this.lblCodigo.Text = "label1";
+            this.lblCodigo.Text = "label";
             // 
             // btnSalir
             // 
@@ -107,16 +117,93 @@ namespace ptoVenta
             this.btnSalir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(401, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 292;
+            this.label1.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(401, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.TabIndex = 293;
+            this.label2.Text = "Principio Activo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(401, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.TabIndex = 297;
+            this.label3.Text = "Código:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(401, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 296;
+            this.label4.Text = "Precio:";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(401, 144);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(42, 20);
+            this.lblPrecio.TabIndex = 294;
+            this.lblPrecio.Text = "label";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(401, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 20);
+            this.label5.TabIndex = 299;
+            this.label5.Text = "Stock:";
+            // 
+            // lblStock
+            // 
+            this.lblStock.AutoSize = true;
+            this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStock.Location = new System.Drawing.Point(401, 206);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(42, 20);
+            this.lblStock.TabIndex = 298;
+            this.lblStock.Text = "label";
+            // 
             // imagenProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(731, 450);
+            this.ClientSize = new System.Drawing.Size(716, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblStock);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.lblLinea);
+            this.Controls.Add(this.lblPrincipioActivo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
@@ -136,8 +223,15 @@ namespace ptoVenta
         #endregion
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label lblNombre;
-        public System.Windows.Forms.Label lblLinea;
+        public System.Windows.Forms.Label lblPrincipioActivo;
         public System.Windows.Forms.Label lblCodigo;
         private Guna.UI.WinForms.GunaGradientButton btnSalir;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lblPrecio;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblStock;
     }
 }
