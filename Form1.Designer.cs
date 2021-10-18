@@ -1283,7 +1283,7 @@ namespace ptoVenta
             this.altoButton1.ForeColor = System.Drawing.Color.White;
             this.altoButton1.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210)))));
             this.altoButton1.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(167)))), ((int)(((byte)(188)))));
-            this.altoButton1.Location = new System.Drawing.Point(401, 73);
+            this.altoButton1.Location = new System.Drawing.Point(128, 171);
             this.altoButton1.Margin = new System.Windows.Forms.Padding(2);
             this.altoButton1.Name = "altoButton1";
             this.altoButton1.Radius = 10;
@@ -1417,7 +1417,6 @@ namespace ptoVenta
             this.iconButton4.OnHoverForeColor = System.Drawing.Color.White;
             this.iconButton4.OnHoverImage = null;
             this.iconButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.iconButton4.Radius = 10;
             this.iconButton4.Size = new System.Drawing.Size(140, 45);
             this.iconButton4.TabIndex = 263;
             this.iconButton4.Text = "Delivery";
@@ -1430,7 +1429,7 @@ namespace ptoVenta
             this.iconButton2.AnimationSpeed = 0.03F;
             this.iconButton2.BackColor = System.Drawing.Color.Transparent;
             this.iconButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.iconButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(179)))));
+            this.iconButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(143)))));
             this.iconButton2.BorderColor = System.Drawing.Color.Black;
             this.iconButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.iconButton2.FocusedColor = System.Drawing.Color.Empty;
@@ -1461,7 +1460,7 @@ namespace ptoVenta
             this.btnTicketsEmitidos.AnimationSpeed = 0.03F;
             this.btnTicketsEmitidos.BackColor = System.Drawing.Color.Transparent;
             this.btnTicketsEmitidos.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(176)))), ((int)(((byte)(125)))));
-            this.btnTicketsEmitidos.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(142)))), ((int)(((byte)(101)))));
+            this.btnTicketsEmitidos.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
             this.btnTicketsEmitidos.BorderColor = System.Drawing.Color.Black;
             this.btnTicketsEmitidos.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnTicketsEmitidos.FocusedColor = System.Drawing.Color.Empty;
