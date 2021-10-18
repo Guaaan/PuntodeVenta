@@ -41,7 +41,7 @@ namespace ptoVenta
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(309, 393);
+            this.pictureBox1.Size = new System.Drawing.Size(395, 395);
             this.pictureBox1.TabIndex = 287;
             this.pictureBox1.TabStop = false;
             // 
@@ -49,7 +49,7 @@ namespace ptoVenta
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(363, 128);
+            this.lblNombre.Location = new System.Drawing.Point(413, 12);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(51, 20);
             this.lblNombre.TabIndex = 288;
@@ -59,7 +59,7 @@ namespace ptoVenta
             // 
             this.lblLinea.AutoSize = true;
             this.lblLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinea.Location = new System.Drawing.Point(363, 180);
+            this.lblLinea.Location = new System.Drawing.Point(413, 80);
             this.lblLinea.Name = "lblLinea";
             this.lblLinea.Size = new System.Drawing.Size(51, 20);
             this.lblLinea.TabIndex = 289;
@@ -69,7 +69,7 @@ namespace ptoVenta
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(363, 154);
+            this.lblCodigo.Location = new System.Drawing.Point(413, 46);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(51, 20);
             this.lblCodigo.TabIndex = 290;
@@ -92,7 +92,7 @@ namespace ptoVenta
             this.btnSalir.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnSalir.Image = null;
             this.btnSalir.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSalir.Location = new System.Drawing.Point(12, 411);
+            this.btnSalir.Location = new System.Drawing.Point(12, 413);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.btnSalir.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
