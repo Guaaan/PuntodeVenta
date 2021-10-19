@@ -116,6 +116,7 @@ namespace ptoVenta
             this.btnSalir.Text = "Cerrar";
             this.btnSalir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnSalir_KeyDown);
             // 
             // label1
             // 
@@ -213,7 +214,6 @@ namespace ptoVenta
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.imagenProducto_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.imagenProducto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

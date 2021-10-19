@@ -33,14 +33,16 @@ namespace ptoVenta
             this.Close();
         }
 
-        private void imagenProducto_KeyDown(object sender, KeyEventArgs e)
+        private void btnSalir_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Close();
+            }
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
             }
         }
-
-        
     }
 }
