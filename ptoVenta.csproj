@@ -186,6 +186,12 @@
     <Compile Include="imagenProducto.Designer.cs">
       <DependentUpon>imagenProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="nuevosBotones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevosBotones.Designer.cs">
+      <DependentUpon>nuevosBotones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="iniciarSesion.resx">
       <DependentUpon>iniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevosBotones.resx">
+      <DependentUpon>nuevosBotones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="productoFaltante.resx">
       <DependentUpon>productoFaltante.cs</DependentUpon>
