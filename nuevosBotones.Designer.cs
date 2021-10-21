@@ -42,6 +42,33 @@ namespace ptoVenta
             CButtonLib.cBlendItems cBlendItems10 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems11 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems12 = new CButtonLib.cBlendItems();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nuevosBotones));
+            CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems14 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems15 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems16 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems17 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems18 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems19 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems20 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems21 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems22 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems23 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems24 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems25 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems26 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems27 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems28 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems29 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems30 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems31 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems32 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems33 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems34 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems35 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems36 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems37 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems38 = new CButtonLib.cBlendItems();
             this.gunaGradientButton48 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton61 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton65 = new Guna.UI.WinForms.GunaGradientButton();
@@ -66,6 +93,34 @@ namespace ptoVenta
             this.cButton10 = new CButtonLib.CButton();
             this.cButton11 = new CButtonLib.CButton();
             this.cButton12 = new CButtonLib.CButton();
+            this.gunaGradientButton100 = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton13 = new Guna.UI.WinForms.GunaGradientButton();
+            this.cButton13 = new CButtonLib.CButton();
+            this.cButton14 = new CButtonLib.CButton();
+            this.cButton15 = new CButtonLib.CButton();
+            this.cButton16 = new CButtonLib.CButton();
+            this.cButton17 = new CButtonLib.CButton();
+            this.cButton18 = new CButtonLib.CButton();
+            this.cButton19 = new CButtonLib.CButton();
+            this.cButton20 = new CButtonLib.CButton();
+            this.cButton21 = new CButtonLib.CButton();
+            this.cButton22 = new CButtonLib.CButton();
+            this.cButton23 = new CButtonLib.CButton();
+            this.cButton24 = new CButtonLib.CButton();
+            this.cButton25 = new CButtonLib.CButton();
+            this.cButton26 = new CButtonLib.CButton();
+            this.cButton27 = new CButtonLib.CButton();
+            this.cButton28 = new CButtonLib.CButton();
+            this.cButton29 = new CButtonLib.CButton();
+            this.cButton30 = new CButtonLib.CButton();
+            this.cButton31 = new CButtonLib.CButton();
+            this.cButton32 = new CButtonLib.CButton();
+            this.cButton33 = new CButtonLib.CButton();
+            this.cButton34 = new CButtonLib.CButton();
+            this.cButton35 = new CButtonLib.CButton();
+            this.cButton36 = new CButtonLib.CButton();
+            this.cButton38 = new CButtonLib.CButton();
+            this.cButton37 = new CButtonLib.CButton();
             this.SuspendLayout();
             // 
             // gunaGradientButton48
@@ -105,7 +160,7 @@ namespace ptoVenta
             this.gunaGradientButton61.AnimationSpeed = 0.03F;
             this.gunaGradientButton61.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradientButton61.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(188)))), ((int)(((byte)(210)))));
-            this.gunaGradientButton61.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(167)))), ((int)(((byte)(188)))));
+            this.gunaGradientButton61.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))));
             this.gunaGradientButton61.BorderColor = System.Drawing.Color.Black;
             this.gunaGradientButton61.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaGradientButton61.FocusedColor = System.Drawing.Color.Empty;
@@ -430,7 +485,9 @@ namespace ptoVenta
             // 
             // cButton5
             // 
+            this.cButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton5.BorderShow = false;
             cBlendItems1.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
@@ -444,7 +501,8 @@ namespace ptoVenta
             this.cButton5.Corners.UpperLeft = 8;
             this.cButton5.Corners.UpperRight = 8;
             this.cButton5.DesignerSelected = false;
-            this.cButton5.DimFactorHover = -10;
+            this.cButton5.DimFactorClick = -35;
+            this.cButton5.DimFactorHover = -25;
             this.cButton5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton5.ImageIndex = 0;
             this.cButton5.Location = new System.Drawing.Point(12, 222);
@@ -454,10 +512,13 @@ namespace ptoVenta
             this.cButton5.TabIndex = 259;
             this.cButton5.Text = "Botón";
             this.cButton5.TextShadow = System.Drawing.Color.Gray;
+            this.cButton5.TextShadowShow = false;
             // 
             // cButton1
             // 
+            this.cButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton1.BorderShow = false;
             cBlendItems2.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))))};
@@ -471,7 +532,8 @@ namespace ptoVenta
             this.cButton1.Corners.UpperLeft = 8;
             this.cButton1.Corners.UpperRight = 8;
             this.cButton1.DesignerSelected = false;
-            this.cButton1.DimFactorHover = -10;
+            this.cButton1.DimFactorClick = -35;
+            this.cButton1.DimFactorHover = -25;
             this.cButton1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton1.ImageIndex = 0;
             this.cButton1.Location = new System.Drawing.Point(208, 222);
@@ -481,10 +543,13 @@ namespace ptoVenta
             this.cButton1.TabIndex = 260;
             this.cButton1.Text = "Botón";
             this.cButton1.TextShadow = System.Drawing.Color.Gray;
+            this.cButton1.TextShadowShow = false;
             // 
             // cButton2
             // 
+            this.cButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton2.BorderShow = false;
             cBlendItems3.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(133))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))))};
@@ -498,7 +563,8 @@ namespace ptoVenta
             this.cButton2.Corners.UpperLeft = 8;
             this.cButton2.Corners.UpperRight = 8;
             this.cButton2.DesignerSelected = false;
-            this.cButton2.DimFactorHover = -10;
+            this.cButton2.DimFactorClick = -35;
+            this.cButton2.DimFactorHover = -25;
             this.cButton2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton2.ImageIndex = 0;
             this.cButton2.Location = new System.Drawing.Point(404, 222);
@@ -508,13 +574,16 @@ namespace ptoVenta
             this.cButton2.TabIndex = 261;
             this.cButton2.Text = "Botón";
             this.cButton2.TextShadow = System.Drawing.Color.Gray;
+            this.cButton2.TextShadowShow = false;
             // 
             // cButton3
             // 
+            this.cButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton3.BorderShow = false;
             cBlendItems4.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
             cBlendItems4.iPoint = new float[] {
         0F,
         1F};
@@ -525,7 +594,8 @@ namespace ptoVenta
             this.cButton3.Corners.UpperLeft = 8;
             this.cButton3.Corners.UpperRight = 8;
             this.cButton3.DesignerSelected = false;
-            this.cButton3.DimFactorHover = -10;
+            this.cButton3.DimFactorClick = -35;
+            this.cButton3.DimFactorHover = -25;
             this.cButton3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton3.ImageIndex = 0;
             this.cButton3.Location = new System.Drawing.Point(404, 361);
@@ -535,13 +605,16 @@ namespace ptoVenta
             this.cButton3.TabIndex = 264;
             this.cButton3.Text = "Botón";
             this.cButton3.TextShadow = System.Drawing.Color.Gray;
+            this.cButton3.TextShadowShow = false;
             // 
             // cButton4
             // 
+            this.cButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton4.BorderShow = false;
             cBlendItems5.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))))};
             cBlendItems5.iPoint = new float[] {
         0F,
         1F};
@@ -552,7 +625,8 @@ namespace ptoVenta
             this.cButton4.Corners.UpperLeft = 8;
             this.cButton4.Corners.UpperRight = 8;
             this.cButton4.DesignerSelected = false;
-            this.cButton4.DimFactorHover = -10;
+            this.cButton4.DimFactorClick = -35;
+            this.cButton4.DimFactorHover = -25;
             this.cButton4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton4.ImageIndex = 0;
             this.cButton4.Location = new System.Drawing.Point(208, 361);
@@ -562,13 +636,16 @@ namespace ptoVenta
             this.cButton4.TabIndex = 263;
             this.cButton4.Text = "Botón";
             this.cButton4.TextShadow = System.Drawing.Color.Gray;
+            this.cButton4.TextShadowShow = false;
             // 
             // cButton6
             // 
+            this.cButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton6.BorderShow = false;
             cBlendItems6.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(68)))), ((int)(((byte)(80)))))};
             cBlendItems6.iPoint = new float[] {
         0F,
         1F};
@@ -579,7 +656,8 @@ namespace ptoVenta
             this.cButton6.Corners.UpperLeft = 8;
             this.cButton6.Corners.UpperRight = 8;
             this.cButton6.DesignerSelected = false;
-            this.cButton6.DimFactorHover = -10;
+            this.cButton6.DimFactorClick = -35;
+            this.cButton6.DimFactorHover = -25;
             this.cButton6.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton6.ImageIndex = 0;
             this.cButton6.Location = new System.Drawing.Point(12, 361);
@@ -589,13 +667,16 @@ namespace ptoVenta
             this.cButton6.TabIndex = 262;
             this.cButton6.Text = "Botón";
             this.cButton6.TextShadow = System.Drawing.Color.Gray;
+            this.cButton6.TextShadowShow = false;
             // 
             // cButton7
             // 
+            this.cButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton7.BorderShow = false;
             cBlendItems7.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
             cBlendItems7.iPoint = new float[] {
         0F,
         1F};
@@ -606,7 +687,8 @@ namespace ptoVenta
             this.cButton7.Corners.UpperLeft = 8;
             this.cButton7.Corners.UpperRight = 8;
             this.cButton7.DesignerSelected = false;
-            this.cButton7.DimFactorHover = -10;
+            this.cButton7.DimFactorClick = -35;
+            this.cButton7.DimFactorHover = -25;
             this.cButton7.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton7.ImageIndex = 0;
             this.cButton7.Location = new System.Drawing.Point(404, 315);
@@ -616,13 +698,16 @@ namespace ptoVenta
             this.cButton7.TabIndex = 267;
             this.cButton7.Text = "Botón";
             this.cButton7.TextShadow = System.Drawing.Color.Gray;
+            this.cButton7.TextShadowShow = false;
             // 
             // cButton8
             // 
+            this.cButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton8.BorderShow = false;
             cBlendItems8.iColor = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))))};
             cBlendItems8.iPoint = new float[] {
         0F,
         1F};
@@ -633,7 +718,8 @@ namespace ptoVenta
             this.cButton8.Corners.UpperLeft = 8;
             this.cButton8.Corners.UpperRight = 8;
             this.cButton8.DesignerSelected = false;
-            this.cButton8.DimFactorHover = -10;
+            this.cButton8.DimFactorClick = -35;
+            this.cButton8.DimFactorHover = -25;
             this.cButton8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton8.ImageIndex = 0;
             this.cButton8.Location = new System.Drawing.Point(208, 315);
@@ -643,10 +729,13 @@ namespace ptoVenta
             this.cButton8.TabIndex = 266;
             this.cButton8.Text = "Botón";
             this.cButton8.TextShadow = System.Drawing.Color.Gray;
+            this.cButton8.TextShadowShow = false;
             // 
             // cButton9
             // 
+            this.cButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton9.BorderShow = false;
             cBlendItems9.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(30))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(143)))), ((int)(((byte)(9)))))};
@@ -660,7 +749,8 @@ namespace ptoVenta
             this.cButton9.Corners.UpperLeft = 8;
             this.cButton9.Corners.UpperRight = 8;
             this.cButton9.DesignerSelected = false;
-            this.cButton9.DimFactorHover = -10;
+            this.cButton9.DimFactorClick = -35;
+            this.cButton9.DimFactorHover = -25;
             this.cButton9.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton9.ImageIndex = 0;
             this.cButton9.Location = new System.Drawing.Point(12, 315);
@@ -670,10 +760,13 @@ namespace ptoVenta
             this.cButton9.TabIndex = 265;
             this.cButton9.Text = "Botón";
             this.cButton9.TextShadow = System.Drawing.Color.Gray;
+            this.cButton9.TextShadowShow = false;
             // 
             // cButton10
             // 
+            this.cButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton10.BorderShow = false;
             cBlendItems10.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
@@ -687,7 +780,8 @@ namespace ptoVenta
             this.cButton10.Corners.UpperLeft = 8;
             this.cButton10.Corners.UpperRight = 8;
             this.cButton10.DesignerSelected = false;
-            this.cButton10.DimFactorHover = -10;
+            this.cButton10.DimFactorClick = -35;
+            this.cButton10.DimFactorHover = -25;
             this.cButton10.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton10.ImageIndex = 0;
             this.cButton10.Location = new System.Drawing.Point(404, 268);
@@ -697,10 +791,13 @@ namespace ptoVenta
             this.cButton10.TabIndex = 270;
             this.cButton10.Text = "Botón";
             this.cButton10.TextShadow = System.Drawing.Color.Gray;
+            this.cButton10.TextShadowShow = false;
             // 
             // cButton11
             // 
+            this.cButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton11.BorderShow = false;
             cBlendItems11.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(124)))), ((int)(((byte)(62)))))};
@@ -714,7 +811,8 @@ namespace ptoVenta
             this.cButton11.Corners.UpperLeft = 8;
             this.cButton11.Corners.UpperRight = 8;
             this.cButton11.DesignerSelected = false;
-            this.cButton11.DimFactorHover = -10;
+            this.cButton11.DimFactorClick = -35;
+            this.cButton11.DimFactorHover = -25;
             this.cButton11.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton11.ImageIndex = 0;
             this.cButton11.Location = new System.Drawing.Point(208, 268);
@@ -724,10 +822,13 @@ namespace ptoVenta
             this.cButton11.TabIndex = 269;
             this.cButton11.Text = "Botón";
             this.cButton11.TextShadow = System.Drawing.Color.Gray;
+            this.cButton11.TextShadowShow = false;
             // 
             // cButton12
             // 
+            this.cButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton12.BorderShow = false;
             cBlendItems12.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(132)))), ((int)(((byte)(94)))))};
@@ -741,7 +842,8 @@ namespace ptoVenta
             this.cButton12.Corners.UpperLeft = 8;
             this.cButton12.Corners.UpperRight = 8;
             this.cButton12.DesignerSelected = false;
-            this.cButton12.DimFactorHover = -10;
+            this.cButton12.DimFactorClick = -35;
+            this.cButton12.DimFactorHover = -25;
             this.cButton12.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cButton12.ImageIndex = 0;
             this.cButton12.Location = new System.Drawing.Point(12, 268);
@@ -751,12 +853,913 @@ namespace ptoVenta
             this.cButton12.TabIndex = 268;
             this.cButton12.Text = "Botón";
             this.cButton12.TextShadow = System.Drawing.Color.Gray;
+            this.cButton12.TextShadowShow = false;
+            // 
+            // gunaGradientButton100
+            // 
+            this.gunaGradientButton100.Animated = true;
+            this.gunaGradientButton100.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton100.AnimationSpeed = 0.03F;
+            this.gunaGradientButton100.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton100.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.gunaGradientButton100.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(139)))), ((int)(((byte)(68)))));
+            this.gunaGradientButton100.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton100.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton100.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton100.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold);
+            this.gunaGradientButton100.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton100.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradientButton100.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton100.Image")));
+            this.gunaGradientButton100.ImageOffsetX = -5;
+            this.gunaGradientButton100.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaGradientButton100.Location = new System.Drawing.Point(718, 397);
+            this.gunaGradientButton100.Name = "gunaGradientButton100";
+            this.gunaGradientButton100.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))));
+            this.gunaGradientButton100.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(48)))));
+            this.gunaGradientButton100.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton100.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton100.OnHoverImage = null;
+            this.gunaGradientButton100.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton100.Radius = 8;
+            this.gunaGradientButton100.Size = new System.Drawing.Size(106, 30);
+            this.gunaGradientButton100.TabIndex = 278;
+            this.gunaGradientButton100.Text = "Aceptar";
+            this.gunaGradientButton100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // gunaGradientButton13
+            // 
+            this.gunaGradientButton13.Animated = true;
+            this.gunaGradientButton13.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton13.AnimationSpeed = 0.03F;
+            this.gunaGradientButton13.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton13.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gunaGradientButton13.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gunaGradientButton13.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton13.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton13.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton13.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientButton13.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton13.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradientButton13.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton13.Image")));
+            this.gunaGradientButton13.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaGradientButton13.Location = new System.Drawing.Point(622, 397);
+            this.gunaGradientButton13.Name = "gunaGradientButton13";
+            this.gunaGradientButton13.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.gunaGradientButton13.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.gunaGradientButton13.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton13.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton13.OnHoverImage = null;
+            this.gunaGradientButton13.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton13.Radius = 8;
+            this.gunaGradientButton13.Size = new System.Drawing.Size(90, 30);
+            this.gunaGradientButton13.TabIndex = 277;
+            this.gunaGradientButton13.Text = "Salir";
+            this.gunaGradientButton13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cButton13
+            // 
+            this.cButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton13.BorderShow = false;
+            cBlendItems13.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
+            cBlendItems13.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton13.ColorFillBlend = cBlendItems13;
+            this.cButton13.Corners.All = 8;
+            this.cButton13.Corners.LowerLeft = 8;
+            this.cButton13.Corners.LowerRight = 8;
+            this.cButton13.Corners.UpperLeft = 8;
+            this.cButton13.Corners.UpperRight = 8;
+            this.cButton13.DesignerSelected = false;
+            this.cButton13.DimFactorClick = -35;
+            this.cButton13.DimFactorHover = -25;
+            this.cButton13.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton13.ImageIndex = 0;
+            this.cButton13.Location = new System.Drawing.Point(284, 458);
+            this.cButton13.Name = "cButton13";
+            this.cButton13.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton13.Size = new System.Drawing.Size(130, 45);
+            this.cButton13.TabIndex = 290;
+            this.cButton13.Text = "Botón";
+            this.cButton13.TextShadow = System.Drawing.Color.Gray;
+            this.cButton13.TextShadowShow = false;
+            // 
+            // cButton14
+            // 
+            this.cButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton14.BorderShow = false;
+            cBlendItems14.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(94))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(124)))), ((int)(((byte)(62)))))};
+            cBlendItems14.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton14.ColorFillBlend = cBlendItems14;
+            this.cButton14.Corners.All = 8;
+            this.cButton14.Corners.LowerLeft = 8;
+            this.cButton14.Corners.LowerRight = 8;
+            this.cButton14.Corners.UpperLeft = 8;
+            this.cButton14.Corners.UpperRight = 8;
+            this.cButton14.DesignerSelected = false;
+            this.cButton14.DimFactorClick = -35;
+            this.cButton14.DimFactorHover = -25;
+            this.cButton14.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton14.ImageIndex = 0;
+            this.cButton14.Location = new System.Drawing.Point(148, 458);
+            this.cButton14.Name = "cButton14";
+            this.cButton14.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton14.Size = new System.Drawing.Size(130, 45);
+            this.cButton14.TabIndex = 289;
+            this.cButton14.Text = "Botón";
+            this.cButton14.TextShadow = System.Drawing.Color.Gray;
+            this.cButton14.TextShadowShow = false;
+            // 
+            // cButton15
+            // 
+            this.cButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton15.BorderShow = false;
+            cBlendItems15.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(132)))), ((int)(((byte)(94)))))};
+            cBlendItems15.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton15.ColorFillBlend = cBlendItems15;
+            this.cButton15.Corners.All = 8;
+            this.cButton15.Corners.LowerLeft = 8;
+            this.cButton15.Corners.LowerRight = 8;
+            this.cButton15.Corners.UpperLeft = 8;
+            this.cButton15.Corners.UpperRight = 8;
+            this.cButton15.DesignerSelected = false;
+            this.cButton15.DimFactorClick = -35;
+            this.cButton15.DimFactorHover = -25;
+            this.cButton15.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton15.ImageIndex = 0;
+            this.cButton15.Location = new System.Drawing.Point(12, 458);
+            this.cButton15.Name = "cButton15";
+            this.cButton15.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton15.Size = new System.Drawing.Size(130, 45);
+            this.cButton15.TabIndex = 288;
+            this.cButton15.Text = "Botón";
+            this.cButton15.TextShadow = System.Drawing.Color.Gray;
+            this.cButton15.TextShadowShow = false;
+            // 
+            // cButton16
+            // 
+            this.cButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton16.BorderShow = false;
+            cBlendItems16.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
+            cBlendItems16.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton16.ColorFillBlend = cBlendItems16;
+            this.cButton16.Corners.All = 8;
+            this.cButton16.Corners.LowerLeft = 8;
+            this.cButton16.Corners.LowerRight = 8;
+            this.cButton16.Corners.UpperLeft = 8;
+            this.cButton16.Corners.UpperRight = 8;
+            this.cButton16.DesignerSelected = false;
+            this.cButton16.DimFactorClick = -35;
+            this.cButton16.DimFactorHover = -25;
+            this.cButton16.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton16.ImageIndex = 0;
+            this.cButton16.Location = new System.Drawing.Point(284, 505);
+            this.cButton16.Name = "cButton16";
+            this.cButton16.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton16.Size = new System.Drawing.Size(130, 45);
+            this.cButton16.TabIndex = 287;
+            this.cButton16.Text = "Botón";
+            this.cButton16.TextShadow = System.Drawing.Color.Gray;
+            this.cButton16.TextShadowShow = false;
+            // 
+            // cButton17
+            // 
+            this.cButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton17.BorderShow = false;
+            cBlendItems17.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))))};
+            cBlendItems17.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton17.ColorFillBlend = cBlendItems17;
+            this.cButton17.Corners.All = 8;
+            this.cButton17.Corners.LowerLeft = 8;
+            this.cButton17.Corners.LowerRight = 8;
+            this.cButton17.Corners.UpperLeft = 8;
+            this.cButton17.Corners.UpperRight = 8;
+            this.cButton17.DesignerSelected = false;
+            this.cButton17.DimFactorClick = -35;
+            this.cButton17.DimFactorHover = -25;
+            this.cButton17.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton17.ImageIndex = 0;
+            this.cButton17.Location = new System.Drawing.Point(148, 505);
+            this.cButton17.Name = "cButton17";
+            this.cButton17.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton17.Size = new System.Drawing.Size(130, 45);
+            this.cButton17.TabIndex = 286;
+            this.cButton17.Text = "Botón";
+            this.cButton17.TextShadow = System.Drawing.Color.Gray;
+            this.cButton17.TextShadowShow = false;
+            // 
+            // cButton18
+            // 
+            this.cButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton18.BorderShow = false;
+            cBlendItems18.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(30))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(143)))), ((int)(((byte)(9)))))};
+            cBlendItems18.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton18.ColorFillBlend = cBlendItems18;
+            this.cButton18.Corners.All = 8;
+            this.cButton18.Corners.LowerLeft = 8;
+            this.cButton18.Corners.LowerRight = 8;
+            this.cButton18.Corners.UpperLeft = 8;
+            this.cButton18.Corners.UpperRight = 8;
+            this.cButton18.DesignerSelected = false;
+            this.cButton18.DimFactorClick = -35;
+            this.cButton18.DimFactorHover = -25;
+            this.cButton18.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton18.ImageIndex = 0;
+            this.cButton18.Location = new System.Drawing.Point(12, 505);
+            this.cButton18.Name = "cButton18";
+            this.cButton18.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton18.Size = new System.Drawing.Size(130, 45);
+            this.cButton18.TabIndex = 285;
+            this.cButton18.Text = "Botón";
+            this.cButton18.TextShadow = System.Drawing.Color.Gray;
+            this.cButton18.TextShadowShow = false;
+            // 
+            // cButton19
+            // 
+            this.cButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton19.BorderShow = false;
+            cBlendItems19.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
+            cBlendItems19.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton19.ColorFillBlend = cBlendItems19;
+            this.cButton19.Corners.All = 8;
+            this.cButton19.Corners.LowerLeft = 8;
+            this.cButton19.Corners.LowerRight = 8;
+            this.cButton19.Corners.UpperLeft = 8;
+            this.cButton19.Corners.UpperRight = 8;
+            this.cButton19.DesignerSelected = false;
+            this.cButton19.DimFactorClick = -35;
+            this.cButton19.DimFactorHover = -25;
+            this.cButton19.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton19.ImageIndex = 0;
+            this.cButton19.Location = new System.Drawing.Point(284, 551);
+            this.cButton19.Name = "cButton19";
+            this.cButton19.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton19.Size = new System.Drawing.Size(130, 45);
+            this.cButton19.TabIndex = 284;
+            this.cButton19.Text = "Botón";
+            this.cButton19.TextShadow = System.Drawing.Color.Gray;
+            this.cButton19.TextShadowShow = false;
+            // 
+            // cButton20
+            // 
+            this.cButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton20.BorderShow = false;
+            cBlendItems20.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))))};
+            cBlendItems20.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton20.ColorFillBlend = cBlendItems20;
+            this.cButton20.Corners.All = 8;
+            this.cButton20.Corners.LowerLeft = 8;
+            this.cButton20.Corners.LowerRight = 8;
+            this.cButton20.Corners.UpperLeft = 8;
+            this.cButton20.Corners.UpperRight = 8;
+            this.cButton20.DesignerSelected = false;
+            this.cButton20.DimFactorClick = -35;
+            this.cButton20.DimFactorHover = -25;
+            this.cButton20.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton20.ImageIndex = 0;
+            this.cButton20.Location = new System.Drawing.Point(148, 551);
+            this.cButton20.Name = "cButton20";
+            this.cButton20.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton20.Size = new System.Drawing.Size(130, 45);
+            this.cButton20.TabIndex = 283;
+            this.cButton20.Text = "Botón";
+            this.cButton20.TextShadow = System.Drawing.Color.Gray;
+            this.cButton20.TextShadowShow = false;
+            // 
+            // cButton21
+            // 
+            this.cButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton21.BorderShow = false;
+            cBlendItems21.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(68)))), ((int)(((byte)(80)))))};
+            cBlendItems21.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton21.ColorFillBlend = cBlendItems21;
+            this.cButton21.Corners.All = 8;
+            this.cButton21.Corners.LowerLeft = 8;
+            this.cButton21.Corners.LowerRight = 8;
+            this.cButton21.Corners.UpperLeft = 8;
+            this.cButton21.Corners.UpperRight = 8;
+            this.cButton21.DesignerSelected = false;
+            this.cButton21.DimFactorClick = -35;
+            this.cButton21.DimFactorHover = -25;
+            this.cButton21.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton21.ImageIndex = 0;
+            this.cButton21.Location = new System.Drawing.Point(12, 551);
+            this.cButton21.Name = "cButton21";
+            this.cButton21.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton21.Size = new System.Drawing.Size(130, 45);
+            this.cButton21.TabIndex = 282;
+            this.cButton21.Text = "Botón";
+            this.cButton21.TextShadow = System.Drawing.Color.Gray;
+            this.cButton21.TextShadowShow = false;
+            // 
+            // cButton22
+            // 
+            this.cButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton22.BorderShow = false;
+            cBlendItems22.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(133))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))))};
+            cBlendItems22.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton22.ColorFillBlend = cBlendItems22;
+            this.cButton22.Corners.All = 8;
+            this.cButton22.Corners.LowerLeft = 8;
+            this.cButton22.Corners.LowerRight = 8;
+            this.cButton22.Corners.UpperLeft = 8;
+            this.cButton22.Corners.UpperRight = 8;
+            this.cButton22.DesignerSelected = false;
+            this.cButton22.DimFactorClick = -35;
+            this.cButton22.DimFactorHover = -25;
+            this.cButton22.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton22.ImageIndex = 0;
+            this.cButton22.Location = new System.Drawing.Point(284, 412);
+            this.cButton22.Name = "cButton22";
+            this.cButton22.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton22.Size = new System.Drawing.Size(130, 45);
+            this.cButton22.TabIndex = 281;
+            this.cButton22.Text = "Botón";
+            this.cButton22.TextShadow = System.Drawing.Color.Gray;
+            this.cButton22.TextShadowShow = false;
+            // 
+            // cButton23
+            // 
+            this.cButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton23.BorderShow = false;
+            cBlendItems23.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))))};
+            cBlendItems23.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton23.ColorFillBlend = cBlendItems23;
+            this.cButton23.Corners.All = 8;
+            this.cButton23.Corners.LowerLeft = 8;
+            this.cButton23.Corners.LowerRight = 8;
+            this.cButton23.Corners.UpperLeft = 8;
+            this.cButton23.Corners.UpperRight = 8;
+            this.cButton23.DesignerSelected = false;
+            this.cButton23.DimFactorClick = -35;
+            this.cButton23.DimFactorHover = -25;
+            this.cButton23.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton23.ImageIndex = 0;
+            this.cButton23.Location = new System.Drawing.Point(148, 412);
+            this.cButton23.Name = "cButton23";
+            this.cButton23.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton23.Size = new System.Drawing.Size(130, 45);
+            this.cButton23.TabIndex = 280;
+            this.cButton23.Text = "Botón";
+            this.cButton23.TextShadow = System.Drawing.Color.Gray;
+            this.cButton23.TextShadowShow = false;
+            // 
+            // cButton24
+            // 
+            this.cButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton24.BorderShow = false;
+            cBlendItems24.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+            cBlendItems24.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton24.ColorFillBlend = cBlendItems24;
+            this.cButton24.Corners.All = 8;
+            this.cButton24.Corners.LowerLeft = 8;
+            this.cButton24.Corners.LowerRight = 8;
+            this.cButton24.Corners.UpperLeft = 8;
+            this.cButton24.Corners.UpperRight = 8;
+            this.cButton24.DesignerSelected = false;
+            this.cButton24.DimFactorClick = -35;
+            this.cButton24.DimFactorHover = -25;
+            this.cButton24.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton24.ImageIndex = 0;
+            this.cButton24.Location = new System.Drawing.Point(12, 412);
+            this.cButton24.Name = "cButton24";
+            this.cButton24.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton24.Size = new System.Drawing.Size(130, 45);
+            this.cButton24.TabIndex = 279;
+            this.cButton24.Text = "Botón";
+            this.cButton24.TextShadow = System.Drawing.Color.Gray;
+            this.cButton24.TextShadowShow = false;
+            // 
+            // cButton25
+            // 
+            this.cButton25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton25.BorderShow = false;
+            cBlendItems25.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
+            cBlendItems25.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton25.ColorFillBlend = cBlendItems25;
+            this.cButton25.Corners.All = 8;
+            this.cButton25.Corners.LowerLeft = 8;
+            this.cButton25.Corners.LowerRight = 8;
+            this.cButton25.Corners.UpperLeft = 8;
+            this.cButton25.Corners.UpperRight = 8;
+            this.cButton25.DesignerSelected = false;
+            this.cButton25.DimFactorClick = -35;
+            this.cButton25.DimFactorHover = -25;
+            this.cButton25.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton25.ImageIndex = 0;
+            this.cButton25.Location = new System.Drawing.Point(744, 512);
+            this.cButton25.Name = "cButton25";
+            this.cButton25.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton25.Size = new System.Drawing.Size(156, 24);
+            this.cButton25.TabIndex = 302;
+            this.cButton25.Text = "Botón";
+            this.cButton25.TextShadow = System.Drawing.Color.Gray;
+            this.cButton25.TextShadowShow = false;
+            // 
+            // cButton26
+            // 
+            this.cButton26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton26.BorderShow = false;
+            cBlendItems26.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(94))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(124)))), ((int)(((byte)(62)))))};
+            cBlendItems26.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton26.ColorFillBlend = cBlendItems26;
+            this.cButton26.Corners.All = 8;
+            this.cButton26.Corners.LowerLeft = 8;
+            this.cButton26.Corners.LowerRight = 8;
+            this.cButton26.Corners.UpperLeft = 8;
+            this.cButton26.Corners.UpperRight = 8;
+            this.cButton26.DesignerSelected = false;
+            this.cButton26.DimFactorClick = -35;
+            this.cButton26.DimFactorHover = -25;
+            this.cButton26.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton26.ImageIndex = 0;
+            this.cButton26.Location = new System.Drawing.Point(582, 512);
+            this.cButton26.Name = "cButton26";
+            this.cButton26.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton26.Size = new System.Drawing.Size(156, 24);
+            this.cButton26.TabIndex = 301;
+            this.cButton26.Text = "Botón";
+            this.cButton26.TextShadow = System.Drawing.Color.Gray;
+            this.cButton26.TextShadowShow = false;
+            // 
+            // cButton27
+            // 
+            this.cButton27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton27.BorderShow = false;
+            cBlendItems27.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(132)))), ((int)(((byte)(94)))))};
+            cBlendItems27.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton27.ColorFillBlend = cBlendItems27;
+            this.cButton27.Corners.All = 8;
+            this.cButton27.Corners.LowerLeft = 8;
+            this.cButton27.Corners.LowerRight = 8;
+            this.cButton27.Corners.UpperLeft = 8;
+            this.cButton27.Corners.UpperRight = 8;
+            this.cButton27.DesignerSelected = false;
+            this.cButton27.DimFactorClick = -35;
+            this.cButton27.DimFactorHover = -25;
+            this.cButton27.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton27.ImageIndex = 0;
+            this.cButton27.Location = new System.Drawing.Point(420, 512);
+            this.cButton27.Name = "cButton27";
+            this.cButton27.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton27.Size = new System.Drawing.Size(156, 24);
+            this.cButton27.TabIndex = 300;
+            this.cButton27.Text = "Botón";
+            this.cButton27.TextShadow = System.Drawing.Color.Gray;
+            this.cButton27.TextShadowShow = false;
+            // 
+            // cButton28
+            // 
+            this.cButton28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton28.BorderShow = false;
+            cBlendItems28.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
+            cBlendItems28.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton28.ColorFillBlend = cBlendItems28;
+            this.cButton28.Corners.All = 8;
+            this.cButton28.Corners.LowerLeft = 8;
+            this.cButton28.Corners.LowerRight = 8;
+            this.cButton28.Corners.UpperLeft = 8;
+            this.cButton28.Corners.UpperRight = 8;
+            this.cButton28.DesignerSelected = false;
+            this.cButton28.DimFactorClick = -35;
+            this.cButton28.DimFactorHover = -25;
+            this.cButton28.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton28.ImageIndex = 0;
+            this.cButton28.Location = new System.Drawing.Point(744, 542);
+            this.cButton28.Name = "cButton28";
+            this.cButton28.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton28.Size = new System.Drawing.Size(156, 24);
+            this.cButton28.TabIndex = 299;
+            this.cButton28.Text = "Botón";
+            this.cButton28.TextShadow = System.Drawing.Color.Gray;
+            this.cButton28.TextShadowShow = false;
+            // 
+            // cButton29
+            // 
+            this.cButton29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton29.BorderShow = false;
+            cBlendItems29.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))))};
+            cBlendItems29.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton29.ColorFillBlend = cBlendItems29;
+            this.cButton29.Corners.All = 8;
+            this.cButton29.Corners.LowerLeft = 8;
+            this.cButton29.Corners.LowerRight = 8;
+            this.cButton29.Corners.UpperLeft = 8;
+            this.cButton29.Corners.UpperRight = 8;
+            this.cButton29.DesignerSelected = false;
+            this.cButton29.DimFactorClick = -35;
+            this.cButton29.DimFactorHover = -25;
+            this.cButton29.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton29.ImageIndex = 0;
+            this.cButton29.Location = new System.Drawing.Point(582, 542);
+            this.cButton29.Name = "cButton29";
+            this.cButton29.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton29.Size = new System.Drawing.Size(156, 24);
+            this.cButton29.TabIndex = 298;
+            this.cButton29.Text = "Botón";
+            this.cButton29.TextShadow = System.Drawing.Color.Gray;
+            this.cButton29.TextShadowShow = false;
+            // 
+            // cButton30
+            // 
+            this.cButton30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton30.BorderShow = false;
+            cBlendItems30.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(30))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(143)))), ((int)(((byte)(9)))))};
+            cBlendItems30.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton30.ColorFillBlend = cBlendItems30;
+            this.cButton30.Corners.All = 8;
+            this.cButton30.Corners.LowerLeft = 8;
+            this.cButton30.Corners.LowerRight = 8;
+            this.cButton30.Corners.UpperLeft = 8;
+            this.cButton30.Corners.UpperRight = 8;
+            this.cButton30.DesignerSelected = false;
+            this.cButton30.DimFactorClick = -35;
+            this.cButton30.DimFactorHover = -25;
+            this.cButton30.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton30.ImageIndex = 0;
+            this.cButton30.Location = new System.Drawing.Point(420, 542);
+            this.cButton30.Name = "cButton30";
+            this.cButton30.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton30.Size = new System.Drawing.Size(156, 24);
+            this.cButton30.TabIndex = 297;
+            this.cButton30.Text = "Botón";
+            this.cButton30.TextShadow = System.Drawing.Color.Gray;
+            this.cButton30.TextShadowShow = false;
+            // 
+            // cButton31
+            // 
+            this.cButton31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton31.BorderShow = false;
+            cBlendItems31.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
+            cBlendItems31.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton31.ColorFillBlend = cBlendItems31;
+            this.cButton31.Corners.All = 8;
+            this.cButton31.Corners.LowerLeft = 8;
+            this.cButton31.Corners.LowerRight = 8;
+            this.cButton31.Corners.UpperLeft = 8;
+            this.cButton31.Corners.UpperRight = 8;
+            this.cButton31.DesignerSelected = false;
+            this.cButton31.DimFactorClick = -35;
+            this.cButton31.DimFactorHover = -25;
+            this.cButton31.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton31.ImageIndex = 0;
+            this.cButton31.Location = new System.Drawing.Point(744, 572);
+            this.cButton31.Name = "cButton31";
+            this.cButton31.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton31.Size = new System.Drawing.Size(156, 24);
+            this.cButton31.TabIndex = 296;
+            this.cButton31.Text = "Botón";
+            this.cButton31.TextShadow = System.Drawing.Color.Gray;
+            this.cButton31.TextShadowShow = false;
+            // 
+            // cButton32
+            // 
+            this.cButton32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton32.BorderShow = false;
+            cBlendItems32.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))))};
+            cBlendItems32.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton32.ColorFillBlend = cBlendItems32;
+            this.cButton32.Corners.All = 8;
+            this.cButton32.Corners.LowerLeft = 8;
+            this.cButton32.Corners.LowerRight = 8;
+            this.cButton32.Corners.UpperLeft = 8;
+            this.cButton32.Corners.UpperRight = 8;
+            this.cButton32.DesignerSelected = false;
+            this.cButton32.DimFactorClick = -35;
+            this.cButton32.DimFactorHover = -25;
+            this.cButton32.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton32.ImageIndex = 0;
+            this.cButton32.Location = new System.Drawing.Point(582, 572);
+            this.cButton32.Name = "cButton32";
+            this.cButton32.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton32.Size = new System.Drawing.Size(156, 24);
+            this.cButton32.TabIndex = 295;
+            this.cButton32.Text = "Botón";
+            this.cButton32.TextShadow = System.Drawing.Color.Gray;
+            this.cButton32.TextShadowShow = false;
+            // 
+            // cButton33
+            // 
+            this.cButton33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton33.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton33.BorderShow = false;
+            cBlendItems33.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(68)))), ((int)(((byte)(80)))))};
+            cBlendItems33.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton33.ColorFillBlend = cBlendItems33;
+            this.cButton33.Corners.All = 8;
+            this.cButton33.Corners.LowerLeft = 8;
+            this.cButton33.Corners.LowerRight = 8;
+            this.cButton33.Corners.UpperLeft = 8;
+            this.cButton33.Corners.UpperRight = 8;
+            this.cButton33.DesignerSelected = false;
+            this.cButton33.DimFactorClick = -35;
+            this.cButton33.DimFactorHover = -25;
+            this.cButton33.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton33.ImageIndex = 0;
+            this.cButton33.Location = new System.Drawing.Point(420, 572);
+            this.cButton33.Name = "cButton33";
+            this.cButton33.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton33.Size = new System.Drawing.Size(156, 24);
+            this.cButton33.TabIndex = 294;
+            this.cButton33.Text = "Botón";
+            this.cButton33.TextShadow = System.Drawing.Color.Gray;
+            this.cButton33.TextShadowShow = false;
+            // 
+            // cButton34
+            // 
+            this.cButton34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton34.BorderShow = false;
+            cBlendItems34.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(133))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))))};
+            cBlendItems34.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton34.ColorFillBlend = cBlendItems34;
+            this.cButton34.Corners.All = 8;
+            this.cButton34.Corners.LowerLeft = 8;
+            this.cButton34.Corners.LowerRight = 8;
+            this.cButton34.Corners.UpperLeft = 8;
+            this.cButton34.Corners.UpperRight = 8;
+            this.cButton34.DesignerSelected = false;
+            this.cButton34.DimFactorClick = -35;
+            this.cButton34.DimFactorHover = -25;
+            this.cButton34.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton34.ImageIndex = 0;
+            this.cButton34.Location = new System.Drawing.Point(744, 482);
+            this.cButton34.Name = "cButton34";
+            this.cButton34.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton34.Size = new System.Drawing.Size(156, 24);
+            this.cButton34.TabIndex = 293;
+            this.cButton34.Text = "Botón";
+            this.cButton34.TextShadow = System.Drawing.Color.Gray;
+            this.cButton34.TextShadowShow = false;
+            // 
+            // cButton35
+            // 
+            this.cButton35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton35.BorderShow = false;
+            cBlendItems35.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))))};
+            cBlendItems35.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton35.ColorFillBlend = cBlendItems35;
+            this.cButton35.Corners.All = 8;
+            this.cButton35.Corners.LowerLeft = 8;
+            this.cButton35.Corners.LowerRight = 8;
+            this.cButton35.Corners.UpperLeft = 8;
+            this.cButton35.Corners.UpperRight = 8;
+            this.cButton35.DesignerSelected = false;
+            this.cButton35.DimFactorClick = -35;
+            this.cButton35.DimFactorHover = -25;
+            this.cButton35.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton35.ImageIndex = 0;
+            this.cButton35.Location = new System.Drawing.Point(582, 482);
+            this.cButton35.Name = "cButton35";
+            this.cButton35.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton35.Size = new System.Drawing.Size(156, 24);
+            this.cButton35.TabIndex = 292;
+            this.cButton35.Text = "Botón";
+            this.cButton35.TextShadow = System.Drawing.Color.Gray;
+            this.cButton35.TextShadowShow = false;
+            // 
+            // cButton36
+            // 
+            this.cButton36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton36.BorderShow = false;
+            cBlendItems36.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
+            cBlendItems36.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton36.ColorFillBlend = cBlendItems36;
+            this.cButton36.Corners.All = 8;
+            this.cButton36.Corners.LowerLeft = 8;
+            this.cButton36.Corners.LowerRight = 8;
+            this.cButton36.Corners.UpperLeft = 8;
+            this.cButton36.Corners.UpperRight = 8;
+            this.cButton36.DesignerSelected = false;
+            this.cButton36.DimFactorClick = -35;
+            this.cButton36.DimFactorHover = -25;
+            this.cButton36.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton36.ImageIndex = 0;
+            this.cButton36.Location = new System.Drawing.Point(420, 482);
+            this.cButton36.Name = "cButton36";
+            this.cButton36.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton36.Size = new System.Drawing.Size(156, 24);
+            this.cButton36.TabIndex = 291;
+            this.cButton36.Text = "Botón";
+            this.cButton36.TextShadow = System.Drawing.Color.Gray;
+            this.cButton36.TextShadowShow = false;
+            // 
+            // cButton38
+            // 
+            this.cButton38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton38.BorderShow = false;
+            cBlendItems37.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
+            cBlendItems37.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton38.ColorFillBlend = cBlendItems37;
+            this.cButton38.Corners.All = 8;
+            this.cButton38.Corners.LowerLeft = 8;
+            this.cButton38.Corners.LowerRight = 8;
+            this.cButton38.Corners.UpperLeft = 8;
+            this.cButton38.Corners.UpperRight = 8;
+            this.cButton38.DesignerSelected = false;
+            this.cButton38.DimFactorClick = -35;
+            this.cButton38.DimFactorHover = -25;
+            this.cButton38.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton38.ImageIndex = 0;
+            this.cButton38.Location = new System.Drawing.Point(620, 433);
+            this.cButton38.Name = "cButton38";
+            this.cButton38.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton38.Size = new System.Drawing.Size(92, 30);
+            this.cButton38.TabIndex = 305;
+            this.cButton38.Text = "Salir";
+            this.cButton38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cButton38.TextShadow = System.Drawing.Color.Gray;
+            this.cButton38.TextShadowShow = false;
+            // 
+            // cButton37
+            // 
+            this.cButton37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton37.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cButton37.BorderShow = false;
+            cBlendItems38.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
+            cBlendItems38.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton37.ColorFillBlend = cBlendItems38;
+            this.cButton37.Corners.All = 8;
+            this.cButton37.Corners.LowerLeft = 8;
+            this.cButton37.Corners.LowerRight = 8;
+            this.cButton37.Corners.UpperLeft = 8;
+            this.cButton37.Corners.UpperRight = 8;
+            this.cButton37.DesignerSelected = false;
+            this.cButton37.DimFactorClick = -35;
+            this.cButton37.DimFactorHover = -25;
+            this.cButton37.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton37.ImageIndex = 0;
+            this.cButton37.Location = new System.Drawing.Point(718, 433);
+            this.cButton37.Name = "cButton37";
+            this.cButton37.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton37.SideImage = ((System.Drawing.Image)(resources.GetObject("cButton37.SideImage")));
+            this.cButton37.SideImageSize = new System.Drawing.Size(25, 25);
+            this.cButton37.Size = new System.Drawing.Size(92, 30);
+            this.cButton37.TabIndex = 306;
+            this.cButton37.Text = "Aceptar";
+            this.cButton37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cButton37.TextShadow = System.Drawing.Color.Gray;
+            this.cButton37.TextShadowShow = false;
             // 
             // nuevosBotones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1568, 670);
+            this.Controls.Add(this.cButton37);
+            this.Controls.Add(this.cButton38);
+            this.Controls.Add(this.cButton25);
+            this.Controls.Add(this.cButton26);
+            this.Controls.Add(this.cButton27);
+            this.Controls.Add(this.cButton28);
+            this.Controls.Add(this.cButton29);
+            this.Controls.Add(this.cButton30);
+            this.Controls.Add(this.cButton31);
+            this.Controls.Add(this.cButton32);
+            this.Controls.Add(this.cButton33);
+            this.Controls.Add(this.cButton34);
+            this.Controls.Add(this.cButton35);
+            this.Controls.Add(this.cButton36);
+            this.Controls.Add(this.cButton13);
+            this.Controls.Add(this.cButton14);
+            this.Controls.Add(this.cButton15);
+            this.Controls.Add(this.cButton16);
+            this.Controls.Add(this.cButton17);
+            this.Controls.Add(this.cButton18);
+            this.Controls.Add(this.cButton19);
+            this.Controls.Add(this.cButton20);
+            this.Controls.Add(this.cButton21);
+            this.Controls.Add(this.cButton22);
+            this.Controls.Add(this.cButton23);
+            this.Controls.Add(this.cButton24);
+            this.Controls.Add(this.gunaGradientButton100);
+            this.Controls.Add(this.gunaGradientButton13);
             this.Controls.Add(this.cButton10);
             this.Controls.Add(this.cButton11);
             this.Controls.Add(this.cButton12);
@@ -813,5 +1816,33 @@ namespace ptoVenta
         private CButtonLib.CButton cButton10;
         private CButtonLib.CButton cButton11;
         private CButtonLib.CButton cButton12;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton100;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton13;
+        private CButtonLib.CButton cButton13;
+        private CButtonLib.CButton cButton14;
+        private CButtonLib.CButton cButton15;
+        private CButtonLib.CButton cButton16;
+        private CButtonLib.CButton cButton17;
+        private CButtonLib.CButton cButton18;
+        private CButtonLib.CButton cButton19;
+        private CButtonLib.CButton cButton20;
+        private CButtonLib.CButton cButton21;
+        private CButtonLib.CButton cButton22;
+        private CButtonLib.CButton cButton23;
+        private CButtonLib.CButton cButton24;
+        private CButtonLib.CButton cButton25;
+        private CButtonLib.CButton cButton26;
+        private CButtonLib.CButton cButton27;
+        private CButtonLib.CButton cButton28;
+        private CButtonLib.CButton cButton29;
+        private CButtonLib.CButton cButton30;
+        private CButtonLib.CButton cButton31;
+        private CButtonLib.CButton cButton32;
+        private CButtonLib.CButton cButton33;
+        private CButtonLib.CButton cButton34;
+        private CButtonLib.CButton cButton35;
+        private CButtonLib.CButton cButton36;
+        private CButtonLib.CButton cButton38;
+        private CButtonLib.CButton cButton37;
     }
 }

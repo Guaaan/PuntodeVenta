@@ -28,5 +28,8 @@ namespace ptoVenta
             btnProcesarBoleta.Text = "Procesar" + Environment.NewLine + "Boleta";
             btnCambioPrecio.Text = "Cambio" + Environment.NewLine + "de Precio";
         }
+
+        
+
     }
 }
