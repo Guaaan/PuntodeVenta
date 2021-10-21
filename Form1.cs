@@ -1192,7 +1192,12 @@ namespace ptoVenta
             abc.Show();
         }
 
- 
+        private void gunaGradientButton1_Click(object sender, EventArgs e)
+        {
+            nuevosBotones abrirnb = new nuevosBotones();
+            abrirnb.Show();
+        }
+
         private void stocktiendas()
             {
                 Stock abrirstock = new Stock();
