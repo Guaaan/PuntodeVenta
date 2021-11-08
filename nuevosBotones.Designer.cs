@@ -30,6 +30,7 @@ namespace ptoVenta
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            CButtonLib.cBlendItems cBlendItems39 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems2 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems3 = new CButtonLib.cBlendItems();
@@ -41,8 +42,8 @@ namespace ptoVenta
             CButtonLib.cBlendItems cBlendItems9 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems10 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems11 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems12 = new CButtonLib.cBlendItems();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nuevosBotones));
+            CButtonLib.cBlendItems cBlendItems12 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems14 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems15 = new CButtonLib.cBlendItems();
@@ -68,7 +69,6 @@ namespace ptoVenta
             CButtonLib.cBlendItems cBlendItems35 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems36 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems37 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems38 = new CButtonLib.cBlendItems();
             this.gunaGradientButton48 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton61 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton65 = new Guna.UI.WinForms.GunaGradientButton();
@@ -121,6 +121,11 @@ namespace ptoVenta
             this.cButton36 = new CButtonLib.CButton();
             this.cButton38 = new CButtonLib.CButton();
             this.cButton37 = new CButtonLib.CButton();
+            this.btnAceptar1 = new btnLib.btnAceptar();
+            this.btnSalir1 = new btnLib.btnSalir();
+            this.btnPrimary1 = new btnLib.btnPrimary();
+            this.btnGris1 = new btnLib.btnGris();
+            this.btnAquamarina1 = new btnLib.btnAquamarina();
             this.SuspendLayout();
             // 
             // gunaGradientButton48
@@ -488,13 +493,13 @@ namespace ptoVenta
             this.cButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton5.BorderShow = false;
-            cBlendItems1.iColor = new System.Drawing.Color[] {
+            cBlendItems39.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
-            cBlendItems1.iPoint = new float[] {
+            cBlendItems39.iPoint = new float[] {
         0F,
         1F};
-            this.cButton5.ColorFillBlend = cBlendItems1;
+            this.cButton5.ColorFillBlend = cBlendItems39;
             this.cButton5.Corners.All = 8;
             this.cButton5.Corners.LowerLeft = 8;
             this.cButton5.Corners.LowerRight = 8;
@@ -519,13 +524,13 @@ namespace ptoVenta
             this.cButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton1.BorderShow = false;
-            cBlendItems2.iColor = new System.Drawing.Color[] {
+            cBlendItems1.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))))};
-            cBlendItems2.iPoint = new float[] {
+            cBlendItems1.iPoint = new float[] {
         0F,
         1F};
-            this.cButton1.ColorFillBlend = cBlendItems2;
+            this.cButton1.ColorFillBlend = cBlendItems1;
             this.cButton1.Corners.All = 8;
             this.cButton1.Corners.LowerLeft = 8;
             this.cButton1.Corners.LowerRight = 8;
@@ -550,13 +555,13 @@ namespace ptoVenta
             this.cButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton2.BorderShow = false;
-            cBlendItems3.iColor = new System.Drawing.Color[] {
+            cBlendItems2.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(133))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))))};
-            cBlendItems3.iPoint = new float[] {
+            cBlendItems2.iPoint = new float[] {
         0F,
         1F};
-            this.cButton2.ColorFillBlend = cBlendItems3;
+            this.cButton2.ColorFillBlend = cBlendItems2;
             this.cButton2.Corners.All = 8;
             this.cButton2.Corners.LowerLeft = 8;
             this.cButton2.Corners.LowerRight = 8;
@@ -581,13 +586,14 @@ namespace ptoVenta
             this.cButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton3.BorderShow = false;
-            cBlendItems4.iColor = new System.Drawing.Color[] {
+            cBlendItems3.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            cBlendItems4.iPoint = new float[] {
+            cBlendItems3.iPoint = new float[] {
         0F,
         1F};
-            this.cButton3.ColorFillBlend = cBlendItems4;
+            this.cButton3.ColorFillBlend = cBlendItems3;
+            this.cButton3.ColorFillSolid = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton3.Corners.All = 8;
             this.cButton3.Corners.LowerLeft = 8;
             this.cButton3.Corners.LowerRight = 8;
@@ -612,13 +618,13 @@ namespace ptoVenta
             this.cButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton4.BorderShow = false;
-            cBlendItems5.iColor = new System.Drawing.Color[] {
+            cBlendItems4.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))))};
-            cBlendItems5.iPoint = new float[] {
+            cBlendItems4.iPoint = new float[] {
         0F,
         1F};
-            this.cButton4.ColorFillBlend = cBlendItems5;
+            this.cButton4.ColorFillBlend = cBlendItems4;
             this.cButton4.Corners.All = 8;
             this.cButton4.Corners.LowerLeft = 8;
             this.cButton4.Corners.LowerRight = 8;
@@ -643,13 +649,13 @@ namespace ptoVenta
             this.cButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton6.BorderShow = false;
-            cBlendItems6.iColor = new System.Drawing.Color[] {
+            cBlendItems5.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(68)))), ((int)(((byte)(80)))))};
-            cBlendItems6.iPoint = new float[] {
+            cBlendItems5.iPoint = new float[] {
         0F,
         1F};
-            this.cButton6.ColorFillBlend = cBlendItems6;
+            this.cButton6.ColorFillBlend = cBlendItems5;
             this.cButton6.Corners.All = 8;
             this.cButton6.Corners.LowerLeft = 8;
             this.cButton6.Corners.LowerRight = 8;
@@ -674,13 +680,13 @@ namespace ptoVenta
             this.cButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton7.BorderShow = false;
-            cBlendItems7.iColor = new System.Drawing.Color[] {
+            cBlendItems6.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
-            cBlendItems7.iPoint = new float[] {
+            cBlendItems6.iPoint = new float[] {
         0F,
         1F};
-            this.cButton7.ColorFillBlend = cBlendItems7;
+            this.cButton7.ColorFillBlend = cBlendItems6;
             this.cButton7.Corners.All = 8;
             this.cButton7.Corners.LowerLeft = 8;
             this.cButton7.Corners.LowerRight = 8;
@@ -705,13 +711,13 @@ namespace ptoVenta
             this.cButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton8.BorderShow = false;
-            cBlendItems8.iColor = new System.Drawing.Color[] {
+            cBlendItems7.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))))};
-            cBlendItems8.iPoint = new float[] {
+            cBlendItems7.iPoint = new float[] {
         0F,
         1F};
-            this.cButton8.ColorFillBlend = cBlendItems8;
+            this.cButton8.ColorFillBlend = cBlendItems7;
             this.cButton8.Corners.All = 8;
             this.cButton8.Corners.LowerLeft = 8;
             this.cButton8.Corners.LowerRight = 8;
@@ -736,13 +742,13 @@ namespace ptoVenta
             this.cButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton9.BorderShow = false;
-            cBlendItems9.iColor = new System.Drawing.Color[] {
+            cBlendItems8.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(30))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(143)))), ((int)(((byte)(9)))))};
-            cBlendItems9.iPoint = new float[] {
+            cBlendItems8.iPoint = new float[] {
         0F,
         1F};
-            this.cButton9.ColorFillBlend = cBlendItems9;
+            this.cButton9.ColorFillBlend = cBlendItems8;
             this.cButton9.Corners.All = 8;
             this.cButton9.Corners.LowerLeft = 8;
             this.cButton9.Corners.LowerRight = 8;
@@ -767,13 +773,13 @@ namespace ptoVenta
             this.cButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton10.BorderShow = false;
-            cBlendItems10.iColor = new System.Drawing.Color[] {
+            cBlendItems9.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
-            cBlendItems10.iPoint = new float[] {
+            cBlendItems9.iPoint = new float[] {
         0F,
         1F};
-            this.cButton10.ColorFillBlend = cBlendItems10;
+            this.cButton10.ColorFillBlend = cBlendItems9;
             this.cButton10.Corners.All = 8;
             this.cButton10.Corners.LowerLeft = 8;
             this.cButton10.Corners.LowerRight = 8;
@@ -798,13 +804,13 @@ namespace ptoVenta
             this.cButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton11.BorderShow = false;
-            cBlendItems11.iColor = new System.Drawing.Color[] {
+            cBlendItems10.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(124)))), ((int)(((byte)(62)))))};
-            cBlendItems11.iPoint = new float[] {
+            cBlendItems10.iPoint = new float[] {
         0F,
         1F};
-            this.cButton11.ColorFillBlend = cBlendItems11;
+            this.cButton11.ColorFillBlend = cBlendItems10;
             this.cButton11.Corners.All = 8;
             this.cButton11.Corners.LowerLeft = 8;
             this.cButton11.Corners.LowerRight = 8;
@@ -829,13 +835,13 @@ namespace ptoVenta
             this.cButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton12.BorderShow = false;
-            cBlendItems12.iColor = new System.Drawing.Color[] {
+            cBlendItems11.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(132)))), ((int)(((byte)(94)))))};
-            cBlendItems12.iPoint = new float[] {
+            cBlendItems11.iPoint = new float[] {
         0F,
         1F};
-            this.cButton12.ColorFillBlend = cBlendItems12;
+            this.cButton12.ColorFillBlend = cBlendItems11;
             this.cButton12.Corners.All = 8;
             this.cButton12.Corners.LowerLeft = 8;
             this.cButton12.Corners.LowerRight = 8;
@@ -921,13 +927,13 @@ namespace ptoVenta
             this.cButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton13.BorderShow = false;
-            cBlendItems13.iColor = new System.Drawing.Color[] {
+            cBlendItems12.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
-            cBlendItems13.iPoint = new float[] {
+            cBlendItems12.iPoint = new float[] {
         0F,
         1F};
-            this.cButton13.ColorFillBlend = cBlendItems13;
+            this.cButton13.ColorFillBlend = cBlendItems12;
             this.cButton13.Corners.All = 8;
             this.cButton13.Corners.LowerLeft = 8;
             this.cButton13.Corners.LowerRight = 8;
@@ -952,13 +958,13 @@ namespace ptoVenta
             this.cButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton14.BorderShow = false;
-            cBlendItems14.iColor = new System.Drawing.Color[] {
+            cBlendItems13.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(124)))), ((int)(((byte)(62)))))};
-            cBlendItems14.iPoint = new float[] {
+            cBlendItems13.iPoint = new float[] {
         0F,
         1F};
-            this.cButton14.ColorFillBlend = cBlendItems14;
+            this.cButton14.ColorFillBlend = cBlendItems13;
             this.cButton14.Corners.All = 8;
             this.cButton14.Corners.LowerLeft = 8;
             this.cButton14.Corners.LowerRight = 8;
@@ -983,13 +989,13 @@ namespace ptoVenta
             this.cButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton15.BorderShow = false;
-            cBlendItems15.iColor = new System.Drawing.Color[] {
+            cBlendItems14.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(132)))), ((int)(((byte)(94)))))};
-            cBlendItems15.iPoint = new float[] {
+            cBlendItems14.iPoint = new float[] {
         0F,
         1F};
-            this.cButton15.ColorFillBlend = cBlendItems15;
+            this.cButton15.ColorFillBlend = cBlendItems14;
             this.cButton15.Corners.All = 8;
             this.cButton15.Corners.LowerLeft = 8;
             this.cButton15.Corners.LowerRight = 8;
@@ -1014,13 +1020,13 @@ namespace ptoVenta
             this.cButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton16.BorderShow = false;
-            cBlendItems16.iColor = new System.Drawing.Color[] {
+            cBlendItems15.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
-            cBlendItems16.iPoint = new float[] {
+            cBlendItems15.iPoint = new float[] {
         0F,
         1F};
-            this.cButton16.ColorFillBlend = cBlendItems16;
+            this.cButton16.ColorFillBlend = cBlendItems15;
             this.cButton16.Corners.All = 8;
             this.cButton16.Corners.LowerLeft = 8;
             this.cButton16.Corners.LowerRight = 8;
@@ -1045,13 +1051,13 @@ namespace ptoVenta
             this.cButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton17.BorderShow = false;
-            cBlendItems17.iColor = new System.Drawing.Color[] {
+            cBlendItems16.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))))};
-            cBlendItems17.iPoint = new float[] {
+            cBlendItems16.iPoint = new float[] {
         0F,
         1F};
-            this.cButton17.ColorFillBlend = cBlendItems17;
+            this.cButton17.ColorFillBlend = cBlendItems16;
             this.cButton17.Corners.All = 8;
             this.cButton17.Corners.LowerLeft = 8;
             this.cButton17.Corners.LowerRight = 8;
@@ -1076,13 +1082,13 @@ namespace ptoVenta
             this.cButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton18.BorderShow = false;
-            cBlendItems18.iColor = new System.Drawing.Color[] {
+            cBlendItems17.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(30))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(143)))), ((int)(((byte)(9)))))};
-            cBlendItems18.iPoint = new float[] {
+            cBlendItems17.iPoint = new float[] {
         0F,
         1F};
-            this.cButton18.ColorFillBlend = cBlendItems18;
+            this.cButton18.ColorFillBlend = cBlendItems17;
             this.cButton18.Corners.All = 8;
             this.cButton18.Corners.LowerLeft = 8;
             this.cButton18.Corners.LowerRight = 8;
@@ -1107,13 +1113,13 @@ namespace ptoVenta
             this.cButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton19.BorderShow = false;
-            cBlendItems19.iColor = new System.Drawing.Color[] {
+            cBlendItems18.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            cBlendItems19.iPoint = new float[] {
+            cBlendItems18.iPoint = new float[] {
         0F,
         1F};
-            this.cButton19.ColorFillBlend = cBlendItems19;
+            this.cButton19.ColorFillBlend = cBlendItems18;
             this.cButton19.Corners.All = 8;
             this.cButton19.Corners.LowerLeft = 8;
             this.cButton19.Corners.LowerRight = 8;
@@ -1138,13 +1144,13 @@ namespace ptoVenta
             this.cButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton20.BorderShow = false;
-            cBlendItems20.iColor = new System.Drawing.Color[] {
+            cBlendItems19.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))))};
-            cBlendItems20.iPoint = new float[] {
+            cBlendItems19.iPoint = new float[] {
         0F,
         1F};
-            this.cButton20.ColorFillBlend = cBlendItems20;
+            this.cButton20.ColorFillBlend = cBlendItems19;
             this.cButton20.Corners.All = 8;
             this.cButton20.Corners.LowerLeft = 8;
             this.cButton20.Corners.LowerRight = 8;
@@ -1169,13 +1175,13 @@ namespace ptoVenta
             this.cButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton21.BorderShow = false;
-            cBlendItems21.iColor = new System.Drawing.Color[] {
+            cBlendItems20.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(68)))), ((int)(((byte)(80)))))};
-            cBlendItems21.iPoint = new float[] {
+            cBlendItems20.iPoint = new float[] {
         0F,
         1F};
-            this.cButton21.ColorFillBlend = cBlendItems21;
+            this.cButton21.ColorFillBlend = cBlendItems20;
             this.cButton21.Corners.All = 8;
             this.cButton21.Corners.LowerLeft = 8;
             this.cButton21.Corners.LowerRight = 8;
@@ -1200,13 +1206,13 @@ namespace ptoVenta
             this.cButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton22.BorderShow = false;
-            cBlendItems22.iColor = new System.Drawing.Color[] {
+            cBlendItems21.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(133))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))))};
-            cBlendItems22.iPoint = new float[] {
+            cBlendItems21.iPoint = new float[] {
         0F,
         1F};
-            this.cButton22.ColorFillBlend = cBlendItems22;
+            this.cButton22.ColorFillBlend = cBlendItems21;
             this.cButton22.Corners.All = 8;
             this.cButton22.Corners.LowerLeft = 8;
             this.cButton22.Corners.LowerRight = 8;
@@ -1231,13 +1237,13 @@ namespace ptoVenta
             this.cButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton23.BorderShow = false;
-            cBlendItems23.iColor = new System.Drawing.Color[] {
+            cBlendItems22.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))))};
-            cBlendItems23.iPoint = new float[] {
+            cBlendItems22.iPoint = new float[] {
         0F,
         1F};
-            this.cButton23.ColorFillBlend = cBlendItems23;
+            this.cButton23.ColorFillBlend = cBlendItems22;
             this.cButton23.Corners.All = 8;
             this.cButton23.Corners.LowerLeft = 8;
             this.cButton23.Corners.LowerRight = 8;
@@ -1262,13 +1268,13 @@ namespace ptoVenta
             this.cButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton24.BorderShow = false;
-            cBlendItems24.iColor = new System.Drawing.Color[] {
+            cBlendItems23.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
-            cBlendItems24.iPoint = new float[] {
+            cBlendItems23.iPoint = new float[] {
         0F,
         1F};
-            this.cButton24.ColorFillBlend = cBlendItems24;
+            this.cButton24.ColorFillBlend = cBlendItems23;
             this.cButton24.Corners.All = 8;
             this.cButton24.Corners.LowerLeft = 8;
             this.cButton24.Corners.LowerRight = 8;
@@ -1293,13 +1299,13 @@ namespace ptoVenta
             this.cButton25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton25.BorderShow = false;
-            cBlendItems25.iColor = new System.Drawing.Color[] {
+            cBlendItems24.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
-            cBlendItems25.iPoint = new float[] {
+            cBlendItems24.iPoint = new float[] {
         0F,
         1F};
-            this.cButton25.ColorFillBlend = cBlendItems25;
+            this.cButton25.ColorFillBlend = cBlendItems24;
             this.cButton25.Corners.All = 8;
             this.cButton25.Corners.LowerLeft = 8;
             this.cButton25.Corners.LowerRight = 8;
@@ -1324,13 +1330,13 @@ namespace ptoVenta
             this.cButton26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton26.BorderShow = false;
-            cBlendItems26.iColor = new System.Drawing.Color[] {
+            cBlendItems25.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(124)))), ((int)(((byte)(62)))))};
-            cBlendItems26.iPoint = new float[] {
+            cBlendItems25.iPoint = new float[] {
         0F,
         1F};
-            this.cButton26.ColorFillBlend = cBlendItems26;
+            this.cButton26.ColorFillBlend = cBlendItems25;
             this.cButton26.Corners.All = 8;
             this.cButton26.Corners.LowerLeft = 8;
             this.cButton26.Corners.LowerRight = 8;
@@ -1355,13 +1361,13 @@ namespace ptoVenta
             this.cButton27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton27.BorderShow = false;
-            cBlendItems27.iColor = new System.Drawing.Color[] {
+            cBlendItems26.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(132)))), ((int)(((byte)(94)))))};
-            cBlendItems27.iPoint = new float[] {
+            cBlendItems26.iPoint = new float[] {
         0F,
         1F};
-            this.cButton27.ColorFillBlend = cBlendItems27;
+            this.cButton27.ColorFillBlend = cBlendItems26;
             this.cButton27.Corners.All = 8;
             this.cButton27.Corners.LowerLeft = 8;
             this.cButton27.Corners.LowerRight = 8;
@@ -1386,13 +1392,13 @@ namespace ptoVenta
             this.cButton28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton28.BorderShow = false;
-            cBlendItems28.iColor = new System.Drawing.Color[] {
+            cBlendItems27.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(140)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(106)))), ((int)(((byte)(37)))))};
-            cBlendItems28.iPoint = new float[] {
+            cBlendItems27.iPoint = new float[] {
         0F,
         1F};
-            this.cButton28.ColorFillBlend = cBlendItems28;
+            this.cButton28.ColorFillBlend = cBlendItems27;
             this.cButton28.Corners.All = 8;
             this.cButton28.Corners.LowerLeft = 8;
             this.cButton28.Corners.LowerRight = 8;
@@ -1417,13 +1423,13 @@ namespace ptoVenta
             this.cButton29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton29.BorderShow = false;
-            cBlendItems29.iColor = new System.Drawing.Color[] {
+            cBlendItems28.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))))};
-            cBlendItems29.iPoint = new float[] {
+            cBlendItems28.iPoint = new float[] {
         0F,
         1F};
-            this.cButton29.ColorFillBlend = cBlendItems29;
+            this.cButton29.ColorFillBlend = cBlendItems28;
             this.cButton29.Corners.All = 8;
             this.cButton29.Corners.LowerLeft = 8;
             this.cButton29.Corners.LowerRight = 8;
@@ -1448,13 +1454,13 @@ namespace ptoVenta
             this.cButton30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton30.BorderShow = false;
-            cBlendItems30.iColor = new System.Drawing.Color[] {
+            cBlendItems29.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(181)))), ((int)(((byte)(30))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(143)))), ((int)(((byte)(9)))))};
-            cBlendItems30.iPoint = new float[] {
+            cBlendItems29.iPoint = new float[] {
         0F,
         1F};
-            this.cButton30.ColorFillBlend = cBlendItems30;
+            this.cButton30.ColorFillBlend = cBlendItems29;
             this.cButton30.Corners.All = 8;
             this.cButton30.Corners.LowerLeft = 8;
             this.cButton30.Corners.LowerRight = 8;
@@ -1479,13 +1485,13 @@ namespace ptoVenta
             this.cButton31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton31.BorderShow = false;
-            cBlendItems31.iColor = new System.Drawing.Color[] {
+            cBlendItems30.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            cBlendItems31.iPoint = new float[] {
+            cBlendItems30.iPoint = new float[] {
         0F,
         1F};
-            this.cButton31.ColorFillBlend = cBlendItems31;
+            this.cButton31.ColorFillBlend = cBlendItems30;
             this.cButton31.Corners.All = 8;
             this.cButton31.Corners.LowerLeft = 8;
             this.cButton31.Corners.LowerRight = 8;
@@ -1510,13 +1516,13 @@ namespace ptoVenta
             this.cButton32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton32.BorderShow = false;
-            cBlendItems32.iColor = new System.Drawing.Color[] {
+            cBlendItems31.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(103)))), ((int)(((byte)(94))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))))};
-            cBlendItems32.iPoint = new float[] {
+            cBlendItems31.iPoint = new float[] {
         0F,
         1F};
-            this.cButton32.ColorFillBlend = cBlendItems32;
+            this.cButton32.ColorFillBlend = cBlendItems31;
             this.cButton32.Corners.All = 8;
             this.cButton32.Corners.LowerLeft = 8;
             this.cButton32.Corners.LowerRight = 8;
@@ -1541,13 +1547,13 @@ namespace ptoVenta
             this.cButton33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton33.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton33.BorderShow = false;
-            cBlendItems33.iColor = new System.Drawing.Color[] {
+            cBlendItems32.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(96)))), ((int)(((byte)(108))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(68)))), ((int)(((byte)(80)))))};
-            cBlendItems33.iPoint = new float[] {
+            cBlendItems32.iPoint = new float[] {
         0F,
         1F};
-            this.cButton33.ColorFillBlend = cBlendItems33;
+            this.cButton33.ColorFillBlend = cBlendItems32;
             this.cButton33.Corners.All = 8;
             this.cButton33.Corners.LowerLeft = 8;
             this.cButton33.Corners.LowerRight = 8;
@@ -1572,13 +1578,13 @@ namespace ptoVenta
             this.cButton34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton34.BorderShow = false;
-            cBlendItems34.iColor = new System.Drawing.Color[] {
+            cBlendItems33.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(101)))), ((int)(((byte)(133))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(67)))), ((int)(((byte)(88)))))};
-            cBlendItems34.iPoint = new float[] {
+            cBlendItems33.iPoint = new float[] {
         0F,
         1F};
-            this.cButton34.ColorFillBlend = cBlendItems34;
+            this.cButton34.ColorFillBlend = cBlendItems33;
             this.cButton34.Corners.All = 8;
             this.cButton34.Corners.LowerLeft = 8;
             this.cButton34.Corners.LowerRight = 8;
@@ -1603,13 +1609,13 @@ namespace ptoVenta
             this.cButton35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton35.BorderShow = false;
-            cBlendItems35.iColor = new System.Drawing.Color[] {
+            cBlendItems34.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(214))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))))};
-            cBlendItems35.iPoint = new float[] {
+            cBlendItems34.iPoint = new float[] {
         0F,
         1F};
-            this.cButton35.ColorFillBlend = cBlendItems35;
+            this.cButton35.ColorFillBlend = cBlendItems34;
             this.cButton35.Corners.All = 8;
             this.cButton35.Corners.LowerLeft = 8;
             this.cButton35.Corners.LowerRight = 8;
@@ -1634,13 +1640,13 @@ namespace ptoVenta
             this.cButton36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton36.BorderShow = false;
-            cBlendItems36.iColor = new System.Drawing.Color[] {
+            cBlendItems35.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))))};
-            cBlendItems36.iPoint = new float[] {
+            cBlendItems35.iPoint = new float[] {
         0F,
         1F};
-            this.cButton36.ColorFillBlend = cBlendItems36;
+            this.cButton36.ColorFillBlend = cBlendItems35;
             this.cButton36.Corners.All = 8;
             this.cButton36.Corners.LowerLeft = 8;
             this.cButton36.Corners.LowerRight = 8;
@@ -1665,13 +1671,13 @@ namespace ptoVenta
             this.cButton38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton38.BorderShow = false;
-            cBlendItems37.iColor = new System.Drawing.Color[] {
+            cBlendItems36.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            cBlendItems37.iPoint = new float[] {
+            cBlendItems36.iPoint = new float[] {
         0F,
         1F};
-            this.cButton38.ColorFillBlend = cBlendItems37;
+            this.cButton38.ColorFillBlend = cBlendItems36;
             this.cButton38.Corners.All = 8;
             this.cButton38.Corners.LowerLeft = 8;
             this.cButton38.Corners.LowerRight = 8;
@@ -1681,10 +1687,14 @@ namespace ptoVenta
             this.cButton38.DimFactorClick = -35;
             this.cButton38.DimFactorHover = -25;
             this.cButton38.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton38.Image = ((System.Drawing.Image)(resources.GetObject("cButton38.Image")));
             this.cButton38.ImageIndex = 0;
             this.cButton38.Location = new System.Drawing.Point(620, 433);
             this.cButton38.Name = "cButton38";
             this.cButton38.ShowFocus = CButtonLib.CButton.eFocus.None;
+            this.cButton38.SideImage = ((System.Drawing.Image)(resources.GetObject("cButton38.SideImage")));
+            this.cButton38.SideImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cButton38.SideImageSize = new System.Drawing.Size(25, 25);
             this.cButton38.Size = new System.Drawing.Size(92, 30);
             this.cButton38.TabIndex = 305;
             this.cButton38.Text = "Salir";
@@ -1697,13 +1707,13 @@ namespace ptoVenta
             this.cButton37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton37.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cButton37.BorderShow = false;
-            cBlendItems38.iColor = new System.Drawing.Color[] {
+            cBlendItems37.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(123)))), ((int)(((byte)(56)))))};
-            cBlendItems38.iPoint = new float[] {
+            cBlendItems37.iPoint = new float[] {
         0F,
         1F};
-            this.cButton37.ColorFillBlend = cBlendItems38;
+            this.cButton37.ColorFillBlend = cBlendItems37;
             this.cButton37.Corners.All = 8;
             this.cButton37.Corners.LowerLeft = 8;
             this.cButton37.Corners.LowerRight = 8;
@@ -1726,12 +1736,105 @@ namespace ptoVenta
             this.cButton37.TextShadow = System.Drawing.Color.Gray;
             this.cButton37.TextShadowShow = false;
             // 
+            // btnAceptar1
+            // 
+            this.btnAceptar1.Alineacion_texto = btnLib.btnAceptar.TextoAlineo.Right;
+            this.btnAceptar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAceptar1.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.btnAceptar1.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(139)))), ((int)(((byte)(68)))));
+            this.btnAceptar1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(48)))));
+            this.btnAceptar1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(48)))));
+            this.btnAceptar1.Location = new System.Drawing.Point(718, 39);
+            this.btnAceptar1.Name = "btnAceptar1";
+            this.btnAceptar1.Radio = 8;
+            this.btnAceptar1.Size = new System.Drawing.Size(105, 30);
+            this.btnAceptar1.TabIndex = 307;
+            this.btnAceptar1.Tamaño_Boton = new System.Drawing.Size(105, 30);
+            this.btnAceptar1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnAceptar1.Texto = "Aceptar";
+            // 
+            // btnSalir1
+            // 
+            this.btnSalir1.Alineacion_texto = btnLib.btnSalir.TextoAlineo.Center;
+            this.btnSalir1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir1.Color1_Arriba = System.Drawing.Color.Red;
+            this.btnSalir1.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir1.Location = new System.Drawing.Point(718, 75);
+            this.btnSalir1.Name = "btnSalir1";
+            this.btnSalir1.Radio = 8;
+            this.btnSalir1.Size = new System.Drawing.Size(105, 30);
+            this.btnSalir1.TabIndex = 308;
+            this.btnSalir1.Tamaño_Boton = new System.Drawing.Size(175, 50);
+            this.btnSalir1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnSalir1.Texto = "salir";
+            // 
+            // btnPrimary1
+            // 
+            this.btnPrimary1.Alineacion_texto = btnLib.btnPrimary.TextoAlineo.Center;
+            this.btnPrimary1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPrimary1.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(187)))), ((int)(((byte)(209)))));
+            this.btnPrimary1.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))));
+            this.btnPrimary1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(124)))), ((int)(((byte)(139)))));
+            this.btnPrimary1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(124)))), ((int)(((byte)(139)))));
+            this.btnPrimary1.Imagen = null;
+            this.btnPrimary1.Location = new System.Drawing.Point(765, 172);
+            this.btnPrimary1.Name = "btnPrimary1";
+            this.btnPrimary1.Radio = 8;
+            this.btnPrimary1.Size = new System.Drawing.Size(175, 50);
+            this.btnPrimary1.TabIndex = 309;
+            this.btnPrimary1.Tamaño_Boton = new System.Drawing.Size(175, 50);
+            this.btnPrimary1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnPrimary1.Texto = "Botón";
+            // 
+            // btnGris1
+            // 
+            this.btnGris1.Alineacion_texto = btnLib.btnGris.TextoAlineo.Center;
+            this.btnGris1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris1.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris1.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris1.Imagen = null;
+            this.btnGris1.Location = new System.Drawing.Point(779, 228);
+            this.btnGris1.Name = "btnGris1";
+            this.btnGris1.Radio = 8;
+            this.btnGris1.Size = new System.Drawing.Size(175, 50);
+            this.btnGris1.TabIndex = 310;
+            this.btnGris1.Tamaño_Boton = new System.Drawing.Size(175, 50);
+            this.btnGris1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris1.Texto = "Botón";
+            // 
+            // btnAquamarina1
+            // 
+            this.btnAquamarina1.Alineacion_texto = btnLib.btnAquamarina.TextoAlineo.Center;
+            this.btnAquamarina1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAquamarina1.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(175)))), ((int)(((byte)(125)))));
+            this.btnAquamarina1.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(116)))), ((int)(((byte)(83)))));
+            this.btnAquamarina1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(77)))), ((int)(((byte)(55)))));
+            this.btnAquamarina1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(77)))), ((int)(((byte)(55)))));
+            this.btnAquamarina1.Imagen = null;
+            this.btnAquamarina1.Location = new System.Drawing.Point(744, 284);
+            this.btnAquamarina1.Name = "btnAquamarina1";
+            this.btnAquamarina1.Radio = 8;
+            this.btnAquamarina1.Size = new System.Drawing.Size(200, 100);
+            this.btnAquamarina1.TabIndex = 311;
+            this.btnAquamarina1.Tamaño_Boton = new System.Drawing.Size(200, 100);
+            this.btnAquamarina1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnAquamarina1.Texto = "Botón";
+            // 
             // nuevosBotones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1568, 670);
+            this.Controls.Add(this.btnAquamarina1);
+            this.Controls.Add(this.btnGris1);
+            this.Controls.Add(this.btnPrimary1);
+            this.Controls.Add(this.btnSalir1);
+            this.Controls.Add(this.btnAceptar1);
             this.Controls.Add(this.cButton37);
             this.Controls.Add(this.cButton38);
             this.Controls.Add(this.cButton25);
@@ -1844,5 +1947,10 @@ namespace ptoVenta
         private CButtonLib.CButton cButton36;
         private CButtonLib.CButton cButton38;
         private CButtonLib.CButton cButton37;
+        private btnLib.btnAceptar btnAceptar1;
+        private btnLib.btnSalir btnSalir1;
+        private btnLib.btnPrimary btnPrimary1;
+        private btnLib.btnGris btnGris1;
+        private btnLib.btnAquamarina btnAquamarina1;
     }
 }
