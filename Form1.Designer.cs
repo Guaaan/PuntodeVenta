@@ -157,6 +157,13 @@ namespace ptoVenta
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnGris1 = new btnLib.btnGris();
+            this.btnGris2 = new btnLib.btnGris();
+            this.btnGris3 = new btnLib.btnGris();
+            this.btnGris4 = new btnLib.btnGris();
+            this.btnGris5 = new btnLib.btnGris();
+            this.btnGris6 = new btnLib.btnGris();
+            this.btnGris7 = new btnLib.btnGris();
             this.panel15.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -301,7 +308,7 @@ namespace ptoVenta
             // 
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(177)))), ((int)(((byte)(230)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(183)))));
             this.panel15.Controls.Add(this.label13);
             this.panel15.Controls.Add(this.label12);
             this.panel15.Controls.Add(this.textBox1);
@@ -1727,6 +1734,146 @@ namespace ptoVenta
             this.pictureBox2.TabIndex = 214;
             this.pictureBox2.TabStop = false;
             // 
+            // btnGris1
+            // 
+            this.btnGris1.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris1.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris1.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris1.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris1.Imagen = null;
+            this.btnGris1.Location = new System.Drawing.Point(476, 135);
+            this.btnGris1.Name = "btnGris1";
+            this.btnGris1.Radio = 8;
+            this.btnGris1.Size = new System.Drawing.Size(111, 40);
+            this.btnGris1.TabIndex = 215;
+            this.btnGris1.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris1.Texto = "Guardar\nDocumento";
+            // 
+            // btnGris2
+            // 
+            this.btnGris2.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris2.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris2.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris2.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris2.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris2.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris2.Imagen = null;
+            this.btnGris2.Location = new System.Drawing.Point(589, 135);
+            this.btnGris2.Name = "btnGris2";
+            this.btnGris2.Radio = 8;
+            this.btnGris2.Size = new System.Drawing.Size(111, 40);
+            this.btnGris2.TabIndex = 216;
+            this.btnGris2.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris2.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris2.Texto = "Liberar\nCaja";
+            // 
+            // btnGris3
+            // 
+            this.btnGris3.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris3.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris3.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris3.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris3.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris3.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris3.Imagen = null;
+            this.btnGris3.Location = new System.Drawing.Point(702, 135);
+            this.btnGris3.Name = "btnGris3";
+            this.btnGris3.Radio = 8;
+            this.btnGris3.Size = new System.Drawing.Size(111, 40);
+            this.btnGris3.TabIndex = 217;
+            this.btnGris3.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris3.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris3.Texto = "Cargar\nDocumento";
+            // 
+            // btnGris4
+            // 
+            this.btnGris4.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris4.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris4.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris4.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris4.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris4.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris4.Imagen = null;
+            this.btnGris4.Location = new System.Drawing.Point(815, 135);
+            this.btnGris4.Name = "btnGris4";
+            this.btnGris4.Radio = 8;
+            this.btnGris4.Size = new System.Drawing.Size(111, 40);
+            this.btnGris4.TabIndex = 218;
+            this.btnGris4.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris4.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris4.Texto = "Productos\nFaltantes";
+            // 
+            // btnGris5
+            // 
+            this.btnGris5.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris5.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris5.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris5.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris5.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris5.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris5.Imagen = null;
+            this.btnGris5.Location = new System.Drawing.Point(928, 135);
+            this.btnGris5.Name = "btnGris5";
+            this.btnGris5.Radio = 8;
+            this.btnGris5.Size = new System.Drawing.Size(111, 40);
+            this.btnGris5.TabIndex = 219;
+            this.btnGris5.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris5.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris5.Texto = "Stock en\nTiendas";
+            // 
+            // btnGris6
+            // 
+            this.btnGris6.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris6.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris6.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris6.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris6.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris6.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris6.Imagen = null;
+            this.btnGris6.Location = new System.Drawing.Point(1041, 135);
+            this.btnGris6.Name = "btnGris6";
+            this.btnGris6.Radio = 8;
+            this.btnGris6.Size = new System.Drawing.Size(111, 40);
+            this.btnGris6.TabIndex = 220;
+            this.btnGris6.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris6.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris6.Texto = "Procesar\nBoleta";
+            // 
+            // btnGris7
+            // 
+            this.btnGris7.Alineacion_texto = btnLib.btnGris.TextoAlineo.Left;
+            this.btnGris7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGris7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGris7.Color1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnGris7.Color2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnGris7.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGris7.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnGris7.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGris7.Imagen = null;
+            this.btnGris7.Location = new System.Drawing.Point(1154, 135);
+            this.btnGris7.Name = "btnGris7";
+            this.btnGris7.Radio = 8;
+            this.btnGris7.Size = new System.Drawing.Size(111, 40);
+            this.btnGris7.TabIndex = 221;
+            this.btnGris7.Tamaño_Boton = new System.Drawing.Size(111, 40);
+            this.btnGris7.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris7.Texto = "Cambio\nde Precio";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1738,6 +1885,13 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1275, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.btnGris7);
+            this.Controls.Add(this.btnGris6);
+            this.Controls.Add(this.btnGris5);
+            this.Controls.Add(this.btnGris4);
+            this.Controls.Add(this.btnGris3);
+            this.Controls.Add(this.btnGris2);
+            this.Controls.Add(this.btnGris1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.gunaGradientButton63);
@@ -1882,6 +2036,13 @@ namespace ptoVenta
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private btnLib.btnGris btnGris1;
+        private btnLib.btnGris btnGris2;
+        private btnLib.btnGris btnGris3;
+        private btnLib.btnGris btnGris4;
+        private btnLib.btnGris btnGris5;
+        private btnLib.btnGris btnGris6;
+        private btnLib.btnGris btnGris7;
     }
 }
 
