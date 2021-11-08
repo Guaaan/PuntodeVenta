@@ -52,9 +52,14 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+    <Reference Include="btnLib">
+      <HintPath>..\..\source\repos\Libreria_de_botones\bin\Debug\btnLib.dll</HintPath>
+=======
     <Reference Include="btnLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\source\repos\Libreria_de_botones\bin\Debug\btnLib.dll</HintPath>
+>>>>>>> 7b0533b1a6f5ee968993f5fdd44bf91bf75349d0
     </Reference>
     <Reference Include="CButtonLib, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CButtonLib.3.0.6\lib\net40\CButtonLib.dll</HintPath>
@@ -63,9 +68,14 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\source\repos\Libreria_de_botones\bin\Debug\Guna.UI.dll</HintPath>
+=======
     <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>gunaui\Guna.UI.dll</HintPath>
+>>>>>>> 7b0533b1a6f5ee968993f5fdd44bf91bf75349d0
     </Reference>
     <Reference Include="IrisSkin2">
       <HintPath>..\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
