@@ -13,21 +13,6 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,55 +37,42 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
-<<<<<<< HEAD
-    <Reference Include="btnLib">
-      <HintPath>..\..\source\repos\Libreria_de_botones\bin\Debug\btnLib.dll</HintPath>
-=======
-    <Reference Include="btnLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\source\repos\Libreria_de_botones\bin\Debug\btnLib.dll</HintPath>
->>>>>>> 7b0533b1a6f5ee968993f5fdd44bf91bf75349d0
-    </Reference>
     <Reference Include="CButtonLib, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CButtonLib.3.0.6\lib\net40\CButtonLib.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
-<<<<<<< HEAD
-    <Reference Include="Guna.UI">
-      <HintPath>..\..\source\repos\Libreria_de_botones\bin\Debug\Guna.UI.dll</HintPath>
-=======
-    <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>gunaui\Guna.UI.dll</HintPath>
->>>>>>> 7b0533b1a6f5ee968993f5fdd44bf91bf75349d0
     </Reference>
     <Reference Include="IrisSkin2">
       <HintPath>..\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Syncfusion.Shared.Base, Version=19.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
-    <Reference Include="System.Drawing.Design" />
-    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -113,146 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aperturaCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="aperturaCaja.Designer.cs">
-      <DependentUpon>aperturaCaja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="btnAceptar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="btnAceptar.designer.cs">
-      <DependentUpon>btnAceptar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Buscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Buscar.Designer.cs">
-      <DependentUpon>Buscar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="calendarioTicketsE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="calendarioTicketsE.Designer.cs">
-      <DependentUpon>calendarioTicketsE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="cambiarPrecio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cambiarPrecio.Designer.cs">
-      <DependentUpon>cambiarPrecio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="cargadocum.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cargadocum.Designer.cs">
-      <DependentUpon>cargadocum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="cierreBoleta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cierreBoleta.designer.cs">
-      <DependentUpon>cierreBoleta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="cierredecaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cierredecaja.Designer.cs">
-      <DependentUpon>cierredecaja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="clases.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="clases.Designer.cs">
-      <DependentUpon>clases.cs</DependentUpon>
-    </Compile>
-    <Compile Include="componentes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="componentes.Designer.cs">
-      <DependentUpon>componentes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="conexion.cs" />
-    <Compile Include="descripcionFarmacologica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="descripcionFarmacologica.Designer.cs">
-      <DependentUpon>descripcionFarmacologica.cs</DependentUpon>
-    </Compile>
-    <Compile Include="devoluciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="devoluciones.Designer.cs">
-      <DependentUpon>devoluciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="egresoCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="egresoCaja.Designer.cs">
-      <DependentUpon>egresoCaja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="existenciaLocales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="existenciaLocales.Designer.cs">
-      <DependentUpon>existenciaLocales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="imagenProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="imagenProducto.Designer.cs">
-      <DependentUpon>imagenProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="nuevosBotones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="nuevosBotones.Designer.cs">
-      <DependentUpon>nuevosBotones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock.Designer.cs">
-      <DependentUpon>Stock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LocalReport.cs" />
-    <Compile Include="RepTicket.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RepTicket.Designer.cs">
-      <DependentUpon>RepTicket.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formClass.Designer.cs">
-      <DependentUpon>formClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="iniciarSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="iniciarSesion.designer.cs">
-      <DependentUpon>iniciarSesion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="productoFaltante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="productoFaltante.Designer.cs">
-      <DependentUpon>productoFaltante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="productosNoVendidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="productosNoVendidos.Designer.cs">
-      <DependentUpon>productosNoVendidos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -260,97 +92,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="sistema.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sistema.Designer.cs">
-      <DependentUpon>sistema.cs</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TicketDatos.cs" />
-    <Compile Include="ticketsEmitidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ticketsEmitidos.Designer.cs">
-      <DependentUpon>ticketsEmitidos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ventas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ventas.Designer.cs">
-      <DependentUpon>ventas.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="aperturaCaja.resx">
-      <DependentUpon>aperturaCaja.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Informes\Tickets.rdlc" />
-    <EmbeddedResource Include="btnAceptar.resx">
-      <DependentUpon>btnAceptar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Buscar.resx">
-      <DependentUpon>Buscar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="calendarioTicketsE.resx">
-      <DependentUpon>calendarioTicketsE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cambiarPrecio.resx">
-      <DependentUpon>cambiarPrecio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cargadocum.resx">
-      <DependentUpon>cargadocum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cierreBoleta.resx">
-      <DependentUpon>cierreBoleta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cierredecaja.resx">
-      <DependentUpon>cierredecaja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="clases.resx">
-      <DependentUpon>clases.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="componentes.resx">
-      <DependentUpon>componentes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cotizacion.rdlc" />
-    <EmbeddedResource Include="descripcionFarmacologica.resx">
-      <DependentUpon>descripcionFarmacologica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="devoluciones.resx">
-      <DependentUpon>devoluciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="egresoCaja.resx">
-      <DependentUpon>egresoCaja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="existenciaLocales.resx">
-      <DependentUpon>existenciaLocales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formClass.resx">
-      <DependentUpon>formClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="imagenProducto.resx">
-      <DependentUpon>imagenProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="iniciarSesion.resx">
-      <DependentUpon>iniciarSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="nuevosBotones.resx">
-      <DependentUpon>nuevosBotones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="productoFaltante.resx">
-      <DependentUpon>productoFaltante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="productosNoVendidos.resx">
-      <DependentUpon>productosNoVendidos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -358,25 +102,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reci.rdlc" />
     <EmbeddedResource Include="Reportes.rdlc" />
-    <EmbeddedResource Include="sistema.resx">
-      <DependentUpon>sistema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RepTicket.resx">
-      <DependentUpon>RepTicket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock.resx">
-      <DependentUpon>Stock.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tickets.rdlc" />
-    <EmbeddedResource Include="ticketsEmitidos.resx">
-      <DependentUpon>ticketsEmitidos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ventas.resx">
-      <DependentUpon>ventas.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
     <None Include="Properties\DataSources\TicketDatos.datasource" />
@@ -412,7 +138,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
@@ -447,18 +172,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

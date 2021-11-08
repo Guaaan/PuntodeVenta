@@ -14,11 +14,8 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Drawing.Imaging;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
-
 
 
 namespace ptoVenta
@@ -27,7 +24,7 @@ namespace ptoVenta
     {
         CultureInfo myCIintl = new CultureInfo("es-ES", false);
 
-        public static SqlConnection cn, locn;
+        public static SqlConnection cn,locn;
         SqlCommand com;
         SqlDataReader dr;
 
@@ -44,7 +41,6 @@ namespace ptoVenta
         private string upre = "";
         public static string cadena = "";
         public static int conecto = 0;
-        public static int ftop = 0;
 
         public static string nombre = "";
         public static string rut = "";
@@ -88,17 +84,7 @@ namespace ptoVenta
         {
             SqlConnection cn = Conexion.conexion();
             cn.Open();
-
-            btnLiberarCaja.Text = "Liberar" + Environment.NewLine + "Caja";
-            btnGuardarDocumento.Text = "Guardar" + Environment.NewLine + "Documento";
-            btnCargarDocumento.Text = "Cargar" + Environment.NewLine + "Documento";
-            btnProductosFaltantes.Text = "Productos" + Environment.NewLine + "Faltantes";
-            btnStock.Text = "Stock en" + Environment.NewLine + "Tiendas";
-            btnProcesarBoleta.Text = "Procesar" + Environment.NewLine + "Boleta";
-            btnCambioPrecio.Text = "Cambio" + Environment.NewLine + "de Precio";
-
             textBox1.BorderStyle = BorderStyle.None;
-            iconButton1.Left = iconButton3.Left;
             dgvLista.Width = dgvGrid1.Width;
             dgvLista.Visible = false;
             dgvGrid1.Visible = false;
@@ -159,17 +145,16 @@ namespace ptoVenta
         }
         public void alternarColorData(DataGridView dgv)
         {
-            //44, 188, 210
-            dgvLista.RowsDefaultCellStyle.BackColor = Color.FromArgb(213, 241, 245);
+            dgvLista.RowsDefaultCellStyle.BackColor = Color.MistyRose;
             dgvLista.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvLista.EnableHeadersVisualStyles = false;
-            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(46, 134, 193);
+            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.MediumSlateBlue;
             dgvLista.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
             //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(75, 153, 87);
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void txtProducto_TextChanged(object sender, EventArgs e)
@@ -219,7 +204,6 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["STOCK"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
-                        dgvLista.Rows[renglon].Cells["img"].Value = Dr["FOTO"] == DBNull.Value ? " " : Convert.ToString(Dr["FOTO"]).Trim();
                     }
                     Dr.Close();
                 }
@@ -292,15 +276,15 @@ namespace ptoVenta
         private void cerrarBoleta()
         {
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
-            if (vtot > 0 && iconButton1.Visible == true)
+            if (vtot > 0 && cButton9.Visible == true)
             {
-                cierreBoleta frm = new cierreBoleta();
-                AddOwnedForm(frm);
-                frm.ShowDialog();
+               cierreBoleta frm = new cierreBoleta();
+               AddOwnedForm(frm);
+               frm.ShowDialog();
             }
             else
             {
-                if (vtot > 0 && iconButton1.Visible == false)
+                if (vtot > 0 && cButton9.Visible == false)
                 {
                     MessageBox.Show("DEBE HACER APERTURA DE CAJA");
                 }
@@ -469,15 +453,13 @@ namespace ptoVenta
             this.Close();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnTicketsEmitidos_Click(object sender, EventArgs e)
         {
-            formClass abrirFormClass = new formClass();
-            abrirFormClass.ShowDialog();
+            ticketsEmitidos abrirTicketsEmitidos = new ticketsEmitidos();
+            abrirTicketsEmitidos.ShowDialog();
             txtProducto.Text = "";
             txtProducto.Focus();
         }
-
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -513,15 +495,77 @@ namespace ptoVenta
             Dr.Close();
             if (uforma.Trim() == strHostName)
             {
-                iconButton1.Visible = true;
+                cButton9.Visible = true;
             }
             //
             txtProducto.ReadOnly = false;
         }
 
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
 
+            vuser = iniciarSesion.ucodigo.Trim();
+            com = new SqlCommand("SELECT TOP 1 * FROM USUARIOS WHERE CODIGO = '" + vuser + "' ", cn);
+            com.ExecuteNonQuery();
+            Dr = com.ExecuteReader();
+            while (Dr.Read())
+            {
+                uforma = Convert.ToString(Dr["FORMATO"]);
+            }
+            Dr.Close();
+            if (uforma.Trim() != "")
+            {
+                if (uforma.Trim() == strHostName)
+                {
+                    MessageBox.Show("SU CAJA YA ESTA APERTURADA EN ESTE COMPUTADOR");
+                }
+                else
+                {
+                    MessageBox.Show("SU CAJA YA ESTA APERTURADA EN EL COMPUTADOR: " + uforma.Trim());
+                }
+            }
+            else
+            {
+                aperturaCaja frm = new aperturaCaja();
+                frm.ShowDialog();
+                if (montoape >= 0)
+                {
+                    string rec = "";
+                    com = new SqlCommand("SELECT MAX(convert(int, RECIBO))+1 REXP FROM RECIBOS WHERE TIPO=1", cn);
+                    com.ExecuteNonQuery();
+                    Dr = com.ExecuteReader();
+                    while (Dr.Read())
+                    {
+                        rec = Convert.ToString(Dr["REXP"]);
+                    }
+                    Dr.Close();
+                    string cod = iniciarSesion.ucodigo.Trim();
+                    string nom = iniciarSesion.unombre.Trim();
+                    string con = "APERTURA DE CAJA: " + nom;
+                    string caj = iniciarSesion.ucaja.Trim();
+                    int mon = montoape;
+                    com = new SqlCommand("INSERT INTO RECIBOS (CODIGO,RECIBO,FECHA,NOMBRE,CONCEPTO,CAJA,MONTO,TIPO) VALUES ('10','" + rec + "', '" + DateTime.Now + "','" + nom + "','" + con + "','" + caj + "'," + mon + "," + 1 + ") ", cn);
+                    com.ExecuteNonQuery();
 
+                    com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '" + strHostName + "' WHERE CODIGO = '" + vuser + "' ", cn);
+                    com.ExecuteNonQuery();
+                    //Report Form reci To Printer Noconsole
+                    MessageBox.Show("APERTURA DE CAJA SATISFACTORIA");
+                    cButton9.Visible = true;
+                }
+            }
+            txtProducto.Text = "";
+            txtProducto.Focus();
+        }
 
+        private void btnEgresoCaja_Click(object sender, EventArgs e)
+        {
+            egresoCaja abriregresoCajas = new egresoCaja();
+            abriregresoCajas.ShowDialog();
+
+            txtProducto.Text = "";
+            txtProducto.Focus();
+        }
 
         private void dgvGrid1_CurrentCellChanged(object sender, EventArgs e)
         {
@@ -689,8 +733,8 @@ namespace ptoVenta
                     {
                         com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", cn);
                         com.ExecuteNonQuery();
-                        MessageBox.Show("CAJA LIBERARADAEN ESTE EQUIPO");
-                        iconButton1.Visible = false;
+                        MessageBox.Show("CAJA LIBERARADA EN ESTE EQUIPO");
+                        cButton9.Visible = false;
                         Application.Exit();
                         this.Close();
                     }
@@ -703,7 +747,6 @@ namespace ptoVenta
             txtProducto.Text = "";
             txtProducto.Focus();
         }
-
 
         private void cButton1_Click(object sender, EventArgs e)
         {
@@ -883,65 +926,8 @@ namespace ptoVenta
             faltantes();
         }
 
-        private void cButton5_ClickButtonArea(object Sender, MouseEventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
-            cerrarBoleta();
-        }
-
-
-
-        private void iconButton1_VisibleChanged(object sender, EventArgs e)
-        {
-            if (iconButton1.Visible)
-            {
-                iconButton1.Left = iconButton4.Left;
-                iconButton4.Left = btnEgresoCaja.Left;
-                btnEgresoCaja.Left = iconButton2.Left;
-                iconButton2.Left = btnTicketsEmitidos.Left;
-                btnTicketsEmitidos.Left = iconButton3.Left;
-            }
-            else
-            {
-                iconButton3.Left = btnTicketsEmitidos.Left;
-                btnTicketsEmitidos.Left = iconButton2.Left;
-                iconButton2.Left = btnEgresoCaja.Left;
-                btnEgresoCaja.Left = iconButton4.Left;
-                iconButton4.Left = iconButton1.Left;
-
-            }
-        }
-
-
-
-        private void cButton3_Click(object sender, EventArgs e)
-        {
-            stocktiendas();
-        }
-
-        private void altoButton1_Click(object sender, EventArgs e)
-        {
-            componentes abrirComponentes = new componentes();
-            abrirComponentes.Show();
-        }
-
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnTicketsEmitidos_Click(object sender, EventArgs e)
-        {
-
-            ticketsEmitidos abrirTicketsEmitidos = new ticketsEmitidos();
-            abrirTicketsEmitidos.ShowDialog();
-            txtProducto.Text = "";
-            txtProducto.Focus();
-
-        }
-
-        private void iconButton12_Click(object sender, EventArgs e)
-        {
-
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0)
             {
@@ -956,71 +942,34 @@ namespace ptoVenta
                 txtProducto.Text = "";
                 txtProducto.Focus();
             }
-
         }
 
-        private void iconbutton3_Click(object sender, EventArgs e)
+        private void cButton9_VisibleChanged(object sender, EventArgs e)
         {
-
-
-            vuser = iniciarSesion.ucodigo.Trim();
-            com = new SqlCommand("SELECT TOP 1 * FROM USUARIOS WHERE CODIGO = '" + vuser + "' ", cn);
-            com.ExecuteNonQuery();
-            Dr = com.ExecuteReader();
-            while (Dr.Read())
+            if (cButton9.Visible)
             {
-                uforma = Convert.ToString(Dr["FORMATO"]);
-            }
-            Dr.Close();
-            if (uforma.Trim() != "")
-            {
-                if (uforma.Trim() == strHostName)
-                {
-                    MessageBox.Show("SU CAJA YA ESTA APERTURADA EN ESTE COMPUTADOR");
-                }
-                else
-                {
-                    MessageBox.Show("SU CAJA YA ESTA APERTURADA EN EL COMPUTADOR: " + uforma.Trim());
-                }
+                cButton9.Left = cButton13.Left;
+                cButton13.Left = cButton12.Left;
+                cButton12.Left = cButton8.Left;
+                cButton8.Left = cButton11.Left;
+                cButton11.Left = cButton10.Left;
             }
             else
             {
-                aperturaCaja frm = new aperturaCaja();
-                frm.ShowDialog();
-                if (montoape >= 0)
-                {
-                    string rec = "";
-                    com = new SqlCommand("SELECT MAX(convert(int, RECIBO))+1 REXP FROM RECIBOS WHERE TIPO=1", cn);
-                    com.ExecuteNonQuery();
-                    Dr = com.ExecuteReader();
-                    while (Dr.Read())
-                    {
-                        rec = Convert.ToString(Dr["REXP"]);
-                    }
-                    Dr.Close();
-                    string cod = iniciarSesion.ucodigo.Trim();
-                    string nom = iniciarSesion.unombre.Trim();
-                    string con = "APERTURA DE CAJA: " + nom;
-                    string caj = iniciarSesion.ucaja.Trim();
-                    int mon = montoape;
-                    com = new SqlCommand("INSERT INTO RECIBOS (CODIGO,RECIBO,FECHA,NOMBRE,CONCEPTO,CAJA,MONTO,TIPO) VALUES ('10','" + rec + "', '" + DateTime.Now + "','" + nom + "','" + con + "','" + caj + "'," + mon + "," + 1 + ") ", cn);
-                    com.ExecuteNonQuery();
-
-                    com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '" + strHostName + "' WHERE CODIGO = '" + vuser + "' ", cn);
-                    com.ExecuteNonQuery();
-                    //Report Form reci To Printer Noconsole
-                    MessageBox.Show("APERTURA DE CAJA SATISFACTORIA");
-                    iconButton1.Visible = true;
-                }
+                cButton13.Left = cButton12.Left;
+                cButton12.Left = cButton8.Left;
+                cButton8.Left = cButton11.Left;
+                cButton11.Left = cButton10.Left;
             }
-            txtProducto.Text = "";
-            txtProducto.Focus();
+        }
 
+        private void panel1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (panel1.Visible) { panel7.Visible = false; } else { panel7.Visible = true; }
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0)
             {
@@ -1059,152 +1008,47 @@ namespace ptoVenta
             }
             txtProducto.Text = "";
             txtProducto.Focus();
-
         }
 
-        private void btnEgresoCaja_Click(object sender, EventArgs e)
+        private void cButton3_Click(object sender, EventArgs e)
         {
-
-            egresoCaja abriregresoCajas = new egresoCaja();
-            abriregresoCajas.ShowDialog();
-
-            txtProducto.Text = "";
-            txtProducto.Focus();
-
+            stocktiendas();
         }
 
-        private void dgvLista_MouseHover(object sender, DataGridViewCellMouseEventArgs e)
+        private void cButton9_Click(object sender, EventArgs e)
         {
-            this.dgvLista.Click += new System.EventHandler(this.dgvLista_Click);
-        }
-
-        
-
-        private void dgvLista_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
-        {
-            //string newLine = Environment.NewLine;
-            //if (e.RowIndex > -1)
-            //{
-            //    DataGridViewRow dataGridViewRow1 = dgvLista.Rows[e.RowIndex];
-
-            //    // Add the employee's ID to the ToolTipText.
-            //    e.ToolTipText = String.Format("Código {0}:{1}",
-            //        dataGridViewRow1.Cells["CODIGO"].Value, newLine) ;
-            //}
-            
-        }
-
-        private void dgvGrid1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
-        {
-        }
-
-        private void dgvLista_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void dgvLista_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void dgvLista_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow fila in dgvLista.Rows)
+            int vtot = (int)Convert.ToDouble(txtTotal.Text);
+            if (vtot > 0)
             {
-                //if (row.Cells["CODIGO"].Value != null)
-                
-
-
+                MessageBox.Show("DEBE FINALIZAR VENTA BOLETA ");
+                txtProducto.Text = "";
+                txtProducto.Focus();
             }
-            
-
-            
-                
-
-            
-        }
-
-        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //Dr = com.ExecuteReader();
-            //while (Dr.Read())
-            //{
-            //    vfoto = (string)Convert.ToString(Dr["FOTO"]);
-            //    if (vfoto.Trim() != "")
-            //    {
-            //        if (File.Exists(vfoto))
-            //        {
-            //            try
-            //            {
-            //                //dgvLista.CurrentRow.Cells["FOTO"].Value = Image.FromFile(vfoto);
-            //                pictureBox1.Image = Image.FromFile(vfoto);
-            //                txtPrincipioA.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
-
-            //            }
-            //            catch { }
-            //        }
-
-                    
-                    
-            //        else { return; }
-            //    }
-            //}
-            //Dr.Close();
-        }
-
-        private void dgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-            if (e.ColumnIndex == 1) // second-column 
+            else
             {
-               
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-
-
-                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
-                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
-                frm.lblPrecio.Text = dgvLista.CurrentRow.Cells[6].Value.ToString();
-                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
-                frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
-
-
-                MemoryStream ms = new MemoryStream(); 
-                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
-                imagen.Save(ms, ImageFormat.Jpeg);
-                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
-
-                ftop = dgvLista.Top;
-                frm.ShowDialog();
-            }
-
-
-        }
-
-        private void gunaTransfarantPictureBox2_Click(object sender, EventArgs e)
-        {
-            componentes abc = new componentes();
-            abc.Show();
-        }
-
-        private void gunaGradientButton1_Click(object sender, EventArgs e)
-        {
-            nuevosBotones abrirnb = new nuevosBotones();
-            abrirnb.Show();
-        }
-
-        private void stocktiendas()
-            {
-                Stock abrirstock = new Stock();
-                abrirstock.ShowDialog();
+                cierredecaja abrircierre = new cierredecaja();
+                abrircierre.ShowDialog();
                 txtProducto.Text = "";
                 txtProducto.Focus();
             }
         }
-    } 
 
+        private void cButton5_Click(object sender, EventArgs e)
+        {
+            cerrarBoleta();
+        }
+
+        private void cButton11_ClickButtonArea(object Sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void stocktiendas() 
+        {
+            Stock abrirstock = new Stock();
+            abrirstock.ShowDialog();
+            txtProducto.Text = "";
+            txtProducto.Focus();
+        }
+    }
+}
