@@ -37,6 +37,9 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
+    <Reference Include="btnLib">
+      <HintPath>gunaui\btnLib.dll</HintPath>
+    </Reference>
     <Reference Include="CButtonLib, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CButtonLib.3.0.6\lib\net40\CButtonLib.dll</HintPath>
     </Reference>
@@ -46,6 +49,9 @@
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>gunaui\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="IrisSkin2">
       <HintPath>..\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
@@ -85,6 +91,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aperturaCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aperturaCaja.Designer.cs">
+      <DependentUpon>aperturaCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cambiarPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cambiarPrecio.Designer.cs">
+      <DependentUpon>cambiarPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cargadocum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cargadocum.Designer.cs">
+      <DependentUpon>cargadocum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cierreBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cierreBoleta.Designer.cs">
+      <DependentUpon>cierreBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cierredecaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cierredecaja.Designer.cs">
+      <DependentUpon>cierredecaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.cs" />
+    <Compile Include="Datos.cs" />
+    <Compile Include="devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devoluciones.Designer.cs">
+      <DependentUpon>devoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="egresoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="egresoCaja.Designer.cs">
+      <DependentUpon>egresoCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="existenciaLocales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="existenciaLocales.Designer.cs">
+      <DependentUpon>existenciaLocales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iniciarSesion.Designer.cs">
+      <DependentUpon>iniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -93,8 +162,50 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketDatos.cs" />
+    <Compile Include="ticketsEmitidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketsEmitidos.Designer.cs">
+      <DependentUpon>ticketsEmitidos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aperturaCaja.resx">
+      <DependentUpon>aperturaCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Informes\Tickets.rdlc" />
+    <EmbeddedResource Include="cambiarPrecio.resx">
+      <DependentUpon>cambiarPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cargadocum.resx">
+      <DependentUpon>cargadocum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cierreBoleta.resx">
+      <DependentUpon>cierreBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cierredecaja.resx">
+      <DependentUpon>cierredecaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="devoluciones.resx">
+      <DependentUpon>devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="egresoCaja.resx">
+      <DependentUpon>egresoCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="existenciaLocales.resx">
+      <DependentUpon>existenciaLocales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iniciarSesion.resx">
+      <DependentUpon>iniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -102,7 +213,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reci.rdlc" />
     <EmbeddedResource Include="Reportes.rdlc" />
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tickets.rdlc" />
+    <EmbeddedResource Include="ticketsEmitidos.resx">
+      <DependentUpon>ticketsEmitidos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
     <None Include="Properties\DataSources\TicketDatos.datasource" />
