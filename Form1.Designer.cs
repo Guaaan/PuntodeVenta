@@ -1463,6 +1463,7 @@ namespace ptoVenta
             this.dgvGrid1.TabIndex = 201;
             this.dgvGrid1.TabStop = false;
             this.dgvGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid1_CellClick);
+            this.dgvGrid1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvGrid1_CellMouseClick);
             this.dgvGrid1.CurrentCellChanged += new System.EventHandler(this.dgvGrid1_CurrentCellChanged);
             this.dgvGrid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvGrid1_EditingControlShowing);
             // 

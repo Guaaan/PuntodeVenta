@@ -41,6 +41,10 @@ namespace ptoVenta
             this.lblPrecio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblLaboratorio = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblFormaF = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,19 +61,18 @@ namespace ptoVenta
             // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(401, 31);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblNombre.Location = new System.Drawing.Point(400, 34);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(42, 20);
+            this.lblNombre.Size = new System.Drawing.Size(454, 82);
             this.lblNombre.TabIndex = 288;
-            this.lblNombre.Text = "label";
+            this.lblNombre.Text = "Label";
             // 
             // lblPrincipioActivo
             // 
             this.lblPrincipioActivo.AutoSize = true;
             this.lblPrincipioActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrincipioActivo.Location = new System.Drawing.Point(401, 88);
+            this.lblPrincipioActivo.Location = new System.Drawing.Point(401, 186);
             this.lblPrincipioActivo.Name = "lblPrincipioActivo";
             this.lblPrincipioActivo.Size = new System.Drawing.Size(42, 20);
             this.lblPrincipioActivo.TabIndex = 289;
@@ -79,7 +82,7 @@ namespace ptoVenta
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(401, 263);
+            this.lblCodigo.Location = new System.Drawing.Point(401, 282);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(42, 20);
             this.lblCodigo.TabIndex = 290;
@@ -132,7 +135,7 @@ namespace ptoVenta
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(401, 68);
+            this.label2.Location = new System.Drawing.Point(401, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 293;
@@ -142,7 +145,7 @@ namespace ptoVenta
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(401, 243);
+            this.label3.Location = new System.Drawing.Point(401, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 297;
@@ -152,7 +155,7 @@ namespace ptoVenta
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(401, 124);
+            this.label4.Location = new System.Drawing.Point(401, 370);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 296;
@@ -161,10 +164,10 @@ namespace ptoVenta
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(401, 144);
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(401, 391);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(42, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(71, 29);
             this.lblPrecio.TabIndex = 294;
             this.lblPrecio.Text = "label";
             // 
@@ -172,7 +175,7 @@ namespace ptoVenta
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(401, 186);
+            this.label5.Location = new System.Drawing.Point(401, 311);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 299;
@@ -182,19 +185,63 @@ namespace ptoVenta
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(401, 206);
+            this.lblStock.Location = new System.Drawing.Point(401, 331);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(42, 20);
             this.lblStock.TabIndex = 298;
             this.lblStock.Text = "label";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(401, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 20);
+            this.label6.TabIndex = 301;
+            this.label6.Text = "Laboratorio:";
+            // 
+            // lblLaboratorio
+            // 
+            this.lblLaboratorio.AutoSize = true;
+            this.lblLaboratorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaboratorio.Location = new System.Drawing.Point(401, 136);
+            this.lblLaboratorio.Name = "lblLaboratorio";
+            this.lblLaboratorio.Size = new System.Drawing.Size(42, 20);
+            this.lblLaboratorio.TabIndex = 300;
+            this.lblLaboratorio.Text = "label";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(401, 215);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 20);
+            this.label7.TabIndex = 303;
+            this.label7.Text = "Forma Farmacéutica:";
+            // 
+            // lblFormaF
+            // 
+            this.lblFormaF.AutoSize = true;
+            this.lblFormaF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormaF.Location = new System.Drawing.Point(401, 235);
+            this.lblFormaF.Name = "lblFormaF";
+            this.lblFormaF.Size = new System.Drawing.Size(42, 20);
+            this.lblFormaF.TabIndex = 302;
+            this.lblFormaF.Text = "label";
             // 
             // imagenProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(716, 450);
+            this.ClientSize = new System.Drawing.Size(866, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblFormaF);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblLaboratorio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.label3);
@@ -233,5 +280,9 @@ namespace ptoVenta
         public System.Windows.Forms.Label lblPrecio;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label lblStock;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lblLaboratorio;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label lblFormaF;
     }
 }

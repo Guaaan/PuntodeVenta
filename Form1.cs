@@ -151,13 +151,13 @@ namespace ptoVenta
             dgvLista.RowsDefaultCellStyle.BackColor = Color.MistyRose;
             dgvLista.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvLista.EnableHeadersVisualStyles = false;
-            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.MediumSlateBlue;
+            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 255);
             dgvLista.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
             //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(75, 153, 87);
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void txtProducto_TextChanged(object sender, EventArgs e)
@@ -1056,7 +1056,32 @@ namespace ptoVenta
 
                 frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
                 frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
-                frm.lblPrecio.Text = dgvLista.CurrentRow.Cells[6].Value.ToString();
+                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
+                frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+
+
+                MemoryStream ms = new MemoryStream();
+                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
+                imagen.Save(ms, ImageFormat.Jpeg);
+                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+                ftop = dgvLista.Top;
+                frm.ShowDialog();
+            }
+        }
+
+        private void dgvGrid1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1) // second-column 
+            {
+
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+
+
+                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
+                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
                 frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
                 frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
 
