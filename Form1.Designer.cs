@@ -1744,14 +1744,14 @@ namespace ptoVenta
             this.btnGris1.Fuente = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGris1.Hover1_Arriba = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.btnGris1.Hover2_Abajo = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGris1.Imagen = null;
+            this.btnGris1.Imagen = ((System.Drawing.Image)(resources.GetObject("btnGris1.Imagen")));
             this.btnGris1.Location = new System.Drawing.Point(476, 135);
             this.btnGris1.Name = "btnGris1";
             this.btnGris1.Radio = 8;
             this.btnGris1.Size = new System.Drawing.Size(111, 40);
             this.btnGris1.TabIndex = 215;
             this.btnGris1.Tamaño_Boton = new System.Drawing.Size(111, 40);
-            this.btnGris1.Tamaño_imagen = new System.Drawing.Size(25, 25);
+            this.btnGris1.Tamaño_imagen = new System.Drawing.Size(30, 30);
             this.btnGris1.Texto = "Guardar\nDocumento";
             // 
             // btnGris2
