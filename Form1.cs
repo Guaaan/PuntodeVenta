@@ -14,6 +14,7 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -54,6 +55,8 @@ namespace ptoVenta
         public string uperfil = "";
         public string ucaja = "";
         public string ufoto = "";
+        public static int ftop = 0;
+
 
         public static string empresalic = "";
         public static string erif = "";
@@ -1041,6 +1044,31 @@ namespace ptoVenta
         private void cButton11_ClickButtonArea(object Sender, MouseEventArgs e)
         {
 
+        }
+
+        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1) // second-column 
+            {
+
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+
+
+                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
+                frm.lblPrecio.Text = dgvLista.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
+                frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+
+
+                MemoryStream ms = new MemoryStream();
+                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
+                imagen.Save(ms, ImageFormat.Jpeg);
+                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+                ftop = dgvLista.Top;
+                frm.ShowDialog();
+            }
         }
 
         private void stocktiendas() 

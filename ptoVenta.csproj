@@ -37,7 +37,8 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
-    <Reference Include="btnLib">
+    <Reference Include="btnLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>gunaui\btnLib.dll</HintPath>
     </Reference>
     <Reference Include="CButtonLib, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
@@ -147,6 +148,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="imagenProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imagenProducto.Designer.cs">
+      <DependentUpon>imagenProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="iniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagenProducto.resx">
+      <DependentUpon>imagenProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="iniciarSesion.resx">
       <DependentUpon>iniciarSesion.cs</DependentUpon>
