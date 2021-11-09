@@ -52,15 +52,15 @@ namespace ptoVenta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -130,6 +130,15 @@ namespace ptoVenta
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.dgvGrid1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cButton8 = new CButtonLib.CButton();
+            this.gunaGradientButton63 = new Guna.UI.WinForms.GunaGradientButton();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LINEA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOTO = new System.Windows.Forms.DataGridViewImageColumn();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,15 +150,6 @@ namespace ptoVenta
             this.FORMAFARMACEUTICA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LABORATORIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COLORRECETA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvGrid1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cButton8 = new CButtonLib.CButton();
-            this.gunaGradientButton63 = new Guna.UI.WinForms.GunaGradientButton();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LINEA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOTO1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.CODIGO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1335,104 +1335,6 @@ namespace ptoVenta
             this.dgvLista.DoubleClick += new System.EventHandler(this.dgvLista_DoubleClick);
             this.dgvLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLista_KeyPress);
             // 
-            // LINEA
-            // 
-            this.LINEA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.LINEA.DefaultCellStyle = dataGridViewCellStyle7;
-            this.LINEA.HeaderText = "Linea";
-            this.LINEA.Name = "LINEA";
-            this.LINEA.ReadOnly = true;
-            this.LINEA.Width = 50;
-            // 
-            // FOTO
-            // 
-            this.FOTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FOTO.DefaultCellStyle = dataGridViewCellStyle8;
-            this.FOTO.HeaderText = "IMAGEN";
-            this.FOTO.Image = ((System.Drawing.Image)(resources.GetObject("FOTO.Image")));
-            this.FOTO.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.FOTO.Name = "FOTO";
-            this.FOTO.ReadOnly = true;
-            this.FOTO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.FOTO.Width = 90;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            this.CODIGO.Width = 150;
-            // 
-            // PRODUCTO
-            // 
-            this.PRODUCTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PRODUCTO.HeaderText = "PRODUCTO";
-            this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.ReadOnly = true;
-            this.PRODUCTO.Width = 370;
-            // 
-            // PRINCIPIO
-            // 
-            this.PRINCIPIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PRINCIPIO.HeaderText = "PRINCIPIO ACTIVO";
-            this.PRINCIPIO.Name = "PRINCIPIO";
-            this.PRINCIPIO.ReadOnly = true;
-            this.PRINCIPIO.Width = 250;
-            // 
-            // STOCK
-            // 
-            this.STOCK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STOCK.DefaultCellStyle = dataGridViewCellStyle9;
-            this.STOCK.HeaderText = "STOCK";
-            this.STOCK.Name = "STOCK";
-            this.STOCK.ReadOnly = true;
-            this.STOCK.Width = 80;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N0";
-            dataGridViewCellStyle10.NullValue = null;
-            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle10;
-            this.PRECIO.HeaderText = "PRECIO FINAL";
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.ReadOnly = true;
-            // 
-            // OFERTA
-            // 
-            this.OFERTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N0";
-            dataGridViewCellStyle11.NullValue = null;
-            this.OFERTA.DefaultCellStyle = dataGridViewCellStyle11;
-            this.OFERTA.HeaderText = "OFERTA";
-            this.OFERTA.Name = "OFERTA";
-            this.OFERTA.ReadOnly = true;
-            // 
-            // FORMAFARMACEUTICA
-            // 
-            this.FORMAFARMACEUTICA.HeaderText = "Forma Farmacéutica";
-            this.FORMAFARMACEUTICA.Name = "FORMAFARMACEUTICA";
-            this.FORMAFARMACEUTICA.ReadOnly = true;
-            // 
-            // LABORATORIO
-            // 
-            this.LABORATORIO.HeaderText = "Laboratorio";
-            this.LABORATORIO.Name = "LABORATORIO";
-            this.LABORATORIO.ReadOnly = true;
-            // 
-            // COLORRECETA
-            // 
-            this.COLORRECETA.HeaderText = "Color Receta";
-            this.COLORRECETA.Name = "COLORRECETA";
-            this.COLORRECETA.ReadOnly = true;
-            // 
             // dgvGrid1
             // 
             this.dgvGrid1.AllowUserToAddRows = false;
@@ -1640,6 +1542,107 @@ namespace ptoVenta
             this.pictureBox2.TabIndex = 214;
             this.pictureBox2.TabStop = false;
             // 
+            // LINEA
+            // 
+            this.LINEA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.LINEA.DefaultCellStyle = dataGridViewCellStyle7;
+            this.LINEA.HeaderText = "Linea";
+            this.LINEA.Name = "LINEA";
+            this.LINEA.ReadOnly = true;
+            this.LINEA.Width = 50;
+            // 
+            // FOTO
+            // 
+            this.FOTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FOTO.DefaultCellStyle = dataGridViewCellStyle8;
+            this.FOTO.HeaderText = "IMAGEN";
+            this.FOTO.Image = ((System.Drawing.Image)(resources.GetObject("FOTO.Image")));
+            this.FOTO.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.FOTO.Name = "FOTO";
+            this.FOTO.ReadOnly = true;
+            this.FOTO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.FOTO.Width = 90;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            this.CODIGO.Width = 150;
+            // 
+            // PRODUCTO
+            // 
+            this.PRODUCTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PRODUCTO.HeaderText = "PRODUCTO";
+            this.PRODUCTO.Name = "PRODUCTO";
+            this.PRODUCTO.ReadOnly = true;
+            this.PRODUCTO.Width = 370;
+            // 
+            // PRINCIPIO
+            // 
+            this.PRINCIPIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PRINCIPIO.HeaderText = "PRINCIPIO ACTIVO";
+            this.PRINCIPIO.Name = "PRINCIPIO";
+            this.PRINCIPIO.ReadOnly = true;
+            this.PRINCIPIO.Width = 250;
+            // 
+            // STOCK
+            // 
+            this.STOCK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.STOCK.DefaultCellStyle = dataGridViewCellStyle9;
+            this.STOCK.HeaderText = "STOCK";
+            this.STOCK.Name = "STOCK";
+            this.STOCK.ReadOnly = true;
+            this.STOCK.Width = 80;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N0";
+            dataGridViewCellStyle10.NullValue = null;
+            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle10;
+            this.PRECIO.HeaderText = "PRECIO FINAL";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            // 
+            // OFERTA
+            // 
+            this.OFERTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N0";
+            dataGridViewCellStyle11.NullValue = null;
+            this.OFERTA.DefaultCellStyle = dataGridViewCellStyle11;
+            this.OFERTA.HeaderText = "OFERTA";
+            this.OFERTA.Name = "OFERTA";
+            this.OFERTA.ReadOnly = true;
+            // 
+            // FORMAFARMACEUTICA
+            // 
+            this.FORMAFARMACEUTICA.HeaderText = "Forma Farmacéutica";
+            this.FORMAFARMACEUTICA.Name = "FORMAFARMACEUTICA";
+            this.FORMAFARMACEUTICA.ReadOnly = true;
+            this.FORMAFARMACEUTICA.Visible = false;
+            // 
+            // LABORATORIO
+            // 
+            this.LABORATORIO.HeaderText = "Laboratorio";
+            this.LABORATORIO.Name = "LABORATORIO";
+            this.LABORATORIO.ReadOnly = true;
+            this.LABORATORIO.Visible = false;
+            // 
+            // COLORRECETA
+            // 
+            this.COLORRECETA.HeaderText = "Color Receta";
+            this.COLORRECETA.Name = "COLORRECETA";
+            this.COLORRECETA.ReadOnly = true;
+            this.COLORRECETA.Visible = false;
+            // 
             // LINEA1
             // 
             this.LINEA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -1765,21 +1768,25 @@ namespace ptoVenta
             // 
             this.FORMAFARMACEUTICA1.HeaderText = "FORMA FARMACEUTICA ";
             this.FORMAFARMACEUTICA1.Name = "FORMAFARMACEUTICA1";
+            this.FORMAFARMACEUTICA1.Visible = false;
             // 
             // LABORATORIO1
             // 
             this.LABORATORIO1.HeaderText = "LABORATORIO";
             this.LABORATORIO1.Name = "LABORATORIO1";
+            this.LABORATORIO1.Visible = false;
             // 
             // COLORRECETA1
             // 
             this.COLORRECETA1.HeaderText = "COLORRECETA";
             this.COLORRECETA1.Name = "COLORRECETA1";
+            this.COLORRECETA1.Visible = false;
             // 
             // PRINCIPIO1
             // 
             this.PRINCIPIO1.HeaderText = "PRINCIPIOACTIVO";
             this.PRINCIPIO1.Name = "PRINCIPIO1";
+            this.PRINCIPIO1.Visible = false;
             // 
             // Form1
             // 
