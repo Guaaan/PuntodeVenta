@@ -176,7 +176,7 @@ namespace ptoVenta
                     panel1.Visible = true;
                     dgvLista.Visible = true;
                     dgvLista.Rows.Clear();                                              //CONDICIONAL POR SI REQUIERE RECETA                            //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
-                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,CASE I.NACIONAL WHEN 1 THEN 'RECETA REQUERIDA' WHEN 2 THEN 'RECETA RETENIDA' ELSE 'VENTA LIBRE' END AS 'CONDICION RECETA', E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
+                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE, I.NACIONAL COLORRECETA,CASE I.NACIONAL WHEN 1 THEN 'RECETA REQUERIDA' WHEN 2 THEN 'RECETA RETENIDA' ELSE 'VENTA LIBRE' END AS 'CONDICION RECETA', E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
@@ -210,7 +210,9 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
                         dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
                         dgvLista.Rows[renglon].Cells["REQUIERERECETA"].Value = Dr["CONDICION RECETA"] == DBNull.Value ? " " : Convert.ToString(Dr["CONDICION RECETA"]).Trim();
+                        dgvLista.Rows[renglon].Cells["COLORRECETA"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : (Dr["COLORRECETA"]);
 
+                        //SI ES UNO COLOR ROJO   SI ES 0 COLOR VERDE
                     }
                     Dr.Close();
                 }
@@ -1067,8 +1069,17 @@ namespace ptoVenta
                 frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
 
                 frm.lblRequiereR.Text = dgvLista.CurrentRow.Cells[10].Value.ToString();
-                frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
-                frm.lblRequiereR.ForeColor = Color.FromArgb(154, 0, 0);
+                
+                if (dgvLista.CurrentRow.Cells[11].Value.Equals(0))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
+                    
+                }
+                if(dgvLista.CurrentRow.Cells[11].Value.Equals(1))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
+
+                }
 
 
 

@@ -224,10 +224,11 @@ namespace ptoVenta
             // lblRequiereR
             // 
             this.lblRequiereR.AutoSize = true;
-            this.lblRequiereR.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRequiereR.Location = new System.Drawing.Point(401, 348);
+            this.lblRequiereR.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequiereR.ForeColor = System.Drawing.Color.Black;
+            this.lblRequiereR.Location = new System.Drawing.Point(401, 349);
             this.lblRequiereR.Name = "lblRequiereR";
-            this.lblRequiereR.Size = new System.Drawing.Size(42, 19);
+            this.lblRequiereR.Size = new System.Drawing.Size(49, 19);
             this.lblRequiereR.TabIndex = 304;
             this.lblRequiereR.Text = "label";
             // 
