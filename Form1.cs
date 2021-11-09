@@ -175,17 +175,17 @@ namespace ptoVenta
                 {
                     panel1.Visible = true;
                     dgvLista.Visible = true;
-                    dgvLista.Rows.Clear();                                               //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
-                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,  U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION = U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
+                    dgvLista.Rows.Clear();                                              //CONDICIONAL POR SI REQUIERE RECETA                            //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
+                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,CASE I.NACIONAL WHEN 1 THEN 'RECETA REQUERIDA' WHEN 2 THEN 'RECETA RETENIDA' ELSE 'VENTA LIBRE' END AS 'CONDICION RECETA', E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,CASE I.NACIONAL WHEN 1 THEN 'RECETA REQUERIDA' WHEN 2 THEN 'RECETA RETENIDA' ELSE 'VENTA LIBRE' END AS 'CONDICION RECETA',E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     if (ivari.ToString() == "+" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,CASE I.NACIONAL WHEN 1 THEN 'RECETA REQUERIDA' WHEN 2 THEN 'RECETA RETENIDA' ELSE 'VENTA LIBRE' END AS 'CONDICION RECETA',E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     com.ExecuteNonQuery();
                     Dr = com.ExecuteReader();
@@ -208,7 +208,8 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
                         dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
-                        dgvLista.Rows[renglon].Cells["Laboratorio"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
+                        dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
+                        dgvLista.Rows[renglon].Cells["REQUIERERECETA"].Value = Dr["CONDICION RECETA"] == DBNull.Value ? " " : Convert.ToString(Dr["CONDICION RECETA"]).Trim();
 
                     }
                     Dr.Close();
@@ -1062,6 +1063,14 @@ namespace ptoVenta
                 frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
                 frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
                 frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+                frm.lblFormaF.Text = dgvLista.CurrentRow.Cells[8].Value.ToString();
+                frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
+
+                frm.lblRequiereR.Text = dgvLista.CurrentRow.Cells[10].Value.ToString();
+                frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
+                frm.lblRequiereR.ForeColor = Color.FromArgb(154, 0, 0);
+
+
 
 
                 MemoryStream ms = new MemoryStream();
