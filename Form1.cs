@@ -175,12 +175,12 @@ namespace ptoVenta
                 {
                     panel1.Visible = true;
                     dgvLista.Visible = true;
-                    dgvLista.Rows.Clear();
-                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
+                    dgvLista.Rows.Clear();                                               //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
+                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,  U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION = U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     if (ivari.ToString() == "+" && vari.Length > 3)
                     {
@@ -208,6 +208,7 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
                         dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
+                        dgvLista.Rows[renglon].Cells["Laboratorio"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
 
                     }
                     Dr.Close();
