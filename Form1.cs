@@ -211,7 +211,7 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
                         dgvLista.Rows[renglon].Cells["COLORRECETA"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
 
-                        //SI ES UNO COLOR ROJO   SI ES 0 COLOR VERDE
+                        
                     }
                     Dr.Close();
                 }
@@ -358,7 +358,7 @@ namespace ptoVenta
             else
             {
                 int renglon = 0;
-                com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + vari + "' ", cn);
+                com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + vari + "' ", cn);
                 com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
                 while (Dr.Read())
@@ -380,6 +380,12 @@ namespace ptoVenta
                     dgvGrid1.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                     dgvGrid1.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
                     dgvGrid1.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+
+                    dgvGrid1.Rows[renglon].Cells["FORMAFARMACEUTICA1"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
+                    dgvGrid1.Rows[renglon].Cells["LABORATORIO1"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
+                    dgvGrid1.Rows[renglon].Cells["COLORRECETA1"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
+                    dgvGrid1.Rows[renglon].Cells["PRINCIPIO1"].Value = Dr["PRINCIPIO"] == DBNull.Value ? " " : Convert.ToString(Dr["PRINCIPIO"]).Trim();
+
                 }
                 Dr.Close();
                 if (renglon > 0)
@@ -1063,7 +1069,6 @@ namespace ptoVenta
                 frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
                 frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
                 frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
-                frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
                 frm.lblFormaF.Text = dgvLista.CurrentRow.Cells[8].Value.ToString();
                 frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
 
@@ -1077,7 +1082,6 @@ namespace ptoVenta
                 {
                     frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
                     frm.lblRequiereR.Text = "Requiere Receta";
-
                 }
 
 
@@ -1101,15 +1105,28 @@ namespace ptoVenta
                 imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
 
 
-                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
-                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
-                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
-                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
-                frm.lblCodigo.Text = dgvLista.CurrentRow.Cells[2].Value.ToString();
+                frm.lblNombre.Text = dgvGrid1.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrecio.Text = "$" + dgvGrid1.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvGrid1.CurrentRow.Cells[4].Value.ToString();
+                frm.lblFormaF.Text = dgvGrid1.CurrentRow.Cells[10].Value.ToString();
+                frm.lblLaboratorio.Text = dgvGrid1.CurrentRow.Cells[11].Value.ToString();
+
+
+                if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(0))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
+                    frm.lblRequiereR.Text = "No Requiere Receta";
+                }
+                else if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(1))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
+                    frm.lblRequiereR.Text = "Requiere Receta";
+                }
+                frm.lblPrincipioActivo.Text = dgvGrid1.CurrentRow.Cells[13].Value.ToString();
 
 
                 MemoryStream ms = new MemoryStream();
-                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
+                Bitmap imagen = (Bitmap)dgvGrid1.CurrentRow.Cells[1].Value;
                 imagen.Save(ms, ImageFormat.Jpeg);
                 frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
 

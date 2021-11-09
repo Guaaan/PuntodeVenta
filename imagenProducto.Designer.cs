@@ -32,10 +32,8 @@ namespace ptoVenta
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrincipioActivo = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.btnSalir = new Guna.UI.WinForms.GunaGradientButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
@@ -43,7 +41,6 @@ namespace ptoVenta
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.lblFormaF = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblRequiereR = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,10 +58,10 @@ namespace ptoVenta
             // 
             // lblNombre
             // 
-            this.lblNombre.Font = new System.Drawing.Font("Tahoma", 18F);
+            this.lblNombre.Font = new System.Drawing.Font("Tahoma", 20F);
             this.lblNombre.Location = new System.Drawing.Point(400, 7);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(454, 82);
+            this.lblNombre.Size = new System.Drawing.Size(454, 93);
             this.lblNombre.TabIndex = 288;
             this.lblNombre.Text = "LabelNombre";
             // 
@@ -73,22 +70,11 @@ namespace ptoVenta
             this.lblPrincipioActivo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPrincipioActivo.AutoSize = true;
             this.lblPrincipioActivo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrincipioActivo.Location = new System.Drawing.Point(401, 161);
+            this.lblPrincipioActivo.Location = new System.Drawing.Point(403, 182);
             this.lblPrincipioActivo.Name = "lblPrincipioActivo";
             this.lblPrincipioActivo.Size = new System.Drawing.Size(90, 19);
             this.lblPrincipioActivo.TabIndex = 289;
             this.lblPrincipioActivo.Text = "NO POSEE ";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(401, 257);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(42, 19);
-            this.lblCodigo.TabIndex = 290;
-            this.lblCodigo.Text = "label";
             // 
             // btnSalir
             // 
@@ -128,30 +114,19 @@ namespace ptoVenta
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(401, 137);
+            this.label2.Location = new System.Drawing.Point(403, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 19);
             this.label2.TabIndex = 293;
             this.label2.Text = "Principio Activo:";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(401, 233);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 19);
-            this.label3.TabIndex = 297;
-            this.label3.Text = "Código:";
-            // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Tahoma", 22F);
+            this.lblPrecio.Font = new System.Drawing.Font("Tahoma", 26F);
             this.lblPrecio.Location = new System.Drawing.Point(401, 391);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(178, 36);
+            this.lblPrecio.Size = new System.Drawing.Size(205, 42);
             this.lblPrecio.TabIndex = 294;
             this.lblPrecio.Text = "LAbel Precio";
             // 
@@ -160,7 +135,7 @@ namespace ptoVenta
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(401, 281);
+            this.label5.Location = new System.Drawing.Point(403, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 19);
             this.label5.TabIndex = 299;
@@ -171,7 +146,7 @@ namespace ptoVenta
             this.lblStock.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(401, 305);
+            this.lblStock.Location = new System.Drawing.Point(403, 273);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(42, 19);
             this.lblStock.TabIndex = 298;
@@ -182,7 +157,7 @@ namespace ptoVenta
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(401, 89);
+            this.label6.Location = new System.Drawing.Point(403, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 19);
             this.label6.TabIndex = 301;
@@ -193,7 +168,7 @@ namespace ptoVenta
             this.lblLaboratorio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLaboratorio.AutoSize = true;
             this.lblLaboratorio.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLaboratorio.Location = new System.Drawing.Point(401, 113);
+            this.lblLaboratorio.Location = new System.Drawing.Point(403, 134);
             this.lblLaboratorio.Name = "lblLaboratorio";
             this.lblLaboratorio.Size = new System.Drawing.Size(85, 19);
             this.lblLaboratorio.TabIndex = 300;
@@ -204,7 +179,7 @@ namespace ptoVenta
             this.lblFormaF.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblFormaF.AutoSize = true;
             this.lblFormaF.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormaF.Location = new System.Drawing.Point(401, 209);
+            this.lblFormaF.Location = new System.Drawing.Point(403, 230);
             this.lblFormaF.Name = "lblFormaF";
             this.lblFormaF.Size = new System.Drawing.Size(85, 19);
             this.lblFormaF.TabIndex = 302;
@@ -215,22 +190,11 @@ namespace ptoVenta
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(401, 185);
+            this.label7.Location = new System.Drawing.Point(403, 206);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(157, 19);
             this.label7.TabIndex = 303;
             this.label7.Text = "Forma Farmacéutica:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(401, 329);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 19);
-            this.label1.TabIndex = 305;
-            this.label1.Text = "Requiere Receta:";
             // 
             // lblRequiereR
             // 
@@ -238,7 +202,7 @@ namespace ptoVenta
             this.lblRequiereR.AutoSize = true;
             this.lblRequiereR.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequiereR.ForeColor = System.Drawing.Color.Black;
-            this.lblRequiereR.Location = new System.Drawing.Point(401, 353);
+            this.lblRequiereR.Location = new System.Drawing.Point(403, 307);
             this.lblRequiereR.Name = "lblRequiereR";
             this.lblRequiereR.Size = new System.Drawing.Size(49, 19);
             this.lblRequiereR.TabIndex = 304;
@@ -251,7 +215,6 @@ namespace ptoVenta
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(866, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRequiereR);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblFormaF);
@@ -259,11 +222,9 @@ namespace ptoVenta
             this.Controls.Add(this.lblLaboratorio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblStock);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblPrincipioActivo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pictureBox1);
@@ -284,10 +245,8 @@ namespace ptoVenta
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.Label lblPrincipioActivo;
-        public System.Windows.Forms.Label lblCodigo;
         private Guna.UI.WinForms.GunaGradientButton btnSalir;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lblPrecio;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label lblStock;
@@ -295,7 +254,6 @@ namespace ptoVenta
         public System.Windows.Forms.Label lblLaboratorio;
         public System.Windows.Forms.Label lblFormaF;
         public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblRequiereR;
     }
 }
