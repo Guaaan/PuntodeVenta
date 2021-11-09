@@ -159,7 +159,6 @@ namespace ptoVenta
             this.OFERTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FORMAFARMACEUTICA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LABORATORIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.REQUIERERECETA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COLORRECETA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel15.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -1296,7 +1295,6 @@ namespace ptoVenta
             this.OFERTA,
             this.FORMAFARMACEUTICA,
             this.LABORATORIO,
-            this.REQUIERERECETA,
             this.COLORRECETA});
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
@@ -1749,12 +1747,6 @@ namespace ptoVenta
             this.LABORATORIO.Name = "LABORATORIO";
             this.LABORATORIO.ReadOnly = true;
             // 
-            // REQUIERERECETA
-            // 
-            this.REQUIERERECETA.HeaderText = "Requiere receta ";
-            this.REQUIERERECETA.Name = "REQUIERERECETA";
-            this.REQUIERERECETA.ReadOnly = true;
-            // 
             // COLORRECETA
             // 
             this.COLORRECETA.HeaderText = "Color Receta";
@@ -1918,7 +1910,6 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn OFERTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn FORMAFARMACEUTICA;
         private System.Windows.Forms.DataGridViewTextBoxColumn LABORATORIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn REQUIERERECETA;
         private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA;
     }
 }
