@@ -56,6 +56,7 @@ namespace ptoVenta
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.printDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -369,5 +370,6 @@ namespace ptoVenta
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
+        private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }
