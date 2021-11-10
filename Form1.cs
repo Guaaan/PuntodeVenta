@@ -282,7 +282,7 @@ namespace ptoVenta
             }
         }
 
-        private void cerrarBoleta()
+        public void cerrarBoleta()
         {
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0 && cButton9.Visible == true)
@@ -1143,16 +1143,17 @@ namespace ptoVenta
             txtProducto.Focus();
         }
         //cotización
-        private void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
+        public void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
         {
-            if (dgvGrid1.Rows.Count > 0) {
+            if (dgvGrid1.Rows.Count > 0) 
+            {
                 int vtot = (int)Convert.ToDouble(txtTotal.Text);
                 if (vtot > 0)
                 {
 
 
 
-                    /*foreach (DataGridViewRow row in dgvGrid1.Rows)
+                    foreach (DataGridViewRow row in dgvGrid1.Rows)
                     {
                         TicketDatos dat = new TicketDatos();
                         dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
@@ -1162,7 +1163,7 @@ namespace ptoVenta
                         dat.Precio = pre.ToString("N0");
                         TicketDatos.Add(dat);
 
-                    }*/
+                    }
 
                 }
                 txtProducto.Text = "";
@@ -1220,8 +1221,7 @@ namespace ptoVenta
                     dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
                     dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
                     dato.Precio = row.Cells["PRECIO1"].Value.ToString();
-
-
+                   
                     e.Graphics.DrawString(dato.Cantidad.ToString()
                     + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
