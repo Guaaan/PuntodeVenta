@@ -122,6 +122,7 @@
     <Compile Include="cierredecaja.Designer.cs">
       <DependentUpon>cierredecaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsImprimir.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="devoluciones.cs">
