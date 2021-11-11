@@ -1143,8 +1143,14 @@ namespace ptoVenta
             txtProducto.Focus();
         }
         //cotización
+        
+
         public void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
         {
+            ClsImprimir Imprimir;
+            Imprimir = new ClsImprimir();
+            Imprimir.datosGrid = dgvGrid1.Rows;
+            //Imprimir.vnumero = vnum;
             if (dgvGrid1.Rows.Count > 0) 
             {
                 int vtot = (int)Convert.ToDouble(txtTotal.Text);
@@ -1178,7 +1184,10 @@ namespace ptoVenta
 
             }
 
-            void Imprimir(object sender, PrintPageEventArgs e)
+            
+
+
+            /*void Imprimir(object sender, PrintPageEventArgs e)
             {
                 Font header = new Font("Arial", 14);
                 Font font = new Font("Arial", 11);
@@ -1234,7 +1243,7 @@ namespace ptoVenta
                     /*e.Graphics.DrawString(row.Cells["CANTIDAD1"].Value.ToString() + "|" +
                         row.Cells["PRODUCTO1"].Value.ToString() + " |$" +
                         row.Cells["PRECIO1"].Value.ToString()
-                        , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));*/
+                        , fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 10));
 
                 }
 
@@ -1246,7 +1255,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
                 e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
-            }
+            }*/
 
         }
 

@@ -5,12 +5,28 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 
 namespace ptoVenta
 {
-    class clsImprimir
+    class ClsImprimir
     {
-        private void Imprimir(object sender, PrintPageEventArgs e)
+        public static PrintPageEventHandler imprimirevento() 
+        
+        //public PrintPageEventHandler;
+        public Imprimir()
+        {
+            
+            datosGrid = null;
+            //vnumero = "";
+        }
+
+        public DataGridViewRowCollection datosGrid;
+        //public String vnumero;
+
+        public void Imprimir(object sender, PrintPageEventArgs e)
         {
             Font header = new Font("Arial", 14);
             Font font = new Font("Arial", 11);
@@ -48,7 +64,7 @@ namespace ptoVenta
             //----fin del header
             double montoTotal = 0;
 
-            foreach (DataGridViewRow row in dgvGrid1.Rows)
+            foreach (DataGridViewRow row in datosGrid)
             {
 
                 TicketDatos dato = new TicketDatos();
@@ -62,12 +78,12 @@ namespace ptoVenta
                 montoTotal = montoTotal + (precioN * cantidadN);
 
 
-                if (row.Cells["numero"].Value.ToString() == vnum)
-                {
-                    e.Graphics.DrawString(dato.Cantidad.ToString()
-                    + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                }
+
+
+                e.Graphics.DrawString(dato.Cantidad.ToString()
+                + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
             }
 
 
@@ -86,4 +102,5 @@ namespace ptoVenta
         }
 
     }
+   
 }
