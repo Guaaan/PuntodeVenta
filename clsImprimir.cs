@@ -11,23 +11,22 @@ using System.Windows.Forms;
 
 namespace ptoVenta
 {
-    class ClsImprimir
+    public class clsImprimir
     {
-        public static PrintPageEventHandler imprimirevento() 
-        
-        //public PrintPageEventHandler;
-        public Imprimir()
-        {
-            
-            datosGrid = null;
-            //vnumero = "";
-        }
-
-        public DataGridViewRowCollection datosGrid;
+        //System.Drawing.Printing.PrintPageEventHandler
         //public String vnumero;
+        public DataGridViewRowCollection datosGrid;
 
         public void Imprimir(object sender, PrintPageEventArgs e)
         {
+
+            
+                datosGrid = null;
+            
+                //vnumero = "";
+            
+
+
             Font header = new Font("Arial", 14);
             Font font = new Font("Arial", 11);
             Font fuente = new Font("Arial", 8);

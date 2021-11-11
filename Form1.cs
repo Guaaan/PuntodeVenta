@@ -1147,9 +1147,10 @@ namespace ptoVenta
 
         public void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
         {
-            ClsImprimir Imprimir;
-            Imprimir = new ClsImprimir();
-            Imprimir.datosGrid = dgvGrid1.Rows;
+            //declaro la clase como una variable 
+            clsImprimir printmir;
+            printmir = new clsImprimir();
+            printmir.datosGrid = dgvGrid1.Rows;
             //Imprimir.vnumero = vnum;
             if (dgvGrid1.Rows.Count > 0) 
             {
@@ -1178,10 +1179,8 @@ namespace ptoVenta
                 imprimirDocument = new PrintDocument();
                 PrinterSettings ps = new PrinterSettings();
                 imprimirDocument.PrinterSettings = ps;
-                imprimirDocument.PrintPage += Imprimir;
+                imprimirDocument.PrintPage += (PrintPageEventHandler)printmir;
                 imprimirDocument.Print();
-
-
             }
 
             
