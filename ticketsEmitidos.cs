@@ -91,7 +91,7 @@ namespace ptoVenta
         {
             if (dgvGrid1.Rows.Count > 0)
             {
-                /*if (dgvGrid1.CurrentCell.ColumnIndex == 9)
+                if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
                     //encapsula en vnum el numero de boleta
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
@@ -131,7 +131,10 @@ namespace ptoVenta
                     report.SetParameters(parameters);
                     report.PrintToPrinter();
 
-                }*/
+                }
+                //finrdlc
+
+                    //comienzo de ascii
                 if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();

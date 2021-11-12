@@ -64,6 +64,7 @@ namespace ptoVenta
 
         }
 
+        // metodo para cada boleta
         private void cargaboletas()
         {
             comsql1 = "SELECT F.NUMERO,C.NOMBRE,M.FECHA,M.CODIGO,M.DESCRIP,M.CANTIDAD,M.MONTOFINAL FROM CAJAS C RIGHT JOIN FACTURAS F ON C.CODIGO = F.CAJAPERTUR ";

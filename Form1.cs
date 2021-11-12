@@ -881,6 +881,7 @@ namespace ptoVenta
             cargarDocumento();
         }
 
+        //sacar de acá los datos para la boleta!!!!
         private void cargarDocumento()
         {
             cargadocum fcarga = new cargadocum();
@@ -895,6 +896,7 @@ namespace ptoVenta
                 com = new SqlCommand(comsql, cn);
                 com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
+                //sacar de acá las boletas
                 while (Dr.Read())
                 {
                     renglon = dgvGrid1.Rows.Add();
@@ -1154,11 +1156,7 @@ namespace ptoVenta
         public void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
         {
             //declaro la clase como una variable 
-            clsImprimir printmir;
-            printmir = new clsImprimir();
             
-            printmir.datosGrid = dgvGrid1;
-            printmir.impresiondocument = imprimirDocument;
             if (dgvGrid1.Rows.Count > 0) 
             {
                 //encapsular esto y enviarlo a la clase
@@ -1174,6 +1172,7 @@ namespace ptoVenta
                         double pre = (double)row.Cells["PRECIO1"].Value;
                         dat.Precio = pre.ToString("N0");
                         TicketDatos.Add(dat);
+
                     }
                 }
                 txtProducto.Text = "";
@@ -1182,13 +1181,13 @@ namespace ptoVenta
                 imprimirDocument = new PrintDocument();
                 PrinterSettings ps = new PrinterSettings();
                 imprimirDocument.PrinterSettings = ps;
-                imprimirDocument.PrintPage += printmir.ManejadorEvento();
+                imprimirDocument.PrintPage += Imprimir;
                 imprimirDocument.Print();
             }
 
 
 
-            /*void Imprimir(object sender, PrintPageEventArgs e)
+            void Imprimir(object sender, PrintPageEventArgs e)
             {
                 Font header = new Font("Arial", 14);
                 Font font = new Font("Arial", 11);
@@ -1256,7 +1255,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
                 e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
-            }*/
+            }
 
         }
 

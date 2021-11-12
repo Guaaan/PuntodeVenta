@@ -13,22 +13,12 @@ namespace ptoVenta
 {
     class clsImprimir
     {
-        public class Foo
-        {
-            private string bar;
-
-            public string Bar
-            {
-                get { return bar; }
-                set { bar = value; }
-            }
-        }
-
         public DataGridView datosGrid;
         public PrintDocument impresiondocument;
         //estemanjeador de evento antes era estatico
         public PrintPageEventHandler ManejadorEvento() 
         {
+            var mcl = new clsImprimir();
             void Imprimir (object sender, PrintPageEventArgs e)
             {
                 var mc = new clsImprimir();
@@ -73,7 +63,7 @@ namespace ptoVenta
 
                 //----fin del header
                 double montoTotal = 0;
-                foreach (DataGridViewRow row in mc.datosGrid.Rows)
+                /*foreach (DataGridViewRow row in mc.datosGrid.Rows)
                 {
 
                     TicketDatos dato = new TicketDatos
@@ -87,7 +77,7 @@ namespace ptoVenta
                     double precioN = Convert.ToDouble(dato.Precio.ToString());
                     double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                     montoTotal += (precioN * cantidadN);
-
+                
 
 
 
@@ -95,7 +85,7 @@ namespace ptoVenta
                     + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
-                }
+                }*/
 
 
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -111,10 +101,10 @@ namespace ptoVenta
                 e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
             }
-           //mcl.impresiondocument = new PrintDocument();
-           //PrinterSettings ps = new PrinterSettings();
-           //mcl.impresiondocument.PrinterSettings = ps;
-           //mcl.impresiondocument.PrintPage += Imprimir;
+           /*mcl.impresiondocument = new PrintDocument();
+           PrinterSettings ps = new PrinterSettings();
+           mcl.impresiondocument.PrinterSettings = ps;
+           mcl.impresiondocument.PrintPage += Imprimir;*/
 
             return Imprimir;
         }
