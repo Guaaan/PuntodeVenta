@@ -13,13 +13,22 @@ namespace ptoVenta
 {
     class clsImprimir
     {
+        public class Foo
+        {
+            private string bar;
+
+            public string Bar
+            {
+                get { return bar; }
+                set { bar = value; }
+            }
+        }
+
         public DataGridView datosGrid;
         public PrintDocument impresiondocument;
         //estemanjeador de evento antes era estatico
         public PrintPageEventHandler ManejadorEvento() 
         {
-            var mcl = new clsImprimir();
-            
             void Imprimir (object sender, PrintPageEventArgs e)
             {
                 var mc = new clsImprimir();
@@ -67,15 +76,17 @@ namespace ptoVenta
                 foreach (DataGridViewRow row in mc.datosGrid.Rows)
                 {
 
-                    TicketDatos dato = new TicketDatos();
-                    dato.Codigo = row.Cells["codigo"].Value.ToString();
-                    dato.Nombre = row.Cells["producto"].Value.ToString();
-                    dato.Cantidad = row.Cells["cantidad"].Value.ToString();
-                    dato.Precio = row.Cells["precio"].Value.ToString();
+                    TicketDatos dato = new TicketDatos
+                    {
+                        Codigo = row.Cells["codigo"].Value.ToString(),
+                        Nombre = row.Cells["producto"].Value.ToString(),
+                        Cantidad = row.Cells["cantidad"].Value.ToString(),
+                        Precio = row.Cells["precio"].Value.ToString()
+                    };
                     //agregar total de la boleta
                     double precioN = Convert.ToDouble(dato.Precio.ToString());
                     double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
-                    montoTotal = montoTotal + (precioN * cantidadN);
+                    montoTotal += (precioN * cantidadN);
 
 
 

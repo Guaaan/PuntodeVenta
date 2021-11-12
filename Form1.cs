@@ -1186,7 +1186,6 @@ namespace ptoVenta
                 imprimirDocument.Print();
             }
 
-            
 
 
             /*void Imprimir(object sender, PrintPageEventArgs e)
