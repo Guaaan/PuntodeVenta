@@ -97,7 +97,7 @@ namespace ptoVenta
                 {
                     int indice = dgvGrid1.CurrentRow.Index;
                     string ddoc = Convert.ToString(dgvGrid1.Rows[indice].Cells[0].Value).Trim();
-                    printmir.CargarImprimir(dgvGrid1, printDocumento, ddoc);
+                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum);
                 }
                 /*if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {

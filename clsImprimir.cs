@@ -34,18 +34,36 @@ namespace ptoVenta
                 string comsql = comsql1 + comsql2;
                 cn = Form1.cn;
                 com = new SqlCommand(comsql, cn);
-                com.ExecuteNonQuery();
+                //com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
                 while (Dr.Read())
                 {
-                    
-                    dgVariable.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
-                    dgVariable.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
-                    dgVariable.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
-                    dgVariable.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
-                    dgVariable.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
-                    dgVariable.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
-                    dgVariable.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+
+                    TicketDatos dat = new TicketDatos();
+                    dat.Codigo = "CODIGO";
+                    dat.Nombre = "NOMBRE";
+                    dat.Cantidad = "CANTIDAD";
+                    double pre = (double)Dr["PRECIO1"]; 
+                    dat.Precio = pre.ToString("N0");
+                    TicketDatos.Add(dat);
+                    //fincodigo del dataset
+                    /*renglon = dgvGrid1.Rows.Add();
+                    dgvGrid1.Rows[renglon].Cells["Linea1"].Value = Convert.ToString(renglon + 1);
+                    string vfoto = (string)Convert.ToString(Dr["FOTO"]);
+                    if (vfoto.Trim() != "")
+                    {
+                        if (File.Exists(vfoto))
+                        {
+                            dgvGrid1.Rows[renglon].Cells["FOTO1"].Value = Image.FromFile(vfoto);
+                        }
+                    }
+                    dgvGrid1.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
+                    dgvGrid1.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
+                    dgvGrid1.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
+                    dgvGrid1.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
+                    dgvGrid1.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+                    dgvGrid1.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                    dgvGrid1.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);*/
                 }
                 Dr.Close();
                 if (renglon > 0)
@@ -143,3 +161,18 @@ namespace ptoVenta
     }
     
 }
+/*TicketDatos dat = new TicketDatos();
+                    dat.Codigo = row.Cells["codigo"].Value.ToString();
+                    dat.Nombre = row.Cells["producto"].Value.ToString();
+                    dat.Cantidad = row.Cells["cantidad"].Value.ToString();
+                    double pre = (double)row.Cells["precio"].Value;
+                    dat.Precio = pre.ToString("N0");
+                    TicketDatos.Add(dat);
+
+                    //dgVariable.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
+                    //dgVariable.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
+                    //dgVariable.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
+                    //dgVariable.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
+                    //dgVariable.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+                    //dgVariable.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                    //dgVariable.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);*/
