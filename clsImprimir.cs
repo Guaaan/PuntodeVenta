@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,18 +15,57 @@ namespace ptoVenta
 {
     class clsImprimir
     {
-        public DataGridView datosGrid;
-        public PrintDocument impresiondocument;
-        //estemanjeador de evento antes era estatico
-        public PrintPageEventHandler ManejadorEvento() 
+        public static string documc = "";
+        private string comsql1, comsql2;
+        public static string vnum;
+        public static SqlConnection cn, locn;
+        SqlCommand com;
+        SqlDataReader Dr;
+        
+
+        public PrintEventHandler CargarImprimir(DataGridView dgVariable, PrintDocument impresiondocument, string documc)
         {
-            var mcl = new clsImprimir();
+
+            if (documc != "")
+            {
+                int renglon = 0;
+                string comsql1 = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO ";
+                string comsql2 = "FROM MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
+                string comsql = comsql1 + comsql2;
+                com = new SqlCommand(comsql, cn);
+                com.ExecuteNonQuery();
+                Dr = com.ExecuteReader();
+                while (Dr.Read())
+                {
+                    renglon = dgVariable.Rows.Add();
+                    dgVariable.Rows[renglon].Cells["Linea1"].Value = Convert.ToString(renglon + 1);
+                    string vfoto = (string)Convert.ToString(Dr["FOTO"]);
+                    if (vfoto.Trim() != "")
+                    {
+                        if (File.Exists(vfoto))
+                        {
+                            dgVariable.Rows[renglon].Cells["FOTO1"].Value = Image.FromFile(vfoto);
+                        }
+                    }
+                    dgVariable.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
+                    dgVariable.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
+                    dgVariable.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
+                    dgVariable.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
+                    dgVariable.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+                    dgVariable.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                    dgVariable.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+                }
+                Dr.Close();
+                if (renglon > 0)
+                {
+                    dgVariable.CurrentCell = dgVariable.Rows[renglon].Cells[0];
+                }
+                
+            }
             void Imprimir (object sender, PrintPageEventArgs e)
             {
-                var mc = new clsImprimir();
                 //vnumero = "";
-                mc.datosGrid = new DataGridView();
-                mc.impresiondocument = new PrintDocument(); 
+                
 
 
 
@@ -63,7 +104,7 @@ namespace ptoVenta
 
                 //----fin del header
                 double montoTotal = 0;
-                /*foreach (DataGridViewRow row in mc.datosGrid.Rows)
+                foreach (DataGridViewRow row in dgVariable.Rows)
                 {
 
                     TicketDatos dato = new TicketDatos
@@ -85,7 +126,7 @@ namespace ptoVenta
                     + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
-                }*/
+                }
 
 
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -101,13 +142,12 @@ namespace ptoVenta
                 e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
             }
-           /*mcl.impresiondocument = new PrintDocument();
+           impresiondocument = new PrintDocument();
            PrinterSettings ps = new PrinterSettings();
-           mcl.impresiondocument.PrinterSettings = ps;
-           mcl.impresiondocument.PrintPage += Imprimir;*/
-
-            return Imprimir;
+           impresiondocument.PrinterSettings = ps;
+           impresiondocument.PrintPage += Imprimir;
+            return CargarImprimir(dgVariable, impresiondocument, documc);
         }
     }
-   
+    
 }
