@@ -89,9 +89,17 @@ namespace ptoVenta
 
         private void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            clsImprimir printmir;
+            printmir = new clsImprimir();
             if (dgvGrid1.Rows.Count > 0)
-            {
+            { 
                 if (dgvGrid1.CurrentCell.ColumnIndex == 9)
+                {
+                    int indice = dgvGrid1.CurrentRow.Index;
+                    string ddoc = Convert.ToString(dgvGrid1.Rows[indice].Cells[0].Value).Trim();
+                    printmir.CargarImprimir(dgvGrid1, printDocumento, ddoc);
+                }
+                /*if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
                     //encapsula en vnum el numero de boleta
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
@@ -131,11 +139,11 @@ namespace ptoVenta
                     report.SetParameters(parameters);
                     report.PrintToPrinter();
 
-                }
+                }*/
                 //finrdlc
 
                     //comienzo de ascii
-                if (dgvGrid1.CurrentCell.ColumnIndex == 9)
+                /*if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
                     devoluciones abrirFormClass = new devoluciones();
@@ -146,9 +154,9 @@ namespace ptoVenta
             PrinterSettings ps = new PrinterSettings();
             printDocumento.PrinterSettings = ps;
             printDocumento.PrintPage += Imprimir;
-            printDocumento.Print();
+            printDocumento.Print();*/
         }
-        private void Imprimir(object sender, PrintPageEventArgs e)
+        /*private void Imprimir(object sender, PrintPageEventArgs e)
         {
             Font header = new Font("Arial", 14);
             Font font = new Font("Arial", 11);
@@ -220,7 +228,7 @@ namespace ptoVenta
             e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
             e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
             e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
-
+*/
         }
         public static StringBuilder line = new StringBuilder();
 

@@ -93,6 +93,7 @@ namespace ptoVenta
 
         private void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //declaro mi clase y la mando a imprimir
             clsImprimir printmir;
             printmir = new clsImprimir();
             if (dgvGrid1.Rows.Count > 0)

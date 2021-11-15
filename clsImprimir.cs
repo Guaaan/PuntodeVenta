@@ -32,21 +32,13 @@ namespace ptoVenta
                 string comsql1 = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO ";
                 string comsql2 = "FROM MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
                 string comsql = comsql1 + comsql2;
+                cn = Form1.cn;
                 com = new SqlCommand(comsql, cn);
                 com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
                 while (Dr.Read())
                 {
-                    renglon = dgVariable.Rows.Add();
-                    dgVariable.Rows[renglon].Cells["Linea1"].Value = Convert.ToString(renglon + 1);
-                    string vfoto = (string)Convert.ToString(Dr["FOTO"]);
-                    if (vfoto.Trim() != "")
-                    {
-                        if (File.Exists(vfoto))
-                        {
-                            dgVariable.Rows[renglon].Cells["FOTO1"].Value = Image.FromFile(vfoto);
-                        }
-                    }
+                    
                     dgVariable.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
                     dgVariable.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
                     dgVariable.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
