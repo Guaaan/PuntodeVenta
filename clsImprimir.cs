@@ -23,63 +23,64 @@ namespace ptoVenta
         SqlDataReader Dr;
 
 
-        public PrintEventHandler CargarImprimir( PrintDocument impresiondocument, string documc)
+        public PrintPageEventHandler CargarImprimir(PrintDocument impresiondocument, string documc)
         {
             void Imprimir(object sender, PrintPageEventArgs e)
             {
                 if (documc != "")
-            {
-                int renglon = 0;
-                string comsql1 = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO ";
-                string comsql2 = "FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
-                string comsql = comsql1 + comsql2;
-                cn = Form1.cn;
-                com = new SqlCommand(comsql, cn);
-                TicketDatos tDatos= new TicketDatos();
-                com.ExecuteNonQuery();
-                Dr = com.ExecuteReader();
-                while (Dr.Read())
                 {
-                    
+                    int renglon = 0;
+                    string comsql1 = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO ";
+                    string comsql2 = "FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
+                    string comsql = comsql1 + comsql2;
+                    cn = Form1.cn;
+                    com = new SqlCommand(comsql, cn);
+                    TicketDatos tDatos = new TicketDatos();
+                    com.ExecuteNonQuery();
+                    Dr = com.ExecuteReader();
+                    while (Dr.HasRows)
+                    {
+                        while (Dr.Read())
+                        {
+                            Console.WriteLine("\t{0}\t{1}", Dr.GetInt32(0),
+                                Dr.GetString(1));
+                        }
+
                         //TicketDatos p1 = new TicketDatos();
                         tDatos.Codigo = Dr.GetString(0);
                         tDatos.Nombre = Dr.GetString(1);
                         tDatos.Cantidad = Dr.GetString(2);
                         tDatos.Precio = Dr.GetString(3);
 
-                    string codi = tDatos.Codigo;
-                    string nomb = tDatos.Codigo;
-                    string cant = tDatos.Codigo;
-                    string Prec = tDatos.Codigo;
+                        
 
-
-                    //fincodigo del dataset
-                    /*renglon = dgvGrid1.Rows.Add();
-                    dgvGrid1.Rows[renglon].Cells["Linea1"].Value = Convert.ToString(renglon + 1);
-                    string vfoto = (string)Convert.ToString(Dr["FOTO"]);
-                    if (vfoto.Trim() != "")
-                    {
-                        if (File.Exists(vfoto))
+                        //fincodigo del dataset
+                        /*renglon = dgvGrid1.Rows.Add();
+                        dgvGrid1.Rows[renglon].Cells["Linea1"].Value = Convert.ToString(renglon + 1);
+                        string vfoto = (string)Convert.ToString(Dr["FOTO"]);
+                        if (vfoto.Trim() != "")
                         {
-                            dgvGrid1.Rows[renglon].Cells["FOTO1"].Value = Image.FromFile(vfoto);
+                            if (File.Exists(vfoto))
+                            {
+                                dgvGrid1.Rows[renglon].Cells["FOTO1"].Value = Image.FromFile(vfoto);
+                            }
                         }
+                        dgvGrid1.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
+                        dgvGrid1.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
+                        dgvGrid1.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
+                        dgvGrid1.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
+                        dgvGrid1.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+                        dgvGrid1.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                        dgvGrid1.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);*/
                     }
-                    dgvGrid1.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
-                    dgvGrid1.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
-                    dgvGrid1.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
-                    dgvGrid1.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
-                    dgvGrid1.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
-                    dgvGrid1.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
-                    dgvGrid1.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);*/
-                }
-                Dr.Close();
-                if (renglon > 0)
-                {
-                    //dgVariable.CurrentCell = dgVariable.Rows[renglon].Cells[0];
+                    Dr.Close();
+                    if (renglon > 0)
+                    {
+                        //dgVariable.CurrentCell = dgVariable.Rows[renglon].Cells[0];
+                    }
+
                 }
 
-            }
-            
                 Font header = new Font("Arial", 14);
                 Font font = new Font("Arial", 11);
                 Font fuente = new Font("Arial", 8);
@@ -117,7 +118,6 @@ namespace ptoVenta
                 double montoTotal = 0;
                 /*foreach (DataGridViewRow row in /*dgVariable.Rows)
                 {
-
                     TicketDatos dato = new TicketDatos
                     {
                         Codigo = row.Cells["codigo"].Value.ToString(),
@@ -129,14 +129,9 @@ namespace ptoVenta
                     double precioN = Convert.ToDouble(dato.Precio.ToString());
                     double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                     montoTotal += (precioN * cantidadN);
-
-
-
-
                     e.Graphics.DrawString(dato.Cantidad.ToString()
                     + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-
                 }*/
 
 
