@@ -38,20 +38,19 @@ namespace ptoVenta
                     TicketDatos tDatos = new TicketDatos();
                     com.ExecuteNonQuery();
                     Dr = com.ExecuteReader();
+                    
                     while (Dr.HasRows)
                     {
                         while (Dr.Read())
                         {
-                            Console.WriteLine("\t{0}\t{1}", Dr.GetInt32(0),
-                                Dr.GetString(1));
-                        }
-
-                        //TicketDatos p1 = new TicketDatos();
-                        tDatos.Codigo = Dr.GetString(0);
-                        tDatos.Nombre = Dr.GetString(1);
-                        tDatos.Cantidad = Dr.GetString(2);
-                        tDatos.Precio = Dr.GetString(3);
-
+                            tDatos.Codigo = Dr.GetString(0);
+                            tDatos.Nombre = Dr.GetString(1);
+                            tDatos.Precio = Dr.GetString(3);
+                            tDatos.Cantidad = Dr.GetString(4);
+                            
+                            //agregar los datos a la tabla
+                            dt.Rows.Add(tDatos.Codigo, tDatos.Nombre, tDatos.Precio, tDatos.Cantidad);
+                            
                         
 
                         //fincodigo del dataset
