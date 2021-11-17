@@ -33,36 +33,21 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
-                /*if (documc != "")
-                {*/
-                    string comsql1 = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO ";
-                    string comsql2 = "FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
-                    string comsql = comsql1 + comsql2;
+                if (documc != "")
+                {
+                    string comsql = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
                     cn = Form1.cn;
                     com = new SqlCommand(comsql, cn);
                     TicketDatos tDatos = new TicketDatos();
                     List<TicketDatos> lista = new List<TicketDatos>();
-
                     com.ExecuteNonQuery();
                     Dr = com.ExecuteReader();
 
-                    /*while (Dr.HasRows)
-                    {
-                        while (Dr.Read())
-                        {
-                            tDatos.Codigo = Dr.GetString(0);
-                            tDatos.Nombre = Dr.GetString(1);
-                            tDatos.Precio = Dr.GetString(3);
-                            tDatos.Cantidad = Dr.GetString(4);
-                            lista.Add(tDatos); 
-
-                        }
-                        Dr.Close();
-                    }*/
                     
-                    Font header = new Font("Arial", 14);
-                    Font font = new Font("Arial", 11);
-                    Font fuente = new Font("Arial", 8);
+                    
+                    Font header = new Font("Courier", 14);
+                    Font font = new Font("Courier", 11);
+                    Font fuente = new Font("Courier", 8);
                     int y = 20;
                     int ancho = 270;
 
@@ -116,38 +101,14 @@ namespace ptoVenta
 
                 //----fin del header
                        
-                           /*if (Dr.Read())
-                            {
-
-                                foreach (TicketDatos t in lista)
-                                {
-
-                                    t.Codigo = Dr.GetString(0);
-                                    t.Nombre = Dr.GetString(1);
-                                    t.Precio = Dr.GetDecimal(3).ToString();
-                                    t.Cantidad = Dr.GetDecimal(4).ToString();
-                                    lista.Add(tDatos);
-                        
-
-                                    double precioN = Convert.ToDouble(t.Precio.ToString());
-                                    double cantidadN = Convert.ToDouble(t.Cantidad.ToString());
-                                    montoTotal += (precioN * cantidadN);
-                                    e.Graphics.DrawString(tDatos.Cantidad.ToString()
-                                    + "  |   " + t.Nombre.ToString().Substring(0, t.Nombre.Length > 30 ? 30 : tDatos.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                                    e.Graphics.DrawString("|$" + t.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-
-                                }
-                            }*/
-                        
-                        Dr.Close();
-                        //agregar total de la boleta
+                           
 
 
                     e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("—————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString(/*montoTotal.ToString()*/ "prueba", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                    e.Graphics.DrawString(montoTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                     e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("Pago con:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("Su cambio:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -155,13 +116,8 @@ namespace ptoVenta
                     e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
                     e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
-                //}
-            }
-            //impresiondocument = new PrintDocument();
-            //PrinterSettings ps = new PrinterSettings();
-            //impresiondocument.PrinterSettings = ps;
-            //impresiondocument.PrintPage += Imprimir;
-            //impresiondocument.Print();                      
+                }
+            }               
             return CargarImprimir(dgVariable, impresiondocument, documc);
             
         }
