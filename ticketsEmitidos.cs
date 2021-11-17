@@ -237,6 +237,11 @@ namespace ptoVenta
             this.Close();
         }
 
+        private void printDocumento_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+        }
+
         private void ticketsEmitidos_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 27)

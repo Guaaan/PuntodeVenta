@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -25,6 +26,11 @@ namespace ptoVenta
 
         public PrintPageEventHandler CargarImprimir(PrintDocument impresiondocument, string documc)
         {
+            impresiondocument = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            impresiondocument.PrinterSettings = ps;
+            impresiondocument.PrintPage += Imprimir;
+            impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
                 /*if (documc != "")
@@ -91,7 +97,8 @@ namespace ptoVenta
                     double montoTotal = 0;
                         while (Dr.HasRows)
                         {
-                            while (Dr.Read())
+                            Dr.Read();
+                            foreach (DbDataRecord registro in Dr)
                             {
                                 tDatos.Codigo = Dr.GetString(0);
                                 tDatos.Nombre = Dr.GetString(1);
@@ -125,21 +132,14 @@ namespace ptoVenta
                     e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
                 //}
-                    impresiondocument = new PrintDocument();
-                    PrinterSettings ps = new PrinterSettings();
-                    impresiondocument.PrinterSettings = ps;
-                    impresiondocument.PrintPage += Imprimir;
-                
             }
+            //impresiondocument = new PrintDocument();
+            //PrinterSettings ps = new PrinterSettings();
+            //impresiondocument.PrinterSettings = ps;
+            //impresiondocument.PrintPage += Imprimir;
+            //impresiondocument.Print();                      
             return CargarImprimir(impresiondocument, documc);
-            //void llamaImprimir()
-            //{
-            //    impresiondocument = new PrintDocument();
-            //    PrinterSettings ps = new PrinterSettings();
-            //    impresiondocument.PrinterSettings = ps;
-            //    impresiondocument.PrintPage += Imprimir;
-            //}
-                //return llamaImprimir();
+            
         }
     }
 }

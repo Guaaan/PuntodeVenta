@@ -317,6 +317,10 @@ namespace ptoVenta
             this.label2.TabIndex = 172;
             this.label2.Text = "Hasta:";
             // 
+            // printDocumento
+            // 
+            this.printDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumento_PrintPage);
+            // 
             // ticketsEmitidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
