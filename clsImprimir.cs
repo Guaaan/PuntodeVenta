@@ -24,7 +24,7 @@ namespace ptoVenta
         SqlDataReader Dr;
 
 
-        public PrintPageEventHandler CargarImprimir(PrintDocument impresiondocument, string documc)
+        public PrintPageEventHandler CargarImprimir(DataGridView dgVariable, PrintDocument impresiondocument, string documc)
         {
             impresiondocument = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
@@ -91,30 +91,54 @@ namespace ptoVenta
                     e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                     e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
 
+                double montoTotal = 0;
+                foreach (DataGridViewRow row in dgVariable.Rows)
+                {
+
+                    TicketDatos dato = new TicketDatos();
+                    dato.Codigo = row.Cells["codigo"].Value.ToString();
+                    dato.Nombre = row.Cells["producto"].Value.ToString();
+                    dato.Cantidad = row.Cells["cantidad"].Value.ToString();
+                    dato.Precio = row.Cells["precio"].Value.ToString();
+                    //agregar total de la boleta
+                    double precioN = Convert.ToDouble(dato.Precio.ToString());
+                    double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
+                    montoTotal = montoTotal + (precioN * cantidadN);
 
 
-                    //----fin del header
-                    double montoTotal = 0;
-                        while (Dr.HasRows)
-                        {
-                            Dr.Read();
-                            foreach (DbDataRecord registro in Dr)
+                    if (row.Cells["numero"].Value.ToString() == documc)
+                    {
+                        e.Graphics.DrawString(dato.Cantidad.ToString()
+                        + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                        e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                    }
+                }
+
+                //----fin del header
+                       
+                           /*if (Dr.Read())
                             {
-                                tDatos.Codigo = Dr.GetString(0);
-                                tDatos.Nombre = Dr.GetString(1);
-                                tDatos.Precio = Dr.GetString(3);
-                                tDatos.Cantidad = Dr.GetString(4);
-                                lista.Add(tDatos);
-                                
-                                double precioN = Convert.ToDouble(tDatos.Precio.ToString());
-                                double cantidadN = Convert.ToDouble(tDatos.Cantidad.ToString());
-                                montoTotal += (precioN * cantidadN);
-                                e.Graphics.DrawString(tDatos.Cantidad.ToString()
-                                + "  |   " + tDatos.Nombre.ToString().Substring(0, tDatos.Nombre.Length > 30 ? 30 : tDatos.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                                e.Graphics.DrawString("|$" + tDatos.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
-                            }
-                        }
+                                foreach (TicketDatos t in lista)
+                                {
+
+                                    t.Codigo = Dr.GetString(0);
+                                    t.Nombre = Dr.GetString(1);
+                                    t.Precio = Dr.GetDecimal(3).ToString();
+                                    t.Cantidad = Dr.GetDecimal(4).ToString();
+                                    lista.Add(tDatos);
+                        
+
+                                    double precioN = Convert.ToDouble(t.Precio.ToString());
+                                    double cantidadN = Convert.ToDouble(t.Cantidad.ToString());
+                                    montoTotal += (precioN * cantidadN);
+                                    e.Graphics.DrawString(tDatos.Cantidad.ToString()
+                                    + "  |   " + t.Nombre.ToString().Substring(0, t.Nombre.Length > 30 ? 30 : tDatos.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                                    e.Graphics.DrawString("|$" + t.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
+                                }
+                            }*/
+                        
                         Dr.Close();
                         //agregar total de la boleta
 
@@ -123,7 +147,7 @@ namespace ptoVenta
                     e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("—————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString(montoTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                    e.Graphics.DrawString(/*montoTotal.ToString()*/ "prueba", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                     e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("Pago con:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("Su cambio:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -138,7 +162,7 @@ namespace ptoVenta
             //impresiondocument.PrinterSettings = ps;
             //impresiondocument.PrintPage += Imprimir;
             //impresiondocument.Print();                      
-            return CargarImprimir(impresiondocument, documc);
+            return CargarImprimir(dgVariable, impresiondocument, documc);
             
         }
     }

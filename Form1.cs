@@ -649,7 +649,7 @@ namespace ptoVenta
 
         protected override bool ProcessCmdKey(ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData)
         {
-            //TECLAS DEL FORM
+            //TECLAS DEL FOR
             bool passed = false;
             if (keyData == Keys.F9)
             {
