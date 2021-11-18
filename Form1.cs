@@ -1194,9 +1194,11 @@ namespace ptoVenta
 
             void Imprimir(object sender, PrintPageEventArgs e)
             {
-                Font header = new Font("Arial", 14);
-                Font font = new Font("Arial", 11);
-                Font fuente = new Font("Arial", 8);
+                Font titulo = new Font("Arial", 16, System.Drawing.FontStyle.Bold);
+                Font header = new Font("Courier", 14);
+                Font linea = new Font("Courier", 14);
+                Font font = new Font("Courier", 11);
+                Font fuente = new Font("Courier", 8);
                 int y = 20;
                 int ancho = 270;
 
@@ -1211,15 +1213,16 @@ namespace ptoVenta
 
                 //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
 
-                string LineEncabezado = "Cant        Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
+                string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
 
                 //header
-                e.Graphics.DrawString("FARMACIAS GEMINIS", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("————Punto de Venta————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Rut: " + erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("————Punto de Venta————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("————Productos—————————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Cotización", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("————Productos—————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                 e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
