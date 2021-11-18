@@ -96,7 +96,7 @@ namespace ptoVenta
                 if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
-                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum);
+                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Cotización");
 
                 }
                 
