@@ -33,8 +33,7 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
-                if (documc != "")
-                {
+                
                     /*string comsql = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
                     cn = Form1.cn;
                     com = new SqlCommand(comsql, cn);
@@ -81,9 +80,10 @@ namespace ptoVenta
                 foreach (DataGridViewRow row in dgVariable.Rows)
                 {
 
-                    TicketDatos dato = new TicketDatos();
+                    
                         if (dgVariable.Columns.Contains("linea"))
                         {
+                            TicketDatos dato = new TicketDatos();
                             //dato.Codigo = row.Cells["codigo"].Value.ToString();
                             dato.Nombre = row.Cells["producto1"].Value.ToString();
                             dato.Cantidad = row.Cells["cantidad1"].Value.ToString();
@@ -91,15 +91,15 @@ namespace ptoVenta
                             double precioN = Convert.ToDouble(dato.Precio.ToString());
                             double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                             montoTotal = montoTotal + (precioN * cantidadN);
-                            if (documc == null)
-                            {
+                            
                                 e.Graphics.DrawString(dato.Cantidad.ToString()
                             + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                                 e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                            }
+                            
                         }
                         else if (dgVariable.Columns.Contains("numero"))
                         {
+                            TicketDatos dato = new TicketDatos();
                             dato.Nombre = row.Cells["producto"].Value.ToString();
                             dato.Cantidad = row.Cells["cantidad"].Value.ToString();
                             dato.Precio = row.Cells["precio"].Value.ToString();
@@ -133,7 +133,7 @@ namespace ptoVenta
                     e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
                     e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
-                }
+                
             }
 
 
