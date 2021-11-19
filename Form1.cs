@@ -1157,42 +1157,30 @@ namespace ptoVenta
 
         public void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
         {
+            clsImprimir printmir;
+            printmir = new clsImprimir();
             if (dgvGrid1.Rows.Count > 0)
             {
                 int vtot = (int)Convert.ToDouble(txtTotal.Text);
-               /*if(vtot > 0)
-                {
 
+                printmir.CargarImprimir(dgvGrid1, imprimirDocument, null, "Cotización");
 
-
-                    foreach (DataGridViewRow row in dgvGrid1.Rows)
-                    {
-                        TicketDatos dat = new TicketDatos();
-                        dat.Codigo = row.Cells["CODIGO1"].Value.ToString();
-                        dat.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                        dat.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                        double pre = (double)row.Cells["PRECIO1"].Value;
-                        dat.Precio = pre.ToString("N0");
-                        TicketDatos.Add(dat);
-
-                    }
-
-                }*/
+                
                 txtProducto.Text = "";
                 txtProducto.Focus();
 
-                imprimirDocument = new PrintDocument();
-                PrinterSettings ps = new PrinterSettings();
-                imprimirDocument.PrinterSettings = ps;
-                imprimirDocument.PrintPage += Imprimir;
-                imprimirDocument.Print();
+                //imprimirDocument = new PrintDocument();
+                //PrinterSettings ps = new PrinterSettings();
+                //imprimirDocument.PrinterSettings = ps;
+                //imprimirDocument.PrintPage += Imprimir;
+                //imprimirDocument.Print();
 
 
             }
 
 
 
-            void Imprimir(object sender, PrintPageEventArgs e)
+            /*void Imprimir(object sender, PrintPageEventArgs e)
             {
                 Font titulo = new Font("Arial", 16, System.Drawing.FontStyle.Bold);
                 Font header = new Font("Courier", 14);
@@ -1262,7 +1250,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
                 e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
 
-            }
+            }*/
 
         }
 
