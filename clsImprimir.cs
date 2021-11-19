@@ -82,36 +82,41 @@ namespace ptoVenta
                 {
 
                     TicketDatos dato = new TicketDatos();
-                        if (row.Cells[0] == row.["linea"])
+                        if (dgVariable.Columns.Contains("linea"))
                         {
                             //dato.Codigo = row.Cells["codigo"].Value.ToString();
                             dato.Nombre = row.Cells["producto1"].Value.ToString();
                             dato.Cantidad = row.Cells["cantidad1"].Value.ToString();
                             dato.Precio = row.Cells["precio1"].Value.ToString();
+                            double precioN = Convert.ToDouble(dato.Precio.ToString());
+                            double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
+                            montoTotal = montoTotal + (precioN * cantidadN);
+                            if (documc == null)
+                            {
+                                e.Graphics.DrawString(dato.Cantidad.ToString()
+                            + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                                e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                            }
                         }
-                        else if (row.Cells[0] == row.Cells["numero"])
+                        else if (dgVariable.Columns.Contains("numero"))
                         {
                             dato.Nombre = row.Cells["producto"].Value.ToString();
                             dato.Cantidad = row.Cells["cantidad"].Value.ToString();
                             dato.Precio = row.Cells["precio"].Value.ToString();
+                            double precioN = Convert.ToDouble(dato.Precio.ToString());
+                            double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
+                            montoTotal = montoTotal + (precioN * cantidadN);
+                            if (row.Cells["numero"].Value.ToString() == documc)
+                            {
+                                e.Graphics.DrawString(dato.Cantidad.ToString()
+                                + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                                e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                            }
                         }
                     //agregar total de la boleta
-                    double precioN = Convert.ToDouble(dato.Precio.ToString());
-                    double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
-                    montoTotal = montoTotal + (precioN * cantidadN);
+                    
 
-                    if (documc == null)
-                    {
-                            e.Graphics.DrawString(dato.Cantidad.ToString()
-                        + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                            e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                    }
-                    else if (row.Cells["numero"].Value.ToString() == documc)
-                    {
-                        e.Graphics.DrawString(dato.Cantidad.ToString()
-                        + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                        e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                    }
+                    
                 }
 
                 //----fin del header
