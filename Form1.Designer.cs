@@ -165,6 +165,7 @@ namespace ptoVenta
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel15.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -491,7 +492,7 @@ namespace ptoVenta
             this.cButton11.Corners.LowerRight = 8;
             this.cButton11.Corners.UpperLeft = 8;
             this.cButton11.Corners.UpperRight = 8;
-            this.cButton11.DesignerSelected = true;
+            this.cButton11.DesignerSelected = false;
             this.cButton11.DimFactorClick = 0;
             this.cButton11.DimFactorHover = -25;
             this.cButton11.Image = ((System.Drawing.Image)(resources.GetObject("cButton11.Image")));
@@ -1793,6 +1794,16 @@ namespace ptoVenta
             // 
             this.imprimirDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimirDocument_PrintPage);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(396, 122);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 215;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1804,6 +1815,7 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1275, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.gunaGradientButton63);
@@ -1956,6 +1968,7 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRINCIPIO1;
         private System.Drawing.Printing.PrintDocument imprimirDocument;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -123,6 +123,7 @@
       <DependentUpon>cierredecaja.cs</DependentUpon>
     </Compile>
     <Compile Include="clsImprimir.cs" />
+    <Compile Include="clsImprimirCierre.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="devoluciones.cs">

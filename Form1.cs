@@ -76,6 +76,7 @@ namespace ptoVenta
         public static string mante = "";
         public static string MiReporte = "";
         public static string documc = "";
+        public static string nombreFarmacia;
 
         public SqlDataReader Dr { get => dr; set => dr = value; }
 
@@ -144,8 +145,11 @@ namespace ptoVenta
             {
                 label13.Text = Convert.ToString(Dr["NOMBRE"]).Trim();
                 label13.Text = Convert.ToString(Dr["NOMBRE"]).Trim();
+                nombreFarmacia = Convert.ToString(Dr["NOMBRE"]).Trim();
+                  
             }
             Dr.Close();
+
         }
         public void alternarColorData(DataGridView dgv)
         {
@@ -1150,7 +1154,14 @@ namespace ptoVenta
 
         }
 
-       
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ClsImprimirCierre printmir;
+            printmir = new ClsImprimirCierre();
+            printmir.CargarImprimir(imprimirDocument);
+        }
+
+
 
         //cotización
 
