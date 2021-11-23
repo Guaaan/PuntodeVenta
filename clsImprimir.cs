@@ -33,21 +33,22 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
-                
-                    /*string comsql = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
-                    cn = Form1.cn;
-                    com = new SqlCommand(comsql, cn);
-                    TicketDatos tDatos = new TicketDatos();
-                    List<TicketDatos> lista = new List<TicketDatos>();
-                    com.ExecuteNonQuery();
-                    Dr = com.ExecuteReader();*/
 
+                /*string comsql = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
+                cn = Form1.cn;
+                com = new SqlCommand(comsql, cn);
+                TicketDatos tDatos = new TicketDatos();
+                List<TicketDatos> lista = new List<TicketDatos>();
+                com.ExecuteNonQuery();
+                Dr = com.ExecuteReader();*/
 
-                Font titulo = new Font("Arial", 16, System.Drawing.FontStyle.Bold);
+                Font titulo = new Font("Arial", 16, FontStyle.Bold);
                 Font header = new Font("Courier", 14);
-                Font linea = new Font("Courier", 14);
+                Font linea = new Font("Courier", 14, FontStyle.Bold);
                 Font font = new Font("Courier", 11);
                 Font fuente = new Font("Courier", 8);
+                Font espaciado = new Font("Arial", 2);
+                
                 int y = 20;
                 int ancho = 270;
                 int anchoB = 245;
@@ -70,8 +71,10 @@ namespace ptoVenta
                 //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
 
                 string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
+                string telef = Form1.telefono;
 
                 //header
+                e.Graphics.DrawString(telef, titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20),alineadoCentro);
                 e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -128,6 +131,7 @@ namespace ptoVenta
                 }
                 //----fin del header
                 //e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString("————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("$" + montoTotal.ToString("C"), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
