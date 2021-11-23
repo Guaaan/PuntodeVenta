@@ -50,6 +50,7 @@ namespace ptoVenta
                 Font fuente = new Font("Courier", 8);
                 int y = 20;
                 int ancho = 270;
+                int anchoB = 245;
                 var dateAndTime = DateTime.Now;
                 var Date = dateAndTime.ToLongDateString();
                 string hora = DateTime.Now.ToString("hh:mm:ss");
@@ -100,10 +101,10 @@ namespace ptoVenta
                             double precioN = Convert.ToDouble(dato.Precio.ToString());
                             double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                             montoTotal = montoTotal + (precioN * cantidadN);
-
                             e.Graphics.DrawString(dato.Cantidad.ToString()
-                            + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                                    + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
                             e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
 
                         }
                         else if (dgVariable.Columns.Contains("numero"))
@@ -118,8 +119,9 @@ namespace ptoVenta
                             if (row.Cells["numero"].Value.ToString() == documc)
                             {
                                 e.Graphics.DrawString(dato.Cantidad.ToString()
-                                + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 40, ancho, 20));
+                                    + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
                                 e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
                             }
                         }
                     //agregar total de la boleta
@@ -129,11 +131,10 @@ namespace ptoVenta
                            
 
 
-                    e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     //e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                     e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString(montoTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                    e.Graphics.DrawString("$" + montoTotal.ToString("C"), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                     e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                     e.Graphics.DrawString("GRACIAS POR SU VISITA", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("HASTA PRONTO", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
