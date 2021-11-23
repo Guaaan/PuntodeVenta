@@ -183,6 +183,7 @@
     <Compile Include="Stock.designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestImpr.cs" />
     <Compile Include="TicketDatos.cs" />
     <Compile Include="ticketsEmitidos.cs">
       <SubType>Form</SubType>

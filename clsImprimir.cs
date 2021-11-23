@@ -118,16 +118,12 @@ namespace ptoVenta
                             if (row.Cells["numero"].Value.ToString() == documc)
                             {
                                 e.Graphics.DrawString(dato.Cantidad.ToString()
-                                + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                                + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 40, ancho, 20));
                                 e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                             }
                         }
                     //agregar total de la boleta
-                    
-
-                    
                 }
-
                 //----fin del header
                        
                            

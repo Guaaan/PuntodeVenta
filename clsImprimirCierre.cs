@@ -189,6 +189,7 @@ namespace ptoVenta
                 
 
 
+
                 ///////////////////////////////////////////////
                 e.Graphics.DrawString("Dinero en Caja", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
