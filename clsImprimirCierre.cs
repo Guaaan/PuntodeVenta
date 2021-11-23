@@ -21,7 +21,7 @@ namespace ptoVenta
     
     class ClsImprimirCierre
     {
-        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument/*DataGridView dgVariable, PrintDocument impresiondocument, string documc, string tipo*/)
+        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument /*List< listaej*/)
         {
             
             
@@ -182,7 +182,7 @@ namespace ptoVenta
                 e.Graphics.DrawString(totalDigitales.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 //fin tarjetas
-                
+                e.Graphics.DrawString("Total Ventas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(totalVentas.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), formato2);
                 //
                 //agregar acá los ingresos de manera dinamica//
