@@ -43,41 +43,45 @@ namespace ptoVenta
                     Dr = com.ExecuteReader();*/
 
 
-                    Font titulo = new Font("Arial", 16, System.Drawing.FontStyle.Bold);
-                    Font header = new Font("Courier", 14);
-                    Font linea = new Font("Courier", 14);
-                    Font font = new Font("Courier", 11);
-                    Font fuente = new Font("Courier", 8);
-                    int y = 20;
-                    int ancho = 270;
+                Font titulo = new Font("Arial", 16, System.Drawing.FontStyle.Bold);
+                Font header = new Font("Courier", 14);
+                Font linea = new Font("Courier", 14);
+                Font font = new Font("Courier", 11);
+                Font fuente = new Font("Courier", 8);
+                int y = 20;
+                int ancho = 270;
+                var dateAndTime = DateTime.Now;
+                var Date = dateAndTime.ToLongDateString();
+                string hora = DateTime.Now.ToString("hh:mm:ss");
 
-                    StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
-                    StringFormat formato2 = new StringFormat(formato1);
-                    StringFormat alineadoCentro = new StringFormat();
+                StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
+                StringFormat formato2 = new StringFormat(formato1);
+                StringFormat alineadoCentro = new StringFormat();
 
-                    alineadoCentro.LineAlignment = StringAlignment.Center;
-                    alineadoCentro.Alignment = StringAlignment.Center;
-                    formato1.LineAlignment = StringAlignment.Near;
-                    formato1.Alignment = StringAlignment.Center;
-                    formato2.LineAlignment = StringAlignment.Center;
-                    formato2.Alignment = StringAlignment.Far;
+                alineadoCentro.LineAlignment = StringAlignment.Center;
+                alineadoCentro.Alignment = StringAlignment.Center;
+                formato1.LineAlignment = StringAlignment.Near;
+                formato1.Alignment = StringAlignment.Center;
+                formato2.LineAlignment = StringAlignment.Center;
+                formato2.Alignment = StringAlignment.Far;
 
 
-                    //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
+                //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
 
-                    string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
+                string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
 
-                    //header
-                    e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                    e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20),alineadoCentro);
-                    e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString(tipo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("———Productos———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                //header
+                e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20),alineadoCentro);
+                e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString(Date, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("hora: " + hora, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString(tipo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("———Productos———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                    e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
 
                 double montoTotal = 0;
                 foreach (DataGridViewRow row in dgVariable.Rows)
