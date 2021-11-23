@@ -1158,7 +1158,7 @@ namespace ptoVenta
         {
             ClsImprimirCierre printmir;
             printmir = new ClsImprimirCierre();
-            printmir.CargarImprimir(imprimirDocument);
+            printmir.imprimirCierre(imprimirDocument);
         }
 
 
