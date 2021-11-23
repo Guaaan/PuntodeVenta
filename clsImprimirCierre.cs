@@ -71,7 +71,7 @@ namespace ptoVenta
                 int resultadoCredito = credito - arqueoCredito;
 
                 int debito = 0;
-                int arqueoDebito = 0;
+                int arqueoDebito = 1230;
                 int resultadoDebito = debito - arqueoDebito;
 
                 int transferencias = 0;
@@ -85,7 +85,7 @@ namespace ptoVenta
                 int egresosCaja = 312;
                 int remesas = 2;
 
-                int efectivoFinal = 1;
+                int efectivoFinal = totalEfectivo + difTarjetas;
                 int arqueodeCaja = 32;
                 int DiferenciaFinal = efectivoFinal - arqueodeCaja;
 
