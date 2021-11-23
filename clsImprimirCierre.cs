@@ -82,13 +82,14 @@ namespace ptoVenta
                 int totalDigitales = credito + debito + transferencias;
 
                 int totalVentas = totalDigitales + totalEfectivo;
-                int egresosCaja = 1;
+                int egresosCaja = 312;
                 int remesas = 2;
 
                 int efectivoFinal = 1;
                 int arqueodeCaja = 32;
                 int DiferenciaFinal = efectivoFinal - arqueodeCaja;
 
+                
 
                 StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
                 StringFormat formato2 = new StringFormat(formato1);
@@ -166,7 +167,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("Crédito", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(credito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Arqueo Crédito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(resultadoCredito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(arqueoCredito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(resultadoCredito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
