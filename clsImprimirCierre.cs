@@ -25,7 +25,7 @@ namespace ptoVenta
         SqlDataReader Dr;
         public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument /*List< listaej*/)
         {
-                string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '2021-11-19', 102) AND FECHA < CONVERT(DATETIME, '2021-11-20', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+                string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '2021-11-24', 102) AND FECHA < CONVERT(DATETIME, '2021-11-25', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
                 cn = Form1.cn;
                 com = new SqlCommand(comsql, cn);
                 com.ExecuteNonQuery();
@@ -192,8 +192,11 @@ namespace ptoVenta
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 //fin tarjetas
                 e.Graphics.DrawString("Total Ventas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalVentas.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), formato2);
+                e.Graphics.DrawString(totalVentas.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
+                
+                e.Graphics.DrawString("Egresos", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+
                 //agregar acá los egresos de manera dinamica//
                 while (Dr.Read())
                 {
@@ -206,9 +209,9 @@ namespace ptoVenta
                     eg.Concepto = Dr.GetString(1);
                     eg.Monto = Dr.GetDecimal(2);
 
-                    e.Graphics.DrawString(eg.Concepto.ToString(), fuente, Brushes.Black, new RectangleF(0, y += 30, ancho, 35));
-                    e.Graphics.DrawString("|$" + eg.Monto.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-
+                    
+                    e.Graphics.DrawString(eg.Concepto, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                    e.Graphics.DrawString(eg.Monto.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
 
 
