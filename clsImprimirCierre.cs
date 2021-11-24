@@ -194,30 +194,27 @@ namespace ptoVenta
                 e.Graphics.DrawString("Total Ventas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(totalVentas.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
-                
-                e.Graphics.DrawString("Egresos", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
 
-                //agregar acá los egresos de manera dinamica//
-                while (Dr.Read())
+                if (Dr.HasRows)
                 {
+                    e.Graphics.DrawString("Egresos", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
 
-                    Egreso eg = new Egreso();
-
-                    //var concept = Dr.GetString(1); //The 0 stands for "the 0'th column", so the first column of the result.
-                    //var amount = Dr.GetString(2); //The 0 stands for "the 0'th column", so the first column of the result.
-                
-                    eg.Concepto = Dr.GetString(1);
-                    eg.Monto = Dr.GetDecimal(2);
-
-                    
-                    e.Graphics.DrawString(eg.Concepto, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString(eg.Monto.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                    //agregar acá los egresos de manera dinamica//
+                    while (Dr.Read())
+                    {
+                        Egreso eg = new Egreso();
+                        eg.Concepto = Dr.GetString(1);
+                        eg.Monto = Dr.GetDecimal(2);
 
 
+                        e.Graphics.DrawString(eg.Concepto, fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                        e.Graphics.DrawString(eg.Monto.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
+
+
+                    }
+                    Dr.Close();
                 }
-                Dr.Close();
-                
 
 
 
