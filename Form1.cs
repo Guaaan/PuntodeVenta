@@ -1164,9 +1164,9 @@ namespace ptoVenta
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            TestImpr printmir;
-            printmir = new TestImpr();
-            printmir.CargarImprimir(imprimirDocument);
+            ClsImprimirCierre printmir;
+            printmir = new ClsImprimirCierre();
+            printmir.imprimirCierre(imprimirDocument);
         }
 
 

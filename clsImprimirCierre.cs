@@ -18,13 +18,22 @@ namespace ptoVenta
     //e.Graphics.DrawString(montoTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato
     //ESPACIADO
     //e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
-    
     class ClsImprimirCierre
     {
+        public static SqlConnection cn, locn;
+        SqlCommand com;
+        SqlDataReader Dr;
         public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument /*List< listaej*/)
         {
-            
-            
+                string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '2021-11-19', 102) AND FECHA < CONVERT(DATETIME, '2021-11-20', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+                cn = Form1.cn;
+                com = new SqlCommand(comsql, cn);
+                com.ExecuteNonQuery();
+                Dr = com.ExecuteReader();
+                
+                //List<Egreso> egresos = new List<Egreso>();
+
+
             impresiondocument = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
             impresiondocument.PrinterSettings = ps;
@@ -185,7 +194,26 @@ namespace ptoVenta
                 e.Graphics.DrawString("Total Ventas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(totalVentas.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), formato2);
                 //
-                //agregar acá los ingresos de manera dinamica//
+                //agregar acá los egresos de manera dinamica//
+                while (Dr.Read())
+                {
+
+                    Egreso eg = new Egreso();
+
+                    //var concept = Dr.GetString(1); //The 0 stands for "the 0'th column", so the first column of the result.
+                    //var amount = Dr.GetString(2); //The 0 stands for "the 0'th column", so the first column of the result.
+                
+                    eg.Concepto = Dr.GetString(1);
+                    eg.Monto = Dr.GetDecimal(2);
+
+                    e.Graphics.DrawString(eg.Concepto.ToString(), fuente, Brushes.Black, new RectangleF(0, y += 30, ancho, 35));
+                    e.Graphics.DrawString("|$" + eg.Monto.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
+
+
+
+                }
+                Dr.Close();
                 
 
 

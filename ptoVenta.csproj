@@ -123,7 +123,7 @@
       <DependentUpon>cierredecaja.cs</DependentUpon>
     </Compile>
     <Compile Include="clsImprimir.cs" />
-    <Compile Include="clsImprimirCierre.cs" />
+    <Compile Include="ClsImprimirCierre.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="devoluciones.cs">
@@ -132,6 +132,7 @@
     <Compile Include="devoluciones.Designer.cs">
       <DependentUpon>devoluciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Egreso.cs" />
     <Compile Include="egresoCaja.cs">
       <SubType>Form</SubType>
     </Compile>
