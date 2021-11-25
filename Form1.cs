@@ -1164,11 +1164,9 @@ namespace ptoVenta
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var fechaE1 = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
-            var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
             ClsImprimirCierre printmir;
             printmir = new ClsImprimirCierre();
-            printmir.imprimirCierre(imprimirDocument, fechaE1, fechaE2);
+            printmir.imprimirCierre(imprimirDocument);
         }
 
 
