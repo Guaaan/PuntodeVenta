@@ -23,15 +23,17 @@ namespace ptoVenta
         public static SqlConnection cn, locn;
         SqlCommand com;
         SqlDataReader Dr;
-        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument /*List< listaej*/)
+        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument, string fechaE1,string  fechaE2)
         {
-                string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '2021-11-24', 102) AND FECHA < CONVERT(DATETIME, '2021-11-25', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
-                cn = Form1.cn;
-                com = new SqlCommand(comsql, cn);
-                com.ExecuteNonQuery();
-                Dr = com.ExecuteReader();
+            //var fechaE1 = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
+            //var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
+            string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 +"', 102) AND FECHA < CONVERT(DATETIME, '"+ fechaE2 +"', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+            cn = Form1.cn;
+            com = new SqlCommand(comsql, cn);
+            com.ExecuteNonQuery();
+            Dr = com.ExecuteReader();
                 
-                //List<Egreso> egresos = new List<Egreso>();
+            //List<Egreso> egresos = new List<Egreso>();
 
 
             impresiondocument = new PrintDocument();
@@ -55,6 +57,7 @@ namespace ptoVenta
 
                 int y = 20;
                 int ancho = 270;
+                int anchob = 200;
                 var dateAndTime = DateTime.Now;
                 var Date = dateAndTime.ToLongDateString();
                 string hora = DateTime.Now.ToString("hh:mm:ss");
@@ -205,13 +208,10 @@ namespace ptoVenta
                         Egreso eg = new Egreso();
                         eg.Concepto = Dr.GetString(1);
                         eg.Monto = Dr.GetDecimal(2);
+                        
 
-
-                        e.Graphics.DrawString(eg.Concepto, fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                        e.Graphics.DrawString(eg.Concepto, fuente, Brushes.Black, new RectangleF(0, y += 35, anchob, 35));
                         e.Graphics.DrawString(eg.Monto.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
-
-
-
                     }
                     Dr.Close();
                 }
@@ -219,8 +219,8 @@ namespace ptoVenta
 
 
                 ///////////////////////////////////////////////
-                e.Graphics.DrawString("Dinero en Caja", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("Dinero en Caja", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Entrada Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(totalEfectivo.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Egresos de Caja:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
