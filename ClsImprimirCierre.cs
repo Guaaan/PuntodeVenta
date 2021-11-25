@@ -25,7 +25,7 @@ namespace ptoVenta
         SqlDataReader Dr;
         public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument)
         {
-            var fechaE1 = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
+            var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
             var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
             string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 +"', 102) AND FECHA < CONVERT(DATETIME, '"+ fechaE2 +"', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
             cn = Form1.cn;
