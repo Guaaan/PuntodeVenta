@@ -180,7 +180,7 @@ namespace ptoVenta
                 {
                     panel1.Visible = true;
                     dgvLista.Visible = true;
-                    dgvLista.Rows.Clear();                                              //CONDICIONAL POR SI REQUIERE RECETA                            //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
+                    dgvLista.Rows.Clear();                                                                         //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
                     com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA, E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
@@ -1169,7 +1169,7 @@ namespace ptoVenta
             printmir.imprimirCierre(imprimirDocument);
         }
 
-
+ 
 
         //cotización
 
@@ -1180,21 +1180,10 @@ namespace ptoVenta
             printmir = new clsImprimir();
             if (dgvGrid1.Rows.Count > 0)
             {
-                int vtot = (int)Convert.ToDouble(txtTotal.Text);
-
                 printmir.CargarImprimir(dgvGrid1, imprimirDocument, null, "Cotización");
 
-                
                 txtProducto.Text = "";
                 txtProducto.Focus();
-
-                //imprimirDocument = new PrintDocument();
-                //PrinterSettings ps = new PrinterSettings();
-                //imprimirDocument.PrinterSettings = ps;
-                //imprimirDocument.PrintPage += Imprimir;
-                //imprimirDocument.Print();
-
-
             }
 
 

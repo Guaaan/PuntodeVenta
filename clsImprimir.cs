@@ -90,39 +90,43 @@ namespace ptoVenta
                 foreach (DataGridViewRow row in dgVariable.Rows)
                 {
 
-                    
-                        if (dgVariable.Columns.Contains("LINEA1"))
-                        {
-                            TicketDatos dato = new TicketDatos();
-                            //dato.Codigo = row.Cells["codigo"].Value.ToString();
-                            dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                            dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                            dato.Precio = row.Cells["PRECIO1"].Value.ToString();
-                            //obtener el total de la boleta
+                        //cotización
+                    if (dgVariable.Columns.Contains("LINEA1"))
+                    {
+                        TicketDatos dato = new TicketDatos();
+                        //dato.Codigo = row.Cells["codigo"].Value.ToString();
+                        dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
+                        dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
+                        dato.Precio = row.Cells["PRECIO1"].Value.ToString();
+                        //obtener el total de la boleta
 
-                            double precioN = Convert.ToDouble(dato.Precio.ToString());
-                            double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
-                            montoTotal = montoTotal + (precioN * cantidadN);
-                            e.Graphics.DrawString(dato.Cantidad.ToString()
+                        double precioN = Convert.ToDouble(dato.Precio.ToString());
+                        double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
+                        montoTotal = montoTotal + (precioN * cantidadN);
+                        e.Graphics.DrawString(dato.Cantidad.ToString()
                             + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
-                            e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                        }
-                        else if (dgVariable.Columns.Contains("numero"))
+                        e.Graphics.DrawString(precioN.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
+                    }
+                    //ventas emitidas
+                    else if (dgVariable.Columns.Contains("numero"))
                         {
                             TicketDatos dato = new TicketDatos();
                             dato.Nombre = row.Cells["producto"].Value.ToString();
                             dato.Cantidad = row.Cells["cantidad"].Value.ToString();
                             dato.Precio = row.Cells["precio"].Value.ToString();
-                            double precioN = Convert.ToDouble(dato.Precio.ToString());
-                            double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
-                            montoTotal = montoTotal + (precioN * cantidadN);
+                            double precioN = Convert.ToDouble(dato.Precio);
+                            double cantidadN = Convert.ToDouble(dato.Cantidad);
                             if (row.Cells["numero"].Value.ToString() == documc)
                             {
+                                montoTotal = montoTotal + (precioN * cantidadN);
                                 e.Graphics.DrawString(dato.Cantidad.ToString()
                                     + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
-                                e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                                e.Graphics.DrawString(precioN.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
                             }
+                            
+
                         }
                     //agregar total de la boleta
                 }
@@ -131,7 +135,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString("————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("$" + montoTotal.ToString("C"), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                e.Graphics.DrawString(montoTotal.ToString("C"), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("HASTA PRONTO", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);

@@ -99,8 +99,14 @@ namespace ptoVenta
                     printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Reimpresión");
 
                 }
-                
-                
+
+                if (dgvGrid1.CurrentCell.ColumnIndex == 10)
+                {
+                    vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
+                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Devolución");
+
+                }
+
                 if (dgvGrid1.CurrentCell.ColumnIndex == 10)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();

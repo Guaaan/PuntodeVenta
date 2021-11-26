@@ -25,7 +25,7 @@ namespace ptoVenta
         SqlDataReader Dr;
         public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument)
         {
-            var fechaE1 = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
+            var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
             var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
             string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 +"', 102) AND FECHA < CONVERT(DATETIME, '"+ fechaE2 +"', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
             cn = Form1.cn;
@@ -122,27 +122,27 @@ namespace ptoVenta
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 //billetes
                 e.Graphics.DrawString("De 20.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de20Mil.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de20Mil.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 10.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de10Mil.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de10Mil.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 5.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de5Mil.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de5Mil.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 2.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de2Mil.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de2Mil.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 1.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(deMil.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(deMil.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 500 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de500.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de500.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 100 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de100.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de100.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 50 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de50.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de50.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("De 10 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(de10.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(de10.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 //fin de los billetes
                 e.Graphics.DrawString("Total: ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalBilletes.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(totalBilletes.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //----------------------------------//
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 //e.Graphics.DrawString("Transferencias", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
@@ -153,15 +153,15 @@ namespace ptoVenta
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 //----------------------------------//
                 e.Graphics.DrawString("Apertura de Caja:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(aperturaCaja.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(aperturaCaja.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Ventas Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(ventasEfectivo.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(ventasEfectivo.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Otros Ingresos:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(otrosIngresos.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(otrosIngresos.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 //total 
                 e.Graphics.DrawString("Total Ingresos:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalEfectivo.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(totalEfectivo.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 //----------------------------------//
                 //fin efectivo
@@ -170,32 +170,32 @@ namespace ptoVenta
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
 
                 e.Graphics.DrawString("Débito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(debito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(debito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Arqueo Débito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(arqueoDebito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(arqueoDebito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(resultadoDebito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(resultadoDebito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
                 e.Graphics.DrawString("Crédito", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(credito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(credito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Arqueo Crédito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(arqueoCredito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(arqueoCredito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(resultadoCredito.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(resultadoCredito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
                 e.Graphics.DrawString("Transferencia:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(transferencias.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(transferencias.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("arqueo Transferencia:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(arqueoTransf.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(arqueoTransf.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(resultadoTransf.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(resultadoTransf.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 e.Graphics.DrawString("Total Tarjetas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalDigitales.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(totalDigitales.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 //fin tarjetas
                 e.Graphics.DrawString("Total Ventas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalVentas.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(totalVentas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
 
                 if (Dr.HasRows)
@@ -222,22 +222,22 @@ namespace ptoVenta
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Dinero en Caja", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Entrada Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalEfectivo.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(totalEfectivo.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Egresos de Caja:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(egresosCaja.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(egresosCaja.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Depositos/remesas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(remesas.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(remesas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Dif en Tarjetas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(difTarjetas.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(difTarjetas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 e.Graphics.DrawString("Total Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(efectivoFinal.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(efectivoFinal.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Arqueo de Caja:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("-" + arqueodeCaja.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString("-" + arqueodeCaja.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 e.Graphics.DrawString("Diferencia:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(DiferenciaFinal.ToString(), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(DiferenciaFinal.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
             }
             return Imprimir;
         }
