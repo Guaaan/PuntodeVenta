@@ -113,6 +113,12 @@ namespace ptoVenta
             string asi = textBox2.Text.ToString();
             string con = textBox3.Text.ToString();
             int tip;
+            string cont = textBox3.Text.Trim();
+            string monto = txtEfectivo.Text;
+            string persona = comboBox2.Text;
+            ClsImprimirValeC printmir;
+            printmir = new ClsImprimirValeC();
+            printmir.ImprimirCoti(printDocumento, cont, monto, persona);
             if (mon > 0 && !string.IsNullOrEmpty(cod) && !string.IsNullOrEmpty(asi) && !string.IsNullOrEmpty(con))
             {
                 string rec = "";
@@ -153,28 +159,33 @@ namespace ptoVenta
                 com.Parameters.AddWithValue("@mefe", mon);
                 com.Parameters.AddWithValue("@masi", asi);
                 com.ExecuteNonQuery();
+                
                 dr.Close();
+                
+                
+                
+                
                 //Impresion de reci
-                LocalReport report = new LocalReport();
+                //LocalReport report = new LocalReport();
 
-                Form1.MiReporte = "Informes\\Reci.rdlc";
-                report.ReportPath = (Form1.MiReporte);
+                //Form1.MiReporte = "Informes\\Reci.rdlc";
+                //report.ReportPath = (Form1.MiReporte);
 
-                string vRif = Form1.erif.Trim();
-                string vCaja = iniciarSesion.ucodigo.Trim();
-                string vNro = rec;
+                //string vRif = Form1.erif.Trim();
+                //string vCaja = iniciarSesion.ucodigo.Trim();
+                //string vNro = rec;
 
-                ReportParameter[] parameters = new ReportParameter[7];
-                parameters[0] = new ReportParameter("rRif", vRif.Trim());
-                parameters[1] = new ReportParameter("rCaja", vCaja.Trim());
-                parameters[2] = new ReportParameter("rNro", vNro.Trim());
-                parameters[3] = new ReportParameter("rNom", nom.Trim());
-                parameters[4] = new ReportParameter("rCon", con.Trim());
-                parameters[5] = new ReportParameter("rMon", mon.ToString("N0"));
-                parameters[6] = new ReportParameter("rTit", tit.Trim());
+                //ReportParameter[] parameters = new ReportParameter[7];
+                //parameters[0] = new ReportParameter("rRif", vRif.Trim());
+                //parameters[1] = new ReportParameter("rCaja", vCaja.Trim());
+                //parameters[2] = new ReportParameter("rNro", vNro.Trim());
+                //parameters[3] = new ReportParameter("rNom", nom.Trim());
+                //parameters[4] = new ReportParameter("rCon", con.Trim());
+                //parameters[5] = new ReportParameter("rMon", mon.ToString("N0"));
+                //parameters[6] = new ReportParameter("rTit", tit.Trim());
 
-                report.SetParameters(parameters);
-                report.PrintToPrinter();
+                //report.SetParameters(parameters);
+                //report.PrintToPrinter();
                 //
                 this.Close();
             }
@@ -191,5 +202,15 @@ namespace ptoVenta
                this.Close();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+        }
+
+        
     }
 }

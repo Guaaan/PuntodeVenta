@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="clsImprimir.cs" />
     <Compile Include="ClsImprimirCierre.cs" />
+    <Compile Include="ClsImprimirValeC.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="devoluciones.cs">

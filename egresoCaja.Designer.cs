@@ -49,6 +49,8 @@ namespace ptoVenta
             this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.printDocumento = new System.Drawing.Printing.PrintDocument();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,6 +314,19 @@ namespace ptoVenta
             this.comboBox3.TabIndex = 193;
             this.comboBox3.TabStop = false;
             // 
+            // printDocumento
+            // 
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(611, 422);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 194;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // egresoCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -319,6 +334,7 @@ namespace ptoVenta
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(972, 483);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox2);
@@ -373,5 +389,7 @@ namespace ptoVenta
         private System.Windows.Forms.TextBox txtEfectivo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Drawing.Printing.PrintDocument printDocumento;
+        private System.Windows.Forms.Button button1;
     }
 }
