@@ -104,10 +104,8 @@ namespace ptoVenta
                             double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                             montoTotal = montoTotal + (precioN * cantidadN);
                             e.Graphics.DrawString(dato.Cantidad.ToString()
-                                    + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
+                            + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
                             e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-
-
                         }
                         else if (dgVariable.Columns.Contains("numero"))
                         {
