@@ -29,9 +29,11 @@ namespace ptoVenta
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cargadocum));
             this.dgvGrid1 = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +49,7 @@ namespace ptoVenta
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.printDocumento = new System.Drawing.Printing.PrintDocument();
+            this.cButton40 = new CButtonLib.CButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -197,17 +198,21 @@ namespace ptoVenta
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 83);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(262, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 19);
+            this.label3.Size = new System.Drawing.Size(105, 19);
             this.label3.TabIndex = 167;
             this.label3.Text = "Documentos:";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 80);
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(370, 83);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(77, 25);
@@ -215,43 +220,54 @@ namespace ptoVenta
             this.textBox1.TabStop = false;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnSalir
+            // cButton40
             // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            this.btnSalir.IconColor = System.Drawing.Color.White;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 40;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(977, 56);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSalir.Size = new System.Drawing.Size(139, 49);
-            this.btnSalir.TabIndex = 163;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Text = "Regresar";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.cButton40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cButton40.BackColor = System.Drawing.Color.Transparent;
+            this.cButton40.BorderColor = System.Drawing.Color.Transparent;
+            cBlendItems1.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))))};
+            cBlendItems1.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton40.ColorFillBlend = cBlendItems1;
+            this.cButton40.Corners.All = 8;
+            this.cButton40.Corners.LowerLeft = 8;
+            this.cButton40.Corners.LowerRight = 8;
+            this.cButton40.Corners.UpperLeft = 8;
+            this.cButton40.Corners.UpperRight = 8;
+            this.cButton40.DesignerSelected = false;
+            this.cButton40.DimFactorClick = 0;
+            this.cButton40.DimFactorHover = -25;
+            this.cButton40.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton40.Image = ((System.Drawing.Image)(resources.GetObject("cButton40.Image")));
+            this.cButton40.ImageIndex = 0;
+            this.cButton40.ImageSize = new System.Drawing.Size(35, 30);
+            this.cButton40.Location = new System.Drawing.Point(968, 57);
+            this.cButton40.Name = "cButton40";
+            this.cButton40.Size = new System.Drawing.Size(148, 48);
+            this.cButton40.TabIndex = 308;
+            this.cButton40.TabStop = false;
+            this.cButton40.Text = "Regresar";
+            this.cButton40.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton40.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // cargadocum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 609);
             this.ControlBox = false;
+            this.Controls.Add(this.cButton40);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvGrid1);
             this.Controls.Add(this.panel15);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -269,7 +285,6 @@ namespace ptoVenta
         #endregion
         private System.Windows.Forms.DataGridView dgvGrid1;
         private System.Windows.Forms.Panel panel15;
-        private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
@@ -282,6 +297,6 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewButtonColumn Dele;
-        private System.Drawing.Printing.PrintDocument printDocumento;
+        private CButtonLib.CButton cButton40;
     }
 }

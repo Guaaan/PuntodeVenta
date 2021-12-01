@@ -25,6 +25,7 @@ namespace ptoVenta
 
         private void egresoCaja_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = DateTime.Today;
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CONCEPTOS ORDER BY NOMBRE", Form1.cn);
             da.Fill(ds, "CONCEPTOS");
@@ -113,6 +114,97 @@ namespace ptoVenta
             string asi = textBox2.Text.ToString();
             string con = textBox3.Text.ToString();
             int tip;
+            if (mon > 0 && !string.IsNullOrEmpty(cod) && !string.IsNullOrEmpty(asi) && !string.IsNullOrEmpty(con))
+            {
+                string rec = "";
+                string tit = comboBox3.Text.Trim();
+                if (tit == "EGRESO")
+                {
+                    com = new SqlCommand("SELECT MAX(convert(int, RECIBO))+1 REXP FROM RECIBOS WHERE TIPO=2", Form1.cn);
+                    tip = 2;
+                }
+                else
+                {
+                    com = new SqlCommand("SELECT MAX(convert(int, RECIBO))+1 REXP FROM RECIBOS WHERE TIPO=1", Form1.cn);
+                    tip = 1;
+                }
+
+                com.ExecuteNonQuery();
+                dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    rec = Convert.ToString(dr["REXP"]);
+                }
+                dr.Close();
+                string usu = iniciarSesion.ucodigo.Trim();
+                string caj = iniciarSesion.ucaja.Trim();
+                string nom = comboBox2.Text.ToString();
+                string comsql1 = "INSERT INTO RECIBOS(RECIBO, FECHA, CODIGO, CONCEPTO, MONTO, USUARIO, CAJA, NOMBRE, TIPO, EFECTIVO, ASIGNADO) ";
+                string sqlcom2 = comsql1 + "VALUES (@num,@mfec,@mcod,@mcon,@mmon,@musu,@mcaj,@mnom,@mtip,@mefe,@masi)";
+                com = new SqlCommand(sqlcom2, Form1.cn);
+                com.Parameters.AddWithValue("@num", rec);
+                com.Parameters.AddWithValue("@mfec", dateTimePicker1.Value);
+                com.Parameters.AddWithValue("@mcod", cod);
+                com.Parameters.AddWithValue("@mcon", con);
+                com.Parameters.AddWithValue("@mnom", nom);
+                com.Parameters.AddWithValue("@musu", usu);
+                com.Parameters.AddWithValue("@mcaj", caj);
+                com.Parameters.AddWithValue("@mmon", mon);
+                com.Parameters.AddWithValue("@mtip", tip);
+                com.Parameters.AddWithValue("@mefe", mon);
+                com.Parameters.AddWithValue("@masi", asi);
+                com.ExecuteNonQuery();
+                dr.Close();
+                //Impresion de reci
+                LocalReport report = new LocalReport();
+
+                Form1.MiReporte = "Informes\\Reci.rdlc";
+                report.ReportPath = (Form1.MiReporte);
+
+                string vRif = Form1.erif.Trim();
+                string vCaja = iniciarSesion.ucodigo.Trim();
+                string vNro = rec;
+
+                ReportParameter[] parameters = new ReportParameter[7];
+                parameters[0] = new ReportParameter("rRif", vRif.Trim());
+                parameters[1] = new ReportParameter("rCaja", vCaja.Trim());
+                parameters[2] = new ReportParameter("rNro", vNro.Trim());
+                parameters[3] = new ReportParameter("rNom", nom.Trim());
+                parameters[4] = new ReportParameter("rCon", con.Trim());
+                parameters[5] = new ReportParameter("rMon", mon.ToString("N0"));
+                parameters[6] = new ReportParameter("rTit", tit.Trim());
+
+                report.SetParameters(parameters);
+                report.PrintToPrinter();
+                //
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("DEBE LLENAR DATOS DEL RECIBO");
+            }
+        }
+
+        private void egresoCaja_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           if (e.KeyChar == 27)
+           {
+               this.Close();
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            txtEfectivo.Focus();
+        }
+
+        private void cButton39_ClickButtonArea(object Sender, MouseEventArgs e)
+        {
+            int mon = Convert.ToInt32(txtEfectivo.Text);
+            string cod = textBox1.Text.ToString();
+            string asi = textBox2.Text.ToString();
+            string con = textBox3.Text.ToString();
+            int tip;
             string cont = textBox3.Text.Trim();
             string monto = txtEfectivo.Text;
             string persona = comboBox2.Text;
@@ -159,34 +251,11 @@ namespace ptoVenta
                 com.Parameters.AddWithValue("@mefe", mon);
                 com.Parameters.AddWithValue("@masi", asi);
                 com.ExecuteNonQuery();
-                
+
                 dr.Close();
-                
-                
-                
-                
-                //Impresion de reci
-                //LocalReport report = new LocalReport();
 
-                //Form1.MiReporte = "Informes\\Reci.rdlc";
-                //report.ReportPath = (Form1.MiReporte);
 
-                //string vRif = Form1.erif.Trim();
-                //string vCaja = iniciarSesion.ucodigo.Trim();
-                //string vNro = rec;
 
-                //ReportParameter[] parameters = new ReportParameter[7];
-                //parameters[0] = new ReportParameter("rRif", vRif.Trim());
-                //parameters[1] = new ReportParameter("rCaja", vCaja.Trim());
-                //parameters[2] = new ReportParameter("rNro", vNro.Trim());
-                //parameters[3] = new ReportParameter("rNom", nom.Trim());
-                //parameters[4] = new ReportParameter("rCon", con.Trim());
-                //parameters[5] = new ReportParameter("rMon", mon.ToString("N0"));
-                //parameters[6] = new ReportParameter("rTit", tit.Trim());
-
-                //report.SetParameters(parameters);
-                //report.PrintToPrinter();
-                //
                 this.Close();
             }
             else
@@ -194,23 +263,5 @@ namespace ptoVenta
                 MessageBox.Show("DEBE LLENAR DATOS DEL RECIBO");
             }
         }
-
-        private void egresoCaja_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           if (e.KeyChar == 27)
-           {
-               this.Close();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-
-
-        }
-
-        
     }
 }

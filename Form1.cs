@@ -14,8 +14,6 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.Drawing.Printing;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -26,7 +24,7 @@ namespace ptoVenta
     {
         CultureInfo myCIintl = new CultureInfo("es-ES", false);
 
-        public static SqlConnection cn, locn;
+        public static SqlConnection cn,locn;
         SqlCommand com;
         SqlDataReader dr;
 
@@ -56,8 +54,6 @@ namespace ptoVenta
         public string uperfil = "";
         public string ucaja = "";
         public string ufoto = "";
-        public static int ftop = 0;
-
 
         public static string empresalic = "";
         public static string erif = "";
@@ -77,7 +73,7 @@ namespace ptoVenta
         public static string MiReporte = "";
         public static string documc = "";
         public static string nombreFarmacia;
-
+     
         public SqlDataReader Dr { get => dr; set => dr = value; }
 
         public Form1()
@@ -146,23 +142,21 @@ namespace ptoVenta
                 label13.Text = Convert.ToString(Dr["NOMBRE"]).Trim();
                 label13.Text = Convert.ToString(Dr["NOMBRE"]).Trim();
                 nombreFarmacia = Convert.ToString(Dr["NOMBRE"]).Trim();
-                  
             }
             Dr.Close();
-
         }
         public void alternarColorData(DataGridView dgv)
         {
             dgvLista.RowsDefaultCellStyle.BackColor = Color.MistyRose;
             dgvLista.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvLista.EnableHeadersVisualStyles = false;
-            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 255);
+            dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.MediumSlateBlue;
             dgvLista.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
             //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(75, 153, 87);
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void txtProducto_TextChanged(object sender, EventArgs e)
@@ -180,17 +174,17 @@ namespace ptoVenta
                 {
                     panel1.Visible = true;
                     dgvLista.Visible = true;
-                    dgvLista.Rows.Clear();                                                                         //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
-                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA, E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
+                    dgvLista.Rows.Clear();
+                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     if (ivari.ToString() == "+" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     com.ExecuteNonQuery();
                     Dr = com.ExecuteReader();
@@ -212,11 +206,6 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["STOCK"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
-                        dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
-                        dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
-                        dgvLista.Rows[renglon].Cells["COLORRECETA"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
-
-
                     }
                     Dr.Close();
                 }
@@ -253,16 +242,8 @@ namespace ptoVenta
                     }
                     if (vari.All(Char.IsLetter))
                     {
-                        try
-                        {
-                            dgvLista.Rows[0].Selected = true;
-                            dgvLista.Focus();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-
+                        dgvLista.Rows[0].Selected = true;
+                        dgvLista.Focus();
                     }
                     else
                     {
@@ -294,14 +275,14 @@ namespace ptoVenta
             }
         }
 
-        public void cerrarBoleta()
+        private void cerrarBoleta()
         {
             int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0 && cButton9.Visible == true)
             {
-                cierreBoleta frm = new cierreBoleta();
-                AddOwnedForm(frm);
-                frm.ShowDialog();
+               cierreBoleta frm = new cierreBoleta();
+               AddOwnedForm(frm);
+               frm.ShowDialog();
             }
             else
             {
@@ -371,7 +352,7 @@ namespace ptoVenta
             else
             {
                 int renglon = 0;
-                com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + vari + "' ", cn);
+                com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + vari + "' ", cn);
                 com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
                 while (Dr.Read())
@@ -393,12 +374,6 @@ namespace ptoVenta
                     dgvGrid1.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                     dgvGrid1.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
                     dgvGrid1.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
-
-                    dgvGrid1.Rows[renglon].Cells["FORMAFARMACEUTICA1"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
-                    dgvGrid1.Rows[renglon].Cells["LABORATORIO1"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
-                    dgvGrid1.Rows[renglon].Cells["COLORRECETA1"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
-                    dgvGrid1.Rows[renglon].Cells["PRINCIPIO1"].Value = Dr["PRINCIPIO"] == DBNull.Value ? " " : Convert.ToString(Dr["PRINCIPIO"]).Trim();
-
                 }
                 Dr.Close();
                 if (renglon > 0)
@@ -463,14 +438,6 @@ namespace ptoVenta
             textBox2.Text = totp.ToString("N0");
             toto = totp - totf;
             textBox3.Text = toto.ToString("N0");
-            txtProducto.Text = "";
-            txtProducto.Focus();
-        }
-
-        private void btnExistenciaenLocales_Click_1(object sender, EventArgs e)
-        {
-            existenciaLocales abrirExistencia = new existenciaLocales();
-            abrirExistencia.ShowDialog();
             txtProducto.Text = "";
             txtProducto.Focus();
         }
@@ -661,7 +628,7 @@ namespace ptoVenta
 
         protected override bool ProcessCmdKey(ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData)
         {
-            //TECLAS DEL FOR
+            //TECLAS DEL FORM
             bool passed = false;
             if (keyData == Keys.F9)
             {
@@ -893,7 +860,6 @@ namespace ptoVenta
             cargarDocumento();
         }
 
-        //sacar de acá los datos para la boleta!!!!
         private void cargarDocumento()
         {
             cargadocum fcarga = new cargadocum();
@@ -908,7 +874,6 @@ namespace ptoVenta
                 com = new SqlCommand(comsql, cn);
                 com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
-                //sacar de acá las boletas
                 while (Dr.Read())
                 {
                     renglon = dgvGrid1.Rows.Add();
@@ -1067,114 +1032,11 @@ namespace ptoVenta
             cerrarBoleta();
         }
 
-
-
-        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void cButton11_ClickButtonArea(object Sender, MouseEventArgs e)
         {
-            if (e.ColumnIndex == 1) // second-column 
-            {
-
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-
-
-                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
-                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
-                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
-                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
-                frm.lblFormaF.Text = dgvLista.CurrentRow.Cells[8].Value.ToString();
-                frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
-
-
-                if (dgvLista.CurrentRow.Cells[10].Value.Equals(0))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
-                    frm.lblRequiereR.Text = "No Requiere Receta";
-                }
-                else if (dgvLista.CurrentRow.Cells[10].Value.Equals(1))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
-                    frm.lblRequiereR.Text = "Requiere Receta";
-                }
-
-
-
-
-                MemoryStream ms = new MemoryStream();
-                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
-                imagen.Save(ms, ImageFormat.Jpeg);
-                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
-
-                ftop = dgvLista.Top;
-                frm.ShowDialog();
-            }
         }
 
-        private void dgvGrid1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.ColumnIndex == 1) // second-column 
-            {
-
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-
-
-                frm.lblNombre.Text = dgvGrid1.CurrentRow.Cells[3].Value.ToString();
-                frm.lblPrecio.Text = "$" + dgvGrid1.CurrentRow.Cells[6].Value.ToString();
-                frm.lblStock.Text = dgvGrid1.CurrentRow.Cells[4].Value.ToString();
-                frm.lblFormaF.Text = dgvGrid1.CurrentRow.Cells[10].Value.ToString();
-                frm.lblLaboratorio.Text = dgvGrid1.CurrentRow.Cells[11].Value.ToString();
-
-
-                if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(0))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
-                    frm.lblRequiereR.Text = "No Requiere Receta";
-                }
-                else if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(1))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
-                    frm.lblRequiereR.Text = "Requiere Receta";
-                }
-                frm.lblPrincipioActivo.Text = dgvGrid1.CurrentRow.Cells[13].Value.ToString();
-
-
-                MemoryStream ms = new MemoryStream();
-                Bitmap imagen = (Bitmap)dgvGrid1.CurrentRow.Cells[1].Value;
-                imagen.Save(ms, ImageFormat.Jpeg);
-                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
-
-                ftop = dgvLista.Top;
-                frm.ShowDialog();
-            }
-        }
-
-
-
-        private void stocktiendas()
-        {
-            Stock abrirstock = new Stock();
-            abrirstock.ShowDialog();
-            txtProducto.Text = "";
-            txtProducto.Focus();
-        }
-
-        private void imprimirDocument_PrintPage(object sender, PrintPageEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ClsImprimirCierre printmir;
-            printmir = new ClsImprimirCierre();
-            printmir.imprimirCierre(imprimirDocument);
-        }
-
- 
-
-        //cotización
-
-
-        public void cButton8_ClickButtonArea(object Sender, MouseEventArgs ev)
+        private void cButton8_ClickButtonArea(object Sender, MouseEventArgs e)
         {
             clsImprimir printmir;
             printmir = new clsImprimir();
@@ -1186,82 +1048,14 @@ namespace ptoVenta
                 txtProducto.Focus();
             }
 
-
-
-            /*void Imprimir(object sender, PrintPageEventArgs e)
-            {
-                Font titulo = new Font("Arial", 16, System.Drawing.FontStyle.Bold);
-                Font header = new Font("Courier", 14);
-                Font linea = new Font("Courier", 14);
-                Font font = new Font("Courier", 11);
-                Font fuente = new Font("Courier", 8);
-                int y = 20;
-                int ancho = 270;
-
-                StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
-                StringFormat formato2 = new StringFormat(formato1);
-
-                formato1.LineAlignment = StringAlignment.Near;
-                formato1.Alignment = StringAlignment.Center;
-                formato2.LineAlignment = StringAlignment.Center;
-                formato2.Alignment = StringAlignment.Far;
-
-
-                //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
-
-                string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
-
-                //header
-                e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("————Punto de Venta————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Cotización", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("————Productos—————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-
-
-
-                //----fin del header
-                double montoTotal = 0;
-                foreach (DataGridViewRow row in dgvGrid1.Rows)
-                {
-
-                    TicketDatos dato = new TicketDatos();
-                    //dato.Codigo = row.Cells["codigo"].Value.ToString();
-                    dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
-                    dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
-                    dato.Precio = row.Cells["PRECIO1"].Value.ToString();
-                    //obtener el total de la boleta
-
-                    double precioN = Convert.ToDouble(dato.Precio.ToString());
-                    double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
-                    montoTotal = montoTotal + (precioN * cantidadN);
-
-                    e.Graphics.DrawString(dato.Cantidad.ToString()
-                    + "  |   " + dato.Nombre.ToString().Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length), fuente, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                    e.Graphics.DrawString("|$" + dato.Precio.ToString(), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                    
-
-                }
-
-
-                e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("—————————————————————", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(montoTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("GRACIAS POR SU VISITA", font, Brushes.Black, new RectangleF(25, y += 20, ancho, 20));
-                e.Graphics.DrawString("HASTA PRONTO", font, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
-
-            }*/
-
         }
 
-
-    } 
+        private void stocktiendas() 
+        {
+            Stock abrirstock = new Stock();
+            abrirstock.ShowDialog();
+            txtProducto.Text = "";
+            txtProducto.Focus();
+        }
+    }
 }

@@ -321,7 +321,7 @@ namespace ptoVenta
             txtDebito.Text = "0";
             txtCredito.Text = "0";
             txtTransferencia.Text = "0";
-            iconButton1.Focus();
+            cButton1.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -330,7 +330,7 @@ namespace ptoVenta
             txtEfectivo.Text = "0";
             txtCredito.Text = "0";
             txtTransferencia.Text = "0";
-            iconButton1.Focus();
+            cButton1.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -339,7 +339,7 @@ namespace ptoVenta
             txtEfectivo.Text = "0";
             txtDebito.Text = "0";
             txtTransferencia.Text = "0";
-            iconButton1.Focus();
+            cButton1.Focus();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -348,7 +348,7 @@ namespace ptoVenta
             txtEfectivo.Text = "0";
             txtDebito.Text = "0";
             txtCredito.Text = "0";
-            iconButton1.Focus();
+            cButton1.Focus();
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {

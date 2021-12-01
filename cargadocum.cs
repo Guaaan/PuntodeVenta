@@ -12,7 +12,6 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
 
-
 namespace ptoVenta
 {
 
@@ -65,8 +64,6 @@ namespace ptoVenta
 
         }
 
-        // metodo para cada boleta
-        
         private void cargaboletas()
         {
             comsql1 = "SELECT F.NUMERO,C.NOMBRE,M.FECHA,M.CODIGO,M.DESCRIP,M.CANTIDAD,M.MONTOFINAL FROM CAJAS C RIGHT JOIN FACTURAS F ON C.CODIGO = F.CAJAPERTUR ";
@@ -93,17 +90,8 @@ namespace ptoVenta
 
         private void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //declaro mi clase y la mando a imprimir
-            clsImprimir printmir;
-            printmir = new clsImprimir();
             if (dgvGrid1.Rows.Count > 0)
             {
-                if (dgvGrid1.CurrentCell.ColumnIndex == 7)
-                {
-                    int indice = dgvGrid1.CurrentRow.Index;
-                    string ddoc = Convert.ToString(dgvGrid1.Rows[indice].Cells[0].Value).Trim();
-                    printmir.CargarImprimir(dgvGrid1, printDocumento, ddoc, "Documento");
-                }
                 if (dgvGrid1.CurrentCell.ColumnIndex == 8)
                 {
                     int indice = dgvGrid1.CurrentRow.Index;

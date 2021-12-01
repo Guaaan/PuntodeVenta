@@ -29,11 +29,13 @@ namespace ptoVenta
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ticketsEmitidos));
             this.dgvGrid1 = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,14 +53,16 @@ namespace ptoVenta
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.cButton40 = new CButtonLib.CButton();
+            this.dateTimePicker1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dateTimePicker2 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.printDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvGrid1
@@ -90,7 +94,7 @@ namespace ptoVenta
             this.Pago,
             this.Imp,
             this.Devolver});
-            this.dgvGrid1.Location = new System.Drawing.Point(10, 113);
+            this.dgvGrid1.Location = new System.Drawing.Point(10, 93);
             this.dgvGrid1.Margin = new System.Windows.Forms.Padding(2);
             this.dgvGrid1.Name = "dgvGrid1";
             this.dgvGrid1.ReadOnly = true;
@@ -98,7 +102,7 @@ namespace ptoVenta
             this.dgvGrid1.RowHeadersWidth = 10;
             this.dgvGrid1.RowTemplate.Height = 25;
             this.dgvGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvGrid1.Size = new System.Drawing.Size(1107, 485);
+            this.dgvGrid1.Size = new System.Drawing.Size(1107, 449);
             this.dgvGrid1.TabIndex = 19;
             this.dgvGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid1_CellClick);
             // 
@@ -237,8 +241,9 @@ namespace ptoVenta
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(488, 70);
+            this.label3.Location = new System.Drawing.Point(853, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 19);
             this.label3.TabIndex = 167;
@@ -247,7 +252,7 @@ namespace ptoVenta
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(572, 67);
+            this.textBox1.Location = new System.Drawing.Point(937, 63);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(77, 25);
@@ -255,88 +260,210 @@ namespace ptoVenta
             this.textBox1.TabStop = false;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            this.btnSalir.IconColor = System.Drawing.Color.White;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 40;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(977, 56);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSalir.Size = new System.Drawing.Size(139, 49);
-            this.btnSalir.TabIndex = 163;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Text = "Regresar";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(88, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(97, 20);
-            this.dateTimePicker1.TabIndex = 169;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 69);
+            this.label1.Location = new System.Drawing.Point(262, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 170;
             this.label1.Text = "Desde:";
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(258, 69);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(97, 20);
-            this.dateTimePicker2.TabIndex = 171;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(201, 69);
+            this.label2.Location = new System.Drawing.Point(503, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 172;
             this.label2.Text = "Hasta:";
             // 
-            // printDocumento
+            // cButton40
             // 
-            this.printDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumento_PrintPage);
+            this.cButton40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cButton40.BackColor = System.Drawing.Color.Transparent;
+            this.cButton40.BorderColor = System.Drawing.Color.Transparent;
+            cBlendItems1.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))))};
+            cBlendItems1.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton40.ColorFillBlend = cBlendItems1;
+            this.cButton40.Corners.All = 8;
+            this.cButton40.Corners.LowerLeft = 8;
+            this.cButton40.Corners.LowerRight = 8;
+            this.cButton40.Corners.UpperLeft = 8;
+            this.cButton40.Corners.UpperRight = 8;
+            this.cButton40.DesignerSelected = false;
+            this.cButton40.DimFactorClick = 0;
+            this.cButton40.DimFactorHover = -25;
+            this.cButton40.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton40.Image = ((System.Drawing.Image)(resources.GetObject("cButton40.Image")));
+            this.cButton40.ImageIndex = 0;
+            this.cButton40.ImageSize = new System.Drawing.Size(35, 30);
+            this.cButton40.Location = new System.Drawing.Point(968, 549);
+            this.cButton40.Name = "cButton40";
+            this.cButton40.Size = new System.Drawing.Size(148, 48);
+            this.cButton40.TabIndex = 308;
+            this.cButton40.TabStop = false;
+            this.cButton40.Text = "Regresar";
+            this.cButton40.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton40.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.AutoSelectDate = true;
+            // 
+            // 
+            // 
+            this.dateTimePicker1.BackgroundStyle.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.dateTimePicker1.BackgroundStyle.BackColor2 = System.Drawing.Color.Blue;
+            this.dateTimePicker1.BackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dateTimePicker1.BackgroundStyle.CornerDiameter = 12;
+            this.dateTimePicker1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.dateTimePicker1.BackgroundStyle.HideMnemonic = true;
+            this.dateTimePicker1.BackgroundStyle.PaddingBottom = 4;
+            this.dateTimePicker1.BackgroundStyle.PaddingRight = 10;
+            this.dateTimePicker1.BackgroundStyle.PaddingTop = 2;
+            this.dateTimePicker1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dateTimePicker1.ButtonDropDown.Visible = true;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.ForeColor = System.Drawing.Color.White;
+            this.dateTimePicker1.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.dateTimePicker1.IsPopupCalendarOpen = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(319, 59);
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dateTimePicker1.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker1.MonthCalendar.DisplayMonth = new System.DateTime(2021, 10, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateTimePicker1.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dateTimePicker1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker1.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimePicker1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(141, 29);
+            this.dateTimePicker1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dateTimePicker1.TabIndex = 310;
+            this.dateTimePicker1.TabStop = false;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 11, 6, 15, 41, 3, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.AutoSelectDate = true;
+            // 
+            // 
+            // 
+            this.dateTimePicker2.BackgroundStyle.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.dateTimePicker2.BackgroundStyle.BackColor2 = System.Drawing.Color.Blue;
+            this.dateTimePicker2.BackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker2.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dateTimePicker2.BackgroundStyle.CornerDiameter = 12;
+            this.dateTimePicker2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.dateTimePicker2.BackgroundStyle.HideMnemonic = true;
+            this.dateTimePicker2.BackgroundStyle.PaddingBottom = 4;
+            this.dateTimePicker2.BackgroundStyle.PaddingRight = 10;
+            this.dateTimePicker2.BackgroundStyle.PaddingTop = 2;
+            this.dateTimePicker2.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dateTimePicker2.ButtonDropDown.Visible = true;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.ForeColor = System.Drawing.Color.White;
+            this.dateTimePicker2.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.dateTimePicker2.IsPopupCalendarOpen = false;
+            this.dateTimePicker2.Location = new System.Drawing.Point(557, 59);
+            // 
+            // 
+            // 
+            this.dateTimePicker2.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimePicker2.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker2.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dateTimePicker2.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dateTimePicker2.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker2.MonthCalendar.DisplayMonth = new System.DateTime(2021, 10, 1, 0, 0, 0, 0);
+            this.dateTimePicker2.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateTimePicker2.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dateTimePicker2.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimePicker2.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dateTimePicker2.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker2.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dateTimePicker2.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker2.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimePicker2.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ShowUpDown = true;
+            this.dateTimePicker2.Size = new System.Drawing.Size(141, 29);
+            this.dateTimePicker2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dateTimePicker2.TabIndex = 311;
+            this.dateTimePicker2.TabStop = false;
+            this.dateTimePicker2.Value = new System.DateTime(2021, 11, 6, 15, 41, 15, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // ticketsEmitidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 609);
             this.ControlBox = false;
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cButton40);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvGrid1);
             this.Controls.Add(this.panel15);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -347,6 +474,8 @@ namespace ptoVenta
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,7 +484,6 @@ namespace ptoVenta
         #endregion
         private System.Windows.Forms.DataGridView dgvGrid1;
         private System.Windows.Forms.Panel panel15;
-        private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
@@ -370,10 +498,11 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago;
         private System.Windows.Forms.DataGridViewButtonColumn Imp;
         private System.Windows.Forms.DataGridViewButtonColumn Devolver;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
+        private CButtonLib.CButton cButton40;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimePicker1;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimePicker2;
         private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }

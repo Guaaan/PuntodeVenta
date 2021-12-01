@@ -28,6 +28,7 @@ namespace ptoVenta
         public cierredecaja()
         {
             InitializeComponent();
+            dateTimePicker1.Value = DateTime.Today;
         }
 
         private void cierredecaja_Load(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace ptoVenta
         {
             fec1 = dateTimePicker1.Value;
             totalventas();
+            txtEfectivo.Focus();
         }
 
         private void totalventas()
@@ -47,7 +49,7 @@ namespace ptoVenta
             fec2 = fec1.AddDays(+1);
             string f1 = fec1.ToString("yyyyMMdd");
             string f2 = fec2.ToString("yyyyMMdd");
-            comsql1 = "SELECT F.NOMBRE CONCEPTO,F.NUMERO,F.IMPSERIAL,F.IMPUESTO,F.MONTO,F.TIPO,F.ABONO,R.TIPO,R.RECIBO,F.FECHA,R.CAJA,R.EFECTIVO,R.CHEQUE,R.DEBITO,R.CREDITO,R.OTROS,R.FACTURA,R.VUELTO,F.REGISTRO ";
+            comsql1 = "SELECT F.NOMBRE CONCEPTO,F.NUMERO,F.IMPUESTO,F.MONTO,F.TIPO,F.ABONO,R.TIPO,R.RECIBO,F.FECHA,R.CAJA,R.EFECTIVO,R.DEBITO,R.CREDITO,R.TRANSFERENCIA,R.OTROS,R.FACTURA,R.VUELTO,F.REGISTRO ";
             comsql2 = comsql1 + " FROM FACTURAS F LEFT JOIN RECIBOS R ON R.NUMERO = F.NUMERO AND F.ABONO = F.MONTO + F.IMPUESTO WHERE F.REGISTRO = 0 AND F.CAJAPERTUR = '"+caja+"' AND F.FECHA>='"+f1+"' AND F.FECHA<'"+f2+"'";
             com = new SqlCommand(comsql2, Form1.cn); 
             com.ExecuteNonQuery();
@@ -65,6 +67,11 @@ namespace ptoVenta
             }
             dr.Close();
             textBox1.Text = fila.ToString("N0");
+        }
+
+        private void cierredecaja_VisibleChanged(object sender, EventArgs e)
+        {
+            txtEfectivo.Focus();
         }
 
         private void txtEfectivo_Enter(object sender, EventArgs e)
@@ -117,8 +124,8 @@ namespace ptoVenta
                 DateTime fecd = DateTime.Now;
                 DateTime fech = DateTime.Now;
                 double me = Convert.ToDouble(txtEfectivo.Text);
-                double md = Convert.ToDouble(txtDebito.Text);
-                double mc = Convert.ToDouble(txtCredito.Text);
+                double md = Convert.ToDouble(txtTarjetas.Text);
+                double mc = Convert.ToDouble(txtOtros.Text);
                 double ta = (me + md + mc);
                 double di = ta - mont;
 
@@ -168,8 +175,8 @@ namespace ptoVenta
                 com.Parameters.AddWithValue("@mond", Convert.ToDouble(di));
                 com.Parameters.AddWithValue("@mon", Convert.ToDouble(mont));
                 com.Parameters.AddWithValue("@mon7", Convert.ToDouble(txtEfectivo.Text));
-                com.Parameters.AddWithValue("@mon9", Convert.ToDouble(txtDebito.Text));
-                com.Parameters.AddWithValue("@mon8", Convert.ToDouble(txtCredito.Text));
+                com.Parameters.AddWithValue("@mon9", Convert.ToDouble(txtTarjetas.Text));
+                com.Parameters.AddWithValue("@mon8", Convert.ToDouble(txtOtros.Text));
                 com.Parameters.AddWithValue("@audi", cajero);
                 com.Parameters.AddWithValue("@fech", DateTime.Now);
                 com.Parameters.AddWithValue("@cerr", "CERRADO");

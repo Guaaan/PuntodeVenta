@@ -12,17 +12,17 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
 using Microsoft.Reporting.WinForms;
-using System.Drawing.Printing;
 
 namespace ptoVenta
 {
+
     public partial class ticketsEmitidos : Form
     {
         SqlCommand com;
         SqlDataReader dr;
 
-        private DateTime fec1 = DateTime.Now;
-        private DateTime fec2 = DateTime.Now;
+        private DateTime fec1 = DateTime.Today;
+        private DateTime fec2 = DateTime.Today;
         private string comsql1, comsql2;
         public static string vnum;
 
@@ -35,6 +35,8 @@ namespace ptoVenta
 
         private void ticketsEmitidos_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = DateTime.Today;
+            dateTimePicker2.Value = DateTime.Today;
             int anc = dgvGrid1.Width;
             int ancp = 0;
             for (int a = 0; a < 10; a++)
@@ -43,7 +45,6 @@ namespace ptoVenta
             }
             anc = (anc - ancp) - 100;
             dgvGrid1.Columns[5].Width = dgvGrid1.Columns[5].Width + anc;
-
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
@@ -85,14 +86,16 @@ namespace ptoVenta
             fec1 = dateTimePicker1.Value;
             fec2 = dateTimePicker2.Value;
             cargaboletas();
+            dgvGrid1.Focus();
         }
 
         private void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             clsImprimir printmir;
             printmir = new clsImprimir();
+
             if (dgvGrid1.Rows.Count > 0)
-            { 
+            {
                 if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
@@ -106,7 +109,6 @@ namespace ptoVenta
                     printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Devolución");
 
                 }
-
                 if (dgvGrid1.CurrentCell.ColumnIndex == 10)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
@@ -114,19 +116,11 @@ namespace ptoVenta
                     abrirFormClass.ShowDialog();
                 }
             }
-           
         }
-        
-        public static StringBuilder line = new StringBuilder();
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void printDocumento_PrintPage(object sender, PrintPageEventArgs e)
-        {
-
         }
 
         private void ticketsEmitidos_KeyPress(object sender, KeyPressEventArgs e)

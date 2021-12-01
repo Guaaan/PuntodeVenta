@@ -11,7 +11,6 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Net;
 using Microsoft.Reporting.WinForms;
-using ptoVenta;
 
 namespace Principal
 {

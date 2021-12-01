@@ -69,6 +69,8 @@ namespace ptoVenta
             CButtonLib.cBlendItems cBlendItems36 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems37 = new CButtonLib.cBlendItems();
             CButtonLib.cBlendItems cBlendItems38 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems39 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems40 = new CButtonLib.cBlendItems();
             this.gunaGradientButton48 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton61 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton65 = new Guna.UI.WinForms.GunaGradientButton();
@@ -121,6 +123,10 @@ namespace ptoVenta
             this.cButton36 = new CButtonLib.CButton();
             this.cButton38 = new CButtonLib.CButton();
             this.cButton37 = new CButtonLib.CButton();
+            this.cButton39 = new CButtonLib.CButton();
+            this.cButton40 = new CButtonLib.CButton();
+            this.dateTimePicker1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaGradientButton48
@@ -1726,12 +1732,142 @@ namespace ptoVenta
             this.cButton37.TextShadow = System.Drawing.Color.Gray;
             this.cButton37.TextShadowShow = false;
             // 
+            // cButton39
+            // 
+            this.cButton39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cButton39.BackColor = System.Drawing.Color.Transparent;
+            this.cButton39.BorderColor = System.Drawing.Color.Transparent;
+            cBlendItems39.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(139)))), ((int)(((byte)(68)))))};
+            cBlendItems39.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton39.ColorFillBlend = cBlendItems39;
+            this.cButton39.Corners.All = 8;
+            this.cButton39.Corners.LowerLeft = 8;
+            this.cButton39.Corners.LowerRight = 8;
+            this.cButton39.Corners.UpperLeft = 8;
+            this.cButton39.Corners.UpperRight = 8;
+            this.cButton39.DesignerSelected = false;
+            this.cButton39.DimFactorClick = 0;
+            this.cButton39.DimFactorHover = -25;
+            this.cButton39.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton39.Image = ((System.Drawing.Image)(resources.GetObject("cButton39.Image")));
+            this.cButton39.ImageIndex = 0;
+            this.cButton39.ImageSize = new System.Drawing.Size(35, 30);
+            this.cButton39.Location = new System.Drawing.Point(662, 112);
+            this.cButton39.Name = "cButton39";
+            this.cButton39.Size = new System.Drawing.Size(148, 48);
+            this.cButton39.TabIndex = 308;
+            this.cButton39.TabStop = false;
+            this.cButton39.Text = "Aceptar";
+            this.cButton39.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // cButton40
+            // 
+            this.cButton40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cButton40.BackColor = System.Drawing.Color.Transparent;
+            this.cButton40.BorderColor = System.Drawing.Color.Transparent;
+            cBlendItems40.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))))};
+            cBlendItems40.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton40.ColorFillBlend = cBlendItems40;
+            this.cButton40.Corners.All = 8;
+            this.cButton40.Corners.LowerLeft = 8;
+            this.cButton40.Corners.LowerRight = 8;
+            this.cButton40.Corners.UpperLeft = 8;
+            this.cButton40.Corners.UpperRight = 8;
+            this.cButton40.DesignerSelected = false;
+            this.cButton40.DimFactorClick = 0;
+            this.cButton40.DimFactorHover = -25;
+            this.cButton40.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton40.Image = ((System.Drawing.Image)(resources.GetObject("cButton40.Image")));
+            this.cButton40.ImageIndex = 0;
+            this.cButton40.ImageSize = new System.Drawing.Size(35, 30);
+            this.cButton40.Location = new System.Drawing.Point(662, 58);
+            this.cButton40.Name = "cButton40";
+            this.cButton40.Size = new System.Drawing.Size(148, 48);
+            this.cButton40.TabIndex = 307;
+            this.cButton40.TabStop = false;
+            this.cButton40.Text = "Regresar";
+            this.cButton40.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.AutoSelectDate = true;
+            // 
+            // 
+            // 
+            this.dateTimePicker1.BackgroundStyle.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.dateTimePicker1.BackgroundStyle.BackColor2 = System.Drawing.Color.Blue;
+            this.dateTimePicker1.BackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dateTimePicker1.BackgroundStyle.CornerDiameter = 12;
+            this.dateTimePicker1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.dateTimePicker1.BackgroundStyle.HideMnemonic = true;
+            this.dateTimePicker1.BackgroundStyle.PaddingBottom = 4;
+            this.dateTimePicker1.BackgroundStyle.PaddingRight = 10;
+            this.dateTimePicker1.BackgroundStyle.PaddingTop = 2;
+            this.dateTimePicker1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dateTimePicker1.ButtonDropDown.Visible = true;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.ForeColor = System.Drawing.Color.White;
+            this.dateTimePicker1.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.dateTimePicker1.IsPopupCalendarOpen = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(662, 203);
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dateTimePicker1.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dateTimePicker1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker1.MonthCalendar.DisplayMonth = new System.DateTime(2021, 10, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateTimePicker1.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dateTimePicker1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dateTimePicker1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimePicker1.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimePicker1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(141, 29);
+            this.dateTimePicker1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dateTimePicker1.TabIndex = 309;
+            this.dateTimePicker1.TabStop = false;
+            // 
             // nuevosBotones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1568, 670);
+            this.ClientSize = new System.Drawing.Size(1370, 670);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cButton39);
+            this.Controls.Add(this.cButton40);
             this.Controls.Add(this.cButton37);
             this.Controls.Add(this.cButton38);
             this.Controls.Add(this.cButton25);
@@ -1786,6 +1922,7 @@ namespace ptoVenta
             this.Controls.Add(this.gunaGradientButton2);
             this.Name = "nuevosBotones";
             this.Text = "nuevosBotones";
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1844,5 +1981,8 @@ namespace ptoVenta
         private CButtonLib.CButton cButton36;
         private CButtonLib.CButton cButton38;
         private CButtonLib.CButton cButton37;
+        private CButtonLib.CButton cButton39;
+        private CButtonLib.CButton cButton40;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimePicker1;
     }
 }

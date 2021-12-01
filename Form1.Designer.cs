@@ -69,6 +69,7 @@ namespace ptoVenta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems14 = new CButtonLib.cBlendItems();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -87,6 +88,7 @@ namespace ptoVenta
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cButton9 = new CButtonLib.CButton();
             this.cButton10 = new CButtonLib.CButton();
             this.cButton11 = new CButtonLib.CButton();
@@ -138,9 +140,6 @@ namespace ptoVenta
             this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OFERTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FORMAFARMACEUTICA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LABORATORIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COLORRECETA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGrid1 = new System.Windows.Forms.DataGridView();
             this.LINEA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOTO1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -152,21 +151,16 @@ namespace ptoVenta
             this.OFERTA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOTAL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DELE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.FORMAFARMACEUTICA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LABORATORIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COLORRECETA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRINCIPIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.cButton8 = new CButtonLib.CButton();
-            this.gunaGradientButton63 = new Guna.UI.WinForms.GunaGradientButton();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new CButtonLib.CButton();
             this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -174,7 +168,6 @@ namespace ptoVenta
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -310,7 +303,7 @@ namespace ptoVenta
             // 
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(183)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(177)))), ((int)(((byte)(230)))));
             this.panel15.Controls.Add(this.label13);
             this.panel15.Controls.Add(this.label12);
             this.panel15.Controls.Add(this.textBox1);
@@ -403,6 +396,20 @@ namespace ptoVenta
             this.dataGridViewImageColumn5.ReadOnly = true;
             this.dataGridViewImageColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn5.Width = 90;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-22, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(380, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 96;
+            this.pictureBox1.TabStop = false;
             // 
             // cButton9
             // 
@@ -507,6 +514,7 @@ namespace ptoVenta
             this.cButton11.Text = "Ventas";
             this.cButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton11.ClickButtonArea += new CButtonLib.CButton.ClickButtonAreaEventHandler(this.cButton11_ClickButtonArea);
             this.cButton11.Click += new System.EventHandler(this.btnTicketsEmitidos_Click);
             // 
             // cButton12
@@ -759,7 +767,7 @@ namespace ptoVenta
             this.cButton1.ImageIndex = 0;
             this.cButton1.ImageSize = new System.Drawing.Size(28, 30);
             this.cButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cButton1.Location = new System.Drawing.Point(482, 181);
+            this.cButton1.Location = new System.Drawing.Point(594, 181);
             this.cButton1.Name = "cButton1";
             this.cButton1.Size = new System.Drawing.Size(111, 38);
             this.cButton1.TabIndex = 203;
@@ -998,7 +1006,7 @@ namespace ptoVenta
             this.cButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton7.ImageIndex = 0;
             this.cButton7.ImageSize = new System.Drawing.Size(35, 35);
-            this.cButton7.Location = new System.Drawing.Point(594, 181);
+            this.cButton7.Location = new System.Drawing.Point(482, 181);
             this.cButton7.Name = "cButton7";
             this.cButton7.Size = new System.Drawing.Size(111, 38);
             this.cButton7.TabIndex = 208;
@@ -1218,7 +1226,7 @@ namespace ptoVenta
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(117)))), ((int)(((byte)(83)))));
+            this.panel3.BackColor = System.Drawing.Color.DarkGreen;
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label15);
@@ -1297,10 +1305,7 @@ namespace ptoVenta
             this.PRINCIPIO,
             this.STOCK,
             this.PRECIO,
-            this.OFERTA,
-            this.FORMAFARMACEUTICA,
-            this.LABORATORIO,
-            this.COLORRECETA});
+            this.OFERTA});
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1332,7 +1337,6 @@ namespace ptoVenta
             this.dgvLista.Size = new System.Drawing.Size(783, 230);
             this.dgvLista.TabIndex = 196;
             this.dgvLista.TabStop = false;
-            this.dgvLista.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLista_CellMouseClick);
             this.dgvLista.DoubleClick += new System.EventHandler(this.dgvLista_DoubleClick);
             this.dgvLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLista_KeyPress);
             // 
@@ -1416,27 +1420,6 @@ namespace ptoVenta
             this.OFERTA.Name = "OFERTA";
             this.OFERTA.ReadOnly = true;
             // 
-            // FORMAFARMACEUTICA
-            // 
-            this.FORMAFARMACEUTICA.HeaderText = "Forma Farmacéutica";
-            this.FORMAFARMACEUTICA.Name = "FORMAFARMACEUTICA";
-            this.FORMAFARMACEUTICA.ReadOnly = true;
-            this.FORMAFARMACEUTICA.Visible = false;
-            // 
-            // LABORATORIO
-            // 
-            this.LABORATORIO.HeaderText = "Laboratorio";
-            this.LABORATORIO.Name = "LABORATORIO";
-            this.LABORATORIO.ReadOnly = true;
-            this.LABORATORIO.Visible = false;
-            // 
-            // COLORRECETA
-            // 
-            this.COLORRECETA.HeaderText = "Color Receta";
-            this.COLORRECETA.Name = "COLORRECETA";
-            this.COLORRECETA.ReadOnly = true;
-            this.COLORRECETA.Visible = false;
-            // 
             // dgvGrid1
             // 
             this.dgvGrid1.AllowUserToAddRows = false;
@@ -1464,11 +1447,7 @@ namespace ptoVenta
             this.PRECIO1,
             this.OFERTA1,
             this.TOTAL1,
-            this.DELE,
-            this.FORMAFARMACEUTICA1,
-            this.LABORATORIO1,
-            this.COLORRECETA1,
-            this.PRINCIPIO1});
+            this.DELE});
             dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1499,7 +1478,6 @@ namespace ptoVenta
             this.dgvGrid1.TabIndex = 201;
             this.dgvGrid1.TabStop = false;
             this.dgvGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid1_CellClick);
-            this.dgvGrid1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvGrid1_CellMouseClick);
             this.dgvGrid1.CurrentCellChanged += new System.EventHandler(this.dgvGrid1_CurrentCellChanged);
             this.dgvGrid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvGrid1_EditingControlShowing);
             // 
@@ -1613,7 +1591,7 @@ namespace ptoVenta
             // 
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.NullValue = null;
+            dataGridViewCellStyle23.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle23.NullValue")));
             this.DELE.DefaultCellStyle = dataGridViewCellStyle23;
             this.DELE.HeaderText = "";
             this.DELE.Image = ((System.Drawing.Image)(resources.GetObject("DELE.Image")));
@@ -1623,30 +1601,6 @@ namespace ptoVenta
             this.DELE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.DELE.ToolTipText = "Eliminar Producto de Boleta";
             this.DELE.Width = 30;
-            // 
-            // FORMAFARMACEUTICA1
-            // 
-            this.FORMAFARMACEUTICA1.HeaderText = "FORMA FARMACEUTICA ";
-            this.FORMAFARMACEUTICA1.Name = "FORMAFARMACEUTICA1";
-            this.FORMAFARMACEUTICA1.Visible = false;
-            // 
-            // LABORATORIO1
-            // 
-            this.LABORATORIO1.HeaderText = "LABORATORIO";
-            this.LABORATORIO1.Name = "LABORATORIO1";
-            this.LABORATORIO1.Visible = false;
-            // 
-            // COLORRECETA1
-            // 
-            this.COLORRECETA1.HeaderText = "COLORRECETA";
-            this.COLORRECETA1.Name = "COLORRECETA1";
-            this.COLORRECETA1.Visible = false;
-            // 
-            // PRINCIPIO1
-            // 
-            this.PRINCIPIO1.HeaderText = "PRINCIPIOACTIVO";
-            this.PRINCIPIO1.Name = "PRINCIPIO1";
-            this.PRINCIPIO1.Visible = false;
             // 
             // panel1
             // 
@@ -1691,7 +1645,7 @@ namespace ptoVenta
             this.cButton8.Corners.LowerRight = 8;
             this.cButton8.Corners.UpperLeft = 8;
             this.cButton8.Corners.UpperRight = 8;
-            this.cButton8.DesignerSelected = false;
+            this.cButton8.DesignerSelected = true;
             this.cButton8.DimFactorClick = 0;
             this.cButton8.DimFactorHover = -25;
             this.cButton8.Image = ((System.Drawing.Image)(resources.GetObject("cButton8.Image")));
@@ -1708,42 +1662,9 @@ namespace ptoVenta
             this.cButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton8.ClickButtonArea += new CButtonLib.CButton.ClickButtonAreaEventHandler(this.cButton8_ClickButtonArea);
             // 
-            // gunaGradientButton63
-            // 
-            this.gunaGradientButton63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientButton63.Animated = true;
-            this.gunaGradientButton63.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton63.AnimationSpeed = 0.03F;
-            this.gunaGradientButton63.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton63.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton63.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton63.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton63.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton63.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton63.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton63.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton63.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientButton63.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton63.Image")));
-            this.gunaGradientButton63.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton63.ImageSize = new System.Drawing.Size(25, 20);
-            this.gunaGradientButton63.Location = new System.Drawing.Point(1157, 580);
-            this.gunaGradientButton63.Name = "gunaGradientButton63";
-            this.gunaGradientButton63.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.gunaGradientButton63.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.gunaGradientButton63.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton63.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton63.OnHoverImage = null;
-            this.gunaGradientButton63.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton63.Radius = 8;
-            this.gunaGradientButton63.Size = new System.Drawing.Size(110, 37);
-            this.gunaGradientButton63.TabIndex = 212;
-            this.gunaGradientButton63.Text = "Salir";
-            this.gunaGradientButton63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton63.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(153)))), ((int)(((byte)(87)))));
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(195)))), ((int)(((byte)(93)))));
             this.panel18.Controls.Add(this.label16);
             this.panel18.Controls.Add(this.label14);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1779,30 +1700,38 @@ namespace ptoVenta
             this.label14.Text = "Caja";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox2
+            // btnSalir
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(363, 95);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 214;
-            this.pictureBox2.TabStop = false;
-            // 
-            // imprimirDocument
-            // 
-            this.imprimirDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimirDocument_PrintPage);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(396, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 215;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BorderColor = System.Drawing.Color.Transparent;
+            cBlendItems14.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
+            cBlendItems14.iPoint = new float[] {
+        0F,
+        1F};
+            this.btnSalir.ColorFillBlend = cBlendItems14;
+            this.btnSalir.Corners.All = 8;
+            this.btnSalir.Corners.LowerLeft = 8;
+            this.btnSalir.Corners.LowerRight = 8;
+            this.btnSalir.Corners.UpperLeft = 8;
+            this.btnSalir.Corners.UpperRight = 8;
+            this.btnSalir.DesignerSelected = false;
+            this.btnSalir.DimFactorClick = 0;
+            this.btnSalir.DimFactorHover = -25;
+            this.btnSalir.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageIndex = 0;
+            this.btnSalir.ImageSize = new System.Drawing.Size(35, 30);
+            this.btnSalir.Location = new System.Drawing.Point(1134, 581);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(127, 40);
+            this.btnSalir.TabIndex = 214;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Form1
             // 
@@ -1815,10 +1744,8 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1275, 661);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel18);
-            this.Controls.Add(this.gunaGradientButton63);
             this.Controls.Add(this.cButton8);
             this.Controls.Add(this.cButton3);
             this.Controls.Add(this.cButton6);
@@ -1839,6 +1766,7 @@ namespace ptoVenta
             this.Controls.Add(this.cButton9);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel15);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1853,6 +1781,7 @@ namespace ptoVenta
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1865,7 +1794,6 @@ namespace ptoVenta
             this.panel1.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1881,6 +1809,7 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private System.Windows.Forms.TextBox textBox1;
@@ -1932,16 +1861,6 @@ namespace ptoVenta
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DataGridView dgvLista;
-        public System.Windows.Forms.DataGridView dgvGrid1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label17;
-        private CButtonLib.CButton cButton8;
-        private Guna.UI.WinForms.GunaGradientButton btnBuscar1;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton63;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn LINEA;
         private System.Windows.Forms.DataGridViewImageColumn FOTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
@@ -1950,9 +1869,7 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn OFERTA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FORMAFARMACEUTICA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LABORATORIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA;
+        public System.Windows.Forms.DataGridView dgvGrid1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LINEA1;
         private System.Windows.Forms.DataGridViewImageColumn FOTO1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO1;
@@ -1963,12 +1880,15 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn OFERTA1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL1;
         private System.Windows.Forms.DataGridViewImageColumn DELE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FORMAFARMACEUTICA1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LABORATORIO1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRINCIPIO1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label17;
+        private CButtonLib.CButton cButton8;
+        private Guna.UI.WinForms.GunaGradientButton btnBuscar1;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private CButtonLib.CButton btnSalir;
         private System.Drawing.Printing.PrintDocument imprimirDocument;
-        private System.Windows.Forms.Button button1;
     }
 }
 
