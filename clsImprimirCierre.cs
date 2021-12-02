@@ -23,16 +23,8 @@ namespace ptoVenta
         public static SqlConnection cn;
         SqlCommand com;
         SqlDataReader Dr;
-        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument)
+        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument, int efectivoIngresado)
         {
-            var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
-            var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
-            string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 +"', 102) AND FECHA < CONVERT(DATETIME, '"+ fechaE2 +"', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
-            cn = Form1.cn;
-            com = new SqlCommand(comsql, cn);
-            com.ExecuteNonQuery();
-            Dr = com.ExecuteReader();
-                
             //List<Egreso> egresos = new List<Egreso>();
 
 
@@ -43,6 +35,15 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
+                var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
+                var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
+                string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 +"', 102) AND FECHA < CONVERT(DATETIME, '"+ fechaE2 +"', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+                string comsql2 = "SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM SAES_ADMINISTRATIVOFD.dbo.ARQUEO where FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC";
+                cn = Form1.cn;
+                com = new SqlCommand(comsql, cn);
+                com.ExecuteNonQuery();
+                Dr = com.ExecuteReader();
+
                 //variables
                 Font titulo = new Font("Arial", 16, FontStyle.Bold);
                 Font header = new Font("Courier", 14);
@@ -62,16 +63,16 @@ namespace ptoVenta
                 var Date = dateAndTime.ToLongDateString();
                 string hora = DateTime.Now.ToString("hh:mm:ss");
 
-                int de20Mil = 1;
-                int de10Mil = 1;
-                int de5Mil = 1;
-                int de2Mil = 1;
-                int deMil = 1;
-                int de500 = 1;
-                int de100 = 1;
-                int de50 = 1;
-                int de10 = 1;
-                int totalBilletes = de20Mil + de10Mil + de5Mil + de2Mil + deMil + de500 + de100 + de50 + de10;
+                //int de20Mil = 1;
+                //int de10Mil = 1;
+                //int de5Mil = 1;
+                //int de2Mil = 1;
+                //int deMil = 1;
+                //int de500 = 1;
+                //int de100 = 1;
+                //int de50 = 1;
+                //int de10 = 1;
+                //int totalBilletes = de20Mil + de10Mil + de5Mil + de2Mil + deMil + de500 + de100 + de50 + de10;
 
                 int aperturaCaja = 50000;
                 int ventasEfectivo = 50000;
@@ -101,7 +102,10 @@ namespace ptoVenta
                 int arqueodeCaja = 32;
                 int DiferenciaFinal = efectivoFinal - arqueodeCaja;
 
-                
+                Dr.Read();
+                decimal monto = Dr.GetDecimal(2);
+                Dr.Close();
+
 
                 StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
                 StringFormat formato2 = new StringFormat(formato1);
@@ -112,6 +116,7 @@ namespace ptoVenta
                 formato2.Alignment = StringAlignment.Far;
                 //header
                 e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(monto.ToString(), titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString(NombLoc, linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
@@ -142,7 +147,7 @@ namespace ptoVenta
                 //-------------e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 //fin de los billetes
                 e.Graphics.DrawString("Efectivo Ingresado: ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(totalBilletes.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(efectivoIngresado.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //----------------------------------//
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 //e.Graphics.DrawString("Transferencias", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);

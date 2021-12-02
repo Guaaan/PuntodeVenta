@@ -1054,6 +1054,7 @@ namespace ptoVenta
         {
             ClsImprimirCierre cierrP;
             cierrP = new ClsImprimirCierre();
+            cierrP.imprimirCierre(imprimirDocument, 420);
             
         }
 
