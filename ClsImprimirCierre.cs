@@ -64,6 +64,16 @@ namespace ptoVenta
                 var dateAndTime = DateTime.Now;
                 var Date = dateAndTime.ToLongDateString();
                 string hora = DateTime.Now.ToString("hh:mm:ss");
+                
+                
+                Dr.Read();
+                decimal totalVentas = Dr.GetDecimal(2);
+                decimal diferencia = Dr.GetDecimal(9);
+                decimal arqueoDebito = Dr.GetDecimal(7);
+                decimal arqueoCredito = Dr.GetDecimal(6);
+                decimal arqueoTransf = Dr.GetDecimal(8);
+                decimal arqueo = Dr.GetDecimal(2);
+
 
                 //int de20Mil = 1;
                 //int de10Mil = 1;
@@ -76,37 +86,35 @@ namespace ptoVenta
                 //int de10 = 1;
                 //int totalBilletes = de20Mil + de10Mil + de5Mil + de2Mil + deMil + de500 + de100 + de50 + de10;
 
-                int aperturaCaja = 50000;
-                int ventasEfectivo = 50000;
-                int otrosIngresos = 0;
-                int totalEfectivo = ventasEfectivo + otrosIngresos;
+                decimal aperturaCaja = 50000;
+                decimal ventasEfectivo = 50000;
+                decimal otrosIngresos = 0;
+                decimal totalEfectivo = ventasEfectivo + otrosIngresos;
 
-                int credito = 0;
-                int arqueoCredito = 0;
-                int resultadoCredito = credito - arqueoCredito;
+                decimal credito = 0;
+                //decimal arqueoCredito = 0;
+                decimal resultadoCredito = credito - arqueoCredito;
 
-                int debito = 0;
-                int arqueoDebito = 1230;
-                int resultadoDebito = debito - arqueoDebito;
+                decimal debito = 0;
+                //decimal arqueoDebito = 1230;
+                decimal resultadoDebito = debito - arqueoDebito;
 
-                int transferencias = 0;
-                int arqueoTransf = 0;
-                int resultadoTransf = transferencias - arqueoTransf;
+                decimal transferencias = 0;
+                //decimal arqueoTransf = 0;
+                decimal resultadoTransf = transferencias - arqueoTransf;
 
-                int difTarjetas = arqueoCredito + arqueoDebito + arqueoTransf;
-                int totalDigitales = credito + debito + transferencias;
+                decimal difTarjetas = arqueoCredito + arqueoDebito + arqueoTransf;
+                decimal totalDigitales = credito + debito + transferencias;
 
-                int totalVentas = totalDigitales + totalEfectivo;
-                int egresosCaja = 312;
-                int remesas = 2;
+                //decimal totalVentas = totalDigitales + totalEfectivo;
+                decimal egresosCaja = 312;
+                decimal remesas = 2;
 
-                int efectivoFinal = totalEfectivo + difTarjetas;
-                int arqueodeCaja = 32;
-                int DiferenciaFinal = efectivoFinal - arqueodeCaja;
+                decimal efectivoFinal = totalEfectivo + difTarjetas;
+                decimal arqueodeCaja = 32;
+                decimal DiferenciaFinal = efectivoFinal - arqueodeCaja;
 
-                Dr.Read();
-                decimal monto = Dr.GetDecimal(2);
-                //Dr.Close();
+
 
 
                 StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
@@ -118,7 +126,7 @@ namespace ptoVenta
                 formato2.Alignment = StringAlignment.Far;
                 //header
                 e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString(monto.ToString(), titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(totalVentas.ToString(), titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString(NombLoc, linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
@@ -127,7 +135,7 @@ namespace ptoVenta
                 e.Graphics.DrawString(Date, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("hora: " + hora, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
-                //billetes
+                //billetes (aunque ya no sean necesarios)
                 //e.Graphics.DrawString("De 20.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 //e.Graphics.DrawString(de20Mil.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //e.Graphics.DrawString("De 10.000 =", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
