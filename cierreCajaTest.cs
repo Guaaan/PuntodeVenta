@@ -155,7 +155,7 @@ namespace ptoVenta
                     arqueosi = Convert.ToInt32(dr["REGISTRO"]);
                 }
                 dr.Close();
-                if (arqueosi == 0)
+                /*if (arqueosi == 0)
                 {
                     comsql1 = "INSERT INTO ARQUEO (FECHADESDE,FECHAHASTA,CAJA,NOMBRE,MONTO,MONTOA,DIFERENCIA,MONTO7,MONTO9,MONTO8,AUDITOR,FECHA,TURNO) ";
                     comsql1 = comsql1 + " VALUES (@fd,@fh,@caj,@nom,@mon,@mona,@mond,@mon7,@mon9,@mon8,@audi,@fech,@cerr)";
@@ -164,7 +164,7 @@ namespace ptoVenta
                 {
                     comsql1 = "UPDATE ARQUEO SET FECHADESDE=@fd,FECHAHASTA=@fh,CAJA=@caj,NOMBRE=@nom,MONTO=@mon,MONTOA=@mona,DIFERENCIA=@mond,MONTO7=@mon7,";
                     comsql1 = comsql1 + " MONTO9=@mon9,MONTO8=@mon8,AUDITOR=@audi,FECHA=@fech,TURNO=@cerr WHERE REGISTRO = " +arqueosi ;
-                }
+                }*/
                 com = new SqlCommand(comsql1, Form1.cn);
 
                 com.Parameters.AddWithValue("@fd", fecd);
@@ -182,14 +182,14 @@ namespace ptoVenta
                 com.Parameters.AddWithValue("@cerr", "CERRADO");
                 com.ExecuteNonQuery();
 
-                com = new SqlCommand("UPDATE FACTURAS SET REGISTRO=" + arqueosi + " WHERE REGISTRO=0 AND STATUS=2 AND FECHA>='" + f1 + "' AND FECHA<'" + f2 + "' AND CAJAPERTUR = '" + caja + "'", Form1.cn);
+                /*com = new SqlCommand("UPDATE FACTURAS SET REGISTRO=" + arqueosi + " WHERE REGISTRO=0 AND STATUS=2 AND FECHA>='" + f1 + "' AND FECHA<'" + f2 + "' AND CAJAPERTUR = '" + caja + "'", Form1.cn);
                 com.ExecuteNonQuery();
                 com = new SqlCommand("UPDATE RECIBOS  SET REGISTRO=" + arqueosi + " WHERE REGISTRO=0 AND STATUS=0 AND FECHA>='" + f1 + "' AND FECHA<'" + f2 + "' AND CAJA = '" + caja + "' ", Form1.cn);
                 com.ExecuteNonQuery();
                 com = new SqlCommand("UPDATE CREDITOS SET REGISTRO=" + arqueosi + " WHERE REGISTRO=0 AND STATUS=0 AND FECHA>='" + f1 + "' AND FECHA<'" + f2 + "' AND CAJA = '" + caja + "' ", Form1.cn);
                 com.ExecuteNonQuery();
                 string vuser = iniciarSesion.ucodigo.Trim();
-                com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", Form1.cn);
+                com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", Form1.cn);*/
                 com.ExecuteNonQuery();
                 // IMPRIME CIERRE
                 MessageBox.Show("CIERRE DE CAJA SATISFACTORIO");
