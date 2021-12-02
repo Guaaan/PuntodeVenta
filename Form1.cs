@@ -1050,6 +1050,13 @@ namespace ptoVenta
 
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ClsImprimirCierre cierrP;
+            cierrP = new ClsImprimirCierre();
+            
+        }
+
         private void stocktiendas() 
         {
             Stock abrirstock = new Stock();

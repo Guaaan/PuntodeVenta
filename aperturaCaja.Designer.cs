@@ -82,7 +82,7 @@ namespace ptoVenta
             this.label1.Location = new System.Drawing.Point(2, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 44);
+            this.label1.Size = new System.Drawing.Size(286, 44);
             this.label1.TabIndex = 2;
             this.label1.Text = "Apertura de Caja";
             // 
@@ -112,6 +112,7 @@ namespace ptoVenta
             this.Name = "aperturaCaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Apertura de Caja";
+            this.Load += new System.EventHandler(this.aperturaCaja_Load);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.ResumeLayout(false);

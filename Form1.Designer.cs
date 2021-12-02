@@ -159,6 +159,7 @@ namespace ptoVenta
             this.label14 = new System.Windows.Forms.Label();
             this.btnSalir = new CButtonLib.CButton();
             this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -1645,7 +1646,7 @@ namespace ptoVenta
             this.cButton8.Corners.LowerRight = 8;
             this.cButton8.Corners.UpperLeft = 8;
             this.cButton8.Corners.UpperRight = 8;
-            this.cButton8.DesignerSelected = true;
+            this.cButton8.DesignerSelected = false;
             this.cButton8.DimFactorClick = 0;
             this.cButton8.DimFactorHover = -25;
             this.cButton8.Image = ((System.Drawing.Image)(resources.GetObject("cButton8.Image")));
@@ -1733,6 +1734,16 @@ namespace ptoVenta
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(364, 84);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 215;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1744,6 +1755,7 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1275, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.cButton8);
@@ -1889,6 +1901,7 @@ namespace ptoVenta
         private System.Windows.Forms.Label label14;
         private CButtonLib.CButton btnSalir;
         private System.Drawing.Printing.PrintDocument imprimirDocument;
+        private System.Windows.Forms.Button button1;
     }
 }
 
