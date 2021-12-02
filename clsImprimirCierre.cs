@@ -35,10 +35,12 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
+                
                 var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
                 var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
-                string comsql = "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 +"', 102) AND FECHA < CONVERT(DATETIME, '"+ fechaE2 +"', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
-                string comsql2 = "SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM SAES_ADMINISTRATIVOFD.dbo.ARQUEO where FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC";
+                string comsql = 
+                "SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM SAES_ADMINISTRATIVOFD.dbo.ARQUEO where FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC;" +
+                "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 + "', 102) AND FECHA < CONVERT(DATETIME, '" + fechaE2 + "', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
                 cn = Form1.cn;
                 com = new SqlCommand(comsql, cn);
                 com.ExecuteNonQuery();
@@ -104,7 +106,7 @@ namespace ptoVenta
 
                 Dr.Read();
                 decimal monto = Dr.GetDecimal(2);
-                Dr.Close();
+                //Dr.Close();
 
 
                 StringFormat formato1 = new StringFormat(StringFormatFlags.NoClip);
@@ -203,6 +205,7 @@ namespace ptoVenta
                 e.Graphics.DrawString(totalVentas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
 
+                Dr.NextResult();
                 if (Dr.HasRows)
                 {
                     e.Graphics.DrawString("Egresos", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
