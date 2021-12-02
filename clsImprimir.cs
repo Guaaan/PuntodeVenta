@@ -47,7 +47,7 @@ namespace ptoVenta
                 Font font = new Font("Courier", 11);
                 Font fuente = new Font("Courier", 8);
                 Font espaciado = new Font("Arial", 2);
-                
+
                 int y = 20;
                 int ancho = 270;
                 int anchoB = 245;
@@ -65,7 +65,7 @@ namespace ptoVenta
                 formato1.Alignment = StringAlignment.Center;
                 formato2.LineAlignment = StringAlignment.Center;
                 formato2.Alignment = StringAlignment.Far;
-
+                string nroBoleta = dgVariable.Rows[0].Cells[0].Value.ToString();
 
                 //Rectangle displayRectangle = new Rectangle(new Point(0, 20), new Size(240, 20));
 
@@ -75,10 +75,14 @@ namespace ptoVenta
                 //header
                 e.Graphics.DrawString(telef, titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20),alineadoCentro);
+                e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(Date, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("hora: " + hora, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                if (dgVariable.Rows[0].Cells[0].Value.ToString() != "1")
+                { 
+                    e.Graphics.DrawString("Nro de Boleta: " + nroBoleta, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                }
                 e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(tipo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("———Productos———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
@@ -140,7 +144,8 @@ namespace ptoVenta
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("HASTA PRONTO", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-
+                e.Graphics.DrawString("visitanos en:", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString("www.FarmaciasGeminis.cl", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
 
             }
 
