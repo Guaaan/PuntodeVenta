@@ -160,6 +160,7 @@ namespace ptoVenta
             this.btnSalir = new CButtonLib.CButton();
             this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
             this.button1 = new System.Windows.Forms.Button();
+            this.btton2 = new System.Windows.Forms.Button();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -1744,6 +1745,16 @@ namespace ptoVenta
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btton2
+            // 
+            this.btton2.Location = new System.Drawing.Point(364, 113);
+            this.btton2.Name = "btton2";
+            this.btton2.Size = new System.Drawing.Size(75, 23);
+            this.btton2.TabIndex = 216;
+            this.btton2.Text = "abrirForm";
+            this.btton2.UseVisualStyleBackColor = true;
+            this.btton2.Click += new System.EventHandler(this.btton2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1755,6 +1766,7 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1275, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.btton2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel18);
@@ -1902,6 +1914,7 @@ namespace ptoVenta
         private CButtonLib.CButton btnSalir;
         private System.Drawing.Printing.PrintDocument imprimirDocument;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btton2;
     }
 }
 

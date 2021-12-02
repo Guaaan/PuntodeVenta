@@ -1058,6 +1058,12 @@ namespace ptoVenta
             
         }
 
+        private void btton2_Click(object sender, EventArgs e)
+        {
+            cierreCajaTest cct = new cierreCajaTest();
+            cct.ShowDialog();
+        }
+
         private void stocktiendas() 
         {
             Stock abrirstock = new Stock();
