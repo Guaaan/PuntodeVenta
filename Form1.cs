@@ -14,6 +14,7 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -54,6 +55,7 @@ namespace ptoVenta
         public string uperfil = "";
         public string ucaja = "";
         public string ufoto = "";
+        public static int ftop = 0;
 
         public static string empresalic = "";
         public static string erif = "";
@@ -174,17 +176,17 @@ namespace ptoVenta
                 {
                     panel1.Visible = true;
                     dgvLista.Visible = true;
-                    dgvLista.Rows.Clear();
-                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
+                    dgvLista.Rows.Clear();                                                                         //EL NOMBRE DEL LABORATORIO                                                                                                                                                         //LEFT JOIN PARA LABORATORIO                                      
+                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA, E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     if (ivari.ToString() == "+" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     com.ExecuteNonQuery();
                     Dr = com.ExecuteReader();
@@ -206,6 +208,11 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["STOCK"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                        dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
+                        dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
+                        dgvLista.Rows[renglon].Cells["COLORRECETA"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
+
+
                     }
                     Dr.Close();
                 }
@@ -1054,7 +1061,7 @@ namespace ptoVenta
         {
             ClsImprimirCierre cierrP;
             cierrP = new ClsImprimirCierre();
-            cierrP.imprimirCierre(imprimirDocument, 420);
+            cierrP.imprimirCierre(imprimirDocument, 420, 210,2000);
             
         }
 
@@ -1062,6 +1069,46 @@ namespace ptoVenta
         {
             cierreCajaTest cct = new cierreCajaTest();
             cct.ShowDialog();
+        }
+
+        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1) // second-column 
+            {
+
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+
+
+                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
+                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
+                frm.lblFormaF.Text = dgvLista.CurrentRow.Cells[8].Value.ToString();
+                frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
+
+
+                if (dgvLista.CurrentRow.Cells[10].Value.Equals(0))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
+                    frm.lblRequiereR.Text = "No Requiere Receta";
+                }
+                else if (dgvLista.CurrentRow.Cells[10].Value.Equals(1))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
+                    frm.lblRequiereR.Text = "Requiere Receta";
+                }
+
+
+
+
+                MemoryStream ms = new MemoryStream();
+                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
+                imagen.Save(ms, ImageFormat.Jpeg);
+                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+                ftop = dgvLista.Top;
+                frm.ShowDialog();
+            }
         }
 
         private void stocktiendas() 

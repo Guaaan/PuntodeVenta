@@ -30,12 +30,14 @@ namespace ptoVenta
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            CButtonLib.cBlendItems cBlendItems3 = new CButtonLib.cBlendItems();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cierreCajaTest));
             CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cierredecaja));
-            CButtonLib.cBlendItems cBlendItems2 = new CButtonLib.cBlendItems();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTransfe = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +52,7 @@ namespace ptoVenta
             this.cButton1 = new CButtonLib.CButton();
             this.iconButton1 = new CButtonLib.CButton();
             this.dateTimePicker1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTransfe = new System.Windows.Forms.TextBox();
+            this.printDocumento = new System.Drawing.Printing.PrintDocument();
             this.panel15.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).BeginInit();
@@ -103,6 +104,34 @@ namespace ptoVenta
             this.panel1.Size = new System.Drawing.Size(530, 266);
             this.panel1.TabIndex = 2;
             this.panel1.TabStop = true;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(80, 97);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 22);
+            this.label8.TabIndex = 158;
+            this.label8.Text = "Tranferencias";
+            // 
+            // txtTransfe
+            // 
+            this.txtTransfe.AcceptsReturn = true;
+            this.txtTransfe.AcceptsTab = true;
+            this.txtTransfe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTransfe.Enabled = false;
+            this.txtTransfe.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransfe.Location = new System.Drawing.Point(205, 94);
+            this.txtTransfe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTransfe.Name = "txtTransfe";
+            this.txtTransfe.Size = new System.Drawing.Size(141, 30);
+            this.txtTransfe.TabIndex = 157;
+            this.txtTransfe.Text = "0";
+            this.txtTransfe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -224,7 +253,7 @@ namespace ptoVenta
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(224, 162);
+            this.label5.Location = new System.Drawing.Point(224, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 19);
             this.label5.TabIndex = 172;
@@ -237,7 +266,7 @@ namespace ptoVenta
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(462, 153);
+            this.label6.Location = new System.Drawing.Point(462, 159);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 22);
@@ -247,7 +276,7 @@ namespace ptoVenta
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(610, 120);
+            this.textBox1.Location = new System.Drawing.Point(610, 156);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(107, 29);
             this.textBox1.TabIndex = 174;
@@ -257,13 +286,13 @@ namespace ptoVenta
             this.cButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cButton1.BackColor = System.Drawing.Color.Transparent;
             this.cButton1.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems1.iColor = new System.Drawing.Color[] {
+            cBlendItems3.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            cBlendItems1.iPoint = new float[] {
+            cBlendItems3.iPoint = new float[] {
         0F,
         1F};
-            this.cButton1.ColorFillBlend = cBlendItems1;
+            this.cButton1.ColorFillBlend = cBlendItems3;
             this.cButton1.Corners.All = 8;
             this.cButton1.Corners.LowerLeft = 8;
             this.cButton1.Corners.LowerRight = 8;
@@ -290,13 +319,13 @@ namespace ptoVenta
             this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton1.BackColor = System.Drawing.Color.Transparent;
             this.iconButton1.BorderColor = System.Drawing.Color.Transparent;
-            cBlendItems2.iColor = new System.Drawing.Color[] {
+            cBlendItems1.iColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(139)))), ((int)(((byte)(68)))))};
-            cBlendItems2.iPoint = new float[] {
+            cBlendItems1.iPoint = new float[] {
         0F,
         1F};
-            this.iconButton1.ColorFillBlend = cBlendItems2;
+            this.iconButton1.ColorFillBlend = cBlendItems1;
             this.iconButton1.Corners.All = 8;
             this.iconButton1.Corners.LowerLeft = 8;
             this.iconButton1.Corners.LowerRight = 8;
@@ -382,35 +411,7 @@ namespace ptoVenta
             this.dateTimePicker1.TabStop = false;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(80, 97);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 22);
-            this.label8.TabIndex = 158;
-            this.label8.Text = "Tranferencias";
-            // 
-            // txtTransfe
-            // 
-            this.txtTransfe.AcceptsReturn = true;
-            this.txtTransfe.AcceptsTab = true;
-            this.txtTransfe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTransfe.Enabled = false;
-            this.txtTransfe.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransfe.Location = new System.Drawing.Point(205, 94);
-            this.txtTransfe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTransfe.Name = "txtTransfe";
-            this.txtTransfe.Size = new System.Drawing.Size(141, 30);
-            this.txtTransfe.TabIndex = 157;
-            this.txtTransfe.Text = "0";
-            this.txtTransfe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cierredecaja
+            // cierreCajaTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -462,5 +463,6 @@ namespace ptoVenta
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTransfe;
+        private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }

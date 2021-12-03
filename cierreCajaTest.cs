@@ -34,6 +34,7 @@ namespace ptoVenta
         private void cierreCajaTest_Load(object sender, EventArgs e)
         {
             totalventas();
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -73,6 +74,8 @@ namespace ptoVenta
         {
             txtEfectivo.Focus();
         }
+
+        
 
         private void txtEfectivo_Enter(object sender, EventArgs e)
         {
@@ -125,8 +128,9 @@ namespace ptoVenta
                 DateTime fech = DateTime.Now;
                 double me = Convert.ToDouble(txtEfectivo.Text);
                 double md = Convert.ToDouble(txtTarjetas.Text);
+                double trnf = Convert.ToDouble(txtTransfe.Text);
                 double mc = Convert.ToDouble(txtOtros.Text);
-                double ta = (me + md + mc);
+                double ta = (me + md + mc + trnf);
                 double di = ta - mont;
 
                 com = new SqlCommand("SELECT TOP 1 FECHA FROM RECIBOS WHERE REGISTRO = 0 AND FECHA>'" + f1 + "' AND FECHA<'" + f2 + "' AND CAJA='" + caja + "' ORDER BY FECHA", Form1.cn);
@@ -165,7 +169,7 @@ namespace ptoVenta
                     comsql1 = "UPDATE ARQUEO SET FECHADESDE=@fd,FECHAHASTA=@fh,CAJA=@caj,NOMBRE=@nom,MONTO=@mon,MONTOA=@mona,DIFERENCIA=@mond,MONTO7=@mon7,";
                     comsql1 = comsql1 + " MONTO9=@mon9,MONTO8=@mon8,AUDITOR=@audi,FECHA=@fech,TURNO=@cerr WHERE REGISTRO = " +arqueosi ;
                 }*/
-                com = new SqlCommand(comsql1, Form1.cn);
+                /*com = new SqlCommand(comsql1, Form1.cn);
 
                 com.Parameters.AddWithValue("@fd", fecd);
                 com.Parameters.AddWithValue("@fh", fech);
@@ -180,7 +184,7 @@ namespace ptoVenta
                 com.Parameters.AddWithValue("@audi", cajero);
                 com.Parameters.AddWithValue("@fech", DateTime.Now);
                 com.Parameters.AddWithValue("@cerr", "CERRADO");
-                com.ExecuteNonQuery();
+                com.ExecuteNonQuery();*/
 
                 /*com = new SqlCommand("UPDATE FACTURAS SET REGISTRO=" + arqueosi + " WHERE REGISTRO=0 AND STATUS=2 AND FECHA>='" + f1 + "' AND FECHA<'" + f2 + "' AND CAJAPERTUR = '" + caja + "'", Form1.cn);
                 com.ExecuteNonQuery();
@@ -190,8 +194,12 @@ namespace ptoVenta
                 com.ExecuteNonQuery();
                 string vuser = iniciarSesion.ucodigo.Trim();
                 com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", Form1.cn);*/
-                com.ExecuteNonQuery();
+                /*com.ExecuteNonQuery();*/
                 // IMPRIME CIERRE
+                ClsImprimirCierre cierrP;
+                cierrP = new ClsImprimirCierre();
+                cierrP.imprimirCierre(printDocumento, me, md, trnf);
+
                 MessageBox.Show("CIERRE DE CAJA SATISFACTORIO");
                 Application.Exit();
                 this.Close();
