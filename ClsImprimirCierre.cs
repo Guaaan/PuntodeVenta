@@ -23,7 +23,7 @@ namespace ptoVenta
         public static SqlConnection cn;
         SqlCommand com;
         SqlDataReader Dr;
-        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument, double efectivoIngresado, double tarjetasIngresadas, double transferenciasIngresadas)
+        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument, decimal efectivoIngresado, decimal tarjetasIngresadas, decimal transferenciasIngresadas)
         {
             //List<Egreso> egresos = new List<Egreso>();
 
@@ -41,9 +41,16 @@ namespace ptoVenta
                 
                 var fechaE1 = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
                 var fechaE2 = DateTime.Today.ToString("yyyyMMdd");
-                string comsql = 
-                "SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM SAES_ADMINISTRATIVOFD.dbo.ARQUEO where FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC;" +
-                "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 + "', 102) AND FECHA < CONVERT(DATETIME, '" + fechaE2 + "', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+                var caja = iniciarSesion.ucaja.Trim();
+                //string comsql = 
+                //"SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM SAES_ADMINISTRATIVOFD.dbo.ARQUEO where FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC;" +
+                //"SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE CAJA = '"+ 15 + "'AND FECHA >= CONVERT(DATETIME, '" + fechaE1 + "', 102) AND FECHA < CONVERT(DATETIME, '" + fechaE2 + "', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+
+                string comsql =
+                "SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM ARQUEO where CAJA = "+ caja + "AND FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC;" +
+                "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE CAJA = '" + caja + " 'AND FECHA >= CONVERT(DATETIME, '" + fechaE1 + "', 102) AND FECHA < CONVERT(DATETIME, '" + fechaE2 + "', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
+
+
                 cn = Form1.cn;
                 com = new SqlCommand(comsql, cn);
                 com.ExecuteNonQuery();
@@ -98,25 +105,27 @@ namespace ptoVenta
 
                 decimal credito = 0;
                 //decimal arqueoCredito = 0;
-                decimal resultadoCredito = credito - arqueoCredito;
+                //decimal resultadoCredito = credito - arqueoCredito;
 
                 decimal debito = 0;
                 //decimal arqueoDebito = 1230;
                 decimal resultadoDebito = debito - arqueoDebito;
 
+                decimal resultadoTarjetas = tarjetasIngresadas - (arqueoDebito + arqueoCredito);
+
                 decimal transferencias = 0;
                 //decimal arqueoTransf = 0;
-                decimal resultadoTransf = transferencias - arqueoTransf;
+                decimal resultadoTransf = transferenciasIngresadas - arqueoTransf;
 
                 decimal difTarjetas = arqueoCredito + arqueoDebito + arqueoTransf;
                 decimal totalDigitales = credito + debito + transferencias;
 
                 //decimal totalVentas = totalDigitales + totalEfectivo;
-                decimal egresosCaja = 312;
+                //decimal egresosCaja = 312;
                 decimal remesas = 2;
 
                 decimal efectivoFinal = totalEfectivo + difTarjetas;
-                decimal arqueodeCaja = 32;
+                decimal arqueodeCaja = 0;
                 decimal DiferenciaFinal = efectivoFinal - arqueodeCaja;
 
 
@@ -175,7 +184,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("Apertura de Caja:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(aperturaCaja.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Ventas Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(ventasEfectivo.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(efectivoIngresado.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Otros Ingresos:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(otrosIngresos.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
@@ -224,7 +233,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("Total Ventas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(totalVentas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
-
+                decimal totalEgresos = 0;
                 Dr.NextResult();
                 if (Dr.HasRows)
                 {
@@ -236,7 +245,8 @@ namespace ptoVenta
                         Egreso eg = new Egreso();
                         eg.Concepto = Dr.GetString(1);
                         eg.Monto = Dr.GetDecimal(2);
-                        
+
+                        totalEgresos = totalEgresos + eg.Monto;
 
                         e.Graphics.DrawString(eg.Concepto, fuente, Brushes.Black, new RectangleF(0, y += 35, anchob, 35));
                         e.Graphics.DrawString(eg.Monto.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
@@ -252,11 +262,11 @@ namespace ptoVenta
                 e.Graphics.DrawString("Entrada Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(totalEfectivo.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Egresos de Caja:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(egresosCaja.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(totalEgresos.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Depositos/remesas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(remesas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString("Dif en Tarjetas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(difTarjetas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString(resultadoTarjetas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 //
                 e.Graphics.DrawString("――――――――――――――――――――――――――――――", linea, Brushes.Black, new RectangleF(0, y += 25, ancho, 20));
                 e.Graphics.DrawString("Total Efectivo:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
