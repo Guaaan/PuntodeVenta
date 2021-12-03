@@ -23,7 +23,7 @@ namespace ptoVenta
         public static SqlConnection cn;
         SqlCommand com;
         SqlDataReader Dr;
-        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument, int efectivoIngresado)
+        public PrintPageEventHandler imprimirCierre(PrintDocument impresiondocument, double efectivoIngresado, double tarjetasIngresadas, double transferenciasIngresadas)
         {
             //List<Egreso> egresos = new List<Egreso>();
 
@@ -35,9 +35,12 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
+
+                //var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
+                //var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd"); 
                 
-                var fechaE1 = DateTime.Today.ToString("yyyyMMdd");
-                var fechaE2 = DateTime.Today.AddDays(1).ToString("yyyyMMdd");
+                var fechaE1 = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
+                var fechaE2 = DateTime.Today.ToString("yyyyMMdd");
                 string comsql = 
                 "SELECT top 1 FECHADESDE,FECHAHASTA,MONTO,MONTO1,MONTO2,MONTO4,MONTO8,MONTO9,MONTO12,DIFERENCIA,monto14,monto15,monto16,monto18,MONTO20 FROM SAES_ADMINISTRATIVOFD.dbo.ARQUEO where FECHADESDE >= CONVERT(DATETIME, '" + fechaE1 + "', 102) and FECHAHASTA < CONVERT(DATETIME, '" + fechaE2 + "', 102) order by FECHADESDE DESC;" +
                 "SELECT [FECHA], [CONCEPTO], [MONTO] FROM [RECIBOS] WHERE FECHA >= CONVERT(DATETIME, '" + fechaE1 + "', 102) AND FECHA < CONVERT(DATETIME, '" + fechaE2 + "', 102) AND CODIGO IN ('62', '02', '29', '38', '63') ORDER BY CONCEPTO, FECHA DESC";
@@ -67,10 +70,12 @@ namespace ptoVenta
                 
                 
                 Dr.Read();
+                
                 decimal totalVentas = Dr.GetDecimal(2);
                 decimal diferencia = Dr.GetDecimal(9);
                 decimal arqueoDebito = Dr.GetDecimal(7);
                 decimal arqueoCredito = Dr.GetDecimal(6);
+                decimal arqueoTarjetas = arqueoDebito + arqueoCredito;
                 decimal arqueoTransf = Dr.GetDecimal(8);
                 decimal arqueo = Dr.GetDecimal(2);
 
@@ -126,7 +131,7 @@ namespace ptoVenta
                 formato2.Alignment = StringAlignment.Far;
                 //header
                 e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString(totalVentas.ToString(), titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                //e.Graphics.DrawString(totalVentas.ToString(), titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 15, ancho, 20));
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString(NombLoc, linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
@@ -184,23 +189,30 @@ namespace ptoVenta
                 e.Graphics.DrawString("Entrada en Tarjetas", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(" ", espaciado, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
 
-                e.Graphics.DrawString("Débito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(debito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
-                e.Graphics.DrawString("Arqueo Débito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(arqueoDebito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString("Tarjetas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString(tarjetasIngresadas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString("Arqueo Tarjetas:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString(arqueoTarjetas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(resultadoDebito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
-                e.Graphics.DrawString("Crédito", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(credito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
-                e.Graphics.DrawString("Arqueo Crédito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(arqueoCredito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
-                e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(resultadoCredito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                //e.Graphics.DrawString("Débito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString(Debito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                //e.Graphics.DrawString("Arqueo Débito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString(arqueoDebito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                //e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString(resultadoDebito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
 
-                e.Graphics.DrawString("Transferencia:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(transferencias.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
-                e.Graphics.DrawString("arqueo Transferencia:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString("Crédito", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString(credito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                //e.Graphics.DrawString("Arqueo Crédito:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString(arqueoCredito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                //e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                //e.Graphics.DrawString(resultadoCredito.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+
+                e.Graphics.DrawString("Transferencias:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString(transferenciasIngresadas.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
+                e.Graphics.DrawString("Arqueo Transferencias:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(arqueoTransf.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
                 e.Graphics.DrawString(" ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(resultadoTransf.ToString("C"), font, Brushes.Black, new RectangleF(0, y, ancho, 20), formato2);
