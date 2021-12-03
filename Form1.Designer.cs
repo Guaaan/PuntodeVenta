@@ -88,7 +88,6 @@ namespace ptoVenta
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cButton9 = new CButtonLib.CButton();
             this.cButton10 = new CButtonLib.CButton();
             this.cButton11 = new CButtonLib.CButton();
@@ -168,8 +167,8 @@ namespace ptoVenta
             this.LABORATORIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COLORRECETA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRINCIPIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -177,6 +176,7 @@ namespace ptoVenta
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -405,20 +405,6 @@ namespace ptoVenta
             this.dataGridViewImageColumn5.ReadOnly = true;
             this.dataGridViewImageColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn5.Width = 90;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-22, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(380, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 96;
-            this.pictureBox1.TabStop = false;
             // 
             // cButton9
             // 
@@ -1653,7 +1639,7 @@ namespace ptoVenta
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(364, 84);
+            this.button1.Location = new System.Drawing.Point(396, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 215;
@@ -1663,7 +1649,7 @@ namespace ptoVenta
             // 
             // btton2
             // 
-            this.btton2.Location = new System.Drawing.Point(364, 113);
+            this.btton2.Location = new System.Drawing.Point(396, 100);
             this.btton2.Name = "btton2";
             this.btton2.Size = new System.Drawing.Size(75, 23);
             this.btton2.TabIndex = 216;
@@ -1816,6 +1802,17 @@ namespace ptoVenta
             this.PRINCIPIO1.Name = "PRINCIPIO1";
             this.PRINCIPIO1.Visible = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(363, 95);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 217;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1827,6 +1824,7 @@ namespace ptoVenta
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1275, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btton2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
@@ -1851,7 +1849,6 @@ namespace ptoVenta
             this.Controls.Add(this.cButton9);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel15);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1866,7 +1863,6 @@ namespace ptoVenta
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1879,6 +1875,7 @@ namespace ptoVenta
             this.panel1.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1894,7 +1891,6 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private System.Windows.Forms.TextBox textBox1;
@@ -1983,6 +1979,7 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn LABORATORIO1;
         private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRINCIPIO1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

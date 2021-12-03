@@ -196,9 +196,10 @@ namespace ptoVenta
                 com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", Form1.cn);*/
                 /*com.ExecuteNonQuery();*/
                 // IMPRIME CIERRE
+
                 ClsImprimirCierre cierrP;
                 cierrP = new ClsImprimirCierre();
-                cierrP.imprimirCierre(printDocumento, me, md, trnf);
+                cierrP.imprimirCierre(printDocumento, Convert.ToDecimal(me), Convert.ToDecimal(md), Convert.ToDecimal(trnf));
 
                 MessageBox.Show("CIERRE DE CAJA SATISFACTORIO");
                 Application.Exit();
