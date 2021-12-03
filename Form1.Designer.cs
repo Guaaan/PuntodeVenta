@@ -52,9 +52,16 @@ namespace ptoVenta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
+            CButtonLib.cBlendItems cBlendItems14 = new CButtonLib.cBlendItems();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -63,13 +70,6 @@ namespace ptoVenta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            CButtonLib.cBlendItems cBlendItems13 = new CButtonLib.cBlendItems();
-            CButtonLib.cBlendItems cBlendItems14 = new CButtonLib.cBlendItems();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -132,27 +132,6 @@ namespace ptoVenta
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.dgvGrid1 = new System.Windows.Forms.DataGridView();
-            this.LINEA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FOTO1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.CODIGO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCTO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STOCK1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANTIDAD1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.PRECIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OFERTA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DELE = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cButton8 = new CButtonLib.CButton();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnSalir = new CButtonLib.CButton();
-            this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btton2 = new System.Windows.Forms.Button();
             this.LINEA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOTO = new System.Windows.Forms.DataGridViewImageColumn();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,6 +143,31 @@ namespace ptoVenta
             this.FORMAFARMACEUTICA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LABORATORIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COLORRECETA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGrid1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cButton8 = new CButtonLib.CButton();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnSalir = new CButtonLib.CButton();
+            this.imprimirDocument = new System.Drawing.Printing.PrintDocument();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btton2 = new System.Windows.Forms.Button();
+            this.LINEA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FOTO1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.CODIGO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCTO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STOCK1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANTIDAD1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PRECIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OFERTA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTAL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DELE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.FORMAFARMACEUTICA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LABORATORIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COLORRECETA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRINCIPIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -1349,6 +1353,107 @@ namespace ptoVenta
             this.dgvLista.DoubleClick += new System.EventHandler(this.dgvLista_DoubleClick);
             this.dgvLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLista_KeyPress);
             // 
+            // LINEA
+            // 
+            this.LINEA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.LINEA.DefaultCellStyle = dataGridViewCellStyle7;
+            this.LINEA.HeaderText = "Linea";
+            this.LINEA.Name = "LINEA";
+            this.LINEA.ReadOnly = true;
+            this.LINEA.Width = 50;
+            // 
+            // FOTO
+            // 
+            this.FOTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FOTO.DefaultCellStyle = dataGridViewCellStyle8;
+            this.FOTO.HeaderText = "IMAGEN";
+            this.FOTO.Image = ((System.Drawing.Image)(resources.GetObject("FOTO.Image")));
+            this.FOTO.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.FOTO.Name = "FOTO";
+            this.FOTO.ReadOnly = true;
+            this.FOTO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.FOTO.Width = 90;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            this.CODIGO.Width = 150;
+            // 
+            // PRODUCTO
+            // 
+            this.PRODUCTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PRODUCTO.HeaderText = "PRODUCTO";
+            this.PRODUCTO.Name = "PRODUCTO";
+            this.PRODUCTO.ReadOnly = true;
+            this.PRODUCTO.Width = 370;
+            // 
+            // PRINCIPIO
+            // 
+            this.PRINCIPIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PRINCIPIO.HeaderText = "PRINCIPIO ACTIVO";
+            this.PRINCIPIO.Name = "PRINCIPIO";
+            this.PRINCIPIO.ReadOnly = true;
+            this.PRINCIPIO.Width = 250;
+            // 
+            // STOCK
+            // 
+            this.STOCK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.STOCK.DefaultCellStyle = dataGridViewCellStyle9;
+            this.STOCK.HeaderText = "STOCK";
+            this.STOCK.Name = "STOCK";
+            this.STOCK.ReadOnly = true;
+            this.STOCK.Width = 80;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N0";
+            dataGridViewCellStyle10.NullValue = null;
+            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle10;
+            this.PRECIO.HeaderText = "PRECIO FINAL";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            // 
+            // OFERTA
+            // 
+            this.OFERTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N0";
+            dataGridViewCellStyle11.NullValue = null;
+            this.OFERTA.DefaultCellStyle = dataGridViewCellStyle11;
+            this.OFERTA.HeaderText = "OFERTA";
+            this.OFERTA.Name = "OFERTA";
+            this.OFERTA.ReadOnly = true;
+            // 
+            // FORMAFARMACEUTICA
+            // 
+            this.FORMAFARMACEUTICA.HeaderText = "Forma farmacéutica";
+            this.FORMAFARMACEUTICA.Name = "FORMAFARMACEUTICA";
+            this.FORMAFARMACEUTICA.ReadOnly = true;
+            this.FORMAFARMACEUTICA.Visible = false;
+            // 
+            // LABORATORIO
+            // 
+            this.LABORATORIO.HeaderText = "Laboratorio";
+            this.LABORATORIO.Name = "LABORATORIO";
+            this.LABORATORIO.ReadOnly = true;
+            this.LABORATORIO.Visible = false;
+            // 
+            // COLORRECETA
+            // 
+            this.COLORRECETA.HeaderText = "Color Receta";
+            this.COLORRECETA.Name = "COLORRECETA";
+            this.COLORRECETA.ReadOnly = true;
+            this.COLORRECETA.Visible = false;
+            // 
             // dgvGrid1
             // 
             this.dgvGrid1.AllowUserToAddRows = false;
@@ -1376,7 +1481,11 @@ namespace ptoVenta
             this.PRECIO1,
             this.OFERTA1,
             this.TOTAL1,
-            this.DELE});
+            this.DELE,
+            this.FORMAFARMACEUTICA1,
+            this.LABORATORIO1,
+            this.COLORRECETA1,
+            this.PRINCIPIO1});
             dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1407,129 +1516,9 @@ namespace ptoVenta
             this.dgvGrid1.TabIndex = 201;
             this.dgvGrid1.TabStop = false;
             this.dgvGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid1_CellClick);
+            this.dgvGrid1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvGrid1_CellMouseClick);
             this.dgvGrid1.CurrentCellChanged += new System.EventHandler(this.dgvGrid1_CurrentCellChanged);
             this.dgvGrid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvGrid1_EditingControlShowing);
-            // 
-            // LINEA1
-            // 
-            this.LINEA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.LINEA1.DefaultCellStyle = dataGridViewCellStyle16;
-            this.LINEA1.HeaderText = "Linea";
-            this.LINEA1.Name = "LINEA1";
-            this.LINEA1.ReadOnly = true;
-            this.LINEA1.Width = 50;
-            // 
-            // FOTO1
-            // 
-            this.FOTO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FOTO1.DefaultCellStyle = dataGridViewCellStyle17;
-            this.FOTO1.HeaderText = "IMAGEN";
-            this.FOTO1.Image = ((System.Drawing.Image)(resources.GetObject("FOTO1.Image")));
-            this.FOTO1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.FOTO1.Name = "FOTO1";
-            this.FOTO1.ReadOnly = true;
-            this.FOTO1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.FOTO1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.FOTO1.Width = 90;
-            // 
-            // CODIGO1
-            // 
-            this.CODIGO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CODIGO1.HeaderText = "CODIGO";
-            this.CODIGO1.Name = "CODIGO1";
-            this.CODIGO1.ReadOnly = true;
-            this.CODIGO1.Width = 150;
-            // 
-            // PRODUCTO1
-            // 
-            this.PRODUCTO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PRODUCTO1.HeaderText = "PRODUCTO";
-            this.PRODUCTO1.Name = "PRODUCTO1";
-            this.PRODUCTO1.Width = 370;
-            // 
-            // STOCK1
-            // 
-            this.STOCK1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STOCK1.DefaultCellStyle = dataGridViewCellStyle18;
-            this.STOCK1.HeaderText = "STOCK";
-            this.STOCK1.Name = "STOCK1";
-            this.STOCK1.ReadOnly = true;
-            this.STOCK1.Width = 80;
-            // 
-            // CANTIDAD1
-            // 
-            this.CANTIDAD1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CANTIDAD1.DefaultCellStyle = dataGridViewCellStyle19;
-            this.CANTIDAD1.DisplayStyleForCurrentCellOnly = true;
-            this.CANTIDAD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CANTIDAD1.HeaderText = "CANTIDAD";
-            this.CANTIDAD1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.CANTIDAD1.Name = "CANTIDAD1";
-            this.CANTIDAD1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // PRECIO1
-            // 
-            this.PRECIO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "N0";
-            dataGridViewCellStyle20.NullValue = null;
-            this.PRECIO1.DefaultCellStyle = dataGridViewCellStyle20;
-            this.PRECIO1.HeaderText = "PRECIO FINAL";
-            this.PRECIO1.Name = "PRECIO1";
-            this.PRECIO1.ReadOnly = true;
-            // 
-            // OFERTA1
-            // 
-            this.OFERTA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "N0";
-            dataGridViewCellStyle21.NullValue = null;
-            this.OFERTA1.DefaultCellStyle = dataGridViewCellStyle21;
-            this.OFERTA1.HeaderText = "OFERTA";
-            this.OFERTA1.Name = "OFERTA1";
-            this.OFERTA1.ReadOnly = true;
-            // 
-            // TOTAL1
-            // 
-            this.TOTAL1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.Format = "N0";
-            dataGridViewCellStyle22.NullValue = null;
-            this.TOTAL1.DefaultCellStyle = dataGridViewCellStyle22;
-            this.TOTAL1.HeaderText = "TOTAL";
-            this.TOTAL1.Name = "TOTAL1";
-            this.TOTAL1.ReadOnly = true;
-            this.TOTAL1.Width = 120;
-            // 
-            // DELE
-            // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle23.NullValue")));
-            this.DELE.DefaultCellStyle = dataGridViewCellStyle23;
-            this.DELE.HeaderText = "";
-            this.DELE.Image = ((System.Drawing.Image)(resources.GetObject("DELE.Image")));
-            this.DELE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.DELE.Name = "DELE";
-            this.DELE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DELE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DELE.ToolTipText = "Eliminar Producto de Boleta";
-            this.DELE.Width = 30;
             // 
             // panel1
             // 
@@ -1682,106 +1671,150 @@ namespace ptoVenta
             this.btton2.UseVisualStyleBackColor = true;
             this.btton2.Click += new System.EventHandler(this.btton2_Click);
             // 
-            // LINEA
+            // LINEA1
             // 
-            this.LINEA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.LINEA.DefaultCellStyle = dataGridViewCellStyle7;
-            this.LINEA.HeaderText = "Linea";
-            this.LINEA.Name = "LINEA";
-            this.LINEA.ReadOnly = true;
-            this.LINEA.Width = 50;
+            this.LINEA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.LINEA1.DefaultCellStyle = dataGridViewCellStyle16;
+            this.LINEA1.HeaderText = "Linea";
+            this.LINEA1.Name = "LINEA1";
+            this.LINEA1.ReadOnly = true;
+            this.LINEA1.Width = 50;
             // 
-            // FOTO
+            // FOTO1
             // 
-            this.FOTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FOTO.DefaultCellStyle = dataGridViewCellStyle8;
-            this.FOTO.HeaderText = "IMAGEN";
-            this.FOTO.Image = ((System.Drawing.Image)(resources.GetObject("FOTO.Image")));
-            this.FOTO.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.FOTO.Name = "FOTO";
-            this.FOTO.ReadOnly = true;
-            this.FOTO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.FOTO.Width = 90;
+            this.FOTO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FOTO1.DefaultCellStyle = dataGridViewCellStyle17;
+            this.FOTO1.HeaderText = "IMAGEN";
+            this.FOTO1.Image = ((System.Drawing.Image)(resources.GetObject("FOTO1.Image")));
+            this.FOTO1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.FOTO1.Name = "FOTO1";
+            this.FOTO1.ReadOnly = true;
+            this.FOTO1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FOTO1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.FOTO1.Width = 90;
             // 
-            // CODIGO
+            // CODIGO1
             // 
-            this.CODIGO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            this.CODIGO.Width = 150;
+            this.CODIGO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CODIGO1.HeaderText = "CODIGO";
+            this.CODIGO1.Name = "CODIGO1";
+            this.CODIGO1.ReadOnly = true;
+            this.CODIGO1.Width = 150;
             // 
-            // PRODUCTO
+            // PRODUCTO1
             // 
-            this.PRODUCTO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PRODUCTO.HeaderText = "PRODUCTO";
-            this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.ReadOnly = true;
-            this.PRODUCTO.Width = 370;
+            this.PRODUCTO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PRODUCTO1.HeaderText = "PRODUCTO";
+            this.PRODUCTO1.Name = "PRODUCTO1";
+            this.PRODUCTO1.Width = 370;
             // 
-            // PRINCIPIO
+            // STOCK1
             // 
-            this.PRINCIPIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PRINCIPIO.HeaderText = "PRINCIPIO ACTIVO";
-            this.PRINCIPIO.Name = "PRINCIPIO";
-            this.PRINCIPIO.ReadOnly = true;
-            this.PRINCIPIO.Width = 250;
+            this.STOCK1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.STOCK1.DefaultCellStyle = dataGridViewCellStyle18;
+            this.STOCK1.HeaderText = "STOCK";
+            this.STOCK1.Name = "STOCK1";
+            this.STOCK1.ReadOnly = true;
+            this.STOCK1.Width = 80;
             // 
-            // STOCK
+            // CANTIDAD1
             // 
-            this.STOCK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.STOCK.DefaultCellStyle = dataGridViewCellStyle9;
-            this.STOCK.HeaderText = "STOCK";
-            this.STOCK.Name = "STOCK";
-            this.STOCK.ReadOnly = true;
-            this.STOCK.Width = 80;
+            this.CANTIDAD1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CANTIDAD1.DefaultCellStyle = dataGridViewCellStyle19;
+            this.CANTIDAD1.DisplayStyleForCurrentCellOnly = true;
+            this.CANTIDAD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CANTIDAD1.HeaderText = "CANTIDAD";
+            this.CANTIDAD1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CANTIDAD1.Name = "CANTIDAD1";
+            this.CANTIDAD1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // PRECIO
+            // PRECIO1
             // 
-            this.PRECIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N0";
-            dataGridViewCellStyle10.NullValue = null;
-            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle10;
-            this.PRECIO.HeaderText = "PRECIO FINAL";
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.ReadOnly = true;
+            this.PRECIO1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle20.Format = "N0";
+            dataGridViewCellStyle20.NullValue = null;
+            this.PRECIO1.DefaultCellStyle = dataGridViewCellStyle20;
+            this.PRECIO1.HeaderText = "PRECIO FINAL";
+            this.PRECIO1.Name = "PRECIO1";
+            this.PRECIO1.ReadOnly = true;
             // 
-            // OFERTA
+            // OFERTA1
             // 
-            this.OFERTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N0";
-            dataGridViewCellStyle11.NullValue = null;
-            this.OFERTA.DefaultCellStyle = dataGridViewCellStyle11;
-            this.OFERTA.HeaderText = "OFERTA";
-            this.OFERTA.Name = "OFERTA";
-            this.OFERTA.ReadOnly = true;
+            this.OFERTA1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.Format = "N0";
+            dataGridViewCellStyle21.NullValue = null;
+            this.OFERTA1.DefaultCellStyle = dataGridViewCellStyle21;
+            this.OFERTA1.HeaderText = "OFERTA";
+            this.OFERTA1.Name = "OFERTA1";
+            this.OFERTA1.ReadOnly = true;
             // 
-            // FORMAFARMACEUTICA
+            // TOTAL1
             // 
-            this.FORMAFARMACEUTICA.HeaderText = "Forma farmacéutica";
-            this.FORMAFARMACEUTICA.Name = "FORMAFARMACEUTICA";
-            this.FORMAFARMACEUTICA.ReadOnly = true;
-            this.FORMAFARMACEUTICA.Visible = false;
+            this.TOTAL1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.Format = "N0";
+            dataGridViewCellStyle22.NullValue = null;
+            this.TOTAL1.DefaultCellStyle = dataGridViewCellStyle22;
+            this.TOTAL1.HeaderText = "TOTAL";
+            this.TOTAL1.Name = "TOTAL1";
+            this.TOTAL1.ReadOnly = true;
+            this.TOTAL1.Width = 120;
             // 
-            // LABORATORIO
+            // DELE
             // 
-            this.LABORATORIO.HeaderText = "Laboratorio";
-            this.LABORATORIO.Name = "LABORATORIO";
-            this.LABORATORIO.ReadOnly = true;
-            this.LABORATORIO.Visible = false;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle23.NullValue")));
+            this.DELE.DefaultCellStyle = dataGridViewCellStyle23;
+            this.DELE.HeaderText = "";
+            this.DELE.Image = ((System.Drawing.Image)(resources.GetObject("DELE.Image")));
+            this.DELE.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.DELE.Name = "DELE";
+            this.DELE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DELE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DELE.ToolTipText = "Eliminar Producto de Boleta";
+            this.DELE.Width = 30;
             // 
-            // COLORRECETA
+            // FORMAFARMACEUTICA1
             // 
-            this.COLORRECETA.HeaderText = "Color Receta";
-            this.COLORRECETA.Name = "COLORRECETA";
-            this.COLORRECETA.ReadOnly = true;
-            this.COLORRECETA.Visible = false;
+            this.FORMAFARMACEUTICA1.HeaderText = "FORMA FARMACEUTICA ";
+            this.FORMAFARMACEUTICA1.Name = "FORMAFARMACEUTICA1";
+            this.FORMAFARMACEUTICA1.Visible = false;
+            // 
+            // LABORATORIO1
+            // 
+            this.LABORATORIO1.HeaderText = "LABORATORIO";
+            this.LABORATORIO1.Name = "LABORATORIO1";
+            this.LABORATORIO1.Visible = false;
+            // 
+            // COLORRECETA1
+            // 
+            this.COLORRECETA1.HeaderText = "COLORRECETA";
+            this.COLORRECETA1.Name = "COLORRECETA1";
+            this.COLORRECETA1.Visible = false;
+            // 
+            // PRINCIPIO1
+            // 
+            this.PRINCIPIO1.HeaderText = "PRINCIPIOACTIVO";
+            this.PRINCIPIO1.Name = "PRINCIPIO1";
+            this.PRINCIPIO1.Visible = false;
             // 
             // Form1
             // 
@@ -1914,16 +1947,6 @@ namespace ptoVenta
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DataGridView dgvLista;
         public System.Windows.Forms.DataGridView dgvGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LINEA1;
-        private System.Windows.Forms.DataGridViewImageColumn FOTO1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STOCK1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn CANTIDAD1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OFERTA1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL1;
-        private System.Windows.Forms.DataGridViewImageColumn DELE;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label17;
         private CButtonLib.CButton cButton8;
@@ -1946,6 +1969,20 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn FORMAFARMACEUTICA;
         private System.Windows.Forms.DataGridViewTextBoxColumn LABORATORIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LINEA1;
+        private System.Windows.Forms.DataGridViewImageColumn FOTO1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STOCK1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn CANTIDAD1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OFERTA1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL1;
+        private System.Windows.Forms.DataGridViewImageColumn DELE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FORMAFARMACEUTICA1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LABORATORIO1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COLORRECETA1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRINCIPIO1;
     }
 }
 
