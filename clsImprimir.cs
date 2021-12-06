@@ -109,7 +109,7 @@ namespace ptoVenta
                         montoTotal = montoTotal + (precioN * cantidadN);
                         e.Graphics.DrawString(dato.Cantidad.ToString()
                             + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
-                        e.Graphics.DrawString(precioN.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                        e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
                     }
                     //ventas emitidas
@@ -126,7 +126,7 @@ namespace ptoVenta
                                 montoTotal = montoTotal + (precioN * cantidadN);
                                 e.Graphics.DrawString(dato.Cantidad.ToString()
                                     + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
-                                e.Graphics.DrawString(precioN.ToString("C"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                                e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
                             }
                             
@@ -140,7 +140,7 @@ namespace ptoVenta
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString("————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(montoTotal.ToString("C"), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+                e.Graphics.DrawString("$"+montoTotal.ToString("N0"), font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("HASTA PRONTO", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);

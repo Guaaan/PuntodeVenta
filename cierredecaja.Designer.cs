@@ -36,6 +36,8 @@ namespace ptoVenta
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTransfe = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@ namespace ptoVenta
             this.cButton1 = new CButtonLib.CButton();
             this.iconButton1 = new CButtonLib.CButton();
             this.dateTimePicker1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTransfe = new System.Windows.Forms.TextBox();
             this.panel15.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).BeginInit();
@@ -103,6 +103,34 @@ namespace ptoVenta
             this.panel1.Size = new System.Drawing.Size(530, 266);
             this.panel1.TabIndex = 2;
             this.panel1.TabStop = true;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(80, 97);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 22);
+            this.label8.TabIndex = 158;
+            this.label8.Text = "Tranferencias";
+            // 
+            // txtTransfe
+            // 
+            this.txtTransfe.AcceptsReturn = true;
+            this.txtTransfe.AcceptsTab = true;
+            this.txtTransfe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTransfe.Enabled = false;
+            this.txtTransfe.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransfe.Location = new System.Drawing.Point(205, 94);
+            this.txtTransfe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTransfe.Name = "txtTransfe";
+            this.txtTransfe.Size = new System.Drawing.Size(141, 30);
+            this.txtTransfe.TabIndex = 157;
+            this.txtTransfe.Text = "0";
+            this.txtTransfe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -237,7 +265,7 @@ namespace ptoVenta
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(462, 153);
+            this.label6.Location = new System.Drawing.Point(462, 124);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 22);
@@ -381,34 +409,6 @@ namespace ptoVenta
             this.dateTimePicker1.TabIndex = 311;
             this.dateTimePicker1.TabStop = false;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(80, 97);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 22);
-            this.label8.TabIndex = 158;
-            this.label8.Text = "Tranferencias";
-            // 
-            // txtTransfe
-            // 
-            this.txtTransfe.AcceptsReturn = true;
-            this.txtTransfe.AcceptsTab = true;
-            this.txtTransfe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTransfe.Enabled = false;
-            this.txtTransfe.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransfe.Location = new System.Drawing.Point(205, 94);
-            this.txtTransfe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTransfe.Name = "txtTransfe";
-            this.txtTransfe.Size = new System.Drawing.Size(141, 30);
-            this.txtTransfe.TabIndex = 157;
-            this.txtTransfe.Text = "0";
-            this.txtTransfe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cierredecaja
             // 

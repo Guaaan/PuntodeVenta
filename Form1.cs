@@ -211,8 +211,6 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
                         dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
                         dgvLista.Rows[renglon].Cells["COLORRECETA"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
-
-
                     }
                     Dr.Close();
                 }
@@ -232,54 +230,6 @@ namespace ptoVenta
             direccion = txtDireccion.Text.ToString();
             telefono = txtTelefono.Text.ToString();
             correo = txtCorreo.Text.ToString();
-        }
-
-        private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar == 13))
-            {
-                vari = txtProducto.Text.Trim();
-                if (!string.IsNullOrEmpty(vari))
-                {
-
-                    this.dgvLista.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    if (vari.Substring(0, 1) == "*" || vari.Substring(0, 1) == "+")
-                    {
-                        vari = vari.Substring(1);
-                    }
-                    if (vari.All(Char.IsLetter))
-                    {
-                        dgvLista.Rows[0].Selected = true;
-                        dgvLista.Focus();
-                    }
-                    else
-                    {
-                        Cargarproducto();
-                    }
-                }
-                else
-                {
-                    cerrarBoleta();
-                }
-            }
-            if (e.KeyChar == 27)
-            {
-                if (!string.IsNullOrEmpty(txtProducto.Text.Trim()))
-                {
-                    txtProducto.Text = "";
-                }
-                else
-                {
-                    if (!string.IsNullOrEmpty(txtTotal.Text.Trim()))
-                    {
-                        dgvGrid1.Rows.Clear();
-                    }
-                }
-            }
-            if (e.KeyChar == 120)
-            {
-                cambiaprecios();
-            }
         }
 
         private void cerrarBoleta()
@@ -402,7 +352,7 @@ namespace ptoVenta
             asignavalores();
             int fila = 0;
             int cant;
-            int prec, pre1, tpre;
+            int prec=0, pre1=0, tpre=0;
             int ofer;
             int tot, toto;
             totf = 0;
@@ -1152,6 +1102,61 @@ namespace ptoVenta
 
                 ftop = dgvLista.Top;
                 frm.ShowDialog();
+            }
+        }
+
+        private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar == 13))
+            {
+                vari = txtProducto.Text.Trim();
+                if (!string.IsNullOrEmpty(vari))
+                {
+
+                    this.dgvLista.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    if (vari.Substring(0, 1) == "*" || vari.Substring(0, 1) == "+")
+                    {
+                        vari = vari.Substring(1);
+                    }
+                    if (vari.All(Char.IsLetter))
+                    {
+                        try
+                        {
+                            dgvLista.Rows[0].Selected = true;
+                            dgvLista.Focus();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        Cargarproducto();
+                    }
+                }
+                else
+                {
+                    cerrarBoleta();
+                }
+            }
+            if (e.KeyChar == 27)
+            {
+                if (!string.IsNullOrEmpty(txtProducto.Text.Trim()))
+                {
+                    txtProducto.Text = "";
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(txtTotal.Text.Trim()))
+                    {
+                        dgvGrid1.Rows.Clear();
+                    }
+                }
+            }
+            if (e.KeyChar == 120)
+            {
+                cambiaprecios();
             }
         }
 

@@ -278,9 +278,9 @@ namespace ptoVenta
                         mcos = Convert.ToDouble(dr["COSTO"]);
                         mp1 = Convert.ToDouble(dr["PRECIO1"]);
                         mp2 = dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(dr["PRECIO2"]);
-                        msto = Convert.ToInt32(dr["STOCK"]);
+                        msto = dr["STOCK"] == DBNull.Value ? 0 : Convert.ToInt32(dr["STOCK"]);  
                         mgru = Convert.ToString(dr["GRUPO"]);
-                        mcid = Convert.ToInt32(dr["CODID"]);
+                        mcid = dr["CODID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CODID"]); 
 
                     }
                     dr.Close();
@@ -311,6 +311,9 @@ namespace ptoVenta
                 }
             }
             // IMPRIME TICKECT
+            //Form1 FRM1 = Owner as Form1;
+            clsImprimir prnt = new clsImprimir();
+            prnt.CargarImprimir(FRM1.dgvGrid1, printDocumento, null, "Venta");
             FRM1.dgvGrid1.Rows.Clear();
             this.Close();
         }
@@ -350,8 +353,13 @@ namespace ptoVenta
             txtCredito.Text = "0";
             cButton1.Focus();
         }
+
+        
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            
+            
             if (tp == 0)
             {
                 txtEfectivo.Focus();

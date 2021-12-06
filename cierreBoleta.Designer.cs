@@ -81,6 +81,7 @@ namespace ptoVenta
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.cButton1 = new CButtonLib.CButton();
             this.cButton40 = new CButtonLib.CButton();
+            this.printDocumento = new System.Drawing.Printing.PrintDocument();
             this.panel15.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -670,7 +671,7 @@ namespace ptoVenta
             this.label19.Location = new System.Drawing.Point(102, 9);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(94, 32);
+            this.label19.Size = new System.Drawing.Size(93, 32);
             this.label19.TabIndex = 142;
             this.label19.Text = "Vuelto:";
             // 
@@ -843,5 +844,6 @@ namespace ptoVenta
         private CButtonLib.CButton button2;
         private CButtonLib.CButton cButton1;
         private CButtonLib.CButton cButton40;
+        private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }
