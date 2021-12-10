@@ -46,7 +46,7 @@ namespace ptoVenta
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(87)))), ((int)(((byte)(170)))));
             this.panel15.Controls.Add(this.label1);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
@@ -64,7 +64,7 @@ namespace ptoVenta
             this.label1.Location = new System.Drawing.Point(261, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 44);
+            this.label1.Size = new System.Drawing.Size(141, 44);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ingreso";
             // 

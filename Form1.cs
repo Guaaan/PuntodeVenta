@@ -368,6 +368,7 @@ namespace ptoVenta
                     cant = Convert.ToInt32(row.Cells["CANTIDAD1"].Value.ToString());
                     prec = Convert.ToInt32(row.Cells["PRECIO1"].Value.ToString());
                     pre1 = prec;
+
                     ofer = Convert.ToInt32(row.Cells["OFERTA1"].Value.ToString());
                     if (ofer > 0 && cant > 1)
                     {
