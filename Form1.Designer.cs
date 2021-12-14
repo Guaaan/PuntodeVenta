@@ -1791,6 +1791,7 @@ namespace ptoVenta
             this.button1.TabIndex = 215;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btton2
@@ -1801,6 +1802,7 @@ namespace ptoVenta
             this.btton2.TabIndex = 216;
             this.btton2.Text = "abrirForm";
             this.btton2.UseVisualStyleBackColor = true;
+            this.btton2.Visible = false;
             this.btton2.Click += new System.EventHandler(this.btton2_Click);
             // 
             // pictureBox2
@@ -1822,6 +1824,7 @@ namespace ptoVenta
             this.button2.TabIndex = 218;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // Form1
