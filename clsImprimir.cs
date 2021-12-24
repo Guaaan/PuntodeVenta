@@ -102,8 +102,7 @@ namespace ptoVenta
                         double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                         montoTotal = montoTotal + (precioN * cantidadN);
                         
-                        e.Graphics.DrawString(dato.Cantidad.ToString()
-                                    , fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
+                        e.Graphics.DrawString(dato.Cantidad.ToString(), fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
                         e.Graphics.DrawString(dato.Nombre.ToString().Insert(38, " "), fuente, Brushes.Black, new RectangleF(10, y += 0, anchoC, 20));
                         e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                     }
@@ -120,8 +119,7 @@ namespace ptoVenta
                             {
                                 montoTotal = montoTotal + (precioN * cantidadN);
 
-                            e.Graphics.DrawString(dato.Cantidad.ToString()
-                                    , fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
+                            e.Graphics.DrawString(dato.Cantidad.ToString(), fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
                             e.Graphics.DrawString(dato.Nombre.ToString().Insert(38, " "), fuente, Brushes.Black, new RectangleF(10, y += 0, anchoC, 20));
                             e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
                         }
