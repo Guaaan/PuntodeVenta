@@ -10,8 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace ptoVenta
 {
     class clsImprimir
@@ -23,7 +21,6 @@ namespace ptoVenta
         SqlCommand com;
         SqlDataReader Dr;
 
-
         public PrintPageEventHandler CargarImprimir(DataGridView dgVariable, PrintDocument impresiondocument, string documc, string tipo)
         {
             impresiondocument = new PrintDocument();
@@ -33,25 +30,17 @@ namespace ptoVenta
             impresiondocument.Print();
             void Imprimir(object sender, PrintPageEventArgs e)
             {
-
-                /*string comsql = "SELECT M.CODIGO,M.DESCRIP NOMBRE,E.CANTIDAD STOCK,CONVERT(numeric(10,0),ROUND(M.MONTO*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM dbo.MFACTURAS M LEFT JOIN INVENTARIO I ON I.CODIGO=M.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE M.NUMERO = '" + documc + "' ORDER BY M.POSI";
-                cn = Form1.cn;
-                com = new SqlCommand(comsql, cn);
-                TicketDatos tDatos = new TicketDatos();
-                List<TicketDatos> lista = new List<TicketDatos>();
-                com.ExecuteNonQuery();
-                Dr = com.ExecuteReader();*/
-
-                Font titulo = new Font("Arial", 16, FontStyle.Bold);
-                Font header = new Font("Courier", 14);
-                Font linea = new Font("Courier", 14, FontStyle.Bold);
-                Font font = new Font("Courier", 11);
-                Font fuente = new Font("Courier", 8);
-                Font espaciado = new Font("Arial", 2);
+                Font titulo = new Font("Arial", 10, FontStyle.Bold);
+                Font header = new Font("Courier", 10);
+                Font linea = new Font("Courier", 10, FontStyle.Bold);
+                Font font = new Font("Courier", 7);
+                Font fuente = new Font("Courier", 7);
+                Font espaciado = new Font("Arial", 1);
 
                 int y = 20;
-                int ancho = 270;
-                int anchoB = 245;
+                string v1 = Convert.ToString((int)Math.Round(Form1.colimpre*3.375));
+                int ancho = Convert.ToInt32(v1);
+                int anchoB = ancho-25;
                 var dateAndTime = DateTime.Now;
                 var Date = dateAndTime.ToLongDateString();
                 string hora = DateTime.Now.ToString("hh:mm:ss");
@@ -72,13 +61,15 @@ namespace ptoVenta
 
                 string LineEncabezado = "Cant  Articulo‎‎‎‎‏‏‎";   // agrega lineas de  encabezados
                 string telef = Form1.telefono;
+
+                //header
                 Image logoG = Image.FromFile("pfp\\LogoGeminis.png");
                 //header
                 e.Graphics.DrawImage(logoG, new PointF(0, y));
                 e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(telef, titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 //e.Graphics.DrawString("FARMACIAS GEMINIS", titulo, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                //e.Graphics.DrawString("———Punto de Venta———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Rut: " + Form1.erif, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString(Date, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("hora: " + hora, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -87,17 +78,17 @@ namespace ptoVenta
                     e.Graphics.DrawString("Nro de Boleta: " + nroBoleta, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 }
                 e.Graphics.DrawString("Caja: " + iniciarSesion.ucodigo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString(tipo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("———Productos———", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(tipo, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20),alineadoCentro);
+                e.Graphics.DrawString("—————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString(LineEncabezado, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("Valor", font, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+                e.Graphics.DrawString("—————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                //e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
 
                 double montoTotal = 0;
                 foreach (DataGridViewRow row in dgVariable.Rows)
                 {
-
-                        //cotización
+                    //cotización
                     if (dgVariable.Columns.Contains("LINEA1"))
                     {
                         TicketDatos dato = new TicketDatos();
@@ -106,7 +97,6 @@ namespace ptoVenta
                         dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
                         dato.Precio = row.Cells["PRECIO1"].Value.ToString();
                         //obtener el total de la boleta
-
                         double precioN = Convert.ToDouble(dato.Precio.ToString());
                         double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                         montoTotal = montoTotal + (precioN * cantidadN);
@@ -139,7 +129,6 @@ namespace ptoVenta
                 }
                 //----fin del header
                 //e.Graphics.DrawString("PRODUCTOS:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-                e.Graphics.DrawString("   ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 5, ancho, 20));
                 e.Graphics.DrawString("————————————————————————", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("Total:", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
@@ -147,9 +136,11 @@ namespace ptoVenta
                 e.Graphics.DrawString("                    ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
                 e.Graphics.DrawString("GRACIAS POR SU VISITA", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("HASTA PRONTO", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString("visitanos en:", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString("www.FarmaciasGeminis.cl", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-
+                e.Graphics.DrawString("  ", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString("www.farmaciasgeminis.cl", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(" ", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(" ", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(" ", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
             }
 
 
