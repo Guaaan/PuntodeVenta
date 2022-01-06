@@ -34,9 +34,9 @@ namespace ptoVenta
             CButtonLib.cBlendItems cBlendItems2 = new CButtonLib.cBlendItems();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CambiarContraseña));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtContraseñaA = new System.Windows.Forms.TextBox();
+            this.txtContraseñaN = new System.Windows.Forms.TextBox();
+            this.txtConfirmar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,29 +55,31 @@ namespace ptoVenta
             this.label1.TabIndex = 0;
             this.label1.Text = "Cambio de Contraseña";
             // 
-            // textBox1
+            // txtContraseñaA
             // 
-            this.textBox1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(174, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 29);
-            this.textBox1.TabIndex = 1;
+            this.txtContraseñaA.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaA.Location = new System.Drawing.Point(174, 94);
+            this.txtContraseñaA.Name = "txtContraseñaA";
+            this.txtContraseñaA.Size = new System.Drawing.Size(171, 29);
+            this.txtContraseñaA.TabIndex = 1;
+            this.txtContraseñaA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaA_KeyPress);
             // 
-            // textBox2
+            // txtContraseñaN
             // 
-            this.textBox2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(174, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 29);
-            this.textBox2.TabIndex = 2;
+            this.txtContraseñaN.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaN.Location = new System.Drawing.Point(174, 178);
+            this.txtContraseñaN.Name = "txtContraseñaN";
+            this.txtContraseñaN.Size = new System.Drawing.Size(171, 29);
+            this.txtContraseñaN.TabIndex = 2;
+            this.txtContraseñaN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaN_KeyPress);
             // 
-            // textBox3
+            // txtConfirmar
             // 
-            this.textBox3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(174, 212);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 29);
-            this.textBox3.TabIndex = 3;
+            this.txtConfirmar.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmar.Location = new System.Drawing.Point(174, 212);
+            this.txtConfirmar.Name = "txtConfirmar";
+            this.txtConfirmar.Size = new System.Drawing.Size(171, 29);
+            this.txtConfirmar.TabIndex = 3;
             // 
             // label2
             // 
@@ -161,6 +163,7 @@ namespace ptoVenta
             this.cButton40.Corners.UpperLeft = 8;
             this.cButton40.Corners.UpperRight = 8;
             this.cButton40.DesignerSelected = false;
+            this.cButton40.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cButton40.DimFactorClick = 0;
             this.cButton40.DimFactorHover = -25;
             this.cButton40.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,6 +176,7 @@ namespace ptoVenta
             this.cButton40.TabStop = false;
             this.cButton40.Text = "Cancelar";
             this.cButton40.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton40.Click += new System.EventHandler(this.cButton40_Click);
             // 
             // CambiarContraseña
             // 
@@ -181,6 +185,7 @@ namespace ptoVenta
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.cButton40;
             this.ClientSize = new System.Drawing.Size(416, 310);
             this.ControlBox = false;
             this.Controls.Add(this.cButton39);
@@ -188,9 +193,9 @@ namespace ptoVenta
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmar);
+            this.Controls.Add(this.txtContraseñaN);
+            this.Controls.Add(this.txtContraseñaA);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "CambiarContraseña";
@@ -205,9 +210,9 @@ namespace ptoVenta
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtContraseñaA;
+        private System.Windows.Forms.TextBox txtContraseñaN;
+        private System.Windows.Forms.TextBox txtConfirmar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
