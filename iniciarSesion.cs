@@ -153,7 +153,12 @@ namespace ptoVenta
             }
         }
 
-     }
+        private void cButton39_ClickButtonArea(object Sender, MouseEventArgs e)
+        {
+            CambiarContraseña cbc = new CambiarContraseña();
+            cbc.ShowDialog();
+        }
+    }
 
 
  }

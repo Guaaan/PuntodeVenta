@@ -29,7 +29,9 @@ namespace ptoVenta
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iniciarSesion));
+            CButtonLib.cBlendItems cBlendItems1 = new CButtonLib.cBlendItems();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +41,7 @@ namespace ptoVenta
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.pictureBox1 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cButton39 = new CButtonLib.CButton();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -159,18 +161,37 @@ namespace ptoVenta
             this.pictureBox2.TabIndex = 198;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // cButton39
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(166)))), ((int)(((byte)(68)))));
-            this.button1.Location = new System.Drawing.Point(220, 705);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 30);
-            this.button1.TabIndex = 199;
-            this.button1.Text = "Cambiar Contraseña";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cButton39.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cButton39.BackColor = System.Drawing.Color.Transparent;
+            this.cButton39.BorderColor = System.Drawing.Color.Transparent;
+            cBlendItems1.iColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(185)))), ((int)(((byte)(84))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(139)))), ((int)(((byte)(68)))))};
+            cBlendItems1.iPoint = new float[] {
+        0F,
+        1F};
+            this.cButton39.ColorFillBlend = cBlendItems1;
+            this.cButton39.Corners.All = 8;
+            this.cButton39.Corners.LowerLeft = 8;
+            this.cButton39.Corners.LowerRight = 8;
+            this.cButton39.Corners.UpperLeft = 8;
+            this.cButton39.Corners.UpperRight = 8;
+            this.cButton39.DesignerSelected = false;
+            this.cButton39.DimFactorClick = 0;
+            this.cButton39.DimFactorHover = -25;
+            this.cButton39.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton39.ImageIndex = 0;
+            this.cButton39.ImageSize = new System.Drawing.Size(35, 30);
+            this.cButton39.Location = new System.Drawing.Point(220, 705);
+            this.cButton39.Name = "cButton39";
+            this.cButton39.Size = new System.Drawing.Size(174, 30);
+            this.cButton39.TabIndex = 311;
+            this.cButton39.TabStop = false;
+            this.cButton39.Text = "Cambiar Contraseña";
+            this.cButton39.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton39.ClickButtonArea += new CButtonLib.CButton.ClickButtonAreaEventHandler(this.cButton39_ClickButtonArea);
             // 
             // iniciarSesion
             // 
@@ -181,7 +202,7 @@ namespace ptoVenta
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(680, 786);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cButton39);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
@@ -218,6 +239,6 @@ namespace ptoVenta
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.OvalShape pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
+        private CButtonLib.CButton cButton39;
     }
 }
