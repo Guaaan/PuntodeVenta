@@ -14,6 +14,7 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -54,6 +55,7 @@ namespace ptoVenta
         public string uperfil = "";
         public string ucaja = "";
         public string ufoto = "";
+        public static int ftop = 0;
 
         public static string empresalic = "";
         public static string erif = "";
@@ -182,16 +184,16 @@ namespace ptoVenta
                     panel1.Visible = true;
                     dgvLista.Visible = true;
                     dgvLista.Rows.Clear();
-                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,E.ALMACEN,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
+                    com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA, E.CANTIDAD STOCK, U.NOMBRE LABORATORIO, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2, I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '" + vari + "%' ORDER BY I.NOMBRE", cn);
                     if (ivari.ToString() == "*" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,E.ALMACEN,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.NOMBRE  LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     if (ivari.ToString() == "+" && vari.Length > 3)
                     {
                         vari = vari.Substring(1);
-                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,E.ALMACEN,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
+                        com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.PRINCIPIO LIKE '%" + vari + "%' ORDER BY I.NOMBRE", cn);
                     }
                     com.ExecuteNonQuery();
                     Dr = com.ExecuteReader();
@@ -213,6 +215,11 @@ namespace ptoVenta
                         dgvLista.Rows[renglon].Cells["STOCK"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
                         dgvLista.Rows[renglon].Cells["PRECIO"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                         dgvLista.Rows[renglon].Cells["OFERTA"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
+                        dgvLista.Rows[renglon].Cells["FORMAFARMACEUTICA"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
+                        dgvLista.Rows[renglon].Cells["LABORATORIO"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
+                        dgvLista.Rows[renglon].Cells["COLORRECETA"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
+
+
                     }
                     Dr.Close();
                 }
@@ -356,7 +363,6 @@ namespace ptoVenta
                     {
                         enc = 1;
                         cant = Convert.ToInt32(row.Cells["CANTIDAD1"].Value.ToString()) + 1;
-                        upre = row.Cells["PRECIO1"].Value.ToString();
                         break;
                     }
                 }
@@ -369,7 +375,7 @@ namespace ptoVenta
             else
             {
                 int renglon = 0;
-                com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,E.CANTIDAD STOCK,E.ALMACEN, CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO,E.ALMACEN FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + vari + "' ", cn);
+                com = new SqlCommand("SELECT I.CODIGO,I.NOMBRE,I.ESTANTE,I.NACIONAL COLORRECETA,E.CANTIDAD STOCK,U.NOMBRE LABORATORIO,CONVERT(numeric(10,0),ROUND(I.PRECIO1*1.19,-1)) PRECIO1,CONVERT(numeric(10,0),ROUND(I.PRECIO2*1.19,-1)) PRECIO2,I.PRINCIPIO,I.FOTO FROM INVENTARIO I LEFT JOIN UBICACIONES U ON I.UBICACION=U.CODIGO LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + vari + "' ", cn);
                 com.ExecuteNonQuery();
                 Dr = com.ExecuteReader();
                 while (Dr.Read())
@@ -387,11 +393,16 @@ namespace ptoVenta
                     dgvGrid1.Rows[renglon].Cells["CODIGO1"].Value = Dr["CODIGO"] == DBNull.Value ? " " : Convert.ToString(Dr["CODIGO"]).Trim();
                     dgvGrid1.Rows[renglon].Cells["PRODUCTO1"].Value = Dr["NOMBRE"] == DBNull.Value ? " " : Convert.ToString(Dr["NOMBRE"]).Trim();
                     dgvGrid1.Rows[renglon].Cells["STOCK1"].Value = Dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["STOCK"]);
-                    dgvGrid1.Rows[renglon].Cells["ALMACEN1"].Value = Dr["ALMACEN"] == DBNull.Value ? Form1.alma : Convert.ToString(Dr["ALMACEN"]).Trim();
                     dgvGrid1.Rows[renglon].Cells["CANTIDAD1"].Value = "1";
                     dgvGrid1.Rows[renglon].Cells["PRECIO1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
                     dgvGrid1.Rows[renglon].Cells["OFERTA1"].Value = Dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO2"]);
                     dgvGrid1.Rows[renglon].Cells["TOTAL1"].Value = Dr["PRECIO1"] == DBNull.Value ? 0 : Convert.ToDouble(Dr["PRECIO1"]);
+
+                    dgvGrid1.Rows[renglon].Cells["FORMAFARMACEUTICA1"].Value = Dr["ESTANTE"] == DBNull.Value ? " " : Convert.ToString(Dr["ESTANTE"]).Trim();
+                    dgvGrid1.Rows[renglon].Cells["LABORATORIO1"].Value = Dr["LABORATORIO"] == DBNull.Value ? " " : Convert.ToString(Dr["LABORATORIO"]).Trim();
+                    dgvGrid1.Rows[renglon].Cells["COLORRECETA1"].Value = Dr["COLORRECETA"] == DBNull.Value ? 0 : Convert.ToInt32(Dr["COLORRECETA"]);
+                    dgvGrid1.Rows[renglon].Cells["PRINCIPIO1"].Value = Dr["PRINCIPIO"] == DBNull.Value ? " " : Convert.ToString(Dr["PRINCIPIO"]).Trim();
+
                 }
                 Dr.Close();
                 if (renglon > 0)
@@ -1066,6 +1077,60 @@ namespace ptoVenta
             }
             txtProducto.Text = "";
             txtProducto.Focus();
+        }
+
+        private void dgvGrid1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1) // second-column 
+            {
+
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+
+
+                frm.lblNombre.Text = dgvGrid1.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrecio.Text = "$" + dgvGrid1.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvGrid1.CurrentRow.Cells[4].Value.ToString();
+                frm.lblFormaF.Text = dgvGrid1.CurrentRow.Cells[10].Value.ToString();
+                frm.lblLaboratorio.Text = dgvGrid1.CurrentRow.Cells[11].Value.ToString();
+
+
+                if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(0))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
+                    frm.lblRequiereR.Text = "No Requiere Receta";
+                }
+                else if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(1))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
+                    frm.lblRequiereR.Text = "Requiere Receta";
+                }
+                frm.lblPrincipioActivo.Text = dgvGrid1.CurrentRow.Cells[13].Value.ToString();
+
+
+                MemoryStream ms = new MemoryStream();
+                Bitmap imagen = (Bitmap)dgvGrid1.CurrentRow.Cells[1].Value;
+                imagen.Save(ms, ImageFormat.Jpeg);
+                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+                ftop = dgvLista.Top;
+                frm.ShowDialog();
+            }
+        }
+
+        private void dgvGrid1_CurrentCellChanged_1(object sender, EventArgs e)
+        {
+            Sumarproductos();
+        }
+
+        private void dgvGrid1_EditingControlShowing_1(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridViewComboBoxEditingControl dgvCombo = e.Control as DataGridViewComboBoxEditingControl;
+
+            if (dgvCombo != null)
+            {
+                dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
+                dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
+            }
         }
 
         private void stocktiendas() 
