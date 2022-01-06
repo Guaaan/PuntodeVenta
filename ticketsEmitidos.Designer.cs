@@ -468,6 +468,7 @@ namespace ptoVenta
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ticketsEmitidos";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ticketsEmitidos_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ticketsEmitidos_KeyPress);

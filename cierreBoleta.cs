@@ -240,7 +240,7 @@ namespace ptoVenta
             //MFACTURAS
             Form1 FRM1 = Owner as Form1;
             int mfila = 0;
-            string mcod, mnom, mnum, mgru = "";
+            string mcod, mnom, mnum,malm, mgru = "";
             double mcan, msto, mofe, mtot, mtpr, mmon, mcid = 0;
             double mcos = 0;
             double mp1 = 0;
@@ -255,6 +255,7 @@ namespace ptoVenta
                     mfila += 1;
                     mcod = row.Cells["CODIGO1"].Value.ToString();
                     mnom = row.Cells["PRODUCTO1"].Value.ToString();
+                    malm = row.Cells["ALMACEN1"].Value.ToString();
                     msto = Convert.ToInt32(row.Cells["STOCK1"].Value.ToString());
                     mcan = Convert.ToInt32(row.Cells["CANTIDAD1"].Value.ToString());
                     mpre = Convert.ToDouble(row.Cells["PRECIO1"].Value.ToString());
@@ -270,7 +271,7 @@ namespace ptoVenta
                     mnum = num;
                     mpsi = mpre / 1.19;
 
-                    com = new SqlCommand("SELECT E.CANTIDAD STOCK,I.COSTO,I.PRECIO1,I.PRECIO2,I.GRUPO,E.CODID FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + mcod + "' ", Form1.cn);
+                    com = new SqlCommand("SELECT E.CANTIDAD STOCK,I.COSTO,I.PRECIO1,I.PRECIO2,I.GRUPO,E.CODID,E.ALMACEN FROM INVENTARIO I LEFT JOIN EXISTENCIA E ON E.CODIGO=I.CODIGO WHERE I.CODIGO = '" + mcod + "' AND E.ALMACEN='" + malm + "'", Form1.cn);
                     com.ExecuteNonQuery();
                     dr = com.ExecuteReader();
                     while (dr.Read())
@@ -278,9 +279,10 @@ namespace ptoVenta
                         mcos = Convert.ToDouble(dr["COSTO"]);
                         mp1 = Convert.ToDouble(dr["PRECIO1"]);
                         mp2 = dr["PRECIO2"] == DBNull.Value ? 0 : Convert.ToDouble(dr["PRECIO2"]);
-                        msto = dr["STOCK"] == DBNull.Value ? 0 : Convert.ToInt32(dr["STOCK"]);  
+                        msto = dr["STOCK"] == DBNull.Value ? 0 : Convert.ToDouble(dr["STOCK"]);
                         mgru = Convert.ToString(dr["GRUPO"]);
-                        mcid = dr["CODID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CODID"]); 
+                        malm = dr["ALMACEN"] == DBNull.Value ? Form1.alma :  Convert.ToString(dr["ALMACEN"]);
+                        mcid = Convert.ToInt32(dr["CODID"]);
 
                     }
                     dr.Close();
@@ -306,12 +308,11 @@ namespace ptoVenta
                     com.Parameters.AddWithValue("@mcid", mcid);
                     com.Parameters.AddWithValue("@mtot", mtot);
                     com.Parameters.AddWithValue("@mp1", mp1);
-                    com.Parameters.AddWithValue("@malma",Form1.alma);
+                    com.Parameters.AddWithValue("@malma",malm);
                     com.ExecuteNonQuery();
                 }
             }
             // IMPRIME TICKECT
-            //Form1 FRM1 = Owner as Form1;
             clsImprimir prnt = new clsImprimir();
             prnt.CargarImprimir(FRM1.dgvGrid1, printDocumento, null, "Venta");
             FRM1.dgvGrid1.Rows.Clear();
@@ -353,13 +354,8 @@ namespace ptoVenta
             txtCredito.Text = "0";
             cButton1.Focus();
         }
-
-        
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            
-            
             if (tp == 0)
             {
                 txtEfectivo.Focus();

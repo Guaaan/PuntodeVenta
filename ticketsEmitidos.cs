@@ -91,23 +91,54 @@ namespace ptoVenta
 
         private void dgvGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            clsImprimir printmir;
-            printmir = new clsImprimir();
-
             if (dgvGrid1.Rows.Count > 0)
             {
-                if (dgvGrid1.CurrentCell.ColumnIndex == 9)
+                if (dgvGrid1.CurrentCell.ColumnIndex == 99)
                 {
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
-                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Reimpresión");
+
+                    //RepTicket rep = new RepTicket();
+                    LocalReport report = new LocalReport();
+                    report.DataSources.Clear();
+
+                    Form1.MiReporte = "Informes\\Tickets.rdlc";
+
+                    foreach (DataGridViewRow row in dgvGrid1.Rows)
+                    {
+                        if (row.Cells["numero"].Value.ToString() == vnum)
+                        {
+                            TicketDatos dat = new TicketDatos();
+                            dat.Codigo = row.Cells["codigo"].Value.ToString();
+                            dat.Nombre = row.Cells["producto"].Value.ToString();
+                            dat.Cantidad = row.Cells["cantidad"].Value.ToString();
+                            double pre = (double)row.Cells["precio"].Value;
+                            dat.Precio = pre.ToString("N0");
+                            TicketDatos.Add(dat);
+                        }
+                    }
+                    //rep.ShowDialog();
+                    report.DataSources.Add(new ReportDataSource("DataSet1", TicketDatos));
+                    report.ReportPath = (Form1.MiReporte);
+
+                    string vRif = Form1.erif.Trim();
+                    string vCaja = iniciarSesion.ucodigo.Trim();
+                    string vNro = vnum;
+
+                    ReportParameter[] parameters = new ReportParameter[3];
+                    parameters[0] = new ReportParameter("rRif", vRif);
+                    parameters[1] = new ReportParameter("rCaja", vCaja);
+                    parameters[2] = new ReportParameter("rNro", vNro);
+
+                    report.SetParameters(parameters);
+                    report.PrintToPrinter();
 
                 }
-
-                if (dgvGrid1.CurrentCell.ColumnIndex == 10)
+                if (dgvGrid1.CurrentCell.ColumnIndex == 9)
                 {
+                    clsImprimir printmir;
+                    printmir = new clsImprimir();
                     vnum = dgvGrid1.CurrentRow.Cells["NUMERO"].Value.ToString();
-                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Devolución");
-
+                    printmir.CargarImprimir(dgvGrid1, printDocumento, vnum, "Reimpresión");
                 }
                 if (dgvGrid1.CurrentCell.ColumnIndex == 10)
                 {

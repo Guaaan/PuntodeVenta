@@ -14,7 +14,6 @@ using System.Net;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
-using System.Drawing.Imaging;
 //using DevComponents.DotNetBar;
 //using DevComponents.DotNetBar.Controls;
 
@@ -55,7 +54,6 @@ namespace ptoVenta
         public string uperfil = "";
         public string ucaja = "";
         public string ufoto = "";
-        public static int ftop = 0;
 
         public static string empresalic = "";
         public static string erif = "";
@@ -74,7 +72,6 @@ namespace ptoVenta
         public static string mante = "";
         public static string MiReporte = "";
         public static string documc = "";
-        public static string nombreFarmacia;
         public static int colimpre = 80;
 
         public SqlDataReader Dr { get => dr; set => dr = value; }
@@ -150,13 +147,12 @@ namespace ptoVenta
             {
                 label13.Text = Convert.ToString(Dr["NOMBRE"]).Trim();
                 label13.Text = Convert.ToString(Dr["NOMBRE"]).Trim();
-                nombreFarmacia = Convert.ToString(Dr["NOMBRE"]).Trim();
             }
             Dr.Close();
         }
         public void alternarColorData(DataGridView dgv)
         {
-            dgvLista.RowsDefaultCellStyle.BackColor = Color.MistyRose;
+            dgvLista.RowsDefaultCellStyle.BackColor = Color.FromArgb(212, 206, 250);
             dgvLista.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvLista.EnableHeadersVisualStyles = false;
             dgvLista.ColumnHeadersDefaultCellStyle.BackColor = Color.MediumSlateBlue;
@@ -165,7 +161,9 @@ namespace ptoVenta
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
             //dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(121, 195, 93);
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen;
+            dgvGrid1.RowsDefaultCellStyle.BackColor = Color.FromArgb(181, 198, 160);
+            dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White; ;
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(79, 157, 72);
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
         private void txtProducto_TextChanged(object sender, EventArgs e)
@@ -1012,7 +1010,7 @@ namespace ptoVenta
 
         private void ticket(object Sender, MouseEventArgs e)
         {
-            /*int vtot = (int)Convert.ToDouble(txtTotal.Text);
+            int vtot = (int)Convert.ToDouble(txtTotal.Text);
             if (vtot > 0)
             {
                 Ticket ticket = new Ticket();
@@ -1049,7 +1047,7 @@ namespace ptoVenta
                 Sumarproductos();
             }
             txtProducto.Text = "";
-            txtProducto.Focus();*/
+            txtProducto.Focus();
         }
 
         private void cButton8_ClickButtonArea(object Sender, MouseEventArgs e)
@@ -1068,84 +1066,6 @@ namespace ptoVenta
             }
             txtProducto.Text = "";
             txtProducto.Focus();
-        }
-
-        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.ColumnIndex == 1) // second-column 
-            {
-
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-
-
-                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
-                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
-                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
-                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
-                frm.lblFormaF.Text = dgvLista.CurrentRow.Cells[8].Value.ToString();
-                frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
-
-
-                if (dgvLista.CurrentRow.Cells[10].Value.Equals(0))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
-                    frm.lblRequiereR.Text = "No Requiere Receta";
-                }
-                else if (dgvLista.CurrentRow.Cells[10].Value.Equals(1))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
-                    frm.lblRequiereR.Text = "Requiere Receta";
-                }
-
-
-
-
-                MemoryStream ms = new MemoryStream();
-                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
-                imagen.Save(ms, ImageFormat.Jpeg);
-                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
-
-                ftop = dgvLista.Top;
-                frm.ShowDialog();
-            }
-        }
-
-        private void dgvGrid1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.ColumnIndex == 1) // second-column 
-            {
-
-                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
-
-
-                frm.lblNombre.Text = dgvGrid1.CurrentRow.Cells[3].Value.ToString();
-                frm.lblPrecio.Text = "$" + dgvGrid1.CurrentRow.Cells[6].Value.ToString();
-                frm.lblStock.Text = dgvGrid1.CurrentRow.Cells[4].Value.ToString();
-                frm.lblFormaF.Text = dgvGrid1.CurrentRow.Cells[10].Value.ToString();
-                frm.lblLaboratorio.Text = dgvGrid1.CurrentRow.Cells[11].Value.ToString();
-
-
-                if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(0))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
-                    frm.lblRequiereR.Text = "No Requiere Receta";
-                }
-                else if (dgvGrid1.CurrentRow.Cells[12].Value.Equals(1))
-                {
-                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
-                    frm.lblRequiereR.Text = "Requiere Receta";
-                }
-                frm.lblPrincipioActivo.Text = dgvGrid1.CurrentRow.Cells[13].Value.ToString();
-
-
-                MemoryStream ms = new MemoryStream();
-                Bitmap imagen = (Bitmap)dgvGrid1.CurrentRow.Cells[1].Value;
-                imagen.Save(ms, ImageFormat.Jpeg);
-                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
-
-                ftop = dgvLista.Top;
-                frm.ShowDialog();
-            }
         }
 
         private void stocktiendas() 

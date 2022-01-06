@@ -37,13 +37,11 @@ namespace ptoVenta
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTransfe = new System.Windows.Forms.TextBox();
+            this.txtOtros = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtOtros = new System.Windows.Forms.TextBox();
             this.txtTarjetas = new System.Windows.Forms.TextBox();
             this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -88,19 +86,17 @@ namespace ptoVenta
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtTransfe);
+            this.panel1.Controls.Add(this.txtOtros);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtOtros);
             this.panel1.Controls.Add(this.txtTarjetas);
             this.panel1.Controls.Add(this.txtEfectivo);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(224, 206);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 266);
+            this.panel1.Size = new System.Drawing.Size(530, 238);
             this.panel1.TabIndex = 2;
             this.panel1.TabStop = true;
             // 
@@ -117,20 +113,20 @@ namespace ptoVenta
             this.label8.TabIndex = 158;
             this.label8.Text = "Tranferencias";
             // 
-            // txtTransfe
+            // txtOtros
             // 
-            this.txtTransfe.AcceptsReturn = true;
-            this.txtTransfe.AcceptsTab = true;
-            this.txtTransfe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTransfe.Enabled = false;
-            this.txtTransfe.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransfe.Location = new System.Drawing.Point(205, 94);
-            this.txtTransfe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTransfe.Name = "txtTransfe";
-            this.txtTransfe.Size = new System.Drawing.Size(141, 30);
-            this.txtTransfe.TabIndex = 157;
-            this.txtTransfe.Text = "0";
-            this.txtTransfe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtOtros.AcceptsReturn = true;
+            this.txtOtros.AcceptsTab = true;
+            this.txtOtros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOtros.Enabled = false;
+            this.txtOtros.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOtros.Location = new System.Drawing.Point(205, 94);
+            this.txtOtros.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOtros.Name = "txtOtros";
+            this.txtOtros.Size = new System.Drawing.Size(141, 30);
+            this.txtOtros.TabIndex = 2;
+            this.txtOtros.Text = "0";
+            this.txtOtros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -138,7 +134,7 @@ namespace ptoVenta
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(69, 167);
+            this.label7.Location = new System.Drawing.Point(69, 134);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 22);
@@ -151,26 +147,14 @@ namespace ptoVenta
             this.textBox2.AcceptsTab = true;
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(205, 166);
+            this.textBox2.Location = new System.Drawing.Point(205, 133);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(304, 86);
-            this.textBox2.TabIndex = 155;
-            this.textBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(91, 133);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 22);
-            this.label3.TabIndex = 154;
-            this.label3.Text = "Otros Pagos:";
+            this.textBox2.TabIndex = 3;
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -197,23 +181,6 @@ namespace ptoVenta
             this.label4.Size = new System.Drawing.Size(137, 22);
             this.label4.TabIndex = 152;
             this.label4.Text = "Monto Efectivo:";
-            // 
-            // txtOtros
-            // 
-            this.txtOtros.AcceptsReturn = true;
-            this.txtOtros.AcceptsTab = true;
-            this.txtOtros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOtros.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOtros.Location = new System.Drawing.Point(205, 130);
-            this.txtOtros.Margin = new System.Windows.Forms.Padding(2);
-            this.txtOtros.Name = "txtOtros";
-            this.txtOtros.Size = new System.Drawing.Size(141, 30);
-            this.txtOtros.TabIndex = 2;
-            this.txtOtros.TabStop = false;
-            this.txtOtros.Text = "0";
-            this.txtOtros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtOtros.Enter += new System.EventHandler(this.txtCredito_Enter);
-            this.txtOtros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCredito_KeyPress);
             // 
             // txtTarjetas
             // 
@@ -274,11 +241,13 @@ namespace ptoVenta
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(610, 120);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(107, 29);
-            this.textBox1.TabIndex = 174;
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TabStop = false;
             // 
             // cButton1
             // 
@@ -307,7 +276,7 @@ namespace ptoVenta
             this.cButton1.Location = new System.Drawing.Point(24, 509);
             this.cButton1.Name = "cButton1";
             this.cButton1.Size = new System.Drawing.Size(148, 48);
-            this.cButton1.TabIndex = 215;
+            this.cButton1.TabIndex = 3;
             this.cButton1.TabStop = false;
             this.cButton1.Text = "Regresar";
             this.cButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -340,7 +309,7 @@ namespace ptoVenta
             this.iconButton1.Location = new System.Drawing.Point(789, 509);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(148, 48);
-            this.iconButton1.TabIndex = 216;
+            this.iconButton1.TabIndex = 2;
             this.iconButton1.TabStop = false;
             this.iconButton1.Text = "Aceptar";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -406,7 +375,7 @@ namespace ptoVenta
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(141, 29);
             this.dateTimePicker1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateTimePicker1.TabIndex = 311;
+            this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.TabStop = false;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -427,6 +396,7 @@ namespace ptoVenta
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "cierredecaja";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cierrecaja";
             this.Load += new System.EventHandler(this.cierredecaja_Load);
@@ -446,10 +416,8 @@ namespace ptoVenta
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtOtros;
         private System.Windows.Forms.TextBox txtTarjetas;
         private System.Windows.Forms.TextBox txtEfectivo;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -461,6 +429,6 @@ namespace ptoVenta
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTransfe;
+        private System.Windows.Forms.TextBox txtOtros;
     }
 }

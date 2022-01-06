@@ -274,8 +274,10 @@ namespace ptoVenta
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvGrid1);
+            this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.Name = "Stock";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Stock_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Stock_KeyPress);

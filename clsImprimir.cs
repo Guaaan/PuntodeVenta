@@ -41,7 +41,6 @@ namespace ptoVenta
                 string v1 = Convert.ToString((int)Math.Round(Form1.colimpre*3.375));
                 int ancho = Convert.ToInt32(v1);
                 int anchoB = ancho-25;
-                int anchoC = ancho-40;
                 var dateAndTime = DateTime.Now;
                 var Date = dateAndTime.ToLongDateString();
                 string hora = DateTime.Now.ToString("hh:mm:ss");
@@ -94,23 +93,23 @@ namespace ptoVenta
                     {
                         TicketDatos dato = new TicketDatos();
                         //dato.Codigo = row.Cells["codigo"].Value.ToString();
-                        dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString().Trim();
+                        dato.Nombre = row.Cells["PRODUCTO1"].Value.ToString();
                         dato.Cantidad = row.Cells["CANTIDAD1"].Value.ToString();
                         dato.Precio = row.Cells["PRECIO1"].Value.ToString();
                         //obtener el total de la boleta
                         double precioN = Convert.ToDouble(dato.Precio.ToString());
                         double cantidadN = Convert.ToDouble(dato.Cantidad.ToString());
                         montoTotal = montoTotal + (precioN * cantidadN);
-                        
-                        e.Graphics.DrawString(dato.Cantidad.ToString(), fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
-                        e.Graphics.DrawString(dato.Nombre.ToString().Insert(38, " "), fuente, Brushes.Black, new RectangleF(10, y += 0, anchoC, 20));
+                        e.Graphics.DrawString(dato.Cantidad.ToString()
+                            + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
                         e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
+
                     }
                     //ventas emitidas
                     else if (dgVariable.Columns.Contains("numero"))
                         {
                             TicketDatos dato = new TicketDatos();
-                            dato.Nombre = row.Cells["producto"].Value.ToString().Trim();
+                            dato.Nombre = row.Cells["producto"].Value.ToString();
                             dato.Cantidad = row.Cells["cantidad"].Value.ToString();
                             dato.Precio = row.Cells["precio"].Value.ToString();
                             double precioN = Convert.ToDouble(dato.Precio);
@@ -118,11 +117,11 @@ namespace ptoVenta
                             if (row.Cells["numero"].Value.ToString() == documc)
                             {
                                 montoTotal = montoTotal + (precioN * cantidadN);
+                                e.Graphics.DrawString(dato.Cantidad.ToString()
+                                    + "  |   " + dato.Nombre.ToString()/*.Substring(0, dato.Nombre.Length > 30 ? 30 : dato.Nombre.Length)*/, fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
+                                e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
 
-                            e.Graphics.DrawString(dato.Cantidad.ToString(), fuente, Brushes.Black, new RectangleF(0, y += 30, anchoB, 35));
-                            e.Graphics.DrawString(dato.Nombre.ToString().Insert(38, " "), fuente, Brushes.Black, new RectangleF(10, y += 0, anchoC, 20));
-                            e.Graphics.DrawString("$" + precioN.ToString("N0"), fuente, Brushes.Black, new RectangleF(0, y += -5, ancho, 20), formato2);
-                        }
+                            }
                             
 
                         }
@@ -139,9 +138,8 @@ namespace ptoVenta
                 e.Graphics.DrawString("HASTA PRONTO", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("  ", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
                 e.Graphics.DrawString("www.farmaciasgeminis.cl", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString(" ", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString(" ", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
-                e.Graphics.DrawString(" ", header, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(" ", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
+                e.Graphics.DrawString(" ", linea, Brushes.Black, new RectangleF(0, y += 20, ancho, 20), alineadoCentro);
             }
 
 

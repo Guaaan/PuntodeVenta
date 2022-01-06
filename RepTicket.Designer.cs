@@ -50,6 +50,7 @@ namespace ptoVenta
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "RepTicket";
+            this.ShowInTaskbar = false;
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ticket_Load);

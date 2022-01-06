@@ -251,8 +251,9 @@ namespace ptoVenta
                 }
             }
             // IMPRIME DEVOLUCION
+            clsImprimir prnt = new clsImprimir();
+            prnt.CargarImprimir(dgvGrid1, printDocumento, null, "Devolución");
             this.Close();
-
         }
 
     }

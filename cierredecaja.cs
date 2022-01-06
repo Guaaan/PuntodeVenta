@@ -49,7 +49,7 @@ namespace ptoVenta
             fec2 = fec1.AddDays(+1);
             string f1 = fec1.ToString("yyyyMMdd");
             string f2 = fec2.ToString("yyyyMMdd");
-            comsql1 = "SELECT F.NOMBRE CONCEPTO,F.NUMERO,F.IMPUESTO,F.MONTO,F.TIPO,F.ABONO,R.TIPO,R.RECIBO,F.FECHA,R.CAJA,R.EFECTIVO,R.DEBITO,R.CREDITO,R.TRANSFERENCIA,R.OTROS,R.FACTURA,R.VUELTO,F.REGISTRO ";
+            comsql1 = "SELECT F.NOMBRE CONCEPTO,F.NUMERO,F.IMPUESTO,F.MONTO,F.TIPO,F.ABONO,R.TIPO,R.RECIBO,F.FECHA,R.CAJA,R.EFECTIVO,R.DEBITO,R.CREDITO,R.OTROS,R.FACTURA,R.VUELTO,F.REGISTRO ";
             comsql2 = comsql1 + " FROM FACTURAS F LEFT JOIN RECIBOS R ON R.NUMERO = F.NUMERO AND F.ABONO = F.MONTO + F.IMPUESTO WHERE F.REGISTRO = 0 AND F.CAJAPERTUR = '"+caja+"' AND F.FECHA>='"+f1+"' AND F.FECHA<'"+f2+"'";
             com = new SqlCommand(comsql2, Form1.cn); 
             com.ExecuteNonQuery();
@@ -72,6 +72,19 @@ namespace ptoVenta
         private void cierredecaja_VisibleChanged(object sender, EventArgs e)
         {
             txtEfectivo.Focus();
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            SendKeys.Send("^(a)");
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                SendKeys.Send("{TAB}");
+            }
         }
 
         private void txtEfectivo_Enter(object sender, EventArgs e)
@@ -192,6 +205,8 @@ namespace ptoVenta
                 com = new SqlCommand("UPDATE USUARIOS SET FORMATO = '' WHERE CODIGO = '" + vuser + "' ", Form1.cn);
                 com.ExecuteNonQuery();
                 // IMPRIME CIERRE
+
+                //
                 MessageBox.Show("CIERRE DE CAJA SATISFACTORIO");
                 Application.Exit();
                 this.Close();

@@ -59,6 +59,7 @@ namespace ptoVenta
             this.Codid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cButton39 = new CButtonLib.CButton();
             this.cButton40 = new CButtonLib.CButton();
+            this.printDocumento = new System.Drawing.Printing.PrintDocument();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid1)).BeginInit();
             this.SuspendLayout();
@@ -366,10 +367,12 @@ namespace ptoVenta
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBoletaFactura);
             this.Controls.Add(this.panel15);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "devoluciones";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.devoluciones_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.devoluciones_KeyPress);
@@ -402,5 +405,6 @@ namespace ptoVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn Codid;
         private CButtonLib.CButton cButton39;
         private CButtonLib.CButton cButton40;
+        private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }

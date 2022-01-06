@@ -26,5 +26,6 @@ namespace ptoVenta
             reportViewer1.LocalReport.ReportPath = (Form1.MiReporte);
             this.reportViewer1.RefreshReport();
         }
+
     }
 }

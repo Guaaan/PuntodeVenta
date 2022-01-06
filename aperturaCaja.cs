@@ -49,10 +49,6 @@ namespace ptoVenta
             }
         }
 
-        private void aperturaCaja_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

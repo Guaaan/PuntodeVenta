@@ -52,7 +52,6 @@ namespace ptoVenta
             this.cButton39 = new CButtonLib.CButton();
             this.cButton40 = new CButtonLib.CButton();
             this.dateTimePicker1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.printDocumento = new System.Drawing.Printing.PrintDocument();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker1)).BeginInit();
             this.SuspendLayout();
@@ -287,7 +286,6 @@ namespace ptoVenta
             this.cButton39.TabStop = false;
             this.cButton39.Text = "Aceptar";
             this.cButton39.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton39.ClickButtonArea += new CButtonLib.CButton.ClickButtonAreaEventHandler(this.cButton39_ClickButtonArea);
             this.cButton39.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // cButton40
@@ -421,6 +419,7 @@ namespace ptoVenta
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "egresoCaja";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.egresoCaja_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.egresoCaja_KeyPress);
@@ -453,6 +452,5 @@ namespace ptoVenta
         private CButtonLib.CButton cButton39;
         private CButtonLib.CButton cButton40;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimePicker1;
-        private System.Drawing.Printing.PrintDocument printDocumento;
     }
 }

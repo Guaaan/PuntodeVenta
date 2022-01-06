@@ -27,7 +27,7 @@ namespace ptoVenta
         public iniciarSesion()
         {
             InitializeComponent();
-            this.Opacity = 0.9;
+            this.Opacity = 0.98;
         }
 
         private void iniciarSesion_Load(object sender, EventArgs e)

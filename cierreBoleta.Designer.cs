@@ -671,7 +671,7 @@ namespace ptoVenta
             this.label19.Location = new System.Drawing.Point(102, 9);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 32);
+            this.label19.Size = new System.Drawing.Size(94, 32);
             this.label19.TabIndex = 142;
             this.label19.Text = "Vuelto:";
             // 
@@ -780,6 +780,7 @@ namespace ptoVenta
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "cierreBoleta";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.cierreBoleta_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cierreBoleta_KeyPress);
