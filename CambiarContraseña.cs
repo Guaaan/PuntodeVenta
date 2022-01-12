@@ -54,6 +54,18 @@ namespace ptoVenta
             }
             if (e.KeyChar == 13)
             {
+                txtConfirmar.Focus();
+            }
+        }
+
+        private void txtConfirmar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 27)
+            {
+                this.Close();
+            }
+            if (e.KeyChar == 13)
+            {
                 //agregar la función para cambiar de contraseña
             }
         }

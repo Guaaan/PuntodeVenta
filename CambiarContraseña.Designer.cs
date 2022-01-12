@@ -62,6 +62,7 @@ namespace ptoVenta
             this.txtContraseñaA.Name = "txtContraseñaA";
             this.txtContraseñaA.Size = new System.Drawing.Size(171, 29);
             this.txtContraseñaA.TabIndex = 1;
+            this.txtContraseñaA.UseSystemPasswordChar = true;
             this.txtContraseñaA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaA_KeyPress);
             // 
             // txtContraseñaN
@@ -71,6 +72,7 @@ namespace ptoVenta
             this.txtContraseñaN.Name = "txtContraseñaN";
             this.txtContraseñaN.Size = new System.Drawing.Size(171, 29);
             this.txtContraseñaN.TabIndex = 2;
+            this.txtContraseñaN.UseSystemPasswordChar = true;
             this.txtContraseñaN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaN_KeyPress);
             // 
             // txtConfirmar
@@ -80,6 +82,8 @@ namespace ptoVenta
             this.txtConfirmar.Name = "txtConfirmar";
             this.txtConfirmar.Size = new System.Drawing.Size(171, 29);
             this.txtConfirmar.TabIndex = 3;
+            this.txtConfirmar.UseSystemPasswordChar = true;
+            this.txtConfirmar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirmar_KeyPress);
             // 
             // label2
             // 
