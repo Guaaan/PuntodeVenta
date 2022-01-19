@@ -467,6 +467,7 @@ namespace ptoVenta
             this.cButton10.ImageSize = new System.Drawing.Size(40, 40);
             this.cButton10.Location = new System.Drawing.Point(684, 57);
             this.cButton10.Name = "cButton10";
+            this.cButton10.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton10.Size = new System.Drawing.Size(115, 50);
             this.cButton10.TabIndex = 192;
             this.cButton10.TabStop = false;
@@ -501,6 +502,7 @@ namespace ptoVenta
             this.cButton11.ImageSize = new System.Drawing.Size(40, 40);
             this.cButton11.Location = new System.Drawing.Point(801, 57);
             this.cButton11.Name = "cButton11";
+            this.cButton11.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton11.Size = new System.Drawing.Size(115, 50);
             this.cButton11.TabIndex = 193;
             this.cButton11.TabStop = false;
@@ -535,6 +537,7 @@ namespace ptoVenta
             this.cButton12.ImageSize = new System.Drawing.Size(40, 40);
             this.cButton12.Location = new System.Drawing.Point(1035, 57);
             this.cButton12.Name = "cButton12";
+            this.cButton12.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton12.Size = new System.Drawing.Size(115, 50);
             this.cButton12.TabIndex = 194;
             this.cButton12.TabStop = false;
@@ -569,6 +572,7 @@ namespace ptoVenta
             this.cButton13.ImageSize = new System.Drawing.Size(40, 40);
             this.cButton13.Location = new System.Drawing.Point(1151, 57);
             this.cButton13.Name = "cButton13";
+            this.cButton13.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton13.Size = new System.Drawing.Size(115, 50);
             this.cButton13.TabIndex = 195;
             this.cButton13.TabStop = false;
@@ -605,6 +609,7 @@ namespace ptoVenta
             this.cButton3.ImageSize = new System.Drawing.Size(28, 30);
             this.cButton3.Location = new System.Drawing.Point(930, 181);
             this.cButton3.Name = "cButton3";
+            this.cButton3.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton3.Size = new System.Drawing.Size(111, 38);
             this.cButton3.TabIndex = 205;
             this.cButton3.TabStop = false;
@@ -644,6 +649,7 @@ namespace ptoVenta
             this.cButton6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cButton6.Location = new System.Drawing.Point(818, 181);
             this.cButton6.Name = "cButton6";
+            this.cButton6.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton6.Size = new System.Drawing.Size(111, 38);
             this.cButton6.TabIndex = 209;
             this.cButton6.TabStop = false;
@@ -683,6 +689,7 @@ namespace ptoVenta
             this.cButton4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cButton4.Location = new System.Drawing.Point(1154, 181);
             this.cButton4.Name = "cButton4";
+            this.cButton4.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton4.Size = new System.Drawing.Size(111, 38);
             this.cButton4.TabIndex = 207;
             this.cButton4.TabStop = false;
@@ -722,6 +729,7 @@ namespace ptoVenta
             this.cButton5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cButton5.Location = new System.Drawing.Point(1042, 181);
             this.cButton5.Name = "cButton5";
+            this.cButton5.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton5.Size = new System.Drawing.Size(111, 38);
             this.cButton5.TabIndex = 206;
             this.cButton5.TabStop = false;
@@ -761,6 +769,7 @@ namespace ptoVenta
             this.cButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cButton1.Location = new System.Drawing.Point(594, 181);
             this.cButton1.Name = "cButton1";
+            this.cButton1.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton1.Size = new System.Drawing.Size(111, 38);
             this.cButton1.TabIndex = 203;
             this.cButton1.TabStop = false;
@@ -800,6 +809,7 @@ namespace ptoVenta
             this.cButton2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cButton2.Location = new System.Drawing.Point(706, 181);
             this.cButton2.Name = "cButton2";
+            this.cButton2.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton2.Size = new System.Drawing.Size(111, 38);
             this.cButton2.TabIndex = 204;
             this.cButton2.TabStop = false;
@@ -1000,6 +1010,7 @@ namespace ptoVenta
             this.cButton7.ImageSize = new System.Drawing.Size(35, 35);
             this.cButton7.Location = new System.Drawing.Point(482, 181);
             this.cButton7.Name = "cButton7";
+            this.cButton7.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton7.Size = new System.Drawing.Size(111, 38);
             this.cButton7.TabIndex = 208;
             this.cButton7.TabStop = false;
@@ -1324,6 +1335,7 @@ namespace ptoVenta
             this.cButton8.ImageSize = new System.Drawing.Size(40, 40);
             this.cButton8.Location = new System.Drawing.Point(918, 57);
             this.cButton8.Name = "cButton8";
+            this.cButton8.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton8.Size = new System.Drawing.Size(115, 50);
             this.cButton8.TabIndex = 210;
             this.cButton8.TabStop = false;

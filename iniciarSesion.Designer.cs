@@ -186,6 +186,7 @@ namespace ptoVenta
             this.cButton39.ImageSize = new System.Drawing.Size(35, 30);
             this.cButton39.Location = new System.Drawing.Point(220, 705);
             this.cButton39.Name = "cButton39";
+            this.cButton39.ShowFocus = CButtonLib.CButton.eFocus.None;
             this.cButton39.Size = new System.Drawing.Size(174, 30);
             this.cButton39.TabIndex = 311;
             this.cButton39.TabStop = false;

@@ -21,8 +21,8 @@ namespace ptoVenta
 
         private void imagenProducto_Load(object sender, EventArgs e)
         {
-            Top = Form1.ftop;
-            Left = 150;
+            //Top = Form1.ftop;
+            //Left = 150;
         }
        
 
