@@ -42,7 +42,7 @@ namespace ptoVenta
             dgvGrid1.RowsDefaultCellStyle.BackColor = Color.Azure;
             dgvGrid1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             dgvGrid1.EnableHeadersVisualStyles = false;
-            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.Green;
+            dgvGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(79, 157, 72);
             dgvGrid1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             cargaboletas();
 

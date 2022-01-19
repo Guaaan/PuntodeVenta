@@ -1133,6 +1133,46 @@ namespace ptoVenta
             }
         }
 
+        private void dgvLista_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1) // second-column 
+            {
+
+                imagenProducto frm = new imagenProducto(); //Instanciamos el Form que abriremos
+
+
+                frm.lblNombre.Text = dgvLista.CurrentRow.Cells[3].Value.ToString();
+                frm.lblPrincipioActivo.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
+                frm.lblPrecio.Text = "$" + dgvLista.CurrentRow.Cells[6].Value.ToString();
+                frm.lblStock.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
+                frm.lblFormaF.Text = dgvLista.CurrentRow.Cells[8].Value.ToString();
+                frm.lblLaboratorio.Text = dgvLista.CurrentRow.Cells[9].Value.ToString();
+
+
+                if (dgvLista.CurrentRow.Cells[10].Value.Equals(0))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(75, 153, 87);
+                    frm.lblRequiereR.Text = "No Requiere Receta";
+                }
+                else if (dgvLista.CurrentRow.Cells[10].Value.Equals(1))
+                {
+                    frm.lblRequiereR.ForeColor = Color.FromArgb(255, 0, 0);
+                    frm.lblRequiereR.Text = "Requiere Receta";
+                }
+
+
+
+
+                MemoryStream ms = new MemoryStream();
+                Bitmap imagen = (Bitmap)dgvLista.CurrentRow.Cells[1].Value;
+                imagen.Save(ms, ImageFormat.Jpeg);
+                frm.pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+                ftop = dgvLista.Top;
+                frm.ShowDialog();
+            }
+        }
+
         private void stocktiendas() 
         {
             Stock abrirstock = new Stock();
