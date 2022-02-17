@@ -1,3 +1,5 @@
+# Punto de Venta
+
 Punto de venta desarrollado en WinForms C#, con una interfaz de usuario sencilla y una base de datos SqlServer. 
 Permite al usuario vender, buscar, agregar y eliminar productos; así tambien agregar y eliminar clientes o productos faltantes.
 Imprime boletas en en papel termico y cuenta con funcion de impresion en archivos rdlc cuando se usa en el servidor el programa administrativo principal(otro de mis proyectos).
