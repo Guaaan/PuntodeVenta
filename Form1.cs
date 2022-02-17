@@ -292,10 +292,11 @@ namespace ptoVenta
                     }
                 }
             }
-            if (e.KeyChar == 120)
-            {
-                cambiaprecios();
-            }
+            //if (e.KeyChar == 120)
+            //{
+            //    //cambiaprecios();
+            //    MessageBox.Show("presioinada telcla x");
+            //}
         }
 
         private void cerrarBoleta()
@@ -526,7 +527,6 @@ namespace ptoVenta
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-
             vuser = iniciarSesion.ucodigo.Trim();
             com = new SqlCommand("SELECT TOP 1 * FROM USUARIOS WHERE CODIGO = '" + vuser + "' ", cn);
             com.ExecuteNonQuery();
@@ -1172,6 +1172,8 @@ namespace ptoVenta
                 frm.ShowDialog();
             }
         }
+
+        
 
         private void stocktiendas() 
         {

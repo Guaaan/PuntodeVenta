@@ -139,6 +139,7 @@
     <Compile Include="cierredecaja.Designer.cs">
       <DependentUpon>cierredecaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsApertura.cs" />
     <Compile Include="clsImprimir.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="descripcionFarmacologica.cs">

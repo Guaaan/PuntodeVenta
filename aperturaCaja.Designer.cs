@@ -35,6 +35,7 @@ namespace ptoVenta
             this.panel15 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.TextBox1 = new System.Windows.Forms.TextBox();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +110,8 @@ namespace ptoVenta
             this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "aperturaCaja";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -127,5 +130,6 @@ namespace ptoVenta
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TextBox1;
+        private System.Drawing.Printing.PrintDocument printDocument;
     }
 }

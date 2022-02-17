@@ -23,7 +23,10 @@ namespace ptoVenta
         {
             if (e.KeyChar == 13)
             {
+                clsApertura clsA = new clsApertura();
+
                 Form1.montoape = (int)Convert.ToDouble(TextBox1.Text);
+                clsA.CargarImprimir(TextBox1.Text ,printDocument, "Apertura de Caja");
                 this.Close();
             }
             if (e.KeyChar == 27)

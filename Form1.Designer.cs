@@ -458,7 +458,7 @@ namespace ptoVenta
             this.cButton10.Corners.LowerRight = 8;
             this.cButton10.Corners.UpperLeft = 8;
             this.cButton10.Corners.UpperRight = 8;
-            this.cButton10.DesignerSelected = false;
+            this.cButton10.DesignerSelected = true;
             this.cButton10.DimFactorClick = 0;
             this.cButton10.DimFactorHover = -25;
             this.cButton10.Image = ((System.Drawing.Image)(resources.GetObject("cButton10.Image")));
